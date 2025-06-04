@@ -1,4 +1,4 @@
-from evolutionary_rl.counterexample_search import EFXCounterexampleSearch
+from evolutionary_rl.rl_search import EFXCounterexampleSearch
 
 def run_counterexample_search():
     print("🎯 AGGRESSIVE EFX COUNTEREXAMPLE SEARCH")
