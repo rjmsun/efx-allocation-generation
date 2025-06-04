@@ -3,10 +3,13 @@ import pandas as pd
 import random
 import itertools
 import os
+import sys
+import matplotlib.pyplot as plt
 import networkx as nx
+sys.path.append(os.path.abspath("..")) 
 from typing import List, Tuple, Dict, Optional
 from efx import Allocation
-from graphs import build_champion_graph, build_envy_graph
+from graphs import build_champion_graph, build_strong_envy_graph
 
 
 class EFXCounterexampleSearch:
@@ -149,11 +152,11 @@ class EFXCounterexampleSearch:
         for strategy in strategies:
             for attempt in range(100):  # Increased attempts
                 allocation = strategy(utilities)
-                alloc_obj = Allocation(allocation)
+                alloc_obj = allocation
                 is_violated, violation_strength, _, _ = self.check_efx_violation(utilities, alloc_obj)
                 # Compute champion graph and number of champions
                 from graphs import build_champion_graph
-                G = build_champion_graph(alloc_obj, utilities)
+                G = build_champion_graph(alloc_obj)
                 num_champions = len(G)
                 # Compute normalized fitness score: penalize violation, reward champions
                 score = violation_strength - 0.25 * num_champions
@@ -169,15 +172,15 @@ class EFXCounterexampleSearch:
         for item in range(self.num_items):
             player = np.random.randint(self.num_players)
             allocation[player].append(item)
-        return Allocation(allocation)
-    
+        return Allocation(allocation, utilities)
+
     def greedy_max_value_strategy(self, utilities: np.ndarray) -> Allocation:
         """Assign each item to the player who values it most"""
         allocation = [[] for _ in range(self.num_players)]
         for item in range(self.num_items):
             best_player = np.argmax(utilities[:, item])
             allocation[best_player].append(item)
-        return Allocation(allocation)
+        return Allocation(allocation, utilities)
     
     def round_robin_strategy(self, utilities: np.ndarray) -> Allocation:
         """Round-robin picking with best remaining item"""
@@ -195,7 +198,7 @@ class EFXCounterexampleSearch:
             remaining_items.remove(best_item)
             current_player = (current_player + 1) % self.num_players
 
-        return Allocation(allocation)
+        return Allocation(allocation, utilities)
     
     def balanced_value_strategy(self, utilities: np.ndarray) -> Allocation:
         """Try to balance total values across players"""
@@ -213,8 +216,8 @@ class EFXCounterexampleSearch:
             allocation[poorest_player].append(item)
             current_values[poorest_player] += utilities[poorest_player, item]
 
-        return Allocation(allocation)
-    
+        return Allocation(allocation, utilities)
+
     def envy_minimization_strategy(self, utilities: np.ndarray) -> Allocation:
         """Try to minimize total envy"""
         allocation = [[] for _ in range(self.num_players)]
@@ -257,7 +260,7 @@ class EFXCounterexampleSearch:
                 item = remaining_items.pop(0)
                 allocation[0].append(item)
 
-        return Allocation(allocation)
+        return Allocation(allocation, utilities)
     
     def adversarial_strategy(self, utilities: np.ndarray) -> Allocation:
         """Deliberately create conflicts"""
@@ -271,7 +274,7 @@ class EFXCounterexampleSearch:
             median_player = sorted_indices[len(sorted_indices) // 2]
             allocation[median_player].append(item)
 
-        return Allocation(allocation)
+        return Allocation(allocation, utilities)
     
     def proportional_strategy(self, utilities: np.ndarray) -> Allocation:
         """Try to give each player items proportional to their total utility"""
@@ -309,7 +312,7 @@ class EFXCounterexampleSearch:
                 item = remaining_items.pop(0)
                 allocation[0].append(item)
 
-        return Allocation(allocation)
+        return Allocation(allocation, utilities)
     
     def specialized_matching_strategy(self, utilities: np.ndarray) -> Allocation:
         """Give each player their most valued items first, then distribute remainder"""
@@ -340,7 +343,7 @@ class EFXCounterexampleSearch:
             player = np.random.randint(self.num_players)
             allocation[player].append(item)
 
-        return Allocation(allocation)
+        return Allocation(allocation, utilities)
     
     def conflict_aware_strategy(self, utilities: np.ndarray) -> Allocation:
         """Identify high-conflict items and distribute them carefully"""
@@ -370,7 +373,7 @@ class EFXCounterexampleSearch:
 
             allocation[best_player].append(item)
 
-        return Allocation(allocation)
+        return Allocation(allocation, utilities)
     
     def minimax_envy_strategy(self, utilities: np.ndarray) -> Allocation:
         """Try to minimize the maximum envy across all players"""
@@ -428,7 +431,7 @@ class EFXCounterexampleSearch:
                 best_allocation = [bundle.copy() for bundle in allocation]
 
         if best_allocation:
-            return Allocation(best_allocation)
+            return Allocation(best_allocation, utilities)
         else:
             return self.random_allocation_strategy(utilities)
     
@@ -484,7 +487,7 @@ class EFXCounterexampleSearch:
                 loads = [len(bundle) for bundle in allocation]
                 allocation[np.argmin(loads)].append(item)
 
-        return Allocation(allocation)
+        return Allocation(allocation, utilities)
     
     def evolutionary_search(self) -> List[Dict]:
         """Main evolutionary search for counterexamples"""
@@ -537,11 +540,10 @@ class EFXCounterexampleSearch:
                 self.greedy_max_value_strategy,
                 self.round_robin_strategy
             ]:
-                alloc = strategy(utilities)
-                alloc_obj = Allocation(alloc)
+                alloc_obj = strategy(utilities)
 
-                champ_graph = build_champion_graph(alloc_obj, utilities)
-                envy_graph = build_envy_graph(alloc_obj, utilities)
+                champ_graph = build_champion_graph(alloc_obj)
+                envy_graph = build_strong_envy_graph(alloc_obj)
 
                 # Save graphs for use in notebook
                 nx.write_gpickle(champ_graph, f"graph_outputs/champion_graph_{i}_{strategy.__name__}.gpickle")
@@ -627,7 +629,7 @@ class EFXCounterexampleSearch:
             allocation = [[] for _ in range(self.num_players)]
             for item, player in enumerate(allocation_tuple):
                 allocation[player].append(item)
-            alloc_obj = Allocation(allocation)
+            alloc_obj = Allocation(allocation, utilities)
             # Check EFX
             is_violated, violation_strength, violations, _ = self.check_efx_violation(utilities, alloc_obj)
 
@@ -747,10 +749,7 @@ def run_counterexample_search():
     print()
     
     test_configurations = [
-        (4, 6),   # Small for exhaustive verification
-        (4, 7),   # Slightly larger
-        (5, 8),   # More players
-        (6, 9),   # Even more challenging
+        (4, 8)
     ]
     
     verified_counterexamples = []
@@ -838,7 +837,7 @@ def quick_test():
 
     # Test allocation strategies
     test_allocation = [[0, 1], [2], [3], []]
-    alloc_obj = Allocation(test_allocation)
+    alloc_obj = Allocation(test_allocation, utilities)
     is_violated, violation_strength, violations, _ = searcher.check_efx_violation(utilities, alloc_obj)
 
     print(f"\nTest allocation: {test_allocation}")
