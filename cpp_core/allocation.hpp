@@ -3,7 +3,6 @@
 
 #include <vector>
 
-// Type aliases for better readability
 using Allocation = std::vector<std::vector<int>>;
 using Utilities = std::vector<std::vector<int>>;
 
@@ -13,7 +12,7 @@ int total_value(const Utilities& utils, int agent, const std::vector<int>& bundl
 // total utiliy that an agent assigns to bundle after removal
 int value_excluding_least(const Utilities& utils, int agent, const std::vector<int>& bundle);
 
-// checks if EFX
+// checks EFX
 bool isEFX(const Allocation& allocation, const Utilities& utilities);
 
 // brute force
