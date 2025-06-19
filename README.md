@@ -77,24 +77,12 @@ cd cpp_core
 
 ### **3. Run the Evolutionary Search (Most Important)**
 
-```bash
-# From the project root
-python -m evolutionary_rl.evolution_runner
-```
-
 **Or run the search directly:**
+This specifically tests if MM allocations are EFX, probably the biggest contribution at the moment.
 ```bash
 cd evolutionary_rl
 python evolutionary_search.py
 ```
-
-### **4. Run Python Analysis**
-
-```bash
-# From the project root
-python main.py
-```
-
 ---
 
 ## 🔬 Core Components
@@ -121,6 +109,7 @@ make run
 ### **B. Evolutionary Search (`evolutionary_rl/`)**
 
 **Purpose**: **Most important component** - searches for counterexamples to EFX existence
+Although this is currently in works and a bit junky, future improvements hopefully to come.
 
 **Key Features**:
 - Evolutionary algorithm to find difficult utility matrices
@@ -148,7 +137,7 @@ NUM_GENERATIONS = 200   # Number of generations
 
 ### **C. Python Analysis (`efx.py`, `main.py`)**
 
-**Purpose**: Core EFX implementation and analysis tools
+**Purpose**: Core EFX implementation and analysis tools. Mainly testing and generation for graphs. Will integrate better with the RL tools in future updates.
 
 **Key Features**:
 - EFX property verification
