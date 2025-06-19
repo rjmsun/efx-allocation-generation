@@ -1,6 +1,6 @@
 # Compiler and flags
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall -O2 -I.
+CXXFLAGS = -std=c++17 -Wall -O2 -I. -I/opt/homebrew/include
 
 # Executable name
 TARGET = mm_checker
