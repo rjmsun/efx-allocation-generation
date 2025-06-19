@@ -1,32 +1,46 @@
 # Compiler and flags
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall -O2 -I. -I/opt/homebrew/include
+CXXFLAGS = -std=c++11 -Wall -Wextra -O2
 
-# Executable name
+# Executables
 TARGET = mm_checker
 
 # Source files
-SRCS = mm.cpp allocation.cpp
+SOURCES = check_mm.cpp allocation.cpp
 
 # Object files
-OBJS = $(SRCS:.cpp=.o)
+OBJECTS = $(SOURCES:.cpp=.o)
 
 # Default target
 all: $(TARGET)
 
-# Link the object files to create the executable
-$(TARGET): $(OBJS)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS)
+# Build the executable
+$(TARGET): $(OBJECTS)
+	$(CXX) $(OBJECTS) -o $(TARGET)
 
-# Compile source files into object files
+# Compile source files to object files
 %.o: %.cpp allocation.hpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-# Clean up build files
-clean:
-	rm -f $(TARGET) $(OBJS)
-
-# Command to run the checker
-run: all
+# Run the program
+run: $(TARGET)
 	./$(TARGET)
+
+# Clean build artifacts
+clean:
+	rm -f $(OBJECTS) $(TARGET) mm.txt
+
+# Install dependencies (if needed)
+install:
+	# No external dependencies required for this project
+
+# Help target
+help:
+	@echo "Available targets:"
+	@echo "  all     - Build the executable (default)"
+	@echo "  run     - Build and run the program"
+	@echo "  clean   - Remove build artifacts"
+	@echo "  help    - Show this help message"
+
+.PHONY: all run clean install help
 
