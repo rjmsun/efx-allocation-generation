@@ -10,6 +10,9 @@
 #include <chrono>
 #include <iomanip>
 
+#include <nlohmann/json.hpp>
+using json = nlohmann::json;
+
 using namespace std;
 
 // Calculate total utility for an agent across all items
@@ -73,6 +76,14 @@ Utilities generate_random_utilities(int num_agents, int num_items) {
     return utils;
 }
 
+/*
+    This function generates utilities for a fixed pattern.
+    The first item is universally high value.
+    The second item is poisonous.
+    The third item is universally high value.
+    The fourth item is poisonous.
+    The remaining items have sporadic values.
+*/
 Utilities generate_fixed_pattern_utilities(int num_agents, int num_items) {
     Utilities utils(num_agents, vector<int>(num_items));
     random_device rd;
