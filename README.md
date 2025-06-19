@@ -310,21 +310,6 @@ This project builds on work by Chaudhury et al. and others in fair division theo
 
 ---
 
-## 🤝 Contributing
-
-1. **Report Issues**: Document any bugs or unexpected behavior
-2. **Add Tests**: Extend the test suite in `tests/`
-3. **Improve Search**: Enhance the evolutionary algorithms
-4. **Documentation**: Improve code comments and documentation
-
----
-
-## 📄 License
-
-[Add your license information here]
-
----
-
 ## 🙏 Acknowledgments
 
 - Based on theoretical work by Chaudhury et al.
