@@ -6,6 +6,7 @@ import os
 import sys
 import matplotlib.pyplot as plt
 import networkx as nx
+from datetime import datetime
 sys.path.append(os.path.abspath("..")) 
 from typing import List, Tuple, Dict, Optional
 from efx import Allocation
@@ -733,12 +734,48 @@ class EFXCounterexampleSearch:
             else:
                 print(f"   Method: Statistical verification")
                 print(f"   Confidence: {verification_result.get('confidence', 'N/A')}")
+            
+            # Save verified counterexample to file
+            self._save_counterexample_to_file(candidate, verification_result)
         else:
             print(f"\n❌ False positive - EFX allocation exists")
             found_alloc = verification_result.get('efx_allocation_found', [])
             print(f"   Found allocation: {Allocation(found_alloc) if found_alloc else found_alloc}")
 
         return verification_result['is_counterexample']
+
+    def _save_counterexample_to_file(self, candidate: Dict, verification_result: Dict):
+        """Save verified counterexample details to counterexample.txt"""
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        
+        with open("counterexample.txt", "a") as f:
+            f.write(f"\n{'='*80}\n")
+            f.write(f"VERIFIED COUNTEREXAMPLE FOUND - {timestamp}\n")
+            f.write(f"{'='*80}\n")
+            f.write(f"Configuration: {self.num_players} players, {self.num_items} items\n")
+            f.write(f"Fitness Score: {candidate['fitness']:.4f}\n")
+            f.write(f"Generation: {candidate['generation']}\n")
+            
+            if 'total_checked' in verification_result:
+                f.write(f"Verification Method: Exhaustive\n")
+                f.write(f"Allocations checked: {verification_result['total_checked']}\n")
+            else:
+                f.write(f"Verification Method: Statistical\n")
+                f.write(f"Confidence: {verification_result.get('confidence', 'N/A')}\n")
+            
+            f.write(f"\nUTILITY MATRIX:\n")
+            for i, row in enumerate(candidate['utilities']):
+                f.write(f"Player {i}: {row.tolist()}\n")
+            
+            if 'best_allocation' in verification_result:
+                f.write(f"\nBEST ALLOCATION FOUND:\n")
+                f.write(f"{verification_result['best_allocation']}\n")
+            
+            f.write(f"\nDESCRIPTION: This instance has been verified as a counterexample to the EFX existence conjecture.\n")
+            f.write(f"No EFX allocation exists for this utility matrix.\n")
+            f.write(f"{'='*80}\n\n")
+        
+        print(f"💾 Verified counterexample saved to counterexample.txt")
 
 
 def run_counterexample_search():

@@ -15,7 +15,7 @@ using namespace std;
 // Calculate total utility for an agent across all items
 int total_agent_utility(const Utilities& utils, int agent) {
     int total = 0;
-    for (int j = 0; j < utils[agent].size(); ++j) {
+    for (size_t j = 0; j < utils[agent].size(); ++j) {
         total += utils[agent][j];
     }
     return total;
@@ -23,9 +23,9 @@ int total_agent_utility(const Utilities& utils, int agent) {
 
 void print_matrix(const Utilities& utils, ostream& out) {
     out << "Utility matrix:\n";
-    for (int i = 0; i < utils.size(); i++) {
+    for (size_t i = 0; i < utils.size(); i++) {
         out << "Agent " << i << ": ";
-        for (int j = 0; j < utils[i].size(); j++) {
+        for (size_t j = 0; j < utils[i].size(); j++) {
             out << utils[i][j] << " ";
         }
         out << endl;
@@ -34,9 +34,9 @@ void print_matrix(const Utilities& utils, ostream& out) {
 
 void print_allocation(const Allocation& allocation, const Utilities& utils, ostream& out) {
     out << "Allocation:\n";
-    for (int i = 0; i < allocation.size(); i++) {
+    for (size_t i = 0; i < allocation.size(); i++) {
         out << "Agent " << i << " gets bundle {";
-        for (int j = 0; j < allocation[i].size(); j++) {
+        for (size_t j = 0; j < allocation[i].size(); j++) {
             out << allocation[i][j] << " ";
         }
         int bundle_value = total_value(utils, i, allocation[i]);
@@ -115,10 +115,10 @@ Utilities generate_fixed_pattern_utilities(int num_agents, int num_items) {
 
 void print_utilities(const Utilities& utils, ostream& out) {
     out << "Utility matrix:\n";
-    for (int i = 0; i < utils.size(); i++) {
+    for (size_t i = 0; i < utils.size(); i++) {
         int total = total_agent_utility(utils, i);
         out << "Agent " << i << " (Total utility: " << total << "): ";
-        for (int j = 0; j < utils[i].size(); j++) {
+        for (size_t j = 0; j < utils[i].size(); j++) {
             out << utils[i][j] << " ";
         }
         out << endl;
