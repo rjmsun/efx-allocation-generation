@@ -50,16 +50,40 @@ class Allocation:
         return strictly_better
     
     def weak_envy(self, i, j):
-        return self.value_of(i, self.bundles[j]) > self.value(i)
+        """Returns True if agent i weakly envies agent j."""
+        # First check if there's any envy at all
+        if not self.value_of(i, self.bundles[j]) > self.value(i):
+            return False
+        
+        # If there's envy, check if it's strong envy
+        # If it's strong envy, then it's not weak envy
+        if self.strong_envy(i, j):
+            return False
+        
+        # If there's envy but it's not strong envy, then it's weak envy
+        return True
 
     def strong_envy(self, i, j):
-        if not self.weak_envy(i, j):
+        """Returns True if agent i strongly envies agent j.
+        Strong envy means agent i envies agent j even after removing 
+        the least valuable item (from agent i's perspective) from agent j's bundle."""
+        
+        # First check if there's any envy at all
+        if not self.value_of(i, self.bundles[j]) > self.value(i):
             return False
-        for g in self.bundles[j]:
-            reduced = [x for x in self.bundles[j] if x != g]
-            if self.value_of(i, reduced) <= self.value(i):
-                return False
-        return True
+        
+        # Find the least valuable item in agent j's bundle from agent i's perspective
+        if not self.bundles[j]:  # If bundle is empty, no strong envy possible
+            return False
+            
+        least_valuable_item = min(self.bundles[j], key=lambda item: self.valuations[i][item])
+        
+        # Remove the least valuable item and check if envy still exists
+        reduced_bundle = [x for x in self.bundles[j] if x != least_valuable_item]
+        reduced_value = self.value_of(i, reduced_bundle)
+        
+        # If agent i still envies after removing the least valuable item, it's strong envy
+        return reduced_value > self.value(i)
 
     def value_of(self, agent, items):
         return sum(self.valuations[agent][item] for item in items)

@@ -1,0 +1,703 @@
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:01:57
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 8
+MM EFX allocations count: 0
+Max-min proportion: 0.29914529914529914
+
+UTILITY MATRIX:
+Agent 0: [ 4  1 17 14  4 86  4  4  5 15]
+Agent 1: [  3   3   5  16  11 100  93  14   7   1]
+Agent 2: [ 2 10 11 14 15 98 80 12  7 12]
+Agent 3: [ 1 16 16 17 17 10 19  1  1 19]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:01:58
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.3593314763231198
+
+UTILITY MATRIX:
+Agent 0: [18 83  6  3  7 10  3  3  9  8]
+Agent 1: [100  87  11  90  18   9  18   8   7  11]
+Agent 2: [15 19  5 97 19 19 18 11  5 13]
+Agent 3: [82  2  2  3 14 12 19 10  8 14]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:00
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 2
+MM EFX allocations count: 0
+Max-min proportion: 0.38011695906432746
+
+UTILITY MATRIX:
+Agent 0: [ 1 92 92 92 12 10  6 13  5 19]
+Agent 1: [ 8 93 14 89 12 13 16  9 19  3]
+Agent 2: [18  6 97 11 18 16  7 19  8  5]
+Agent 3: [ 6 18  3  4 17 18  9  7 11  3]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:00
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.390625
+
+UTILITY MATRIX:
+Agent 0: [15 13  5  6  4  5  2 12 11 13]
+Agent 1: [11 10  4  1 90  1 94 82  9 18]
+Agent 2: [ 11  13   3   1  12  12   5 100   3   9]
+Agent 3: [ 2 18 14  9 95  8 99  1  2  1]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:06
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 2
+MM EFX allocations count: 0
+Max-min proportion: 0.36936936936936937
+
+UTILITY MATRIX:
+Agent 0: [ 7 12 13 15  1  6 18 96 14 10]
+Agent 1: [ 10  18  17 100  17   9   4  17  14  16]
+Agent 2: [ 9  2  9 18 18 97 19 81  9 14]
+Agent 3: [ 8  1 16 88  1 91 16  8 12  9]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:07
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.3269230769230769
+
+UTILITY MATRIX:
+Agent 0: [  3  17   7  10   3   9  11  18  82 100]
+Agent 1: [ 2 95 10  7 19  1  4  4 14  5]
+Agent 2: [ 4 93 19  1 19  8 16  9 10 98]
+Agent 3: [ 4 19 12 13  8 12  8  7 89  3]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:09
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.3786127167630058
+
+UTILITY MATRIX:
+Agent 0: [18  9  4  1  6 17 19 12 14  5]
+Agent 1: [15  1 13  1  4  5 14  7 83 17]
+Agent 2: [19 13 11 11 17 12 92  7 82 82]
+Agent 3: [17  5 11  2  8  7 95 15 12 86]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:10
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.39759036144578314
+
+UTILITY MATRIX:
+Agent 0: [18  7  3 12 84 11 14  2 13 93]
+Agent 1: [82 11  6 11 96  4 15 14  4 91]
+Agent 2: [12  7 13 10  3  5 12 15  4  2]
+Agent 3: [97  9  9  7 10  7  6  7  4 13]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:12
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.3786407766990291
+
+UTILITY MATRIX:
+Agent 0: [  5  99 100   3  14   4   9   9  86   1]
+Agent 1: [ 2 14 18  7  5 12 10 15  8 12]
+Agent 2: [ 2  6 12  4  9  9 18  3 96  4]
+Agent 3: [ 5 92 87 11  8 19 10 13 19  7]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:15
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.32142857142857145
+
+UTILITY MATRIX:
+Agent 0: [ 3 19 15  9 17 83  9  1 85 12]
+Agent 1: [ 9 12 12 13  1  6  9  5 14  3]
+Agent 2: [ 5 14 18 14 13 90  9  4 12  6]
+Agent 3: [17  1  5  9 15 83 14 11 95 19]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:19
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.39255014326647564
+
+UTILITY MATRIX:
+Agent 0: [11  9 95 11  2  4  6 88  2  9]
+Agent 1: [16  2  7 12 19 18 11  7  3  9]
+Agent 2: [17 11 92  2 86 17 18 91  4 11]
+Agent 3: [16 14 16  7 90  9 18  2  7  5]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:21
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.3687150837988827
+
+UTILITY MATRIX:
+Agent 0: [ 1 18 10 15  5 13  4  3  9 93]
+Agent 1: [16 19 80 12  6 12 17  1 14  2]
+Agent 2: [ 7  1 85 93  1 17 17  1  7 16]
+Agent 3: [ 9 18 15 85  5 10  3  5 11 91]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:22
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.3696369636963696
+
+UTILITY MATRIX:
+Agent 0: [ 2 15 96 18  1  3  7 17 19 14]
+Agent 1: [16 81 99  5  4  1  7  2  1 87]
+Agent 2: [ 4 11 18 15 14 11 10  1  2  2]
+Agent 3: [ 2 89 17  4 10 13 11  2 13 94]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:23
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.3701657458563536
+
+UTILITY MATRIX:
+Agent 0: [12  7 16 12  4 12  4 82 11  1]
+Agent 1: [14  2 15 12  5  8 10  7  8  2]
+Agent 2: [13 10 19 16 94 15  4 92 86 13]
+Agent 3: [17 16 16 14 91 10  7 18 86 10]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:24
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.3653250773993808
+
+UTILITY MATRIX:
+Agent 0: [90 95 18  4  3  3  5 90  2 13]
+Agent 1: [84 11 16 11  1 13  1 19 12 17]
+Agent 2: [ 9 13 19  9  2 10 12 18 13 19]
+Agent 3: [ 1 86 17  9  7 10 19 94 10  5]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:25
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 4
+MM EFX allocations count: 0
+Max-min proportion: 0.34355828220858897
+
+UTILITY MATRIX:
+Agent 0: [ 2 19 10  3 10 84  9  8 15  3]
+Agent 1: [18 10  4 10 10 19  5 98  3  3]
+Agent 2: [14 17 87 14 11 11 18 95  2 18]
+Agent 3: [ 5 12 97 19 19 92  7 11  2 10]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:27
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.36416184971098264
+
+UTILITY MATRIX:
+Agent 0: [15 14 10 83 11  1 10 12 99 90]
+Agent 1: [15  1 14 10 18  6 16  8 81  4]
+Agent 2: [ 7 16  8 98 18 19 18  3  9  3]
+Agent 3: [ 3  4 13  3 11 14 16 16 12 84]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:28
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 3
+MM EFX allocations count: 0
+Max-min proportion: 0.3644578313253012
+
+UTILITY MATRIX:
+Agent 0: [ 1 10 17 16  3  9 11 91 11 12]
+Agent 1: [ 2 12 11 89 16  9  5 17  2 91]
+Agent 2: [ 8  5 11 16  3  8 17 16  9 13]
+Agent 3: [ 7 12 14 93 14  6  9 94  1 82]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:31
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.34293948126801155
+
+UTILITY MATRIX:
+Agent 0: [14 12  7 13 15 96  5 17 10 15]
+Agent 1: [83 91 11  9  3 91 17 13 12 17]
+Agent 2: [91  2 17 11  7 19  6  1 11 17]
+Agent 3: [ 8 85 10  5 12 15 11 18  4 17]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:34
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.35333333333333333
+
+UTILITY MATRIX:
+Agent 0: [ 5 12  7  4 14 99 14  2  1 10]
+Agent 1: [84  5  8  1 13  6  3  1 15  2]
+Agent 2: [82  1  2  6  7 82 88 15 11  6]
+Agent 3: [ 3 19 18  7  1  7 99 17  4  7]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:35
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.36666666666666664
+
+UTILITY MATRIX:
+Agent 0: [83 13  6 16  1  9 16  9 18  1]
+Agent 1: [13 12 12 11 15 83 18  3 16  2]
+Agent 2: [84  4 85 15  9 91  9 13  3 17]
+Agent 3: [ 6  1 98 14 17 17 10  5 18 11]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:35
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.3917525773195876
+
+UTILITY MATRIX:
+Agent 0: [90 13 80  1 14 18 12 15  5 18]
+Agent 1: [ 9 12 10  3  3 12  1 11  3 81]
+Agent 2: [87  3  2 17 16  9 16 11 16 17]
+Agent 3: [15 19 99  8 17  9  2  5  2 87]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:43
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.39556962025316456
+
+UTILITY MATRIX:
+Agent 0: [ 9  4 10  1 86  2 97  7 82 18]
+Agent 1: [ 6  2 10 11 88  9 90 11  6 16]
+Agent 2: [14  6  2  8 13  8 13  5  2 14]
+Agent 3: [ 9 10 10 12 13  2  1  8 89  1]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:44
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.35233160621761656
+
+UTILITY MATRIX:
+Agent 0: [13 84  6 97 14 14  4 18  9 15]
+Agent 1: [11 92  5 15  6 17  3 15  7 19]
+Agent 2: [14  5 13 81 12 11 10 18 18 96]
+Agent 3: [18 14 10 14  5  4 11 14 10 93]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:45
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.3469387755102041
+
+UTILITY MATRIX:
+Agent 0: [ 8 97 12 11 16  6  9 13  5 15]
+Agent 1: [12 81  5  9  3 14  4 89 10  7]
+Agent 2: [99 13 11 17 18 19 12 85 17  3]
+Agent 3: [94  8  6 10  8 16 15 13 14  1]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:46
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 2
+MM EFX allocations count: 0
+Max-min proportion: 0.3596673596673597
+
+UTILITY MATRIX:
+Agent 0: [34 58 18 80 20 19 93 84 24 51]
+Agent 1: [78 92 57 36 96 44 38 52 98 51]
+Agent 2: [12  7 58 10  1 10  6 26 40 55]
+Agent 3: [68 31 83 48 50 49 78 46 89 78]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:50
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.36099585062240663
+
+UTILITY MATRIX:
+Agent 0: [15 18  9 13 17 17  5  6  4 18]
+Agent 1: [ 4  7  6 14  8 18 81 10 85  1]
+Agent 2: [17 10  3 10 17 16 17 18 91 13]
+Agent 3: [ 7  7  1  5 10 11 87 11 86 16]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:51
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 3
+MM EFX allocations count: 0
+Max-min proportion: 0.35555555555555557
+
+UTILITY MATRIX:
+Agent 0: [16 93 93  6 17 12 17  4 10 19]
+Agent 1: [11 87  6 15 19  2 19  4 11  6]
+Agent 2: [ 2  2 89  6  7 17 13 12 17  6]
+Agent 3: [17 15  5 19  2 16  3 14 12 10]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:51
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 4
+MM EFX allocations count: 0
+Max-min proportion: 0.33
+
+UTILITY MATRIX:
+Agent 0: [92  7  4  9 16 16 14 11 12 86]
+Agent 1: [  5  18 100   3  13  14   7  14   7  19]
+Agent 2: [97  6  8  9  8  8 19  6  3 17]
+Agent 3: [ 7  6 90  4  9 19 18 15 11 94]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:52
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.33793103448275863
+
+UTILITY MATRIX:
+Agent 0: [ 9 16 88 13  8  2  1 10 10 12]
+Agent 1: [ 2  2  2  2 18  1  4 15 14 85]
+Agent 2: [15  7 91 13 18 12 91 14 15 83]
+Agent 3: [ 4  1  8  6 10  1 84 13 18  4]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:54
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 2
+MM EFX allocations count: 0
+Max-min proportion: 0.36075949367088606
+
+UTILITY MATRIX:
+Agent 0: [10 12  7 17  4  8 92 10 10  1]
+Agent 1: [ 2 80  6 98  3  4 14  6 12  6]
+Agent 2: [ 3 82 10  1 12 14  6 12  2 16]
+Agent 3: [ 5  6 15 84 19  6 89  2 16 16]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:57
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.3834808259587021
+
+UTILITY MATRIX:
+Agent 0: [ 1 17 15 13 19  6 10 12  8 12]
+Agent 1: [96 19  5  6 13 10  7 84 82 17]
+Agent 2: [81  4  4 18  9  1 11 10 14 10]
+Agent 3: [ 6 11  2  4 13 10 15 91 95 12]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:02:58
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.3597560975609756
+
+UTILITY MATRIX:
+Agent 0: [87  3  9  1  8 14  8  2 19 13]
+Agent 1: [ 7 11  9 10  3 12 92 83  6  4]
+Agent 2: [80  1  8  4 15 18 83  9 17 10]
+Agent 3: [ 6  2 13 14  4  3 14 81  6  7]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:03:01
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.4015957446808511
+
+UTILITY MATRIX:
+Agent 0: [ 13 100   1  19  97  11   5  19 100  11]
+Agent 1: [18  2 16  7 12 16 14  3  8  3]
+Agent 2: [ 2 97 16  6  6  2 19 19 18  1]
+Agent 3: [10 15  1  2 92  8  1  9 95 11]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:03:02
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.35175879396984927
+
+UTILITY MATRIX:
+Agent 0: [99 14  6 10  8  3  9 85 10  8]
+Agent 1: [17 13 10 15 12  2 13  5 10 19]
+Agent 2: [99  8 14  5  9 16 12  5 12 19]
+Agent 3: [86 16  6  7 14 11  6 91  1 14]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:03:04
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.3559322033898305
+
+UTILITY MATRIX:
+Agent 0: [11  7 84 89 16 12  4 15 10 18]
+Agent 1: [ 2 17 19 92  5 16 17 12 13 12]
+Agent 2: [ 15   1  17  11   7  10 100  16  19   1]
+Agent 3: [ 8  5 84  8  5 12 97 10  5  2]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+
+
+================================================================================
+COUNTEREXAMPLE FOUND - 2025-06-20 15:03:07
+================================================================================
+Configuration: 4 agents, 10 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.3614457831325301
+
+UTILITY MATRIX:
+Agent 0: [ 5 17 10  6 89  1  4 19 17 16]
+Agent 1: [16  9 11 94  7 12 10  2  2  2]
+Agent 2: [85 18  8 85 96 10  6 16  7  1]
+Agent 3: [85  2  8  9 13 10  2  8  9 11]
+
+DESCRIPTION: This instance has at least one MM allocation, none of which are EFX.
+This constitutes a counterexample to the MM -> EFX conjecture.
+================================================================================
+

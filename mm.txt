@@ -1,6 +1,0 @@
---- MM and EFX Allocation Finder ---
-Utility matrix:
-Agent 0 (Total utility: 447): 4 6 5 52 89 97 63 44 10 77 
-Agent 1 (Total utility: 380): 49 84 3 23 47 41 14 38 47 34 
-Agent 2 (Total utility: 328): 61 46 21 17 6 5 59 80 29 4 
-Agent 3 (Total utility: 666): 99 26 61 97 77 71 55 73 95 12 
