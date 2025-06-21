@@ -113,6 +113,50 @@ Utilities generate_fixed_pattern_utilities(int num_agents, int num_items) {
     return utils;
 }
 
+Utilities read_utilities_from_file(const string& filename, int num_agents, int num_items) {
+    Utilities utils(num_agents, vector<int>(num_items));
+    ifstream file(filename);
+    
+    if (!file.is_open()) {
+        cerr << "Error: Could not open file " << filename << endl;
+        // Return default utilities if file can't be opened
+        return generate_random_utilities(num_agents, num_items);
+    }
+    
+    string line;
+    int agent = 0;
+    
+    while (getline(file, line) && agent < num_agents) {
+        // Remove brackets and extra whitespace
+        string cleaned_line = line;
+        cleaned_line.erase(remove(cleaned_line.begin(), cleaned_line.end(), '['), cleaned_line.end());
+        cleaned_line.erase(remove(cleaned_line.begin(), cleaned_line.end(), ']'), cleaned_line.end());
+        
+        // Parse the numbers
+        stringstream ss(cleaned_line);
+        int item = 0;
+        int value;
+        
+        while (ss >> value && item < num_items) {
+            utils[agent][item] = value;
+            item++;
+        }
+        
+        if (item != num_items) {
+            cerr << "Warning: Agent " << agent << " has " << item << " values, expected " << num_items << endl;
+        }
+        
+        agent++;
+    }
+    
+    if (agent != num_agents) {
+        cerr << "Warning: Read " << agent << " agents, expected " << num_agents << endl;
+    }
+    
+    file.close();
+    return utils;
+}
+
 void print_utilities(const Utilities& utils, ostream& out) {
     out << "Utility matrix:\n";
     for (size_t i = 0; i < utils.size(); i++) {
@@ -123,6 +167,15 @@ void print_utilities(const Utilities& utils, ostream& out) {
         }
         out << endl;
     }
+}
+
+Utilities generate_builtin_utilities() {
+    Utilities utils(4, vector<int>(10));
+    utils[0] = {5, 17, 10, 6, 89, 1, 4, 19, 17, 16};
+    utils[1] = {16, 9, 11, 94, 7, 12, 10, 2, 2, 2};
+    utils[2] = {85, 18, 8, 85, 96, 10, 6, 16, 7, 1};
+    utils[3] = {85, 2, 8, 9, 13, 10, 2, 8, 9, 11};
+    return utils;
 }
 
 int main() {
@@ -149,6 +202,8 @@ int main() {
     cout << "(R)andom utilities\n";
     cout << "(M)anual input\n";
     cout << "(F)ixed pattern (some high value, some poisonous, some sporadic)\n";
+    cout << "(B)uilt in utilities\n";
+    cout << "(T)ext file (check_mm_utilities.txt)\n";
     cout << "Choice: ";
     cin >> choice;
 
@@ -158,6 +213,10 @@ int main() {
         utilities = get_manual_utilities(num_agents, num_items);
     } else if (choice == 'F' || choice == 'f') {
         utilities = generate_fixed_pattern_utilities(num_agents, num_items);
+    } else if (choice == 'B' || choice == 'b') {
+        utilities = generate_builtin_utilities();
+    } else if (choice == 'T' || choice == 't') {
+        utilities = read_utilities_from_file("check_mm_utilities.txt", num_agents, num_items);
     } else {
         cout << "Invalid choice, defaulting to random utilities.\n";
         utilities = generate_random_utilities(num_agents, num_items);
