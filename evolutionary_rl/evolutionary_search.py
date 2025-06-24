@@ -10,7 +10,7 @@ from datetime import datetime
 # --- Configuration ---
 # These can be adjusted for your search
 NUM_AGENTS = 4
-NUM_ITEMS = 10
+NUM_ITEMS = 9
 CPP_EXECUTABLE = "./mm_checker"  # Path to your compiled C++ program
 
 # --- Evolutionary Algorithm Parameters ---
@@ -81,6 +81,26 @@ class CounterexampleSearch:
             for row in utilities:
                 print(f"  {row}")
             print("\nThis instance has at least one MM allocation, none of which are EFX.")
+            # Print MM allocations that are not EFX
+            mm_allocs = results.get("mm_allocations", [])
+            print("\nMM allocations (not EFX):")
+            for alloc in mm_allocs:
+                print(alloc)
+                # Print strong envy and envy edges for this allocation
+                try:
+                    from efx import Allocation
+                    from graphs import build_strong_envy_graph, build_envy_graph
+                    allocation_obj = Allocation(alloc, utilities)
+                    strong_envy_edges = build_strong_envy_graph(allocation_obj)
+                    envy_edges = build_envy_graph(allocation_obj)
+                    print("Strong envy edges:")
+                    for i, j in strong_envy_edges:
+                        print(f"{i} -> {j}")
+                    print("Envy edges in general (weak or strong):")
+                    for i, j in envy_edges:
+                        print(f"{i} -> {j}")
+                except Exception as e:
+                    print(f"[Error printing envy edges: {e}]")
             print("="*62 + "\n")
             
             # Save counterexample to file

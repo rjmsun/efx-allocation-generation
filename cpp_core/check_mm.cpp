@@ -170,11 +170,12 @@ void print_utilities(const Utilities& utils, ostream& out) {
 }
 
 Utilities generate_builtin_utilities() {
-    Utilities utils(4, vector<int>(10));
-    utils[0] = {5, 17, 10, 6, 89, 1, 4, 19, 17, 16};
-    utils[1] = {16, 9, 11, 94, 7, 12, 10, 2, 2, 2};
-    utils[2] = {85, 18, 8, 85, 96, 10, 6, 16, 7, 1};
-    utils[3] = {85, 2, 8, 9, 13, 10, 2, 8, 9, 11};
+    Utilities utils(5, vector<int>(10));
+    utils[0] = {14,  9, 16,  1,  7, 15,  4,  1, 10,  5};
+    utils[1] = { 2,  5, 19, 18,  9,  9, 12, 17, 17,  8};
+    utils[2] = { 3, 10, 89,  4, 19, 18,  2, 11, 89,  9};
+    utils[3] = { 8, 87, 83, 18, 12, 11,  4,  6,100, 16};
+    utils[4] = { 2, 87,  8, 12,  7, 16, 18,  5, 12, 12};
     return utils;
 }
 
@@ -186,15 +187,17 @@ int main() {
         return 1;
     }
 
-    int num_agents = 4;
+    int num_agents = 5;
     int num_items = 10; // Defaulting to 10 for speed. 4^15 is very slow.
 
     cout << "--- MM and EFX Allocation Finder ---\n";
     outfile << "--- MM and EFX Allocation Finder ---\n";
+    /*
     cout << "Enter number of agents (e.g., 4): ";
     cin >> num_agents;
     cout << "Enter number of items (e.g., 10). Warning: >12 for 4 agents can be very slow: ";
     cin >> num_items;
+    */
 
     Utilities utilities;
     char choice;
@@ -206,6 +209,7 @@ int main() {
     cout << "(T)ext file (check_mm_utilities.txt)\n";
     cout << "Choice: ";
     cin >> choice;
+    
 
     if (choice == 'R' || choice == 'r') {
         utilities = generate_random_utilities(num_agents, num_items);

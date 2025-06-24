@@ -234,12 +234,11 @@ int main(int argc, char* argv[]) {
         result["mm_allocations_count"] = mm_allocations.size();
         result["mm_efx_allocations_count"] = mm_efx_allocations.size();
         
-        // Optional: include the allocations themselves if needed
-        // json mm_allocs_json = json::array();
-        // for(const auto& alloc : mm_allocations){
-        //     mm_allocs_json.push_back(alloc);
-        // }
-        // result["mm_allocations"] = mm_allocs_json;
+        json mm_allocs_json = json::array();
+        for(const auto& alloc : mm_allocations){
+            mm_allocs_json.push_back(alloc);
+        }
+        result["mm_allocations"] = mm_allocs_json;
 
         cout << result.dump() << endl;
     } else {

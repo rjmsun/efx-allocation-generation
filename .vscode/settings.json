@@ -1,7 +1,8 @@
 {
     "files.associations": {
         "istream": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "vector": "cpp"
     },
     "C_Cpp.default.includePath": [
         "${workspaceFolder}/**",

@@ -25,7 +25,7 @@ class Allocation:
                         return False
         return True
 
-    def is_maximal(self):
+    def is_maximal(self): # doesn't work.
         """Returns the minimum utility across all agents (used for max-min fairness)."""
         return min(self.value(i) for i in range(self.n))
 
@@ -84,6 +84,10 @@ class Allocation:
         
         # If agent i still envies after removing the least valuable item, it's strong envy
         return reduced_value > self.value(i)
+    
+    def envy(self, i, j):
+        """Returns True if agent i envies agent j."""
+        return self.value_of(i, self.bundles[j]) > self.value(i)
 
     def value_of(self, agent, items):
         return sum(self.valuations[agent][item] for item in items)

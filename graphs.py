@@ -17,6 +17,22 @@ def build_strong_envy_graph(allocation):
                 edges.append((i, j))
     return edges
 
+def build_weak_envy_graph(allocation):
+    edges = []
+    for i in range(allocation.n):
+        for j in range(allocation.n):
+            if i != j and allocation.weak_envy(i, j):
+                edges.append((i, j))
+    return edges
+
+def build_envy_graph(allocation):
+    edges = []
+    for i in range(allocation.n):
+        for j in range(allocation.n):
+            if i != j and allocation.envy(i, j):
+                edges.append((i, j))
+    return edges
+
 
 # Placeholder function for generating valuation distributions for testing
 import numpy as np
