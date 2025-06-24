@@ -3,9 +3,10 @@
 #include <limits>
 #include <cmath>
 #include <iostream>
+using namespace std;
 
 // Computes total utility an agent assigns to a bundle
-int total_value(const Utilities& utils, int agent, const std::vector<int>& bundle) {
+int total_value(const Utilities& utils, int agent, const vector<int>& bundle) {
     int total = 0;
     for (int item : bundle) {
         total += utils[agent][item];
@@ -14,16 +15,16 @@ int total_value(const Utilities& utils, int agent, const std::vector<int>& bundl
 }
 
 // Computes utility excluding the least valued item in the bundle
-int value_excluding_least(const Utilities& utils, int agent, const std::vector<int>& bundle) {
+int value_excluding_least(const Utilities& utils, int agent, const vector<int>& bundle) {
     if (bundle.empty()) return 0;
     
-    int min_value = std::numeric_limits<int>::max();
+    int min_value = numeric_limits<int>::max();
     int total = 0;
     
     for (int item : bundle) {
         int value = utils[agent][item];
         total += value;
-        min_value = std::min(min_value, value);
+        min_value = min(min_value, value);
     }
     
     return total - min_value;
@@ -75,4 +76,63 @@ bool hasEFXAllocation(const Utilities& utilities, int num_items) {
         }
     }
     return false;
+}
+
+// Returns true if alloc1 Pareto dominates alloc2 (all agents at least as good, one strictly better)
+bool pareto_dominates(const Allocation& alloc1, const Allocation& alloc2, const Utilities& utils) {
+    int n = alloc1.size();
+    bool at_least_one_strictly_better = false;
+    for (int i = 0; i < n; ++i) {
+        int v1 = total_value(utils, i, alloc1[i]);
+        int v2 = total_value(utils, i, alloc2[i]);
+        if (v1 < v2) return false;
+        if (v1 > v2) at_least_one_strictly_better = true;
+    }
+    return at_least_one_strictly_better;
+}
+
+// Returns true if alloc is Pareto optimal among EFX allocations in the list
+bool isParetoOptimalEFX(const Allocation& alloc, const Utilities& utils, const vector<Allocation>& efx_allocs) {
+    for (const auto& other : efx_allocs) {
+        if (&other == &alloc) continue;
+        if (isEFX(other, utils) && pareto_dominates(other, alloc, utils)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Returns the minimum percentage utility for an allocation
+static double min_percentage_utility(const Allocation& alloc, const Utilities& utils) {
+    int n = alloc.size();
+    double min_percentage = numeric_limits<double>::max();
+    for (int i = 0; i < n; ++i) {
+        int bundle_value = total_value(utils, i, alloc[i]);
+        int total_utility = 0;
+        for (size_t item = 0; item < utils[i].size(); ++item) {
+            total_utility += utils[i][item];
+        }
+        double percentage = (total_utility > 0) ? (double)bundle_value / total_utility : 0.0;
+        min_percentage = min(min_percentage, percentage);
+    }
+    return min_percentage;
+}
+
+// Returns true if alloc1 min-dominates alloc2 (min percentage utility in alloc1 > min percentage utility in alloc2)
+bool min_dominates(const Allocation& alloc1, const Allocation& alloc2, const Utilities& utils) {
+    double min1 = min_percentage_utility(alloc1, utils);
+    double min2 = min_percentage_utility(alloc2, utils);
+    return min1 > min2;
+}
+
+// Returns true if alloc is min-optimal among EFX allocations in the list
+bool isMinOptimalEFX(const Allocation& alloc, const Utilities& utils, const vector<Allocation>& efx_allocs) {
+    double min_val = min_percentage_utility(alloc, utils);
+    for (const auto& other : efx_allocs) {
+        if (&other == &alloc) continue;
+        if (isEFX(other, utils) && min_percentage_utility(other, utils) > min_val) {
+            return false;
+        }
+    }
+    return true;
 }

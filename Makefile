@@ -1,5 +1,5 @@
 # Makefile for EFX Project
-MAIN=main.py
+MAIN=evolutionary_rl/evolutionary_search.py
 .PHONY: all run test clean cpp-build cpp-run
 run:
 	@echo "Running $(MAIN)..."

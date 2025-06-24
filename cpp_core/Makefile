@@ -14,8 +14,13 @@ MM_SOURCES = mm.cpp allocation.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
 MM_OBJECTS = $(MM_SOURCES:.cpp=.o)
 
+# Add efxpomo target
+EFXPOMO = efxpomo
+EFXPOMO_SOURCES = efxpomo.cpp allocation.cpp
+EFXPOMO_OBJECTS = $(EFXPOMO_SOURCES:.cpp=.o)
+
 # Default target
-all: $(TARGET)
+all: $(TARGET) $(MM_CHECKER) $(EFXPOMO)
 
 # Build the executable
 $(TARGET): $(OBJECTS)
@@ -24,6 +29,7 @@ $(TARGET): $(OBJECTS)
 # Build mm_checker from mm.cpp
 $(MM_CHECKER): $(MM_OBJECTS)
 	$(CXX) $(MM_OBJECTS) -o $(MM_CHECKER)
+	mv -f $(MM_CHECKER) ..
 
 # Compile source files to object files
 %.o: %.cpp allocation.hpp
@@ -37,9 +43,18 @@ run: $(TARGET)
 run_mm: $(MM_CHECKER)
 	./$(MM_CHECKER)
 
+# Build efxpomo
+$(EFXPOMO): $(EFXPOMO_OBJECTS)
+	$(CXX) $(CXXFLAGS) $(EFXPOMO_OBJECTS) -o $(EFXPOMO)
+	mv -f $(EFXPOMO) ..
+
+efxpomo.o: efxpomo.cpp allocation.hpp
+	$(CXX) $(CXXFLAGS) -c efxpomo.cpp -o efxpomo.o
+
 # Clean build artifacts
 clean:
-	rm -f $(OBJECTS) $(MM_OBJECTS) $(TARGET) $(MM_CHECKER) mm.txt
+	rm -f $(OBJECTS) $(MM_OBJECTS) $(TARGET) $(MM_CHECKER) $(EFXPOMO_OBJECTS) mm.txt
+	rm -f ../mm_checker ../efxpomo
 
 # Install dependencies (if needed)
 install:

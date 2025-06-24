@@ -6,6 +6,11 @@ import random
 import time
 import heapq
 from datetime import datetime
+from pathlib import Path
+import sys
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+from efx import Allocation
+from graphs import build_strong_envy_graph, build_envy_graph
 
 # --- Configuration ---
 # These can be adjusted for your search
@@ -73,49 +78,133 @@ class CounterexampleSearch:
 
         num_mm_allocations = results.get("mm_allocations_count", 0)
         num_mm_efx_allocations = results.get("mm_efx_allocations_count", 0)
+        max_min_proportion = results.get("max_min_proportion", "N/A")
+
+        # Compute min-optimal EFX allocations and proportion
+        min_optimal_efx = []
+        min_optimal_efx_proportion = 'N/A'
+        try:
+            proc_input = f"{self.num_agents}\n{self.num_items}\n"
+            for row in utilities:
+                proc_input += " ".join(map(str, row)) + "\n"
+            result = subprocess.run([
+                os.path.join(os.path.dirname(self.cpp_executable), "efxpomo"), "--automate"
+            ], input=proc_input, capture_output=True, text=True, timeout=60)
+            if result.returncode == 0:
+                efx_json = json.loads(result.stdout)
+                min_optimal_efx = efx_json.get("min_optimal_efx_allocations", [])
+                if min_optimal_efx:
+                    min_percentages = []
+                    for alloc in min_optimal_efx:
+                        min_prop = float('inf')
+                        for agent_idx, bundle in enumerate(alloc):
+                            bundle_value = sum(utilities[agent_idx][item] for item in bundle)
+                            total_utility = sum(utilities[agent_idx])
+                            prop = (bundle_value / total_utility) if total_utility > 0 else 0.0
+                            min_prop = min(min_prop, prop)
+                        min_percentages.append(min_prop)
+                    if min_percentages:
+                        min_optimal_efx_proportion = f"{max(min_percentages):.4f}"
+        except Exception:
+            pass
 
         if num_mm_allocations > 0 and num_mm_efx_allocations == 0:
             # This is a counterexample!
-            print("\n" + "="*20 + " COUNTEREXAMPLE FOUND! " + "="*20)
-            print("UTILITY MATRIX:")
+            output_lines = []
+            output_lines.append("="*80)
+            output_lines.append("COUNTEREXAMPLE FOUND")
+            output_lines.append("="*80)
+            output_lines.append(f"Configuration: {self.num_agents} agents, {self.num_items} items")
+            output_lines.append(f"MM allocations count: {num_mm_allocations}")
+            output_lines.append(f"MM EFX allocations count: {num_mm_efx_allocations}")
+            output_lines.append(f"Max-min proportion: {max_min_proportion}")
+            output_lines.append(f"Min-optimal EFX proportion: {min_optimal_efx_proportion}")
+            output_lines.append("")
+            output_lines.append("Utility Matrix:")
             for row in utilities:
-                print(f"  {row}")
-            print("\nThis instance has at least one MM allocation, none of which are EFX.")
-            # Print MM allocations that are not EFX
+                output_lines.append("  " + str(row.tolist()))
+            output_lines.append("")
+            output_lines.append("MM Allocations (non EFX):")
             mm_allocs = results.get("mm_allocations", [])
-            print("\nMM allocations (not EFX):")
-            for alloc in mm_allocs:
-                print(alloc)
-                # Print strong envy and envy edges for this allocation
-                try:
-                    from efx import Allocation
-                    from graphs import build_strong_envy_graph, build_envy_graph
-                    allocation_obj = Allocation(alloc, utilities)
-                    strong_envy_edges = build_strong_envy_graph(allocation_obj)
-                    envy_edges = build_envy_graph(allocation_obj)
-                    print("Strong envy edges:")
-                    for i, j in strong_envy_edges:
-                        print(f"{i} -> {j}")
-                    print("Envy edges in general (weak or strong):")
-                    for i, j in envy_edges:
-                        print(f"{i} -> {j}")
-                except Exception as e:
-                    print(f"[Error printing envy edges: {e}]")
-            print("="*62 + "\n")
-            
-            # Save counterexample to file
-            self._save_counterexample_to_file(utilities, results)
-            
+            if mm_allocs:
+                for alloc in mm_allocs:
+                    try:
+                        allocation_obj = Allocation(alloc, utilities)
+                        for agent_idx, bundle in enumerate(allocation_obj.bundles):
+                            bundle_value = allocation_obj.value_of(agent_idx, bundle)
+                            total_utility = sum(utilities[agent_idx])
+                            proportion = (bundle_value / total_utility) * 100 if total_utility > 0 else 0.0
+                            output_lines.append(f"Agent {agent_idx} gets bundle {{{' '.join(map(str, bundle))} }}. (Value: {bundle_value}, {proportion:.2f}% of total utility)")
+                        output_lines.append("")
+                    except Exception as e:
+                        output_lines.append(f"[Error printing allocation: {e}]")
+            else:
+                output_lines.append("  None")
+            output_lines.append("")
+            output_lines.append("Strong Envy Edges:")
+            if mm_allocs:
+                for alloc in mm_allocs:
+                    try:
+                        allocation_obj = Allocation(alloc, utilities)
+                        strong_envy_edges = build_strong_envy_graph(allocation_obj)
+                        if strong_envy_edges:
+                            for i, j in strong_envy_edges:
+                                output_lines.append(f"{i} -> {j}")
+                        else:
+                            output_lines.append("  None")
+                        output_lines.append("")
+                    except Exception as e:
+                        output_lines.append(f"[Error printing strong envy edges: {e}]")
+            else:
+                output_lines.append("  None\n")
+            output_lines.append("Envy Edges in General (weak or Strong)")
+            if mm_allocs:
+                for alloc in mm_allocs:
+                    try:
+                        allocation_obj = Allocation(alloc, utilities)
+                        envy_edges = build_envy_graph(allocation_obj)
+                        if envy_edges:
+                            for i, j in envy_edges:
+                                output_lines.append(f"{i} -> {j}")
+                        else:
+                            output_lines.append("  None")
+                        output_lines.append("")
+                    except Exception as e:
+                        output_lines.append(f"[Error printing envy edges: {e}]")
+            else:
+                output_lines.append("  None\n")
+            output_lines.append("Min-Optimal EFX allocations:")
+            if min_optimal_efx:
+                for idx, alloc in enumerate(min_optimal_efx, 1):
+                    output_lines.append(f"Min-optimal EFX allocation #{idx}:")
+                    for agent_idx, bundle in enumerate(alloc):
+                        bundle_value = sum(utilities[agent_idx][item] for item in bundle)
+                        total_utility = sum(utilities[agent_idx])
+                        proportion = (bundle_value / total_utility) * 100 if total_utility > 0 else 0.0
+                        output_lines.append(f"Agent {agent_idx} gets bundle {{{' '.join(map(str, bundle))} }}. (Value: {bundle_value}, {proportion:.2f}% of total utility)")
+                    output_lines.append("")
+            else:
+                output_lines.append("  None\n")
+            output_lines.append("="*80)
+            output_lines.append("")
+            # Print and save all output
+            output_str = "\n".join(output_lines)
+            print(output_str)
+            with open("counterexample.txt", "a") as f:
+                f.write(output_str + "\n")
             # Store the candidate for later analysis
             heapq.heappush(self.best_candidates, (1.0, utilities.tolist(), results))
             return 1.0
-        
         return 0.0
 
     def _save_counterexample_to_file(self, utilities, results):
         """Save counterexample details to counterexample.txt"""
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        
+        from pathlib import Path
+        import sys
+        sys.path.append(str(Path(__file__).resolve().parent.parent))
+        from efx import Allocation
+        from graphs import build_strong_envy_graph, build_envy_graph
         with open("counterexample.txt", "a") as f:
             f.write(f"\n{'='*80}\n")
             f.write(f"COUNTEREXAMPLE FOUND - {timestamp}\n")
@@ -124,15 +213,35 @@ class CounterexampleSearch:
             f.write(f"MM allocations count: {results.get('mm_allocations_count', 0)}\n")
             f.write(f"MM EFX allocations count: {results.get('mm_efx_allocations_count', 0)}\n")
             f.write(f"Max-min proportion: {results.get('max_min_proportion', 'N/A')}\n\n")
-            
             f.write("UTILITY MATRIX:\n")
             for i, row in enumerate(utilities):
                 f.write(f"Agent {i}: {row}\n")
-            
             f.write(f"\nDESCRIPTION: This instance has at least one MM allocation, none of which are EFX.\n")
             f.write(f"This constitutes a counterexample to the MM -> EFX conjecture.\n")
-            f.write(f"{'='*80}\n\n")
-        
+            mm_allocs = results.get("mm_allocations", [])
+            f.write(f"\nMM allocations (not EFX):\n")
+            for alloc in mm_allocs:
+                try:
+                    allocation_obj = Allocation(alloc, utilities)
+                    for agent_idx, bundle in enumerate(allocation_obj.bundles):
+                        bundle_value = allocation_obj.value_of(agent_idx, bundle)
+                        total_utility = sum(utilities[agent_idx])
+                        proportion = (bundle_value / total_utility) * 100 if total_utility > 0 else 0.0
+                        f.write(f"Agent {agent_idx} gets bundle {{{' '.join(map(str, bundle))} }}. (Value: {bundle_value}, {proportion:.2f}% of total utility)\n")
+                    f.write("\n")
+                    strong_envy_edges = build_strong_envy_graph(allocation_obj)
+                    f.write("Strong envy edges:\n")
+                    for i, j in strong_envy_edges:
+                        f.write(f"{i} -> {j}\n")
+                    f.write("\n")
+                    envy_edges = build_envy_graph(allocation_obj)
+                    f.write("Envy edges in general (weak or strong):\n")
+                    for i, j in envy_edges:
+                        f.write(f"{i} -> {j}\n")
+                    f.write("\n")
+                except Exception as e:
+                    f.write(f"[Error printing allocation/envy edges: {e}]\n")
+            f.write(f"\n\n\n\n\n\n\n\n")
         print(f"💾 Counterexample saved to counterexample.txt")
 
     def _generate_initial_population(self):

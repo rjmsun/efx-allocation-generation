@@ -74,7 +74,7 @@ class Allocation:
         
         # Find the least valuable item in agent j's bundle from agent i's perspective
         if not self.bundles[j]:  # If bundle is empty, no strong envy possible
-            return False
+                return False
             
         least_valuable_item = min(self.bundles[j], key=lambda item: self.valuations[i][item])
         
