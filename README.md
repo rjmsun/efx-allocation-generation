@@ -1,8 +1,8 @@
-# 🧠 EFX Allocation Generation: Fair Division Research Project
+# EFX Allocation Generation: Fair Division Research Project
 
 This project implements a comprehensive computational framework to analyze fairness and efficiency properties of indivisible allocations, with a primary focus on finding counterexamples to the **EFX existence conjecture** for four or more agents.
 
-## 🎯 Project Overview
+## Project Overview
 
 ### **Primary Research Goal**
 Search for a **counterexample to the EFX existence conjecture** for \( n \geq 4 \) agents with additive valuations — i.e., a utility matrix with no EFX allocation.
@@ -14,31 +14,34 @@ Search for a **counterexample to the EFX existence conjecture** for \( n \geq 4 
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 efx-allocation-generation/
 ├── cpp_core/                    # High-performance C++ implementation
-│   ├── check_mm.cpp            # Main MM/EFX checker
+│   ├── check_mm.cpp            # Brute force MM allocation finder and EFX tester
+│   ├── mm.cpp                  # Alternative MM allocation brute force algorithm
+│   ├── mms.cpp                 # Algorithm to find approximately MMS allocations
+│   ├── efxpo.cpp               # Find Pareto optimal EFX allocations
 │   ├── allocation.cpp          # EFX verification algorithms
 │   ├── allocation.hpp          # Header definitions
 │   ├── Makefile               # Build configuration
 │   ├── run_mm_checker.sh      # Convenient run script
 │   └── README.md              # C++ specific documentation
 ├── evolutionary_rl/            # Advanced search algorithms
-│   ├── evolutionary_search.py  # Evolutionary algorithm for counterexamples
+│   ├── evolutionary_search.py  # Core evolutionary search for MM/EFX counterexamples
 │   ├── rl_search.py           # Reinforcement learning enhanced search
 │   ├── evolution_runner.py    # Automated search runner
 │   └── graph_outputs/         # Visualization outputs
 ├── notebooks/                  # Jupyter notebooks for analysis
-│   ├── efx_testing.ipynb      # EFX property testing
+│   ├── analyze_graphs.ipynb    # Graph visualization and analysis
 │   ├── mms_testing.ipynb      # MMS property analysis
-│   └── champion_graph_visualization.ipynb
+│   └── test_imports.py
 ├── tests/                     # Unit tests
 ├── data/                      # Valuation data and results
-├── efx.py                     # Core Python EFX implementation
-├── main.py                    # Main analysis script
-├── graphs.py                  # Graph visualization utilities
+├── efx.py                     # Core Python EFX implementation with allocation class
+├── main.py                    # Simple test script
+├── graphs.py                  # Graph visualization utilities and graph qualities
 ├── search_utils.py            # Search utility functions
 ├── counterexample.txt         # Found counterexamples
 └── Makefile                   # Project-wide build configuration
@@ -46,7 +49,7 @@ efx-allocation-generation/
 
 ---
 
-## 🚀 Quick Start Guide
+## Quick Start Guide
 
 ### **1. Environment Setup**
 
@@ -62,7 +65,25 @@ pip install numpy matplotlib jupyter networkx
 g++ --version
 ```
 
-### **2. Run the C++ MM/EFX Checker**
+### **2. Run the Core Evolutionary Search (Most Important)**
+
+The evolutionary search is the core of this project. Here's how to run it:
+
+```bash
+# First, compile the C++ backend
+cd cpp_core
+make clean && make
+
+# Return to project root
+cd ..
+
+# Run the evolutionary search
+make
+```
+
+This will execute `evolutionary_search.py`, which is a simple evolutionary search that looks for MM/EFX counterexamples.
+
+### **3. Run the C++ MM/EFX Checker**
 
 ```bash
 cd cpp_core
@@ -75,33 +96,26 @@ cd cpp_core
 ./run_mm_checker.sh
 ```
 
-### **3. Run the Evolutionary Search (Most Important)**
-
-```bash
-# From the project root
-python -m evolutionary_rl.evolution_runner
-```
-
-**Or run the search directly:**
-```bash
-cd evolutionary_rl
-python evolutionary_search.py
-```
-
 ### **4. Run Python Analysis**
 
 ```bash
 # From the project root
-python main.py
+python main.py  # Simple test script
 ```
 
 ---
 
-## 🔬 Core Components
+## Core Components
 
 ### **A. C++ Backend (`cpp_core/`)**
 
 **Purpose**: High-performance brute-force verification for small instances
+
+**Key Files**:
+- **`check_mm.cpp`**: Brute force MM allocation finder and EFX tester
+- **`mm.cpp`**: Alternative MM allocation brute force algorithm  
+- **`mms.cpp`**: Algorithm to find approximately MMS allocations
+- **`efxpo.cpp`**: Find Pareto optimal EFX allocations
 
 **Key Features**:
 - Fast EFX checking for up to 4 agents, 12 items
@@ -118,24 +132,20 @@ make run
 
 **Output**: Finds all MM allocations and checks which ones are EFX
 
-### **B. Evolutionary Search (`evolutionary_rl/`)**
+### **B. Evolutionary Search (`evolutionary_rl/evolutionary_search.py`)**
 
-**Purpose**: **Most important component** - searches for counterexamples to EFX existence
+**Purpose**: **Core component** - simple evolutionary search that looks for MM/EFX counterexamples
 
 **Key Features**:
 - Evolutionary algorithm to find difficult utility matrices
-- Multiple search strategies (evolutionary, RL-enhanced)
+- Searches for instances where MM allocations are not EFX
 - Automated verification of counterexamples
 - Saves results to `counterexample.txt`
 
 **Usage**:
 ```bash
-# Run the main search
-python -m evolutionary_rl.evolution_runner
-
-# Or run specific search
-cd evolutionary_rl
-python evolutionary_search.py
+# From project root after compiling C++ backend
+make  # This runs evolutionary_search.py
 ```
 
 **Configuration** (in `evolutionary_search.py`):
@@ -146,20 +156,32 @@ POPULATION_SIZE = 100   # Evolutionary population size
 NUM_GENERATIONS = 200   # Number of generations
 ```
 
-### **C. Python Analysis (`efx.py`, `main.py`)**
+### **C. Python Analysis Components**
 
-**Purpose**: Core EFX implementation and analysis tools
+#### **`efx.py`** - Core EFX Implementation
+**Purpose**: Contains the allocation class with EFX verification qualities
 
 **Key Features**:
 - EFX property verification
 - Multiple fairness criteria (EFX, MNW, MM, PO)
 - Allocation generation and evaluation
-- Graph visualization
+- Core allocation class implementation
+
+#### **`graphs.py`** - Graph Visualization
+**Purpose**: Contains graph qualities and visualization utilities
+
+**Key Features**:
+- Graph-based representation of allocations
+- Visualization of fairness properties
+- Network analysis of allocation structures
+- Graph utilities for analysis
+
+#### **`main.py`** - Simple Test Script
+**Purpose**: Basic test script to verify functionality
 
 **Usage**:
 ```bash
 python main.py  # Run basic analysis
-python efx.py   # Import for custom analysis
 ```
 
 ### **D. Jupyter Notebooks (`notebooks/`)**
@@ -167,9 +189,8 @@ python efx.py   # Import for custom analysis
 **Purpose**: Interactive analysis and visualization
 
 **Key Notebooks**:
-- `efx_testing.ipynb`: Comprehensive EFX property testing
+- **`analyze_graphs.ipynb`**: Graph visualization and analysis - visualize the graphs and analyze allocation properties
 - `mms_testing.ipynb`: MMS (Maximin Share) analysis
-- `champion_graph_visualization.ipynb`: Graph-based visualization
 
 **Usage**:
 ```bash
@@ -178,7 +199,7 @@ jupyter notebook notebooks/
 
 ---
 
-## 📊 Key Results and Counterexamples
+## Key Results and Counterexamples
 
 ### **Found Counterexamples**
 
@@ -203,7 +224,7 @@ Agent 2: [15  6 12 18 18]
 
 ---
 
-## 🛠️ Advanced Usage
+## Advanced Usage
 
 ### **Custom Search Configuration**
 
@@ -240,7 +261,7 @@ CPP_EXECUTABLE = "./mm_checker"  # Path to compiled C++ program
 
 ---
 
-## 📈 Performance Considerations
+## Performance Considerations
 
 ### **Computational Complexity**
 
@@ -258,7 +279,7 @@ CPP_EXECUTABLE = "./mm_checker"  # Path to compiled C++ program
 
 ---
 
-## 🔍 Research Directions
+## Research Directions
 
 ### **Current Focus**
 - Finding counterexamples for 4+ agents
@@ -273,71 +294,22 @@ CPP_EXECUTABLE = "./mm_checker"  # Path to compiled C++ program
 
 ---
 
-## 🐛 Troubleshooting
-
-### **Common Issues**
-
-1. **C++ Compilation Errors**:
-   ```bash
-   cd cpp_core
-   make clean && make
-   ```
-
-2. **Python Import Errors**:
-   ```bash
-   pip install -r requirements.txt  # If requirements.txt exists
-   # Or install manually:
-   pip install numpy matplotlib jupyter networkx
-   ```
-
-3. **Memory Issues with Large Instances**:
-   - Reduce `POPULATION_SIZE` in evolutionary search
-   - Use smaller test configurations
-   - Monitor system resources
-
-### **Getting Help**
-
-- Check the `counterexample.txt` file for successful runs
-- Review the Jupyter notebooks for examples
-- Examine the C++ output in `mm.txt`
-
----
-
-## 📚 Theoretical Background
+## Theoretical Background
 
 ### **Key Definitions**
 
 - **EFX (Envy-Free up to any Item)**: For all agents \(i, j\) and any item \(g\) in \(j\)'s bundle, \(u_i(A_i) \geq u_i(A_j \setminus \{g\})\)
 
-- **MM (Maximin)**: Maximizes the minimum utility among all agents
+- **MM (Maximinality)**: Maximizes the minimum utility among all agents (after normalization of utilities)
 
 - **MNW (Maximum Nash Welfare)**: Maximizes \(\prod u_i(A_i)\)
 
 - **Pareto Optimality**: No reallocation makes all agents at least as well off
 
 ### **Research Context**
-
-This project builds on work by Chaudhury et al. and others in fair division theory, specifically exploring the relationship between different fairness criteria in indivisible good allocation.
-
 ---
 
-## 🤝 Contributing
-
-1. **Report Issues**: Document any bugs or unexpected behavior
-2. **Add Tests**: Extend the test suite in `tests/`
-3. **Improve Search**: Enhance the evolutionary algorithms
-4. **Documentation**: Improve code comments and documentation
-
----
-
-## 📄 License
-
-[Add your license information here]
-
----
-
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Based on theoretical work by Chaudhury et al.
 - Inspired by computational fair division research
-- Built with modern C++ and Python tooling

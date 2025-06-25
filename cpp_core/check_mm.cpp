@@ -170,12 +170,11 @@ void print_utilities(const Utilities& utils, ostream& out) {
 }
 
 Utilities generate_builtin_utilities() {
-    Utilities utils(5, vector<int>(10));
-    utils[0] = {14,  9, 16,  1,  7, 15,  4,  1, 10,  5};
-    utils[1] = { 2,  5, 19, 18,  9,  9, 12, 17, 17,  8};
-    utils[2] = { 3, 10, 89,  4, 19, 18,  2, 11, 89,  9};
-    utils[3] = { 8, 87, 83, 18, 12, 11,  4,  6,100, 16};
-    utils[4] = { 2, 87,  8, 12,  7, 16, 18,  5, 12, 12};
+    Utilities utils(4, vector<int>(9));
+    utils[0] = {7, 8, 60, 2, 15, 66, 17, 11, 13};
+    utils[1] = {5, 4, 4, 9, 11, 6, 4, 73, 9};
+    utils[2] = {17, 12, 9, 5, 11, 2, 10, 9, 3};
+    utils[3] = {16, 4, 67, 10, 8, 65, 12, 67, 9};
     return utils;
 }
 
@@ -187,8 +186,8 @@ int main() {
         return 1;
     }
 
-    int num_agents = 5;
-    int num_items = 10; // Defaulting to 10 for speed. 4^15 is very slow.
+    int num_agents = 4;
+    int num_items = 9; // Defaulting to 10 for speed. 4^15 is very slow.
 
     cout << "--- MM and EFX Allocation Finder ---\n";
     outfile << "--- MM and EFX Allocation Finder ---\n";

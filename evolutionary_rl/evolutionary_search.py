@@ -14,8 +14,8 @@ from graphs import build_strong_envy_graph, build_envy_graph
 
 # --- Configuration ---
 # These can be adjusted for your search
-NUM_AGENTS = 4
-NUM_ITEMS = 9
+NUM_AGENTS = 3
+NUM_ITEMS = 11
 CPP_EXECUTABLE = "./mm_checker"  # Path to your compiled C++ program
 
 # --- Evolutionary Algorithm Parameters ---
