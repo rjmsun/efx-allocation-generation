@@ -1,4 +1,7 @@
 import itertools
+import math
+import numpy as np
+from collections import defaultdict
 
 class Allocation:
     def __init__(self, bundles, valuations):
@@ -110,3 +113,186 @@ def generate_valuations(n_agents, n_items, seed=None):
     if seed is not None:
         np.random.seed(seed)
     return np.random.randint(1, 11, size=(n_agents, n_items)).tolist()
+
+# Distance functions between allocations
+
+def swap_distance(allocation1, allocation2):
+    """
+    Calculate the minimum number of swaps needed to transform allocation1 into allocation2.
+    Uses cycle decomposition of the swap graph.
+    """
+    n = len(allocation1)
+    
+    # Check if allocations are identical
+    if allocation1 == allocation2:
+        return 0
+    
+    # Create a mapping from items to their target agent
+    item_to_target = {}
+    for agent in range(n):
+        for item in allocation2[agent]:
+            item_to_target[item] = agent
+    
+    # Build the swap graph: edge (i,j) means agent i has an item that should go to agent j
+    swap_graph = [[] for _ in range(n)]
+    for agent in range(n):
+        for item in allocation1[agent]:
+            target_agent = item_to_target[item]
+            if target_agent != agent:
+                swap_graph[agent].append(target_agent)
+    
+    # Count cycles using DFS
+    visited = [False] * n
+    cycles = 0
+    
+    def dfs(node, start):
+        if visited[node]:
+            return node == start
+        visited[node] = True
+        for neighbor in swap_graph[node]:
+            if dfs(neighbor, start):
+                return True
+        return False
+    
+    for i in range(n):
+        if not visited[i] and swap_graph[i]:
+            if dfs(i, i):
+                cycles += 1
+    
+    # Minimum swaps = n - cycles
+    return n - cycles
+
+def normalized_euclidean_distance(allocation1, allocation2, valuations):
+    """
+    Calculate Euclidean distance between normalized utility vectors.
+    Utilities are normalized by dividing by the sum of all valuations for each agent.
+    """
+    n = len(allocation1)
+    
+    # Calculate utility vectors for both allocations
+    utils1 = []
+    utils2 = []
+    
+    for agent in range(n):
+        # Calculate total utility for agent in allocation1
+        u1 = sum(valuations[agent][item] for item in allocation1[agent])
+        utils1.append(u1)
+        
+        # Calculate total utility for agent in allocation2
+        u2 = sum(valuations[agent][item] for item in allocation2[agent])
+        utils2.append(u2)
+    
+    # Normalize utilities by dividing by sum of all valuations for each agent
+    normalized_utils1 = []
+    normalized_utils2 = []
+    
+    for agent in range(n):
+        total_valuation = sum(valuations[agent])
+        if total_valuation > 0:
+            normalized_utils1.append(utils1[agent] / total_valuation)
+            normalized_utils2.append(utils2[agent] / total_valuation)
+        else:
+            normalized_utils1.append(0)
+            normalized_utils2.append(0)
+    
+    # Calculate Euclidean distance
+    squared_diff_sum = sum((normalized_utils1[i] - normalized_utils2[i])**2 for i in range(n))
+    return math.sqrt(squared_diff_sum)
+
+def chebyshev_distance(allocation1, allocation2, valuations):
+    """
+    Calculate Chebyshev distance (L-infinity norm) between utility vectors.
+    Returns the maximum absolute difference in utilities across all agents.
+    """
+    n = len(allocation1)
+    
+    max_diff = 0
+    for agent in range(n):
+        u1 = sum(valuations[agent][item] for item in allocation1[agent])
+        u2 = sum(valuations[agent][item] for item in allocation2[agent])
+        diff = abs(u1 - u2)
+        max_diff = max(max_diff, diff)
+    
+    return max_diff
+
+def earth_movers_distance(allocation1, allocation2):
+    """
+    Calculate Earth Mover's Distance between allocations.
+    Treats items as units of mass and agents as locations.
+    Cost of moving an item from agent i to agent j is 1 if i != j, 0 otherwise.
+    """
+    n = len(allocation1)
+    
+    # Count items per agent in each allocation
+    count1 = [len(bundle) for bundle in allocation1]
+    count2 = [len(bundle) for bundle in allocation2]
+    
+    # Calculate total flow needed
+    total_flow = 0
+    for i in range(n):
+        # If agent i has more items in allocation1 than allocation2, 
+        # we need to move the excess to other agents
+        if count1[i] > count2[i]:
+            excess = count1[i] - count2[i]
+            total_flow += excess
+    
+    return total_flow
+
+def envy_graph_distance(allocation1, allocation2, valuations):
+    """
+    Calculate the edit distance between envy graphs of two allocations.
+    Returns the number of edge additions/deletions needed to transform one envy graph into another.
+    """
+    n = len(allocation1)
+    
+    def build_envy_graph(allocation):
+        graph = set()
+        for i in range(n):
+            for j in range(n):
+                if i != j:
+                    # Calculate utility of agent i for their own bundle
+                    u_own = sum(valuations[i][item] for item in allocation[i])
+                    # Calculate utility of agent i for agent j's bundle
+                    u_other = sum(valuations[i][item] for item in allocation[j])
+                    if u_other > u_own:
+                        graph.add((i, j))
+        return graph
+    
+    envy_graph1 = build_envy_graph(allocation1)
+    envy_graph2 = build_envy_graph(allocation2)
+    
+    # Calculate edit distance
+    additions = len(envy_graph2 - envy_graph1)
+    deletions = len(envy_graph1 - envy_graph2)
+    
+    return additions + deletions
+
+def hamming_distance(allocation1, allocation2):
+    """
+    Calculate Hamming distance between allocations.
+    Returns the number of items that need to be reassigned to transform one allocation into another.
+    """
+    n = len(allocation1)
+    total_items = sum(len(bundle) for bundle in allocation1)
+    
+    # Count items that are in the same position in both allocations
+    same_position = 0
+    for agent in range(n):
+        same_position += len(set(allocation1[agent]) & set(allocation2[agent]))
+    
+    # Hamming distance = total items - items in same position
+    return total_items - same_position
+
+def calculate_all_distances(allocation1, allocation2, valuations):
+    """
+    Calculate all distance metrics between two allocations.
+    Returns a dictionary with all distance values.
+    """
+    return {
+        'swap_distance': swap_distance(allocation1, allocation2),
+        'normalized_euclidean': normalized_euclidean_distance(allocation1, allocation2, valuations),
+        'chebyshev': chebyshev_distance(allocation1, allocation2, valuations),
+        'earth_movers': earth_movers_distance(allocation1, allocation2),
+        'envy_graph': envy_graph_distance(allocation1, allocation2, valuations),
+        'hamming': hamming_distance(allocation1, allocation2)
+    }

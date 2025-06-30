@@ -9,7 +9,7 @@ from datetime import datetime
 from pathlib import Path
 import sys
 sys.path.append(str(Path(__file__).resolve().parent.parent))
-from efx import Allocation
+from efx import *
 from graphs import build_strong_envy_graph, build_envy_graph
 
 # Configuration parameters
@@ -193,10 +193,98 @@ class CounterexampleSearch:
             print(output_str)
             with open("counterexample.txt", "a") as f:
                 f.write(output_str + "\n")
+            
+            # Analyze and save distance metrics
+            self._analyze_and_save_distances(utilities, mm_allocs, min_optimal_efx, results)
+            
             # store candidate for later analysis
             heapq.heappush(self.best_candidates, (1.0, utilities.tolist(), results))
             return 1.0
         return 0.0
+
+    def _analyze_and_save_distances(self, utilities, mm_allocs, min_optimal_efx, results):
+        """
+        Analyze distance metrics between MM allocations and Min-Optimal EFX allocations
+        and save to distance.txt
+        """
+        if not mm_allocs or not min_optimal_efx:
+            return
+            
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        
+        with open("distance.txt", "a") as f:
+            f.write(f"\n{'='*80}\n")
+            f.write(f"DISTANCE ANALYSIS - {timestamp}\n")
+            f.write(f"{'='*80}\n")
+            f.write(f"Configuration: {self.num_agents} agents, {self.num_items} items\n\n")
+            
+            # Print utility matrix
+            f.write("Utility Matrix:\n")
+            for i, row in enumerate(utilities):
+                f.write(f"Agent {i}: {row.tolist()}\n")
+            f.write("\n")
+            
+            # Print MM allocations (non-EFX)
+            f.write("MM Allocations (non-EFX):\n")
+            for i, alloc in enumerate(mm_allocs):
+                f.write(f"MM Allocation #{i+1}:\n")
+                for agent_idx, bundle in enumerate(alloc):
+                    bundle_value = sum(utilities[agent_idx][item] for item in bundle)
+                    total_utility = sum(utilities[agent_idx])
+                    proportion = (bundle_value / total_utility) * 100 if total_utility > 0 else 0.0
+                    f.write(f"  Agent {agent_idx}: {bundle} (Value: {bundle_value}, {proportion:.2f}%)\n")
+                f.write("\n")
+            
+            # Print Min-Optimal EFX allocations
+            f.write("Min-Optimal EFX Allocations:\n")
+            for i, alloc in enumerate(min_optimal_efx):
+                f.write(f"Min-Optimal EFX Allocation #{i+1}:\n")
+                for agent_idx, bundle in enumerate(alloc):
+                    bundle_value = sum(utilities[agent_idx][item] for item in bundle)
+                    total_utility = sum(utilities[agent_idx])
+                    proportion = (bundle_value / total_utility) * 100 if total_utility > 0 else 0.0
+                    f.write(f"  Agent {agent_idx}: {bundle} (Value: {bundle_value}, {proportion:.2f}%)\n")
+                f.write("\n")
+            
+            # Calculate and print distance metrics for all combinations
+            f.write("Distance Metrics Analysis:\n")
+            f.write("-" * 50 + "\n")
+            
+            for mm_idx, mm_alloc in enumerate(mm_allocs):
+                for efx_idx, efx_alloc in enumerate(min_optimal_efx):
+                    f.write(f"MM Allocation #{mm_idx+1} vs Min-Optimal EFX Allocation #{efx_idx+1}:\n")
+                    
+                    # Print the allocations being compared
+                    f.write("  MM Allocation: ")
+                    for agent_idx, bundle in enumerate(mm_alloc):
+                        f.write(f"Agent{agent_idx}:{bundle}")
+                        if agent_idx < len(mm_alloc) - 1:
+                            f.write(" | ")
+                    f.write("\n")
+                    
+                    f.write("  EFX Allocation: ")
+                    for agent_idx, bundle in enumerate(efx_alloc):
+                        f.write(f"Agent{agent_idx}:{bundle}")
+                        if agent_idx < len(efx_alloc) - 1:
+                            f.write(" | ")
+                    f.write("\n")
+                    
+                    # Calculate all distance metrics
+                    distances = calculate_all_distances(mm_alloc, efx_alloc, utilities)
+                    
+                    # Print distance metrics in the same format as test_distances.py
+                    f.write("  Distance Metrics:\n")
+                    f.write(f"    Swap Distance: {distances['swap_distance']}\n")
+                    f.write(f"    Normalized Euclidean Distance: {distances['normalized_euclidean']:.4f}\n")
+                    f.write(f"    Chebyshev Distance: {distances['chebyshev']}\n")
+                    f.write(f"    Earth Mover's Distance: {distances['earth_movers']}\n")
+                    f.write(f"    Envy Graph Distance: {distances['envy_graph']}\n")
+                    f.write(f"    Hamming Distance: {distances['hamming']}\n")
+                    f.write("\n")
+            
+            f.write(f"{'='*80}\n\n")
+        
+        print(f"Distance analysis saved to distance.txt")
 
     def _save_counterexample_to_file(self, utilities, results):
         """Save counterexample details to counterexample.txt"""
