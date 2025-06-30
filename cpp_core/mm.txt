@@ -1,0 +1,38 @@
+--- MM and EFX Allocation Finder ---
+Utility matrix:
+Agent 0 (Total utility: 33): 30 1 1 1 
+Agent 1 (Total utility: 31): 20 5 5 1 
+Agent 2 (Total utility: 31): 1 12 12 6 
+
+Starting Pass 1: Finding the maximinal proportion of utility...
+Pass 1 Complete. The highest possible minimum proportion of utility is: 19.35%
+
+Starting Pass 2: Finding all MM allocations and checking for EFX...
+
+--- ANALYSIS COMPLETE ---
+Time taken: 0.00 seconds
+Total allocations checked: 81
+
+Found 3 Maximinal (MM) Allocations:
+Allocation:
+Agent 0 gets bundle {0 }. (Value: 30, 90.91% of total utility)
+Agent 1 gets bundle {2 3 }. (Value: 6, 19.35% of total utility)
+Agent 2 gets bundle {1 }. (Value: 12, 38.71% of total utility)
+Allocation:
+Agent 0 gets bundle {0 }. (Value: 30, 90.91% of total utility)
+Agent 1 gets bundle {1 3 }. (Value: 6, 19.35% of total utility)
+Agent 2 gets bundle {2 }. (Value: 12, 38.71% of total utility)
+Allocation:
+Agent 0 gets bundle {0 }. (Value: 30, 90.91% of total utility)
+Agent 1 gets bundle {1 2 }. (Value: 10, 32.26% of total utility)
+Agent 2 gets bundle {3 }. (Value: 6, 19.35% of total utility)
+
+Found 2 Allocations that are both MM and EFX:
+Allocation:
+Agent 0 gets bundle {0 }. (Value: 30, 90.91% of total utility)
+Agent 1 gets bundle {2 3 }. (Value: 6, 19.35% of total utility)
+Agent 2 gets bundle {1 }. (Value: 12, 38.71% of total utility)
+Allocation:
+Agent 0 gets bundle {0 }. (Value: 30, 90.91% of total utility)
+Agent 1 gets bundle {1 3 }. (Value: 6, 19.35% of total utility)
+Agent 2 gets bundle {2 }. (Value: 12, 38.71% of total utility)

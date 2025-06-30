@@ -1,7 +1,7 @@
 from evolutionary_rl.rl_search import EFXCounterexampleSearch
 
 def run_counterexample_search():
-    print("🎯 AGGRESSIVE EFX COUNTEREXAMPLE SEARCH")
+    print("AGGRESSIVE EFX COUNTEREXAMPLE SEARCH")
     print("="*80)
 
     test_configurations = [
@@ -35,7 +35,7 @@ def run_counterexample_search():
                         'verification': verification_result,
                         'config': (num_players, num_items)
                     })
-                    print(f"🎉 VERIFIED COUNTEREXAMPLE FOUND!")
+                    print(f"VERIFIED COUNTEREXAMPLE FOUND!")
                     break
 
     print(f"\n{'='*80}")
@@ -43,16 +43,16 @@ def run_counterexample_search():
     print(f"{'='*80}")
 
     if verified_counterexamples:
-        print(f"🎉 SUCCESS: {len(verified_counterexamples)} VERIFIED COUNTEREXAMPLES!")
+        print(f"SUCCESS: {len(verified_counterexamples)} VERIFIED COUNTEREXAMPLES!")
         for i, ce in enumerate(verified_counterexamples, 1):
             config = ce['config']
             fitness = ce['candidate']['fitness']
             print(f"Counterexample {i}: {config[0]} players, {config[1]} items (fitness: {fitness:.2f})")
     else:
-        print("❌ NO COUNTEREXAMPLES FOUND")
+        print("NO COUNTEREXAMPLES FOUND")
 
 def quick_test():
-    print("🧪 QUICK SYSTEM TEST")
+    print("QUICK SYSTEM TEST")
     print("="*50)
 
     searcher = EFXCounterexampleSearch(3, 4, seed=42)

@@ -7,7 +7,11 @@ import sys
 import matplotlib.pyplot as plt
 import networkx as nx
 from datetime import datetime
-sys.path.append(os.path.abspath("..")) 
+from pathlib import Path
+
+# Add the parent directory to the path to import efx and graphs modules
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+
 from typing import List, Tuple, Dict, Optional
 from efx import Allocation
 from graphs import build_champion_graph, build_strong_envy_graph
@@ -156,7 +160,6 @@ class EFXCounterexampleSearch:
                 alloc_obj = allocation
                 is_violated, violation_strength, _, _ = self.check_efx_violation(utilities, alloc_obj)
                 # Compute champion graph and number of champions
-                from graphs import build_champion_graph
                 G = build_champion_graph(alloc_obj)
                 num_champions = len(G)
                 # Compute normalized fitness score: penalize violation, reward champions
@@ -492,7 +495,7 @@ class EFXCounterexampleSearch:
     
     def evolutionary_search(self) -> List[Dict]:
         """Main evolutionary search for counterexamples"""
-        print(f"🧬 Starting evolutionary search...")
+        print(f"Starting evolutionary search...")
         print(f"   Population: {self.population_size}")
         print(f"   Generations: {self.num_generations}")
         print(f"   Elite ratio: {self.elite_ratio}")
@@ -532,7 +535,7 @@ class EFXCounterexampleSearch:
             if generation < self.num_generations - 1:
                 population = self.evolve_population(population, fitness_scores)
         
-        print(f"🔬 Evolution complete! Found {len(self.counterexample_candidates)} candidates")
+        print(f"Evolution complete! Found {len(self.counterexample_candidates)} candidates")
         os.makedirs("graph_outputs", exist_ok=True)
         for i, candidate in enumerate(sorted(self.counterexample_candidates, key=lambda x: x['fitness'], reverse=True)[:5]):
             utilities = candidate['utilities']
@@ -604,7 +607,7 @@ class EFXCounterexampleSearch:
     
     def verify_counterexample(self, utilities: np.ndarray) -> Dict:
         """Exhaustively verify if utilities matrix is a counterexample"""
-        print(f"🔍 Exhaustive verification...")
+        print(f"Exhaustive verification...")
         
         total_allocations = self.num_players ** self.num_items
         print(f"   Total possible allocations: {total_allocations}")
@@ -727,18 +730,17 @@ class EFXCounterexampleSearch:
 
         # Show verification results
         if verification_result['is_counterexample']:
-            print(f"\n🎉 VERIFIED COUNTEREXAMPLE!")
+            print(f"\nVERIFIED COUNTEREXAMPLE!")
             if 'total_checked' in verification_result:
                 print(f"   Method: Exhaustive verification")
                 print(f"   Allocations checked: {verification_result['total_checked']}")
             else:
                 print(f"   Method: Statistical verification")
                 print(f"   Confidence: {verification_result.get('confidence', 'N/A')}")
-            
             # Save verified counterexample to file
             self._save_counterexample_to_file(candidate, verification_result)
         else:
-            print(f"\n❌ False positive - EFX allocation exists")
+            print(f"\nFalse positive - EFX allocation exists")
             found_alloc = verification_result.get('efx_allocation_found', [])
             print(f"   Found allocation: {Allocation(found_alloc) if found_alloc else found_alloc}")
 
@@ -775,12 +777,12 @@ class EFXCounterexampleSearch:
             f.write(f"No EFX allocation exists for this utility matrix.\n")
             f.write(f"{'='*80}\n\n")
         
-        print(f"💾 Verified counterexample saved to counterexample.txt")
+        print(f"Verified counterexample saved to counterexample.txt")
 
 
 def run_counterexample_search():
     """Main function to run the counterexample search"""
-    print("🎯 AGGRESSIVE EFX COUNTEREXAMPLE SEARCH")
+    print("AGGRESSIVE EFX COUNTEREXAMPLE SEARCH")
     print("="*80)
     print("Strategy: Extreme utilities + Enhanced allocation strategies + Evolutionary search")
     print()
@@ -803,7 +805,7 @@ def run_counterexample_search():
         candidates = searcher.evolutionary_search()
         
         if candidates:
-            print(f"\n🎯 Testing top {min(3, len(candidates))} candidates...")
+            print(f"\nTesting top {min(3, len(candidates))} candidates...")
             
             # Sort by fitness and test best candidates
             sorted_candidates = sorted(candidates, key=lambda x: x['fitness'], reverse=True)
@@ -820,14 +822,14 @@ def run_counterexample_search():
                         'verification': verification_result,
                         'config': (num_players, num_items)
                     })
-                    print(f"🎉 VERIFIED COUNTEREXAMPLE FOUND!")
+                    print(f"VERIFIED COUNTEREXAMPLE FOUND!")
                     break
             
             if not any(searcher.analyze_candidate(c, searcher.verify_counterexample(c['utilities'])) 
                       for c in sorted_candidates[:3]):
-                print(f"❌ All candidates were false positives")
+                print(f"All candidates were false positives")
         else:
-            print(f"❌ No promising candidates found")
+            print(f"No promising candidates found")
     
     # Final results
     print(f"\n{'='*80}")
@@ -835,8 +837,8 @@ def run_counterexample_search():
     print(f"{'='*80}")
     
     if verified_counterexamples:
-        print(f"🎉 SUCCESS: {len(verified_counterexamples)} VERIFIED COUNTEREXAMPLES!")
-        print("\n🏆 MATHEMATICAL BREAKTHROUGH:")
+        print(f"SUCCESS: {len(verified_counterexamples)} VERIFIED COUNTEREXAMPLES!")
+        print("\nMATHEMATICAL BREAKTHROUGH:")
         print("• First computational proof that EFX doesn't always exist")
         print("• Resolves major open conjecture in fair division theory")
         print("• Demonstrates power of AI for mathematical discovery")
@@ -847,12 +849,12 @@ def run_counterexample_search():
             print(f"\nCounterexample {i}: {config[0]} players, {config[1]} items (fitness: {fitness:.2f})")
             
     else:
-        print("❌ NO COUNTEREXAMPLES FOUND")
-        print("\n📊 IMPLICATIONS:")
+        print("NO COUNTEREXAMPLES FOUND")
+        print("\nIMPLICATIONS:")
         print("• Strong computational evidence supporting EFX existence")
         print("• Conjecture survives aggressive evolutionary attack")
         print("• EFX appears remarkably robust")
-        print("\n💡 RESEARCH VALUE:")
+        print("\nRESEARCH VALUE:")
         print("• Comprehensive computational study of EFX conjecture")
         print("• Novel AI methodology for mathematical investigation")
         print("• Valuable negative results for the field")
@@ -862,7 +864,7 @@ def run_counterexample_search():
 
 def quick_test():
     """Quick test of the system"""
-    print("🧪 QUICK SYSTEM TEST")
+    print("QUICK SYSTEM TEST")
     print("="*50)
 
     searcher = EFXCounterexampleSearch(3, 4, seed=42)

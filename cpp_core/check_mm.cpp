@@ -12,7 +12,7 @@
 
 using namespace std;
 
-// Calculate total utility for an agent across all items
+// total utility for an agent across all items
 int total_agent_utility(const Utilities& utils, int agent) {
     int total = 0;
     for (size_t j = 0; j < utils[agent].size(); ++j) {
@@ -60,10 +60,10 @@ Utilities get_manual_utilities(int num_agents, int num_items) {
 }
 
 Utilities generate_random_utilities(int num_agents, int num_items) {
-    Utilities utils(num_agents, std::vector<int>(num_items));
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> distrib(1, 100);
+    Utilities utils(num_agents, vector<int>(num_items));
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<> distrib(1, 100);
 
     for (int i = 0; i < num_agents; ++i) {
         for (int j = 0; j < num_items; ++j) {
@@ -78,7 +78,6 @@ Utilities generate_fixed_pattern_utilities(int num_agents, int num_items) {
     random_device rd;
     mt19937 gen(rd());
     
-    // Define different distributions for different types of items
     uniform_int_distribution<> high_value(80, 100);    // Universally high value items
     uniform_int_distribution<> low_value(1, 20);       // Poisonous items
     uniform_int_distribution<> sporadic(1, 100);       // Sporadic value items
@@ -119,7 +118,7 @@ Utilities read_utilities_from_file(const string& filename, int num_agents, int n
     
     if (!file.is_open()) {
         cerr << "Error: Could not open file " << filename << endl;
-        // Return default utilities if file can't be opened
+        // return default utilities if file can't be opened
         return generate_random_utilities(num_agents, num_items);
     }
     
@@ -127,12 +126,11 @@ Utilities read_utilities_from_file(const string& filename, int num_agents, int n
     int agent = 0;
     
     while (getline(file, line) && agent < num_agents) {
-        // Remove brackets and extra whitespace
+        // remove brackets and extra whitespace
         string cleaned_line = line;
         cleaned_line.erase(remove(cleaned_line.begin(), cleaned_line.end(), '['), cleaned_line.end());
         cleaned_line.erase(remove(cleaned_line.begin(), cleaned_line.end(), ']'), cleaned_line.end());
         
-        // Parse the numbers
         stringstream ss(cleaned_line);
         int item = 0;
         int value;
@@ -170,11 +168,10 @@ void print_utilities(const Utilities& utils, ostream& out) {
 }
 
 Utilities generate_builtin_utilities() {
-    Utilities utils(4, vector<int>(9));
-    utils[0] = {7, 8, 60, 2, 15, 66, 17, 11, 13};
-    utils[1] = {5, 4, 4, 9, 11, 6, 4, 73, 9};
-    utils[2] = {17, 12, 9, 5, 11, 2, 10, 9, 3};
-    utils[3] = {16, 4, 67, 10, 8, 65, 12, 67, 9};
+    Utilities utils(3, vector<int>(4));
+    utils[0] = {30, 1, 1, 1};
+    utils[1] = {20, 5, 5, 1};
+    utils[2] = {1, 12, 12, 6};
     return utils;
 }
 
@@ -186,8 +183,8 @@ int main() {
         return 1;
     }
 
-    int num_agents = 4;
-    int num_items = 9; // Defaulting to 10 for speed. 4^15 is very slow.
+    int num_agents = 3;
+    int num_items = 4; 
 
     cout << "--- MM and EFX Allocation Finder ---\n";
     outfile << "--- MM and EFX Allocation Finder ---\n";
@@ -306,7 +303,6 @@ int main() {
     auto end_time = chrono::high_resolution_clock::now();
     chrono::duration<double> elapsed = end_time - start_time;
 
-    // --- Print Results ---
     cout << "\n--- ANALYSIS COMPLETE ---\n";
     outfile << "\n--- ANALYSIS COMPLETE ---\n";
     cout << "Time taken: " << elapsed.count() << " seconds\n";

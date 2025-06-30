@@ -10,14 +10,12 @@
 #include <chrono>
 #include <iomanip>
 
-// Include for JSON output
 #include <nlohmann/json.hpp>
-// For convenience
 using json = nlohmann::json;
 
 using namespace std;
 
-// Calculate total utility for an agent across all items
+// total utility for an agent across all items
 int total_agent_utility(const Utilities& utils, int agent) {
     int total = 0;
     for (size_t j = 0; j < utils[agent].size(); ++j) {
@@ -25,8 +23,6 @@ int total_agent_utility(const Utilities& utils, int agent) {
     }
     return total;
 }
-
-// --- No changes to your existing print functions, manual/random generation etc. ---
 
 void print_matrix(const Utilities& utils, ostream& out) {
     out << "Utility matrix:\n";
@@ -67,10 +63,10 @@ Utilities get_manual_utilities(int num_agents, int num_items) {
 }
 
 Utilities generate_random_utilities(int num_agents, int num_items) {
-    Utilities utils(num_agents, std::vector<int>(num_items));
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> distrib(1, 100);
+    Utilities utils(num_agents, vector<int>(num_items));
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<> distrib(1, 100);
 
     for (int i = 0; i < num_agents; ++i) {
         for (int j = 0; j < num_items; ++j) {
@@ -117,7 +113,7 @@ int main(int argc, char* argv[]) {
     int num_items;
     Utilities utilities;
 
-    // Automated mode for Python script
+    // Automated mode for Python script in evolutionary_rl/evolutionary_search.py
     if (argc > 1 && string(argv[1]) == "--automate") {
         cin >> num_agents;
         cin >> num_items;
@@ -127,7 +123,7 @@ int main(int argc, char* argv[]) {
                 cin >> utilities[i][j];
             }
         }
-    } else { // Interactive mode
+    } else {
         ofstream outfile("mm.txt");
          if (!outfile) {
             cerr << "Error: Could not open output file mm.txt" << endl;
@@ -166,9 +162,9 @@ int main(int argc, char* argv[]) {
 
 
     long double total_possible_allocations_ld = pow(num_agents, num_items);
-    if (total_possible_allocations_ld > 50000000) { // Safety check for automated mode
+    if (total_possible_allocations_ld > 50000000) { // safety check for automated mode
         if (argc > 1 && string(argv[1]) == "--automate") {
-            // In automated mode, just exit if it's too large to prevent hanging
+            // exit if it's too large to prevent hanging
             json result;
             result["error"] = "Instance too large to compute.";
             cout << result.dump() << endl;
@@ -177,7 +173,7 @@ int main(int argc, char* argv[]) {
     }
     long long total_possible_allocations = (long long)total_possible_allocations_ld;
 
-    // --- Pass 1: Find the maximum-minimum proportion of utility ---
+    // --- Pass 1: Find the MM proportion of utility ---
     double max_min_proportion = -1.0;
 
     for (long long t = 0; t < total_possible_allocations; ++t) {
@@ -241,8 +237,6 @@ int main(int argc, char* argv[]) {
         result["mm_allocations"] = mm_allocs_json;
 
         cout << result.dump() << endl;
-    } else {
-        // Your original interactive output logic here...
     }
 
     return 0;

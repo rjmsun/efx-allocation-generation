@@ -12,18 +12,19 @@ sys.path.append(str(Path(__file__).resolve().parent.parent))
 from efx import Allocation
 from graphs import build_strong_envy_graph, build_envy_graph
 
-# --- Configuration ---
-# These can be adjusted for your search
+# Configuration parameters
 NUM_AGENTS = 3
 NUM_ITEMS = 11
-CPP_EXECUTABLE = "./mm_checker"  # Path to your compiled C++ program
+### make sure that mm_checker is in the same directory as this file 
+### it should be if compiled using Makefile in cpp_core/
+CPP_EXECUTABLE = "./mm_checker" 
 
-# --- Evolutionary Algorithm Parameters ---
-POPULATION_SIZE = 100  # Number of utility matrices to test in each generation
-NUM_GENERATIONS = 200  # How many cycles of evolution to run
-ELITE_RATIO = 0.1      # Percentage of top performers to keep for the next generation
-MUTATION_RATE = 0.2    # Probability of a single utility value changing
-MUTATION_STRENGTH = 20 # How much a value can change when it mutates
+# Evolutionary Algorithm Parameters
+POPULATION_SIZE = 100  # number of utility matrices to test in each generation
+NUM_GENERATIONS = 200  # number of evolution cycles to run
+ELITE_RATIO = 0.1      # percentage of top performers to keep for the next generation
+MUTATION_RATE = 0.2    # probability of a single utility value changing
+MUTATION_STRENGTH = 20 # how much a value can change when it mutates
 
 class CounterexampleSearch:
     """
@@ -37,7 +38,7 @@ class CounterexampleSearch:
         self.cpp_executable = cpp_executable
         self.best_candidates = [] # Keep track of the top few candidates found
         if not os.path.exists(self.cpp_executable):
-            raise FileNotFoundError(f"C++ executable not found at {self.cpp_executable}. Please compile it first using 'make'.")
+            raise FileNotFoundError(f"C++ executable not found at {self.cpp_executable}. Please compile it first in /cpp_core/ using 'make'.")
 
     def _run_cpp_oracle(self, utilities):
         """
@@ -50,7 +51,6 @@ class CounterexampleSearch:
             proc_input += " ".join(map(str, row)) + "\n"
 
         try:
-            # The C++ code now reads from stdin, so we pass the input string
             process = subprocess.run(
                 [self.cpp_executable, "--automate"], # Use the flag we added
                 input=proc_input,
@@ -68,8 +68,6 @@ class CounterexampleSearch:
 
     def get_fitness_score(self, utilities):
         """
-        Calculates the 'fitness' of a utility matrix. A higher score means
-        it is closer to being a counterexample.
         Fitness = 1 if it's a counterexample, otherwise 0.
         """
         results = self._run_cpp_oracle(utilities)
@@ -81,6 +79,9 @@ class CounterexampleSearch:
         max_min_proportion = results.get("max_min_proportion", "N/A")
 
         # Compute min-optimal EFX allocations and proportion
+        # We define a min-optimal EFX allocation as an 
+        # EFX allocation where the minimum proportion of utility is maximized 
+        # (assuming normalization of utilities)
         min_optimal_efx = []
         min_optimal_efx_proportion = 'N/A'
         try:
@@ -109,7 +110,7 @@ class CounterexampleSearch:
             pass
 
         if num_mm_allocations > 0 and num_mm_efx_allocations == 0:
-            # This is a counterexample!
+            # counterexample found
             output_lines = []
             output_lines.append("="*80)
             output_lines.append("COUNTEREXAMPLE FOUND")
@@ -187,12 +188,12 @@ class CounterexampleSearch:
                 output_lines.append("  None\n")
             output_lines.append("="*80)
             output_lines.append("")
-            # Print and save all output
+            # print + save all output
             output_str = "\n".join(output_lines)
             print(output_str)
             with open("counterexample.txt", "a") as f:
                 f.write(output_str + "\n")
-            # Store the candidate for later analysis
+            # store candidate for later analysis
             heapq.heappush(self.best_candidates, (1.0, utilities.tolist(), results))
             return 1.0
         return 0.0
@@ -242,7 +243,7 @@ class CounterexampleSearch:
                 except Exception as e:
                     f.write(f"[Error printing allocation/envy edges: {e}]\n")
             f.write(f"\n\n\n\n\n\n\n\n")
-        print(f"💾 Counterexample saved to counterexample.txt")
+        print(f"Counterexample saved to counterexample.txt")
 
     def _generate_initial_population(self):
         """Creates the first generation of random utility matrices."""
@@ -269,7 +270,7 @@ class CounterexampleSearch:
         """Creates the next generation from the current one using selection, crossover, and mutation."""
         elite_count = int(POPULATION_SIZE * ELITE_RATIO)
         
-        # Add a small constant to handle all-zero fitness
+        # add a small constant to handle all-zero fitness
         probabilities = np.array(fitness_scores) + 0.01
         if probabilities.sum() == 0: # Should not happen with the +0.01
              probabilities = np.ones(len(population)) / len(population)
@@ -278,9 +279,7 @@ class CounterexampleSearch:
         
         elite_indices = np.argsort(fitness_scores)[-elite_count:]
         elites = [population[i] for i in elite_indices]
-        
         new_population = elites[:]
-
         while len(new_population) < POPULATION_SIZE:
             parent1_idx, parent2_idx = np.random.choice(len(population), size=2, p=probabilities)
             parent1, parent2 = population[parent1_idx], population[parent2_idx]
@@ -301,7 +300,7 @@ class CounterexampleSearch:
 
     def search(self):
         """Runs the main evolutionary search loop."""
-        print(f"🧬 Starting evolutionary search for a counterexample...")
+        print(f"   Starting evolutionary search for a counterexample...")
         print(f"   Config: {self.num_agents} agents, {self.num_items} items")
         print(f"   Population Size: {POPULATION_SIZE}, Generations: {NUM_GENERATIONS}")
 
@@ -315,7 +314,7 @@ class CounterexampleSearch:
             
             best_fitness_in_gen = max(fitness_scores) if fitness_scores else 0
             if best_fitness_in_gen >= 1.0:
-                print("🎉🎉🎉 Search successful! Counterexample found and printed above.")
+                print("Search successful! Counterexample found and printed above.")
                 return 
 
             population = self._evolve(population, fitness_scores)
@@ -330,7 +329,11 @@ if __name__ == "__main__":
     # To use this script, you will need the 'nlohmann/json' library for C++.
     # If you are on a Debian-based system (like Ubuntu), you can install it with:
     # sudo apt-get install nlohmann-json3-dev
-    # Then, you need to update your Makefile.
+    # on macOS, you can install it with:
+    # brew install nlohmann-json
+    # on Windows, you can install it with:
+    # pip install nlohmann-json
+    # Then, you need to update your Makefile in /cpp_core/ to include the new library.
     
     searcher = CounterexampleSearch(NUM_AGENTS, NUM_ITEMS, CPP_EXECUTABLE)
     searcher.search()
