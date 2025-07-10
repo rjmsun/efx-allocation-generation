@@ -106,10 +106,10 @@ Utilities get_manual_utilities(int num_agents, int num_items) {
 }
 
 Utilities generate_random_utilities(int num_agents, int num_items) {
-    Utilities utils(num_agents, std::vector<int>(num_items));
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> distrib(1, 100);
+    Utilities utils(num_agents, vector<int>(num_items));
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<> distrib(1, 100);
     for (int i = 0; i < num_agents; ++i) {
         for (int j = 0; j < num_items; ++j) {
             utils[i][j] = distrib(gen);
@@ -120,11 +120,11 @@ Utilities generate_random_utilities(int num_agents, int num_items) {
 
 Utilities generate_fixed_pattern_utilities(int num_agents, int num_items) {
     Utilities utils(num_agents, vector<int>(num_items));
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> high_value(80, 100);
-    std::uniform_int_distribution<> low_value(1, 20);
-    std::uniform_int_distribution<> sporadic(1, 100);
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<> high_value(80, 100);
+    uniform_int_distribution<> low_value(1, 20);
+    uniform_int_distribution<> sporadic(1, 100);
     for (int j = 0; j < num_items; ++j) {
         for (int i = 0; i < num_agents; ++i) {
             if (j < num_items / 2) utils[i][j] = (j%2 == 0) ? high_value(gen) : low_value(gen);

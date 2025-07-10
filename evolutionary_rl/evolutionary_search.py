@@ -12,6 +12,24 @@ sys.path.append(str(Path(__file__).resolve().parent.parent))
 from efx import *
 from graphs import build_strong_envy_graph, build_envy_graph
 
+# Simple tee functionality to print to both console and file
+class TeeLogger:
+    def __init__(self, filename):
+        self.terminal = sys.stdout
+        self.log_file = open(filename, 'a')
+        
+    def write(self, message):
+        self.terminal.write(message)
+        self.log_file.write(message)
+        self.log_file.flush()
+        
+    def flush(self):
+        self.terminal.flush()
+        self.log_file.flush()
+        
+    def close(self):
+        self.log_file.close()
+
 # Configuration parameters
 NUM_AGENTS = 3
 NUM_ITEMS = 11
@@ -37,6 +55,7 @@ class CounterexampleSearch:
         self.num_items = num_items
         self.cpp_executable = cpp_executable
         self.best_candidates = [] # Keep track of the top few candidates found
+        
         if not os.path.exists(self.cpp_executable):
             raise FileNotFoundError(f"C++ executable not found at {self.cpp_executable}. Please compile it first in /cpp_core/ using 'make'.")
 
@@ -188,11 +207,9 @@ class CounterexampleSearch:
                 output_lines.append("  None\n")
             output_lines.append("="*80)
             output_lines.append("")
-            # print + save all output
+            # print all output (automatically saved to counterexample.txt via tee logger)
             output_str = "\n".join(output_lines)
             print(output_str)
-            with open("counterexample.txt", "a") as f:
-                f.write(output_str + "\n")
             
             # Analyze and save distance metrics
             self._analyze_and_save_distances(utilities, mm_allocs, min_optimal_efx, results)
@@ -212,7 +229,9 @@ class CounterexampleSearch:
             
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         
-        with open("distance.txt", "a") as f:
+        # Save to distance.txt in the parent directory (same level as evolutionary_rl/)
+        distance_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "distance.txt")
+        with open(distance_path, "a") as f:
             f.write(f"\n{'='*80}\n")
             f.write(f"DISTANCE ANALYSIS - {timestamp}\n")
             f.write(f"{'='*80}\n")
@@ -286,53 +305,6 @@ class CounterexampleSearch:
         
         print(f"Distance analysis saved to distance.txt")
 
-    def _save_counterexample_to_file(self, utilities, results):
-        """Save counterexample details to counterexample.txt"""
-        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        from pathlib import Path
-        import sys
-        sys.path.append(str(Path(__file__).resolve().parent.parent))
-        from efx import Allocation
-        from graphs import build_strong_envy_graph, build_envy_graph
-        with open("counterexample.txt", "a") as f:
-            f.write(f"\n{'='*80}\n")
-            f.write(f"COUNTEREXAMPLE FOUND - {timestamp}\n")
-            f.write(f"{'='*80}\n")
-            f.write(f"Configuration: {self.num_agents} agents, {self.num_items} items\n")
-            f.write(f"MM allocations count: {results.get('mm_allocations_count', 0)}\n")
-            f.write(f"MM EFX allocations count: {results.get('mm_efx_allocations_count', 0)}\n")
-            f.write(f"Max-min proportion: {results.get('max_min_proportion', 'N/A')}\n\n")
-            f.write("UTILITY MATRIX:\n")
-            for i, row in enumerate(utilities):
-                f.write(f"Agent {i}: {row}\n")
-            f.write(f"\nDESCRIPTION: This instance has at least one MM allocation, none of which are EFX.\n")
-            f.write(f"This constitutes a counterexample to the MM -> EFX conjecture.\n")
-            mm_allocs = results.get("mm_allocations", [])
-            f.write(f"\nMM allocations (not EFX):\n")
-            for alloc in mm_allocs:
-                try:
-                    allocation_obj = Allocation(alloc, utilities)
-                    for agent_idx, bundle in enumerate(allocation_obj.bundles):
-                        bundle_value = allocation_obj.value_of(agent_idx, bundle)
-                        total_utility = sum(utilities[agent_idx])
-                        proportion = (bundle_value / total_utility) * 100 if total_utility > 0 else 0.0
-                        f.write(f"Agent {agent_idx} gets bundle {{{' '.join(map(str, bundle))} }}. (Value: {bundle_value}, {proportion:.2f}% of total utility)\n")
-                    f.write("\n")
-                    strong_envy_edges = build_strong_envy_graph(allocation_obj)
-                    f.write("Strong envy edges:\n")
-                    for i, j in strong_envy_edges:
-                        f.write(f"{i} -> {j}\n")
-                    f.write("\n")
-                    envy_edges = build_envy_graph(allocation_obj)
-                    f.write("Envy edges in general (weak or strong):\n")
-                    for i, j in envy_edges:
-                        f.write(f"{i} -> {j}\n")
-                    f.write("\n")
-                except Exception as e:
-                    f.write(f"[Error printing allocation/envy edges: {e}]\n")
-            f.write(f"\n\n\n\n\n\n\n\n")
-        print(f"Counterexample saved to counterexample.txt")
-
     def _generate_initial_population(self):
         """Creates the first generation of random utility matrices."""
         population = []
@@ -388,29 +360,38 @@ class CounterexampleSearch:
 
     def search(self):
         """Runs the main evolutionary search loop."""
-        print(f"   Starting evolutionary search for a counterexample...")
-        print(f"   Config: {self.num_agents} agents, {self.num_items} items")
-        print(f"   Population Size: {POPULATION_SIZE}, Generations: {NUM_GENERATIONS}")
+        # Redirect stdout to our tee logger
+        counterexample_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "counterexample.txt")
+        tee_logger = TeeLogger(counterexample_path)
+        original_stdout = sys.stdout
+        sys.stdout = tee_logger
+        try:
+            print(f"   Starting evolutionary search for a counterexample...")
+            print(f"   Config: {self.num_agents} agents, {self.num_items} items")
+            print(f"   Population Size: {POPULATION_SIZE}, Generations: {NUM_GENERATIONS}")
 
-        population = self._generate_initial_population()
+            population = self._generate_initial_population()
 
-        for gen in range(NUM_GENERATIONS):
-            start_time = time.time()
-            print(f"\n--- Generation {gen+1}/{NUM_GENERATIONS} ---")
-            
-            fitness_scores = [self.get_fitness_score(util) for util in population]
-            
-            best_fitness_in_gen = max(fitness_scores) if fitness_scores else 0
-            if best_fitness_in_gen >= 1.0:
-                print("Search successful! Counterexample found and printed above.")
-                return 
+            for gen in range(NUM_GENERATIONS):
+                start_time = time.time()
+                print(f"\n--- Generation {gen+1}/{NUM_GENERATIONS} ---")
+                
+                fitness_scores = [self.get_fitness_score(util) for util in population]
+                
+                best_fitness_in_gen = max(fitness_scores) if fitness_scores else 0
+                if best_fitness_in_gen >= 1.0:
+                    print("Search successful! Counterexample found and printed above.")
+                    return 
 
-            population = self._evolve(population, fitness_scores)
-            
-            gen_time = time.time() - start_time
-            print(f"Generation {gen+1} complete. Best Fitness in Gen: {best_fitness_in_gen:.4f}. (Time: {gen_time:.2f}s)")
+                population = self._evolve(population, fitness_scores)
+                
+                gen_time = time.time() - start_time
+                print(f"Generation {gen+1} complete. Best Fitness in Gen: {best_fitness_in_gen:.4f}. (Time: {gen_time:.2f}s)")
 
-        print("\nSearch complete. No definitive counterexample found in the given generations.")
+            print("\nSearch complete. No definitive counterexample found in the given generations.")
+        finally:
+            sys.stdout = original_stdout
+            tee_logger.close()
 
 
 if __name__ == "__main__":

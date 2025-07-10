@@ -6,7 +6,6 @@
 #include <cmath>
 #include <iterator>
 #include <limits>
-
 using namespace std;
 
 int mms_value(const Utilities& utils, int agent, int n_agents, int n_items) {

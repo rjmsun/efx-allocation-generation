@@ -1,28 +1,29 @@
 #include "allocation.hpp"
 #include <iostream>
 #include <iomanip>
+using namespace std;
 
-void print_allocation(const Allocation& alloc, const std::string& name) {
-    std::cout << name << ":" << std::endl;
+void print_allocation(const Allocation& alloc, const string& name) {
+    cout << name << ":" << endl;
     for (size_t i = 0; i < alloc.size(); ++i) {
-        std::cout << "  Agent " << i << ": [";
+        cout << "  Agent " << i << ": [";
         for (size_t j = 0; j < alloc[i].size(); ++j) {
-            if (j > 0) std::cout << ", ";
-            std::cout << alloc[i][j];
+            if (j > 0) cout << ", ";
+            cout << alloc[i][j];
         }
-        std::cout << "]" << std::endl;
+        cout << "]" << endl;
     }
 }
 
 void print_valuations(const Utilities& vals) {
-    std::cout << "Valuations:" << std::endl;
+    cout << "Valuations:" << endl;
     for (size_t i = 0; i < vals.size(); ++i) {
-        std::cout << "  Agent " << i << ": [";
+        cout << "  Agent " << i << ": [";
         for (size_t j = 0; j < vals[i].size(); ++j) {
-            if (j > 0) std::cout << ", ";
-            std::cout << vals[i][j];
+            if (j > 0) cout << ", ";
+            cout << vals[i][j];
         }
-        std::cout << "]" << std::endl;
+        cout << "]" << endl;
     }
 }
 
@@ -38,31 +39,31 @@ void test_distance_functions() {
     Allocation allocation2 = {{0, 2}, {1, 3}};  // Agent 0 gets items 0,2; Agent 1 gets items 1,3
     
     print_valuations(valuations);
-    std::cout << std::endl;
+    cout << endl;
     print_allocation(allocation1, "Allocation 1");
-    std::cout << std::endl;
+    cout << endl;
     print_allocation(allocation2, "Allocation 2");
-    std::cout << std::endl;
+    cout << endl;
     
     // Calculate all distances
-    std::cout << "Distance Metrics:" << std::endl;
-    std::cout << "  Swap Distance: " << swap_distance(allocation1, allocation2) << std::endl;
-    std::cout << "  Normalized Euclidean Distance: " << std::fixed << std::setprecision(4) 
-              << normalized_euclidean_distance(allocation1, allocation2, valuations) << std::endl;
-    std::cout << "  Chebyshev Distance: " << chebyshev_distance(allocation1, allocation2, valuations) << std::endl;
-    std::cout << "  Earth Mover's Distance: " << earth_movers_distance(allocation1, allocation2) << std::endl;
-    std::cout << "  Envy Graph Distance: " << envy_graph_distance(allocation1, allocation2, valuations) << std::endl;
-    std::cout << "  Hamming Distance: " << hamming_distance(allocation1, allocation2) << std::endl;
+    cout << "Distance Metrics:" << endl;
+    cout << "  Swap Distance: " << swap_distance(allocation1, allocation2) << endl;
+    cout << "  Normalized Euclidean Distance: " << fixed << setprecision(4) 
+              << normalized_euclidean_distance(allocation1, allocation2, valuations) << endl;
+    cout << "  Chebyshev Distance: " << chebyshev_distance(allocation1, allocation2, valuations) << endl;
+    cout << "  Earth Mover's Distance: " << earth_movers_distance(allocation1, allocation2) << endl;
+    cout << "  Envy Graph Distance: " << envy_graph_distance(allocation1, allocation2, valuations) << endl;
+    cout << "  Hamming Distance: " << hamming_distance(allocation1, allocation2) << endl;
     
     // Show utility calculations for verification
-    std::cout << std::endl << "Utility Analysis:" << std::endl;
+    cout << endl << "Utility Analysis:" << endl;
     for (size_t agent = 0; agent < 2; ++agent) {
         int u1 = total_value(valuations, agent, allocation1[agent]);
         int u2 = total_value(valuations, agent, allocation2[agent]);
-        std::cout << "  Agent " << agent << ":" << std::endl;
-        std::cout << "    Utility in Allocation 1: " << u1 << std::endl;
-        std::cout << "    Utility in Allocation 2: " << u2 << std::endl;
-        std::cout << "    Difference: " << std::abs(u1 - u2) << std::endl;
+        cout << "  Agent " << agent << ":" << endl;
+        cout << "    Utility in Allocation 1: " << u1 << endl;
+        cout << "    Utility in Allocation 2: " << u2 << endl;
+        cout << "    Difference: " << abs(u1 - u2) << endl;
     }
 }
 
@@ -70,13 +71,13 @@ void test_identical_allocations() {
     Utilities valuations = {{3, 2, 1}, {1, 2, 3}};
     Allocation allocation = {{0, 1}, {2}};
     
-    std::cout << std::endl << "Testing identical allocations:" << std::endl;
-    std::cout << "  Swap Distance: " << swap_distance(allocation, allocation) << std::endl;
-    std::cout << "  Normalized Euclidean Distance: " << normalized_euclidean_distance(allocation, allocation, valuations) << std::endl;
-    std::cout << "  Chebyshev Distance: " << chebyshev_distance(allocation, allocation, valuations) << std::endl;
-    std::cout << "  Earth Mover's Distance: " << earth_movers_distance(allocation, allocation) << std::endl;
-    std::cout << "  Envy Graph Distance: " << envy_graph_distance(allocation, allocation, valuations) << std::endl;
-    std::cout << "  Hamming Distance: " << hamming_distance(allocation, allocation) << std::endl;
+    cout << endl << "Testing identical allocations:" << endl;
+    cout << "  Swap Distance: " << swap_distance(allocation, allocation) << endl;
+    cout << "  Normalized Euclidean Distance: " << normalized_euclidean_distance(allocation, allocation, valuations) << endl;
+    cout << "  Chebyshev Distance: " << chebyshev_distance(allocation, allocation, valuations) << endl;
+    cout << "  Earth Mover's Distance: " << earth_movers_distance(allocation, allocation) << endl;
+    cout << "  Envy Graph Distance: " << envy_graph_distance(allocation, allocation, valuations) << endl;
+    cout << "  Hamming Distance: " << hamming_distance(allocation, allocation) << endl;
 }
 
 void test_extreme_cases() {
@@ -91,18 +92,18 @@ void test_extreme_cases() {
     Allocation allocation1 = {{0, 1}, {2, 3}, {4, 5}};
     Allocation allocation2 = {{4, 5}, {0, 1}, {2, 3}};
     
-    std::cout << std::endl << "Extreme case - completely different allocations:" << std::endl;
-    std::cout << "  Swap Distance: " << swap_distance(allocation1, allocation2) << std::endl;
-    std::cout << "  Normalized Euclidean Distance: " << normalized_euclidean_distance(allocation1, allocation2, valuations) << std::endl;
-    std::cout << "  Chebyshev Distance: " << chebyshev_distance(allocation1, allocation2, valuations) << std::endl;
-    std::cout << "  Earth Mover's Distance: " << earth_movers_distance(allocation1, allocation2) << std::endl;
-    std::cout << "  Envy Graph Distance: " << envy_graph_distance(allocation1, allocation2, valuations) << std::endl;
-    std::cout << "  Hamming Distance: " << hamming_distance(allocation1, allocation2) << std::endl;
+    cout << endl << "Extreme case - completely different allocations:" << endl;
+    cout << "  Swap Distance: " << swap_distance(allocation1, allocation2) << endl;
+    cout << "  Normalized Euclidean Distance: " << normalized_euclidean_distance(allocation1, allocation2, valuations) << endl;
+    cout << "  Chebyshev Distance: " << chebyshev_distance(allocation1, allocation2, valuations) << endl;
+    cout << "  Earth Mover's Distance: " << earth_movers_distance(allocation1, allocation2) << endl;
+    cout << "  Envy Graph Distance: " << envy_graph_distance(allocation1, allocation2, valuations) << endl;
+    cout << "  Hamming Distance: " << hamming_distance(allocation1, allocation2) << endl;
 }
 
 int main() {
-    std::cout << "Testing Allocation Distance Functions" << std::endl;
-    std::cout << "=====================================" << std::endl;
+    cout << "Testing Allocation Distance Functions" << endl;
+    cout << "=====================================" << endl;
     
     test_distance_functions();
     test_identical_allocations();

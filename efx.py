@@ -283,6 +283,45 @@ def hamming_distance(allocation1, allocation2):
     # Hamming distance = total items - items in same position
     return total_items - same_position
 
+def normalized_dot_product_distance(allocation1, allocation2, valuations):
+    """
+    Calculate normalized dot product distance between allocations.
+    This measures how similar the utility functions are between agents.
+    Agents with similar utility functions will have higher dot products and 
+    will likely be interested in the same items.
+    
+    Returns: 1 - normalized_dot_product (so that similar allocations have lower distance)
+    """
+    n = len(allocation1)
+    
+    # Calculate utility vectors for both allocations
+    utils1 = []
+    utils2 = []
+    
+    for agent in range(n):
+        # Calculate total utility for agent in allocation1
+        u1 = sum(valuations[agent][item] for item in allocation1[agent])
+        utils1.append(u1)
+        
+        # Calculate total utility for agent in allocation2
+        u2 = sum(valuations[agent][item] for item in allocation2[agent])
+        utils2.append(u2)
+    
+    # Normalize utility vectors to unit length
+    norm1 = math.sqrt(sum(u * u for u in utils1))
+    norm2 = math.sqrt(sum(u * u for u in utils2))
+    
+    if norm1 == 0 or norm2 == 0:
+        return 1.0  # Maximum distance if either vector is zero
+    
+    # Calculate normalized dot product
+    dot_product = sum(utils1[i] * utils2[i] for i in range(n))
+    normalized_dot_product = dot_product / (norm1 * norm2)
+    
+    # Return 1 - normalized_dot_product so that similar allocations have lower distance
+    # This ensures the distance is in [0, 2] range, where 0 means identical utility profiles
+    return 1.0 - normalized_dot_product
+
 def calculate_all_distances(allocation1, allocation2, valuations):
     """
     Calculate all distance metrics between two allocations.
@@ -294,5 +333,6 @@ def calculate_all_distances(allocation1, allocation2, valuations):
         'chebyshev': chebyshev_distance(allocation1, allocation2, valuations),
         'earth_movers': earth_movers_distance(allocation1, allocation2),
         'envy_graph': envy_graph_distance(allocation1, allocation2, valuations),
-        'hamming': hamming_distance(allocation1, allocation2)
+        'hamming': hamming_distance(allocation1, allocation2),
+        'normalized_dot_product': normalized_dot_product_distance(allocation1, allocation2, valuations)
     }

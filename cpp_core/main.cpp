@@ -5,7 +5,6 @@
 #include <chrono>
 #include <string>
 #include <iterator>
-
 using namespace std;
 
 void print_matrix(const Utilities& utils) {

@@ -7,9 +7,16 @@ Counterexample 1:
   ICI: 0.2714
   ASI: 0.0002
   TVA: 0.3751
-  H-score: 0.6509
+  Max Agent Specialization: 0.6040
+  H-score: 9.7082
   Item-wise Gini: [0.337, 0.275, 0.296, 0.358, 0.186, 0.058, 0.411, 0.308, 0.102, 0.467, 0.209]
   Max pairwise normalized dot product: 0.976
+  Dot Product Analysis:
+    Max pairwise dot product: 0.976
+    Mean pairwise dot product: 0.829
+    Dot product distance score: 0.024
+    All pairwise dots: [0.776, 0.976, 0.734]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 2:
   [100, 7, 3, 13, 18, 5, 14, 15, 99, 11, 9]
@@ -18,9 +25,16 @@ Counterexample 2:
   ICI: 0.2064
   ASI: 0.0016
   TVA: 0.2514
-  H-score: 0.4905
+  Max Agent Specialization: 0.5806
+  H-score: 9.1752
   Item-wise Gini: [0.247, 0.402, 0.323, 0.281, 0.268, 0.252, 0.172, 0.112, 0.068, 0.193, 0.226]
   Max pairwise normalized dot product: 0.992
+  Dot Product Analysis:
+    Max pairwise dot product: 0.992
+    Mean pairwise dot product: 0.855
+    Dot product distance score: 0.008
+    All pairwise dots: [0.992, 0.796, 0.778]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 3:
   [14, 8, 18, 7, 13, 99, 2, 13, 4, 98, 2]
@@ -29,9 +43,16 @@ Counterexample 3:
   ICI: 0.2377
   ASI: 0.0058
   TVA: 0.1925
-  H-score: 0.5456
+  Max Agent Specialization: 0.6105
+  H-score: 9.6161
   Item-wise Gini: [0.219, 0.017, 0.219, 0.219, 0.247, 0.258, 0.338, 0.420, 0.370, 0.286, 0.316]
   Max pairwise normalized dot product: 0.798
+  Dot Product Analysis:
+    Max pairwise dot product: 0.798
+    Mean pairwise dot product: 0.621
+    Dot product distance score: 0.202
+    All pairwise dots: [0.306, 0.798, 0.760]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Counterexample 4:
   [18, 16, 7, 6, 18, 86, 5, 91, 15, 18, 10]
@@ -40,9 +61,16 @@ Counterexample 4:
   ICI: 0.2132
   ASI: 0.0009
   TVA: 0.2446
-  H-score: 0.4766
+  Max Agent Specialization: 0.5738
+  H-score: 9.0695
   Item-wise Gini: [0.177, 0.461, 0.418, 0.213, 0.076, 0.283, 0.063, 0.327, 0.149, 0.087, 0.196]
   Max pairwise normalized dot product: 0.839
+  Dot Product Analysis:
+    Max pairwise dot product: 0.839
+    Mean pairwise dot product: 0.582
+    Dot product distance score: 0.161
+    All pairwise dots: [0.839, 0.220, 0.688]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 5:
   [11, 11, 98, 6, 1, 18, 98, 12, 15, 94, 13]
@@ -51,9 +79,16 @@ Counterexample 5:
   ICI: 0.2688
   ASI: 0.0002
   TVA: 0.2378
-  H-score: 0.5112
+  Max Agent Specialization: 0.5587
+  H-score: 8.8877
   Item-wise Gini: [0.253, 0.230, 0.303, 0.339, 0.416, 0.377, 0.255, 0.374, 0.205, 0.345, 0.190]
   Max pairwise normalized dot product: 0.887
+  Dot Product Analysis:
+    Max pairwise dot product: 0.887
+    Mean pairwise dot product: 0.627
+    Dot product distance score: 0.113
+    All pairwise dots: [0.887, 0.668, 0.327]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 6:
   [10, 4, 11, 10, 9, 18, 16, 99, 9, 1, 19]
@@ -62,9 +97,16 @@ Counterexample 6:
   ICI: 0.2270
   ASI: 0.0004
   TVA: 0.2258
-  H-score: 0.4600
+  Max Agent Specialization: 0.5688
+  H-score: 8.9859
   Item-wise Gini: [0.129, 0.208, 0.027, 0.268, 0.244, 0.231, 0.438, 0.395, 0.310, 0.282, 0.232]
   Max pairwise normalized dot product: 0.829
+  Dot Product Analysis:
+    Max pairwise dot product: 0.829
+    Mean pairwise dot product: 0.617
+    Dot product distance score: 0.171
+    All pairwise dots: [0.734, 0.288, 0.829]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 7:
   [5, 97, 13, 13, 11, 3, 12, 10, 17, 8, 3]
@@ -73,9 +115,16 @@ Counterexample 7:
   ICI: 0.2470
   ASI: 0.0015
   TVA: 0.2883
-  H-score: 0.5644
+  Max Agent Specialization: 0.5900
+  H-score: 9.3925
   Item-wise Gini: [0.299, 0.379, 0.291, 0.385, 0.147, 0.235, 0.265, 0.015, 0.285, 0.290, 0.351]
   Max pairwise normalized dot product: 0.820
+  Dot Product Analysis:
+    Max pairwise dot product: 0.820
+    Mean pairwise dot product: 0.605
+    Dot product distance score: 0.180
+    All pairwise dots: [0.728, 0.266, 0.820]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 8:
   [90, 1, 1, 85, 5, 85, 7, 15, 14, 4, 5]
@@ -84,9 +133,16 @@ Counterexample 8:
   ICI: 0.2963
   ASI: 0.0027
   TVA: 0.3815
-  H-score: 0.7311
+  Max Agent Specialization: 0.6136
+  H-score: 9.8957
   Item-wise Gini: [0.262, 0.408, 0.483, 0.269, 0.411, 0.338, 0.246, 0.154, 0.202, 0.387, 0.262]
   Max pairwise normalized dot product: 0.875
+  Dot Product Analysis:
+    Max pairwise dot product: 0.875
+    Mean pairwise dot product: 0.645
+    Dot product distance score: 0.125
+    All pairwise dots: [0.710, 0.875, 0.349]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 9:
   [13, 1, 94, 8, 16, 11, 6, 19, 14, 8, 7]
@@ -95,9 +151,16 @@ Counterexample 9:
   ICI: 0.2459
   ASI: 0.0027
   TVA: 0.3711
-  H-score: 0.6700
+  Max Agent Specialization: 0.6296
+  H-score: 10.0743
   Item-wise Gini: [0.078, 0.401, 0.072, 0.210, 0.319, 0.185, 0.129, 0.220, 0.534, 0.252, 0.371]
   Max pairwise normalized dot product: 0.985
+  Dot Product Analysis:
+    Max pairwise dot product: 0.985
+    Mean pairwise dot product: 0.876
+    Dot product distance score: 0.015
+    All pairwise dots: [0.820, 0.823, 0.985]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 10:
   [90, 12, 91, 6, 10, 87, 7, 1, 15, 15, 11]
@@ -106,9 +169,16 @@ Counterexample 10:
   ICI: 0.2653
   ASI: 0.0010
   TVA: 0.2721
-  H-score: 0.5569
+  Max Agent Specialization: 0.5783
+  H-score: 9.2173
   Item-wise Gini: [0.301, 0.143, 0.290, 0.256, 0.235, 0.400, 0.403, 0.312, 0.279, 0.069, 0.352]
   Max pairwise normalized dot product: 0.839
+  Dot Product Analysis:
+    Max pairwise dot product: 0.839
+    Mean pairwise dot product: 0.586
+    Dot product distance score: 0.161
+    All pairwise dots: [0.672, 0.839, 0.247]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 11:
   [98, 13, 4, 13, 5, 9, 16, 12, 15, 3, 5]
@@ -117,9 +187,16 @@ Counterexample 11:
   ICI: 0.2360
   ASI: 0.0007
   TVA: 0.2433
-  H-score: 0.4925
+  Max Agent Specialization: 0.5479
+  H-score: 8.7015
   Item-wise Gini: [0.359, 0.370, 0.221, 0.352, 0.338, 0.265, 0.178, 0.190, 0.216, 0.273, 0.138]
   Max pairwise normalized dot product: 0.866
+  Dot Product Analysis:
+    Max pairwise dot product: 0.866
+    Mean pairwise dot product: 0.609
+    Dot product distance score: 0.134
+    All pairwise dots: [0.681, 0.279, 0.866]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 12:
   [6, 13, 17, 6, 83, 4, 19, 2, 18, 8, 82]
@@ -128,9 +205,16 @@ Counterexample 12:
   ICI: 0.2544
   ASI: 0.0011
   TVA: 0.3032
-  H-score: 0.5792
+  Max Agent Specialization: 0.6000
+  H-score: 9.5630
   Item-wise Gini: [0.330, 0.346, 0.233, 0.269, 0.232, 0.229, 0.205, 0.377, 0.252, 0.315, 0.072]
   Max pairwise normalized dot product: 0.976
+  Dot Product Analysis:
+    Max pairwise dot product: 0.976
+    Mean pairwise dot product: 0.868
+    Dot product distance score: 0.024
+    All pairwise dots: [0.976, 0.800, 0.829]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 13:
   [17, 16, 91, 10, 7, 14, 12, 16, 5, 6, 93]
@@ -139,9 +223,16 @@ Counterexample 13:
   ICI: 0.2245
   ASI: 0.0000
   TVA: 0.2575
-  H-score: 0.4826
+  Max Agent Specialization: 0.5257
+  H-score: 8.3671
   Item-wise Gini: [0.121, 0.229, 0.346, 0.195, 0.390, 0.159, 0.275, 0.253, 0.205, 0.303, 0.260]
   Max pairwise normalized dot product: 0.803
+  Dot Product Analysis:
+    Max pairwise dot product: 0.803
+    Mean pairwise dot product: 0.598
+    Dot product distance score: 0.197
+    All pairwise dots: [0.253, 0.803, 0.738]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 14:
   [88, 6, 9, 5, 1, 2, 94, 14, 7, 91, 8]
@@ -150,9 +241,16 @@ Counterexample 14:
   ICI: 0.2410
   ASI: 0.0029
   TVA: 0.2793
-  H-score: 0.5787
+  Max Agent Specialization: 0.6087
+  H-score: 9.6649
   Item-wise Gini: [0.343, 0.281, 0.227, 0.337, 0.332, 0.385, 0.264, 0.121, 0.211, 0.357, 0.173]
   Max pairwise normalized dot product: 0.856
+  Dot Product Analysis:
+    Max pairwise dot product: 0.856
+    Mean pairwise dot product: 0.589
+    Dot product distance score: 0.144
+    All pairwise dots: [0.649, 0.856, 0.261]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 15:
   [11, 91, 17, 19, 19, 11, 6, 5, 3, 81, 12]
@@ -161,9 +259,16 @@ Counterexample 15:
   ICI: 0.2059
   ASI: 0.0047
   TVA: 0.2783
-  H-score: 0.5779
+  Max Agent Specialization: 0.5799
+  H-score: 9.2054
   Item-wise Gini: [0.429, 0.057, 0.039, 0.085, 0.028, 0.153, 0.202, 0.378, 0.355, 0.267, 0.363]
   Max pairwise normalized dot product: 0.986
+  Dot Product Analysis:
+    Max pairwise dot product: 0.986
+    Mean pairwise dot product: 0.868
+    Dot product distance score: 0.014
+    All pairwise dots: [0.832, 0.986, 0.787]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 16:
   [97, 13, 16, 13, 9, 3, 1, 13, 15, 4, 98]
@@ -172,9 +277,16 @@ Counterexample 16:
   ICI: 0.2322
   ASI: 0.0020
   TVA: 0.2227
-  H-score: 0.4950
+  Max Agent Specialization: 0.5861
+  H-score: 9.2561
   Item-wise Gini: [0.293, 0.193, 0.209, 0.272, 0.338, 0.355, 0.338, 0.093, 0.158, 0.405, 0.304]
   Max pairwise normalized dot product: 0.847
+  Dot Product Analysis:
+    Max pairwise dot product: 0.847
+    Mean pairwise dot product: 0.590
+    Dot product distance score: 0.153
+    All pairwise dots: [0.244, 0.847, 0.679]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 17:
   [6, 16, 1, 7, 16, 92, 1, 14, 19, 11, 7]
@@ -183,9 +295,16 @@ Counterexample 17:
   ICI: 0.2298
   ASI: 0.0020
   TVA: 0.3332
-  H-score: 0.6026
+  Max Agent Specialization: 0.5886
+  H-score: 9.4026
   Item-wise Gini: [0.244, 0.173, 0.383, 0.127, 0.237, 0.105, 0.368, 0.355, 0.258, 0.318, 0.151]
   Max pairwise normalized dot product: 0.988
+  Dot Product Analysis:
+    Max pairwise dot product: 0.988
+    Mean pairwise dot product: 0.862
+    Dot product distance score: 0.012
+    All pairwise dots: [0.791, 0.808, 0.988]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 18:
   [80, 4, 16, 4, 11, 2, 14, 9, 17, 4, 12]
@@ -194,9 +313,16 @@ Counterexample 18:
   ICI: 0.2675
   ASI: 0.0006
   TVA: 0.2603
-  H-score: 0.5404
+  Max Agent Specialization: 0.5869
+  H-score: 9.3342
   Item-wise Gini: [0.384, 0.327, 0.225, 0.400, 0.267, 0.327, 0.374, 0.357, 0.219, 0.202, 0.254]
   Max pairwise normalized dot product: 0.840
+  Dot Product Analysis:
+    Max pairwise dot product: 0.840
+    Mean pairwise dot product: 0.592
+    Dot product distance score: 0.160
+    All pairwise dots: [0.257, 0.680, 0.840]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 19:
   [10, 15, 11, 6, 88, 9, 92, 12, 15, 14, 11]
@@ -205,9 +331,16 @@ Counterexample 19:
   ICI: 0.2093
   ASI: 0.0013
   TVA: 0.2864
-  H-score: 0.5216
+  Max Agent Specialization: 0.5731
+  H-score: 9.0987
   Item-wise Gini: [0.130, 0.191, 0.295, 0.416, 0.119, 0.324, 0.283, 0.155, 0.058, 0.083, 0.368]
   Max pairwise normalized dot product: 0.988
+  Dot Product Analysis:
+    Max pairwise dot product: 0.988
+    Mean pairwise dot product: 0.836
+    Dot product distance score: 0.012
+    All pairwise dots: [0.749, 0.988, 0.770]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 20:
   [19, 13, 10, 86, 3, 11, 14, 87, 6, 3, 5]
@@ -216,9 +349,16 @@ Counterexample 20:
   ICI: 0.2027
   ASI: 0.0002
   TVA: 0.3363
-  H-score: 0.5431
+  Max Agent Specialization: 0.5752
+  H-score: 9.1676
   Item-wise Gini: [0.116, 0.181, 0.287, 0.094, 0.014, 0.195, 0.177, 0.244, 0.309, 0.466, 0.285]
   Max pairwise normalized dot product: 0.987
+  Dot Product Analysis:
+    Max pairwise dot product: 0.987
+    Mean pairwise dot product: 0.849
+    Dot product distance score: 0.013
+    All pairwise dots: [0.799, 0.987, 0.761]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 21:
   [2, 19, 99, 99, 1, 19, 10, 2, 15, 17, 80]
@@ -227,9 +367,16 @@ Counterexample 21:
   ICI: 0.2756
   ASI: 0.0030
   TVA: 0.2338
-  H-score: 0.5700
+  Max Agent Specialization: 0.6430
+  H-score: 10.1698
   Item-wise Gini: [0.471, 0.085, 0.333, 0.410, 0.309, 0.183, 0.179, 0.301, 0.395, 0.244, 0.293]
   Max pairwise normalized dot product: 0.777
+  Dot Product Analysis:
+    Max pairwise dot product: 0.777
+    Mean pairwise dot product: 0.572
+    Dot product distance score: 0.223
+    All pairwise dots: [0.717, 0.777, 0.221]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Counterexample 22:
   [94, 14, 19, 2, 12, 15, 5, 81, 1, 98, 2]
@@ -238,9 +385,16 @@ Counterexample 22:
   ICI: 0.2369
   ASI: 0.0013
   TVA: 0.1813
-  H-score: 0.4441
+  Max Agent Specialization: 0.5942
+  H-score: 9.3381
   Item-wise Gini: [0.326, 0.250, 0.189, 0.279, 0.090, 0.177, 0.365, 0.316, 0.295, 0.392, 0.276]
   Max pairwise normalized dot product: 0.801
+  Dot Product Analysis:
+    Max pairwise dot product: 0.801
+    Mean pairwise dot product: 0.570
+    Dot product distance score: 0.199
+    All pairwise dots: [0.703, 0.801, 0.207]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 23:
   [17, 5, 11, 9, 6, 6, 11, 4, 7, 1, 98]
@@ -249,9 +403,16 @@ Counterexample 23:
   ICI: 0.2639
   ASI: 0.0003
   TVA: 0.2465
-  H-score: 0.5162
+  Max Agent Specialization: 0.5901
+  H-score: 9.3639
   Item-wise Gini: [0.408, 0.067, 0.294, 0.119, 0.303, 0.267, 0.279, 0.151, 0.405, 0.291, 0.412]
   Max pairwise normalized dot product: 0.860
+  Dot Product Analysis:
+    Max pairwise dot product: 0.860
+    Mean pairwise dot product: 0.582
+    Dot product distance score: 0.140
+    All pairwise dots: [0.235, 0.650, 0.860]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 24:
   [7, 13, 7, 4, 9, 11, 94, 16, 11, 6, 8]
@@ -260,9 +421,16 @@ Counterexample 24:
   ICI: 0.2291
   ASI: 0.0016
   TVA: 0.2923
-  H-score: 0.5542
+  Max Agent Specialization: 0.6010
+  H-score: 9.5448
   Item-wise Gini: [0.083, 0.362, 0.292, 0.076, 0.372, 0.161, 0.342, 0.051, 0.064, 0.201, 0.166]
   Max pairwise normalized dot product: 0.777
+  Dot Product Analysis:
+    Max pairwise dot product: 0.777
+    Mean pairwise dot product: 0.589
+    Dot product distance score: 0.223
+    All pairwise dots: [0.225, 0.777, 0.766]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Counterexample 25:
   [82, 17, 5, 16, 8, 15, 13, 16, 4, 6, 13]
@@ -271,9 +439,16 @@ Counterexample 25:
   ICI: 0.2445
   ASI: 0.0043
   TVA: 0.2667
-  H-score: 0.5979
+  Max Agent Specialization: 0.6107
+  H-score: 9.6940
   Item-wise Gini: [0.412, 0.258, 0.143, 0.259, 0.291, 0.217, 0.283, 0.345, 0.273, 0.126, 0.335]
   Max pairwise normalized dot product: 0.831
+  Dot Product Analysis:
+    Max pairwise dot product: 0.831
+    Mean pairwise dot product: 0.633
+    Dot product distance score: 0.169
+    All pairwise dots: [0.311, 0.758, 0.831]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 26:
   [12, 1, 6, 18, 83, 6, 1, 84, 17, 10, 10]
@@ -282,9 +457,16 @@ Counterexample 26:
   ICI: 0.2448
   ASI: 0.0001
   TVA: 0.4104
-  H-score: 0.6576
+  Max Agent Specialization: 0.5887
+  H-score: 9.4864
   Item-wise Gini: [0.306, 0.405, 0.163, 0.109, 0.221, 0.271, 0.529, 0.108, 0.435, 0.156, 0.078]
   Max pairwise normalized dot product: 0.977
+  Dot Product Analysis:
+    Max pairwise dot product: 0.977
+    Mean pairwise dot product: 0.860
+    Dot product distance score: 0.023
+    All pairwise dots: [0.977, 0.814, 0.788]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 27:
   [87, 8, 16, 17, 7, 19, 16, 12, 13, 93, 2]
@@ -293,9 +475,16 @@ Counterexample 27:
   ICI: 0.2948
   ASI: 0.0041
   TVA: 0.2458
-  H-score: 0.6220
+  Max Agent Specialization: 0.6637
+  H-score: 10.5165
   Item-wise Gini: [0.325, 0.280, 0.280, 0.346, 0.093, 0.349, 0.342, 0.422, 0.064, 0.252, 0.430]
   Max pairwise normalized dot product: 0.866
+  Dot Product Analysis:
+    Max pairwise dot product: 0.866
+    Mean pairwise dot product: 0.597
+    Dot product distance score: 0.134
+    All pairwise dots: [0.294, 0.866, 0.630]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 28:
   [7, 10, 2, 2, 17, 16, 10, 5, 18, 100, 10]
@@ -304,9 +493,16 @@ Counterexample 28:
   ICI: 0.2461
   ASI: 0.0001
   TVA: 0.2470
-  H-score: 0.4941
+  Max Agent Specialization: 0.5636
+  H-score: 8.9479
   Item-wise Gini: [0.299, 0.304, 0.292, 0.455, 0.232, 0.418, 0.158, 0.150, 0.248, 0.369, 0.111]
   Max pairwise normalized dot product: 0.850
+  Dot Product Analysis:
+    Max pairwise dot product: 0.850
+    Mean pairwise dot product: 0.633
+    Dot product distance score: 0.150
+    All pairwise dots: [0.307, 0.743, 0.850]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 Counterexample 29:
   [17, 6, 10, 4, 12, 3, 8, 19, 8, 9, 96]
@@ -315,11 +511,18 @@ Counterexample 29:
   ICI: 0.2886
   ASI: 0.0032
   TVA: 0.3903
-  H-score: 0.7425
+  Max Agent Specialization: 0.6490
+  H-score: 10.4304
   Item-wise Gini: [0.166, 0.258, 0.251, 0.175, 0.289, 0.250, 0.214, 0.256, 0.300, 0.507, 0.439]
   Max pairwise normalized dot product: 0.807
+  Dot Product Analysis:
+    Max pairwise dot product: 0.807
+    Mean pairwise dot product: 0.609
+    Dot product distance score: 0.193
+    All pairwise dots: [0.270, 0.749, 0.807]
+    Counterexample likelihood: LOW (agents have very similar preferences)
 
 === COUNTEREXAMPLE SUMMARY ===
 Total counterexamples: 29
-Mean H-score: 0.5610
-Standard deviation: 0.0747
+Mean H-score: 9.4233
+Standard deviation: 0.4748

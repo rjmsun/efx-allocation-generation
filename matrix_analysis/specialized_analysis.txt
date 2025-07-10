@@ -1,1106 +1,1806 @@
 === SPECIALIZED MATRIX ANALYSIS ===
 
 Specialized Matrix 1:
-  [94, 83, 78, 40, 10, 8, 10, 46, 42, 41, 14]
-  [31, 19, 5, 95, 72, 88, 25, 48, 18, 48, 1]
-  [26, 21, 47, 34, 49, 2, 72, 94, 74, 29, 29]
-  ICI: 0.3208
-  ASI: 0.0014
-  TVA: 0.5327
-  H-score: 0.8819
-  Item-wise Gini: [0.302, 0.343, 0.376, 0.253, 0.325, 0.588, 0.379, 0.163, 0.269, 0.120, 0.420]
-  Max pairwise normalized dot product: 0.677
+  [97, 84, 88, 44, 23, 4, 1, 33, 29, 46, 43]
+  [14, 18, 25, 77, 87, 70, 21, 21, 10, 18, 27]
+  [34, 49, 3, 13, 50, 47, 91, 82, 81, 10, 35]
+  ICI: 0.3419
+  ASI: 0.0001
+  TVA: 0.5244
+  Max Agent Specialization: 0.3858
+  H-score: 6.6541
+  Item-wise Gini: [0.356, 0.262, 0.462, 0.365, 0.318, 0.405, 0.505, 0.259, 0.370, 0.305, 0.052]
+  Max pairwise normalized dot product: 0.602
+  Dot Product Analysis:
+    Max pairwise dot product: 0.602
+    Mean pairwise dot product: 0.547
+    Dot product distance score: 0.398
+    All pairwise dots: [0.518, 0.523, 0.602]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 2:
-  [82, 79, 82, 3, 16, 5, 32, 34, 41, 15, 37]
-  [20, 35, 35, 86, 79, 91, 33, 27, 20, 2, 31]
-  [5, 8, 31, 3, 1, 33, 79, 94, 81, 20, 40]
-  ICI: 0.3506
-  ASI: 0.0032
-  TVA: 0.5751
-  H-score: 0.9898
-  Item-wise Gini: [0.482, 0.391, 0.223, 0.595, 0.533, 0.424, 0.246, 0.317, 0.312, 0.342, 0.088]
-  Max pairwise normalized dot product: 0.570
+  [72, 87, 78, 17, 20, 42, 30, 48, 21, 45, 33]
+  [8, 36, 7, 89, 100, 70, 48, 49, 24, 30, 43]
+  [22, 25, 39, 7, 25, 47, 80, 80, 85, 46, 31]
+  ICI: 0.2610
+  ASI: 0.0007
+  TVA: 0.4934
+  Max Agent Specialization: 0.3525
+  H-score: 6.0446
+  Item-wise Gini: [0.419, 0.279, 0.382, 0.480, 0.362, 0.112, 0.215, 0.125, 0.332, 0.095, 0.067]
+  Max pairwise normalized dot product: 0.724
+  Dot Product Analysis:
+    Max pairwise dot product: 0.724
+    Mean pairwise dot product: 0.661
+    Dot product distance score: 0.276
+    All pairwise dots: [0.591, 0.724, 0.667]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 3:
-  [89, 91, 70, 50, 21, 45, 29, 7, 23, 43, 10]
-  [40, 27, 36, 92, 75, 91, 13, 41, 7, 19, 32]
-  [31, 50, 9, 30, 41, 22, 71, 98, 84, 23, 34]
-  ICI: 0.2955
+  [89, 96, 86, 6, 20, 3, 41, 44, 39, 29, 27]
+  [15, 18, 34, 86, 96, 78, 24, 21, 41, 11, 36]
+  [32, 42, 6, 18, 20, 33, 98, 84, 95, 49, 37]
+  ICI: 0.3240
   ASI: 0.0003
-  TVA: 0.4841
-  H-score: 0.7851
-  Item-wise Gini: [0.246, 0.255, 0.355, 0.248, 0.268, 0.297, 0.335, 0.409, 0.445, 0.188, 0.203]
-  Max pairwise normalized dot product: 0.707
+  TVA: 0.5480
+  Max Agent Specialization: 0.3943
+  H-score: 6.7882
+  Item-wise Gini: [0.363, 0.334, 0.422, 0.496, 0.391, 0.454, 0.281, 0.261, 0.194, 0.265, 0.071]
+  Max pairwise normalized dot product: 0.665
+  Dot Product Analysis:
+    Max pairwise dot product: 0.665
+    Mean pairwise dot product: 0.556
+    Dot product distance score: 0.335
+    All pairwise dots: [0.448, 0.665, 0.557]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 4:
-  [88, 80, 97, 33, 24, 33, 46, 16, 25, 14, 34]
-  [35, 44, 3, 80, 79, 86, 4, 42, 25, 45, 37]
-  [3, 33, 29, 29, 4, 31, 94, 75, 87, 39, 3]
-  ICI: 0.3289
-  ASI: 0.0021
-  TVA: 0.5028
-  H-score: 0.8729
-  Item-wise Gini: [0.443, 0.173, 0.470, 0.219, 0.464, 0.234, 0.438, 0.322, 0.332, 0.203, 0.304]
-  Max pairwise normalized dot product: 0.591
+  [89, 83, 85, 20, 28, 11, 48, 37, 41, 20, 24]
+  [23, 49, 28, 90, 96, 75, 41, 15, 20, 20, 36]
+  [41, 16, 40, 18, 22, 42, 98, 94, 95, 32, 38]
+  ICI: 0.2704
+  ASI: 0.0000
+  TVA: 0.5016
+  Max Agent Specialization: 0.3375
+  H-score: 5.8339
+  Item-wise Gini: [0.297, 0.313, 0.257, 0.386, 0.349, 0.341, 0.182, 0.343, 0.302, 0.090, 0.082]
+  Max pairwise normalized dot product: 0.717
+  Dot Product Analysis:
+    Max pairwise dot product: 0.717
+    Mean pairwise dot product: 0.634
+    Dot product distance score: 0.283
+    All pairwise dots: [0.611, 0.717, 0.574]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 5:
-  [87, 88, 100, 15, 44, 31, 42, 36, 27, 2, 37]
-  [44, 2, 25, 75, 75, 83, 8, 49, 36, 37, 45]
-  [46, 22, 26, 28, 39, 38, 88, 98, 75, 39, 20]
-  ICI: 0.2771
-  ASI: 0.0006
-  TVA: 0.4832
-  H-score: 0.7729
-  Item-wise Gini: [0.156, 0.513, 0.327, 0.353, 0.171, 0.244, 0.379, 0.218, 0.224, 0.313, 0.180]
-  Max pairwise normalized dot product: 0.719
+  [83, 78, 90, 42, 22, 38, 11, 8, 37, 33, 6]
+  [3, 49, 50, 74, 82, 98, 17, 13, 18, 34, 49]
+  [44, 26, 7, 35, 37, 36, 95, 71, 85, 13, 21]
+  ICI: 0.3175
+  ASI: 0.0002
+  TVA: 0.5166
+  Max Agent Specialization: 0.3920
+  H-score: 6.7160
+  Item-wise Gini: [0.419, 0.240, 0.389, 0.161, 0.268, 0.229, 0.453, 0.454, 0.319, 0.179, 0.366]
+  Max pairwise normalized dot product: 0.671
+  Dot Product Analysis:
+    Max pairwise dot product: 0.671
+    Mean pairwise dot product: 0.590
+    Dot product distance score: 0.329
+    All pairwise dots: [0.671, 0.547, 0.553]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 6:
-  [85, 84, 85, 42, 40, 50, 27, 13, 34, 23, 33]
-  [37, 46, 48, 96, 80, 85, 26, 36, 9, 12, 23]
-  [10, 2, 16, 46, 19, 40, 72, 70, 75, 17, 50]
-  ICI: 0.2736
-  ASI: 0.0014
-  TVA: 0.4676
-  H-score: 0.7685
-  Item-wise Gini: [0.357, 0.405, 0.281, 0.193, 0.270, 0.137, 0.290, 0.358, 0.409, 0.125, 0.214]
-  Max pairwise normalized dot product: 0.804
+  [89, 82, 87, 14, 46, 4, 4, 10, 39, 37, 24]
+  [11, 42, 42, 73, 71, 90, 34, 20, 23, 22, 15]
+  [31, 33, 29, 26, 11, 42, 85, 73, 93, 5, 26]
+  ICI: 0.3205
+  ASI: 0.0016
+  TVA: 0.5068
+  Max Agent Specialization: 0.4387
+  H-score: 7.4160
+  Item-wise Gini: [0.402, 0.216, 0.252, 0.348, 0.313, 0.424, 0.435, 0.402, 0.294, 0.338, 0.107]
+  Max pairwise normalized dot product: 0.628
+  Dot Product Analysis:
+    Max pairwise dot product: 0.628
+    Mean pairwise dot product: 0.575
+    Dot product distance score: 0.372
+    All pairwise dots: [0.572, 0.524, 0.628]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 7:
-  [90, 73, 85, 10, 12, 4, 24, 42, 50, 17, 6]
-  [8, 21, 43, 77, 87, 88, 43, 45, 49, 19, 48]
-  [26, 25, 20, 37, 20, 21, 88, 80, 77, 7, 26]
-  ICI: 0.3064
-  ASI: 0.0044
-  TVA: 0.5252
-  H-score: 0.9188
-  Item-wise Gini: [0.460, 0.332, 0.317, 0.316, 0.376, 0.464, 0.285, 0.182, 0.148, 0.177, 0.306]
-  Max pairwise normalized dot product: 0.725
+  [77, 77, 100, 37, 5, 37, 35, 34, 43, 33, 46]
+  [25, 25, 35, 89, 87, 100, 20, 9, 13, 47, 33]
+  [28, 3, 43, 15, 36, 15, 90, 85, 87, 47, 12]
+  ICI: 0.3195
+  ASI: 0.0029
+  TVA: 0.5165
+  Max Agent Specialization: 0.4039
+  H-score: 6.9085
+  Item-wise Gini: [0.245, 0.456, 0.221, 0.352, 0.425, 0.375, 0.338, 0.412, 0.362, 0.099, 0.226]
+  Max pairwise normalized dot product: 0.644
+  Dot Product Analysis:
+    Max pairwise dot product: 0.644
+    Mean pairwise dot product: 0.575
+    Dot product distance score: 0.356
+    All pairwise dots: [0.607, 0.644, 0.473]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 8:
-  [71, 90, 71, 26, 31, 33, 30, 24, 30, 22, 35]
-  [45, 25, 18, 72, 97, 75, 17, 15, 39, 15, 33]
-  [35, 20, 1, 47, 48, 14, 81, 72, 97, 16, 35]
-  ICI: 0.2603
-  ASI: 0.0026
-  TVA: 0.4922
-  H-score: 0.8037
-  Item-wise Gini: [0.159, 0.345, 0.516, 0.218, 0.256, 0.339, 0.328, 0.337, 0.266, 0.083, 0.007]
-  Max pairwise normalized dot product: 0.683
+  [99, 74, 94, 18, 32, 41, 40, 32, 46, 30, 35]
+  [21, 7, 24, 75, 83, 91, 28, 49, 42, 43, 36]
+  [32, 42, 10, 41, 9, 44, 86, 97, 71, 27, 47]
+  ICI: 0.2549
+  ASI: 0.0005
+  TVA: 0.4869
+  Max Agent Specialization: 0.3266
+  H-score: 5.6437
+  Item-wise Gini: [0.326, 0.350, 0.425, 0.295, 0.407, 0.206, 0.253, 0.253, 0.121, 0.112, 0.082]
+  Max pairwise normalized dot product: 0.719
+  Dot Product Analysis:
+    Max pairwise dot product: 0.719
+    Mean pairwise dot product: 0.674
+    Dot product distance score: 0.281
+    All pairwise dots: [0.619, 0.683, 0.719]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 9:
-  [89, 77, 93, 46, 23, 48, 47, 23, 24, 8, 29]
-  [11, 31, 18, 82, 98, 81, 4, 34, 13, 32, 29]
-  [28, 15, 7, 46, 14, 46, 99, 97, 75, 8, 48]
-  ICI: 0.3162
-  ASI: 0.0016
-  TVA: 0.6092
-  H-score: 0.9567
-  Item-wise Gini: [0.387, 0.316, 0.470, 0.175, 0.438, 0.163, 0.425, 0.319, 0.359, 0.365, 0.126]
-  Max pairwise normalized dot product: 0.593
+  [74, 71, 78, 30, 3, 28, 17, 33, 40, 8, 18]
+  [21, 26, 15, 93, 92, 85, 28, 38, 38, 26, 39]
+  [47, 1, 29, 21, 26, 48, 97, 70, 91, 43, 40]
+  ICI: 0.3039
+  ASI: 0.0008
+  TVA: 0.5097
+  Max Agent Specialization: 0.3864
+  H-score: 6.6130
+  Item-wise Gini: [0.299, 0.506, 0.391, 0.320, 0.486, 0.199, 0.340, 0.137, 0.192, 0.273, 0.109]
+  Max pairwise normalized dot product: 0.668
+  Dot Product Analysis:
+    Max pairwise dot product: 0.668
+    Mean pairwise dot product: 0.611
+    Dot product distance score: 0.332
+    All pairwise dots: [0.542, 0.623, 0.668]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 10:
-  [87, 100, 85, 17, 18, 2, 24, 6, 40, 28, 42]
-  [14, 32, 43, 76, 99, 93, 25, 22, 9, 44, 45]
-  [43, 18, 31, 36, 35, 19, 74, 88, 85, 9, 43]
-  ICI: 0.3223
-  ASI: 0.0023
-  TVA: 0.5453
-  H-score: 0.9133
-  Item-wise Gini: [0.356, 0.381, 0.245, 0.287, 0.338, 0.526, 0.270, 0.471, 0.373, 0.272, 0.010]
-  Max pairwise normalized dot product: 0.588
+  [92, 77, 76, 6, 32, 29, 45, 6, 47, 15, 27]
+  [45, 42, 47, 92, 99, 87, 25, 41, 26, 15, 25]
+  [43, 36, 9, 38, 13, 48, 99, 92, 86, 19, 23]
+  ICI: 0.2543
+  ASI: 0.0011
+  TVA: 0.4452
+  Max Agent Specialization: 0.3833
+  H-score: 6.4551
+  Item-wise Gini: [0.217, 0.208, 0.368, 0.403, 0.374, 0.200, 0.293, 0.415, 0.253, 0.068, 0.063]
+  Max pairwise normalized dot product: 0.663
+  Dot Product Analysis:
+    Max pairwise dot product: 0.663
+    Mean pairwise dot product: 0.647
+    Dot product distance score: 0.337
+    All pairwise dots: [0.663, 0.640, 0.640]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 11:
-  [92, 70, 89, 39, 36, 10, 13, 10, 23, 38, 11]
-  [24, 1, 26, 95, 76, 71, 33, 37, 22, 37, 27]
-  [9, 29, 34, 14, 30, 6, 70, 89, 71, 43, 25]
-  ICI: 0.3148
-  ASI: 0.0006
-  TVA: 0.5361
-  H-score: 0.8635
-  Item-wise Gini: [0.444, 0.457, 0.287, 0.354, 0.201, 0.490, 0.337, 0.396, 0.295, 0.049, 0.159]
-  Max pairwise normalized dot product: 0.588
+  [90, 76, 77, 42, 11, 9, 44, 35, 50, 5, 9]
+  [6, 49, 23, 93, 100, 89, 48, 40, 10, 38, 12]
+  [31, 42, 26, 8, 45, 49, 74, 72, 80, 7, 15]
+  ICI: 0.2886
+  ASI: 0.0005
+  TVA: 0.4916
+  Max Agent Specialization: 0.3998
+  H-score: 6.7791
+  Item-wise Gini: [0.447, 0.141, 0.307, 0.374, 0.357, 0.340, 0.131, 0.173, 0.341, 0.418, 0.115]
+  Max pairwise normalized dot product: 0.729
+  Dot Product Analysis:
+    Max pairwise dot product: 0.729
+    Mean pairwise dot product: 0.641
+    Dot product distance score: 0.271
+    All pairwise dots: [0.519, 0.729, 0.676]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 12:
-  [95, 90, 86, 38, 33, 43, 23, 43, 46, 31, 23]
-  [33, 47, 13, 70, 86, 78, 50, 47, 40, 49, 20]
-  [5, 37, 26, 37, 41, 7, 72, 89, 94, 48, 19]
-  ICI: 0.2290
-  ASI: 0.0030
-  TVA: 0.4269
-  H-score: 0.7161
-  Item-wise Gini: [0.441, 0.173, 0.373, 0.149, 0.220, 0.367, 0.255, 0.206, 0.230, 0.120, 0.024]
-  Max pairwise normalized dot product: 0.763
+  [75, 75, 94, 42, 22, 32, 45, 34, 20, 27, 15]
+  [9, 16, 31, 76, 85, 70, 36, 40, 5, 48, 35]
+  [28, 34, 42, 35, 43, 6, 74, 86, 80, 48, 43]
+  ICI: 0.2712
+  ASI: 0.0012
+  TVA: 0.4612
+  Max Agent Specialization: 0.3503
+  H-score: 5.9936
+  Item-wise Gini: [0.394, 0.313, 0.245, 0.208, 0.300, 0.410, 0.132, 0.195, 0.461, 0.131, 0.180]
+  Max pairwise normalized dot product: 0.723
+  Dot Product Analysis:
+    Max pairwise dot product: 0.723
+    Mean pairwise dot product: 0.682
+    Dot product distance score: 0.277
+    All pairwise dots: [0.635, 0.723, 0.687]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 13:
-  [83, 82, 95, 2, 45, 33, 23, 6, 41, 29, 14]
-  [13, 40, 8, 72, 91, 82, 33, 12, 15, 38, 37]
-  [17, 42, 14, 20, 20, 6, 78, 87, 83, 35, 33]
-  ICI: 0.3321
-  ASI: 0.0002
-  TVA: 0.5539
-  H-score: 0.8902
-  Item-wise Gini: [0.407, 0.163, 0.491, 0.496, 0.304, 0.421, 0.281, 0.518, 0.331, 0.064, 0.185]
-  Max pairwise normalized dot product: 0.548
+  [75, 94, 80, 23, 19, 34, 24, 1, 28, 50, 15]
+  [3, 24, 18, 81, 98, 85, 49, 27, 47, 47, 21]
+  [20, 46, 32, 38, 17, 46, 76, 72, 80, 7, 35]
+  ICI: 0.3061
+  ASI: 0.0012
+  TVA: 0.4993
+  Max Agent Specialization: 0.3928
+  H-score: 6.7031
+  Item-wise Gini: [0.500, 0.306, 0.338, 0.249, 0.387, 0.180, 0.229, 0.481, 0.218, 0.294, 0.181]
+  Max pairwise normalized dot product: 0.721
+  Dot Product Analysis:
+    Max pairwise dot product: 0.721
+    Mean pairwise dot product: 0.621
+    Dot product distance score: 0.279
+    All pairwise dots: [0.532, 0.610, 0.721]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 14:
-  [87, 83, 90, 32, 26, 36, 18, 15, 44, 8, 5]
-  [19, 44, 38, 99, 71, 88, 49, 33, 24, 44, 20]
-  [37, 15, 19, 33, 20, 45, 78, 84, 100, 31, 44]
-  ICI: 0.3017
-  ASI: 0.0026
-  TVA: 0.5265
-  H-score: 0.8800
-  Item-wise Gini: [0.350, 0.350, 0.353, 0.251, 0.272, 0.169, 0.264, 0.336, 0.297, 0.267, 0.371]
-  Max pairwise normalized dot product: 0.684
+  [98, 80, 96, 12, 28, 1, 37, 8, 32, 3, 21]
+  [50, 30, 21, 79, 94, 83, 18, 12, 18, 38, 26]
+  [25, 45, 43, 21, 19, 25, 78, 72, 86, 3, 7]
+  ICI: 0.3570
+  ASI: 0.0034
+  TVA: 0.6104
+  Max Agent Specialization: 0.4956
+  H-score: 8.4187
+  Item-wise Gini: [0.294, 0.236, 0.329, 0.377, 0.332, 0.488, 0.312, 0.468, 0.345, 0.517, 0.212]
+  Max pairwise normalized dot product: 0.649
+  Dot Product Analysis:
+    Max pairwise dot product: 0.649
+    Mean pairwise dot product: 0.554
+    Dot product distance score: 0.351
+    All pairwise dots: [0.518, 0.649, 0.494]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 15:
-  [83, 76, 70, 34, 21, 13, 30, 42, 23, 3, 3]
-  [38, 2, 23, 98, 85, 70, 22, 43, 31, 46, 30]
-  [7, 35, 8, 47, 31, 2, 98, 81, 95, 7, 11]
-  ICI: 0.3693
-  ASI: 0.0041
-  TVA: 0.6401
-  H-score: 1.0909
-  Item-wise Gini: [0.422, 0.448, 0.432, 0.193, 0.269, 0.511, 0.354, 0.180, 0.322, 0.488, 0.378]
-  Max pairwise normalized dot product: 0.572
+  [87, 97, 82, 39, 31, 29, 47, 45, 50, 45, 26]
+  [44, 33, 19, 87, 72, 73, 5, 43, 20, 22, 38]
+  [16, 24, 30, 11, 23, 28, 98, 77, 71, 13, 48]
+  ICI: 0.2734
+  ASI: 0.0033
+  TVA: 0.4967
+  Max Agent Specialization: 0.3777
+  H-score: 6.4523
+  Item-wise Gini: [0.268, 0.256, 0.265, 0.390, 0.267, 0.267, 0.449, 0.187, 0.269, 0.207, 0.181]
+  Max pairwise normalized dot product: 0.702
+  Dot Product Analysis:
+    Max pairwise dot product: 0.702
+    Mean pairwise dot product: 0.647
+    Dot product distance score: 0.298
+    All pairwise dots: [0.702, 0.698, 0.542]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 16:
-  [80, 99, 88, 27, 34, 38, 13, 29, 28, 32, 45]
-  [35, 31, 4, 70, 93, 95, 26, 20, 5, 38, 49]
-  [41, 27, 39, 21, 35, 16, 80, 90, 87, 22, 41]
-  ICI: 0.2837
-  ASI: 0.0017
-  TVA: 0.5309
-  H-score: 0.8481
-  Item-wise Gini: [0.172, 0.295, 0.421, 0.294, 0.264, 0.369, 0.373, 0.327, 0.455, 0.133, 0.056]
-  Max pairwise normalized dot product: 0.656
+  [85, 97, 100, 25, 5, 11, 21, 22, 40, 14, 37]
+  [44, 11, 36, 77, 74, 95, 19, 16, 27, 29, 20]
+  [8, 23, 39, 17, 50, 26, 93, 76, 78, 6, 29]
+  ICI: 0.3249
+  ASI: 0.0009
+  TVA: 0.5715
+  Max Agent Specialization: 0.4317
+  H-score: 7.3758
+  Item-wise Gini: [0.371, 0.434, 0.239, 0.337, 0.356, 0.425, 0.373, 0.354, 0.237, 0.314, 0.127]
+  Max pairwise normalized dot product: 0.575
+  Dot Product Analysis:
+    Max pairwise dot product: 0.575
+    Mean pairwise dot product: 0.541
+    Dot product distance score: 0.425
+    All pairwise dots: [0.511, 0.538, 0.575]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 17:
-  [78, 81, 78, 16, 30, 2, 7, 38, 8, 11, 4]
-  [40, 11, 42, 78, 80, 74, 39, 39, 28, 13, 7]
-  [36, 32, 36, 2, 32, 26, 80, 72, 74, 48, 21]
-  ICI: 0.3278
-  ASI: 0.0076
-  TVA: 0.5987
-  H-score: 1.0779
-  Item-wise Gini: [0.245, 0.423, 0.242, 0.505, 0.216, 0.466, 0.367, 0.134, 0.376, 0.307, 0.316]
-  Max pairwise normalized dot product: 0.661
+  [76, 87, 96, 25, 19, 28, 29, 42, 14, 47, 34]
+  [18, 33, 29, 91, 82, 73, 13, 35, 20, 37, 32]
+  [17, 33, 36, 17, 13, 17, 76, 85, 97, 28, 23]
+  ICI: 0.2852
+  ASI: 0.0006
+  TVA: 0.5735
+  Max Agent Specialization: 0.3772
+  H-score: 6.5201
+  Item-wise Gini: [0.331, 0.216, 0.258, 0.369, 0.402, 0.315, 0.371, 0.221, 0.438, 0.088, 0.060]
+  Max pairwise normalized dot product: 0.626
+  Dot Product Analysis:
+    Max pairwise dot product: 0.626
+    Mean pairwise dot product: 0.589
+    Dot product distance score: 0.374
+    All pairwise dots: [0.625, 0.626, 0.518]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 18:
-  [77, 89, 77, 41, 27, 38, 42, 13, 7, 14, 18]
-  [24, 43, 24, 75, 93, 79, 17, 19, 18, 23, 37]
-  [26, 45, 18, 25, 33, 4, 77, 98, 94, 13, 13]
-  ICI: 0.3005
-  ASI: 0.0013
-  TVA: 0.5851
-  H-score: 0.9113
-  Item-wise Gini: [0.282, 0.178, 0.333, 0.233, 0.283, 0.410, 0.295, 0.436, 0.488, 0.130, 0.232]
-  Max pairwise normalized dot product: 0.693
+  [99, 71, 83, 32, 27, 20, 8, 33, 15, 9, 22]
+  [40, 20, 16, 72, 83, 70, 2, 3, 50, 42, 13]
+  [10, 31, 17, 22, 4, 36, 99, 98, 95, 21, 20]
+  ICI: 0.3515
+  ASI: 0.0002
+  TVA: 0.5743
+  Max Agent Specialization: 0.4427
+  H-score: 7.5673
+  Item-wise Gini: [0.401, 0.281, 0.390, 0.281, 0.468, 0.275, 0.587, 0.461, 0.316, 0.316, 0.108]
+  Max pairwise normalized dot product: 0.574
+  Dot Product Analysis:
+    Max pairwise dot product: 0.574
+    Mean pairwise dot product: 0.478
+    Dot product distance score: 0.426
+    All pairwise dots: [0.574, 0.422, 0.437]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 19:
-  [77, 92, 73, 31, 16, 16, 11, 6, 24, 14, 34]
-  [8, 22, 30, 89, 70, 80, 47, 6, 32, 45, 38]
-  [34, 32, 39, 37, 23, 30, 74, 100, 76, 39, 10]
-  ICI: 0.3093
-  ASI: 0.0027
-  TVA: 0.5163
-  H-score: 0.8796
-  Item-wise Gini: [0.422, 0.360, 0.246, 0.224, 0.307, 0.320, 0.292, 0.548, 0.219, 0.192, 0.234]
-  Max pairwise normalized dot product: 0.638
+  [72, 74, 84, 11, 13, 22, 23, 1, 30, 30, 26]
+  [11, 13, 10, 100, 88, 83, 14, 49, 23, 6, 33]
+  [47, 33, 42, 34, 45, 43, 87, 81, 83, 11, 32]
+  ICI: 0.3206
+  ASI: 0.0075
+  TVA: 0.4968
+  Max Agent Specialization: 0.4605
+  H-score: 7.7620
+  Item-wise Gini: [0.358, 0.380, 0.406, 0.420, 0.354, 0.275, 0.339, 0.369, 0.235, 0.379, 0.057]
+  Max pairwise normalized dot product: 0.668
+  Dot Product Analysis:
+    Max pairwise dot product: 0.668
+    Mean pairwise dot product: 0.554
+    Dot product distance score: 0.332
+    All pairwise dots: [0.349, 0.645, 0.668]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 20:
-  [100, 87, 94, 22, 24, 33, 2, 20, 6, 14, 37]
-  [1, 35, 43, 77, 70, 85, 18, 16, 44, 49, 3]
-  [46, 34, 20, 30, 46, 18, 84, 72, 87, 44, 11]
-  ICI: 0.3409
-  ASI: 0.0036
-  TVA: 0.5502
-  H-score: 0.9624
-  Item-wise Gini: [0.465, 0.248, 0.328, 0.290, 0.226, 0.342, 0.513, 0.322, 0.375, 0.227, 0.455]
-  Max pairwise normalized dot product: 0.650
+  [96, 75, 95, 32, 28, 18, 10, 12, 49, 35, 16]
+  [20, 17, 50, 96, 72, 88, 20, 39, 23, 24, 15]
+  [46, 13, 29, 20, 4, 46, 96, 80, 84, 30, 27]
+  ICI: 0.3024
+  ASI: 0.0002
+  TVA: 0.5267
+  Max Agent Specialization: 0.3933
+  H-score: 6.7294
+  Item-wise Gini: [0.314, 0.396, 0.255, 0.346, 0.437, 0.310, 0.452, 0.342, 0.256, 0.082, 0.132]
+  Max pairwise normalized dot product: 0.596
+  Dot Product Analysis:
+    Max pairwise dot product: 0.596
+    Mean pairwise dot product: 0.583
+    Dot product distance score: 0.404
+    All pairwise dots: [0.596, 0.574, 0.579]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 21:
-  [85, 95, 100, 5, 46, 26, 8, 40, 20, 47, 42]
-  [37, 24, 34, 90, 95, 98, 18, 34, 35, 21, 47]
-  [38, 50, 20, 36, 49, 6, 92, 73, 72, 3, 41]
-  ICI: 0.2974
-  ASI: 0.0006
-  TVA: 0.5396
-  H-score: 0.8499
-  Item-wise Gini: [0.204, 0.279, 0.340, 0.418, 0.160, 0.463, 0.487, 0.200, 0.291, 0.414, 0.017]
-  Max pairwise normalized dot product: 0.642
+  [98, 83, 92, 33, 50, 32, 48, 29, 14, 17, 23]
+  [6, 41, 28, 81, 91, 87, 11, 48, 20, 9, 48]
+  [15, 31, 41, 25, 23, 28, 86, 93, 70, 26, 28]
+  ICI: 0.2871
+  ASI: 0.0012
+  TVA: 0.5441
+  Max Agent Specialization: 0.3957
+  H-score: 6.7731
+  Item-wise Gini: [0.502, 0.199, 0.242, 0.273, 0.283, 0.272, 0.358, 0.268, 0.374, 0.227, 0.187]
+  Max pairwise normalized dot product: 0.646
+  Dot Product Analysis:
+    Max pairwise dot product: 0.646
+    Mean pairwise dot product: 0.628
+    Dot product distance score: 0.354
+    All pairwise dots: [0.628, 0.646, 0.610]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 22:
-  [84, 87, 100, 27, 22, 20, 44, 23, 5, 49, 50]
-  [42, 15, 49, 79, 77, 87, 10, 33, 23, 8, 31]
-  [12, 45, 29, 5, 48, 10, 77, 74, 96, 38, 45]
-  ICI: 0.3230
-  ASI: 0.0000
-  TVA: 0.4878
-  H-score: 0.8111
-  Item-wise Gini: [0.329, 0.308, 0.247, 0.460, 0.270, 0.452, 0.344, 0.268, 0.487, 0.271, 0.076]
-  Max pairwise normalized dot product: 0.617
+  [78, 83, 79, 21, 34, 28, 12, 33, 25, 38, 33]
+  [16, 40, 35, 97, 71, 80, 14, 43, 14, 22, 48]
+  [11, 19, 25, 43, 22, 20, 75, 97, 83, 46, 27]
+  ICI: 0.2899
+  ASI: 0.0006
+  TVA: 0.5594
+  Max Agent Specialization: 0.3563
+  H-score: 6.1959
+  Item-wise Gini: [0.429, 0.304, 0.263, 0.308, 0.251, 0.306, 0.416, 0.247, 0.379, 0.155, 0.123]
+  Max pairwise normalized dot product: 0.670
+  Dot Product Analysis:
+    Max pairwise dot product: 0.670
+    Mean pairwise dot product: 0.619
+    Dot product distance score: 0.330
+    All pairwise dots: [0.670, 0.566, 0.620]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 23:
-  [77, 83, 85, 29, 20, 39, 11, 12, 49, 26, 5]
-  [37, 37, 21, 97, 74, 85, 13, 8, 45, 14, 16]
-  [19, 35, 35, 1, 20, 29, 92, 72, 77, 16, 30]
-  ICI: 0.3079
-  ASI: 0.0001
-  TVA: 0.5946
-  H-score: 0.9040
-  Item-wise Gini: [0.290, 0.203, 0.304, 0.501, 0.309, 0.234, 0.470, 0.470, 0.136, 0.147, 0.334]
-  Max pairwise normalized dot product: 0.672
+  [78, 100, 88, 46, 10, 29, 37, 49, 3, 31, 50]
+  [6, 10, 2, 98, 89, 92, 18, 19, 26, 2, 45]
+  [21, 44, 41, 25, 48, 5, 95, 81, 70, 35, 6]
+  ICI: 0.3705
+  ASI: 0.0061
+  TVA: 0.4863
+  Max Agent Specialization: 0.5213
+  H-score: 8.7071
+  Item-wise Gini: [0.430, 0.360, 0.419, 0.327, 0.391, 0.491, 0.331, 0.267, 0.436, 0.333, 0.297]
+  Max pairwise normalized dot product: 0.654
+  Dot Product Analysis:
+    Max pairwise dot product: 0.654
+    Mean pairwise dot product: 0.513
+    Dot product distance score: 0.346
+    All pairwise dots: [0.432, 0.654, 0.454]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 24:
-  [80, 79, 96, 15, 47, 22, 33, 23, 26, 19, 30]
-  [50, 49, 17, 88, 96, 72, 27, 29, 50, 25, 37]
-  [39, 9, 35, 39, 11, 29, 76, 72, 90, 33, 46]
-  ICI: 0.2560
-  ASI: 0.0005
-  TVA: 0.4637
-  H-score: 0.7304
-  Item-wise Gini: [0.172, 0.359, 0.373, 0.316, 0.343, 0.240, 0.260, 0.267, 0.263, 0.122, 0.094]
-  Max pairwise normalized dot product: 0.694
+  [80, 90, 100, 36, 32, 7, 27, 36, 26, 39, 41]
+  [25, 14, 27, 88, 93, 74, 19, 32, 5, 50, 50]
+  [12, 44, 20, 20, 35, 31, 71, 71, 87, 4, 17]
+  ICI: 0.3219
+  ASI: 0.0008
+  TVA: 0.5398
+  Max Agent Specialization: 0.3866
+  H-score: 6.6647
+  Item-wise Gini: [0.356, 0.312, 0.325, 0.299, 0.259, 0.387, 0.334, 0.227, 0.491, 0.333, 0.188]
+  Max pairwise normalized dot product: 0.603
+  Dot Product Analysis:
+    Max pairwise dot product: 0.603
+    Mean pairwise dot product: 0.574
+    Dot product distance score: 0.397
+    All pairwise dots: [0.589, 0.603, 0.529]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 25:
-  [90, 99, 96, 16, 8, 43, 21, 41, 32, 15, 19]
-  [1, 28, 43, 85, 71, 73, 34, 22, 36, 8, 24]
-  [5, 14, 8, 21, 11, 20, 93, 78, 100, 29, 8]
-  ICI: 0.3509
-  ASI: 0.0030
-  TVA: 0.6057
-  H-score: 1.0162
-  Item-wise Gini: [0.609, 0.368, 0.371, 0.386, 0.473, 0.256, 0.360, 0.295, 0.312, 0.299, 0.204]
-  Max pairwise normalized dot product: 0.549
+  [74, 89, 87, 23, 3, 29, 34, 1, 23, 19, 29]
+  [34, 3, 21, 73, 89, 83, 32, 42, 1, 12, 27]
+  [48, 41, 25, 15, 30, 31, 90, 98, 92, 45, 41]
+  ICI: 0.3289
+  ASI: 0.0041
+  TVA: 0.5811
+  Max Agent Specialization: 0.4325
+  H-score: 7.4184
+  Item-wise Gini: [0.189, 0.469, 0.362, 0.383, 0.500, 0.294, 0.177, 0.415, 0.486, 0.223, 0.029]
+  Max pairwise normalized dot product: 0.593
+  Dot Product Analysis:
+    Max pairwise dot product: 0.593
+    Mean pairwise dot product: 0.534
+    Dot product distance score: 0.407
+    All pairwise dots: [0.439, 0.593, 0.569]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 26:
-  [93, 72, 88, 7, 12, 8, 38, 38, 24, 37, 12]
-  [26, 5, 32, 95, 74, 81, 11, 48, 21, 39, 43]
-  [47, 20, 47, 44, 50, 44, 94, 76, 71, 25, 40]
-  ICI: 0.2878
-  ASI: 0.0070
-  TVA: 0.4316
-  H-score: 0.8594
-  Item-wise Gini: [0.304, 0.490, 0.257, 0.415, 0.312, 0.378, 0.346, 0.097, 0.243, 0.130, 0.219]
-  Max pairwise normalized dot product: 0.747
+  [78, 86, 76, 33, 3, 45, 41, 25, 50, 20, 19]
+  [20, 39, 3, 88, 85, 85, 9, 18, 35, 45, 10]
+  [31, 47, 22, 20, 36, 39, 80, 85, 90, 11, 1]
+  ICI: 0.3208
+  ASI: 0.0014
+  TVA: 0.5551
+  Max Agent Specialization: 0.4273
+  H-score: 7.2921
+  Item-wise Gini: [0.285, 0.164, 0.476, 0.336, 0.450, 0.197, 0.363, 0.343, 0.201, 0.313, 0.387]
+  Max pairwise normalized dot product: 0.734
+  Dot Product Analysis:
+    Max pairwise dot product: 0.734
+    Mean pairwise dot product: 0.628
+    Dot product distance score: 0.266
+    All pairwise dots: [0.566, 0.734, 0.585]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 27:
-  [98, 100, 83, 31, 9, 28, 7, 39, 31, 43, 24]
-  [38, 32, 43, 76, 72, 70, 3, 3, 47, 27, 5]
-  [26, 36, 45, 34, 17, 40, 100, 96, 93, 47, 42]
-  ICI: 0.3006
-  ASI: 0.0023
-  TVA: 0.5443
-  H-score: 0.8904
-  Item-wise Gini: [0.306, 0.273, 0.172, 0.271, 0.467, 0.252, 0.569, 0.420, 0.195, 0.064, 0.304]
-  Max pairwise normalized dot product: 0.660
+  [99, 78, 80, 28, 29, 32, 20, 2, 19, 22, 17]
+  [24, 30, 23, 71, 79, 78, 32, 30, 42, 28, 33]
+  [45, 20, 14, 31, 17, 10, 84, 92, 99, 34, 16]
+  ICI: 0.3002
+  ASI: 0.0052
+  TVA: 0.5627
+  Max Agent Specialization: 0.4057
+  H-score: 6.9749
+  Item-wise Gini: [0.317, 0.321, 0.393, 0.200, 0.321, 0.366, 0.303, 0.484, 0.325, 0.079, 0.164]
+  Max pairwise normalized dot product: 0.629
+  Dot Product Analysis:
+    Max pairwise dot product: 0.629
+    Mean pairwise dot product: 0.576
+    Dot product distance score: 0.371
+    All pairwise dots: [0.623, 0.476, 0.629]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 28:
-  [71, 72, 92, 22, 7, 32, 17, 14, 18, 30, 29]
-  [15, 11, 49, 98, 99, 80, 42, 49, 33, 22, 47]
-  [26, 27, 43, 20, 29, 12, 91, 71, 72, 28, 11]
-  ICI: 0.3018
-  ASI: 0.0005
-  TVA: 0.5135
-  H-score: 0.8260
-  Item-wise Gini: [0.375, 0.403, 0.220, 0.317, 0.411, 0.312, 0.342, 0.300, 0.301, 0.126, 0.220]
-  Max pairwise normalized dot product: 0.655
+  [84, 78, 99, 3, 13, 37, 43, 42, 9, 24, 43]
+  [31, 49, 43, 90, 100, 99, 24, 45, 27, 20, 27]
+  [39, 25, 35, 26, 24, 37, 78, 99, 100, 22, 33]
+  ICI: 0.2632
+  ASI: 0.0014
+  TVA: 0.5101
+  Max Agent Specialization: 0.3900
+  H-score: 6.6312
+  Item-wise Gini: [0.262, 0.257, 0.266, 0.475, 0.401, 0.218, 0.252, 0.203, 0.445, 0.075, 0.138]
+  Max pairwise normalized dot product: 0.650
+  Dot Product Analysis:
+    Max pairwise dot product: 0.650
+    Mean pairwise dot product: 0.634
+    Dot product distance score: 0.350
+    All pairwise dots: [0.611, 0.650, 0.640]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 29:
-  [85, 79, 97, 47, 38, 20, 43, 14, 6, 19, 25]
-  [44, 29, 3, 78, 94, 86, 35, 45, 37, 9, 30]
-  [27, 4, 10, 15, 27, 50, 95, 86, 83, 1, 49]
-  ICI: 0.3331
-  ASI: 0.0017
-  TVA: 0.5379
-  H-score: 0.9055
-  Item-wise Gini: [0.241, 0.448, 0.568, 0.287, 0.263, 0.269, 0.251, 0.346, 0.421, 0.416, 0.169]
-  Max pairwise normalized dot product: 0.695
+  [91, 81, 96, 21, 19, 50, 48, 24, 43, 45, 1]
+  [20, 44, 13, 92, 92, 87, 9, 23, 35, 29, 19]
+  [12, 2, 46, 48, 10, 44, 88, 81, 93, 46, 25]
+  ICI: 0.3132
+  ASI: 0.0003
+  TVA: 0.4920
+  Max Agent Specialization: 0.3907
+  H-score: 6.6676
+  Item-wise Gini: [0.415, 0.397, 0.342, 0.314, 0.466, 0.177, 0.364, 0.302, 0.216, 0.083, 0.346]
+  Max pairwise normalized dot product: 0.643
+  Dot Product Analysis:
+    Max pairwise dot product: 0.643
+    Mean pairwise dot product: 0.597
+    Dot product distance score: 0.357
+    All pairwise dots: [0.577, 0.643, 0.572]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 30:
-  [98, 85, 82, 26, 48, 14, 48, 23, 7, 1, 16]
-  [49, 39, 20, 97, 97, 98, 19, 20, 20, 21, 5]
-  [5, 48, 20, 19, 46, 40, 81, 88, 77, 18, 3]
-  ICI: 0.3278
-  ASI: 0.0003
-  TVA: 0.5670
-  H-score: 0.9008
-  Item-wise Gini: [0.418, 0.193, 0.351, 0.349, 0.157, 0.352, 0.290, 0.359, 0.456, 0.318, 0.366]
-  Max pairwise normalized dot product: 0.622
+  [85, 79, 72, 24, 4, 26, 25, 31, 34, 34, 20]
+  [7, 16, 20, 82, 82, 89, 8, 30, 28, 7, 22]
+  [16, 50, 21, 22, 2, 17, 73, 84, 76, 14, 36]
+  ICI: 0.3376
+  ASI: 0.0020
+  TVA: 0.6429
+  Max Agent Specialization: 0.4501
+  H-score: 7.7426
+  Item-wise Gini: [0.469, 0.273, 0.285, 0.327, 0.610, 0.378, 0.410, 0.251, 0.226, 0.309, 0.146]
+  Max pairwise normalized dot product: 0.669
+  Dot Product Analysis:
+    Max pairwise dot product: 0.669
+    Mean pairwise dot product: 0.521
+    Dot product distance score: 0.331
+    All pairwise dots: [0.439, 0.669, 0.456]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 31:
-  [76, 89, 80, 8, 37, 41, 43, 33, 22, 31, 36]
-  [3, 14, 9, 82, 84, 87, 47, 10, 39, 43, 2]
-  [50, 42, 34, 33, 27, 19, 94, 99, 97, 3, 12]
-  ICI: 0.3447
-  ASI: 0.0049
-  TVA: 0.5310
-  H-score: 0.9747
-  Item-wise Gini: [0.377, 0.330, 0.374, 0.433, 0.299, 0.346, 0.170, 0.399, 0.297, 0.377, 0.448]
-  Max pairwise normalized dot product: 0.692
+  [72, 82, 79, 22, 48, 17, 32, 4, 27, 37, 10]
+  [49, 3, 11, 79, 76, 73, 32, 3, 3, 9, 30]
+  [34, 4, 18, 49, 50, 31, 95, 86, 92, 41, 4]
+  ICI: 0.3481
+  ASI: 0.0025
+  TVA: 0.5843
+  Max Agent Specialization: 0.4857
+  H-score: 8.2297
+  Item-wise Gini: [0.181, 0.589, 0.411, 0.300, 0.171, 0.354, 0.217, 0.576, 0.459, 0.214, 0.435]
+  Max pairwise normalized dot product: 0.582
+  Dot Product Analysis:
+    Max pairwise dot product: 0.582
+    Mean pairwise dot product: 0.562
+    Dot product distance score: 0.418
+    All pairwise dots: [0.563, 0.542, 0.582]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 32:
-  [80, 95, 71, 47, 10, 22, 33, 42, 30, 18, 48]
-  [30, 44, 47, 99, 76, 77, 23, 23, 36, 45, 7]
-  [16, 13, 19, 28, 36, 30, 72, 100, 96, 38, 11]
-  ICI: 0.2999
-  ASI: 0.0013
-  TVA: 0.5304
-  H-score: 0.8558
-  Item-wise Gini: [0.330, 0.355, 0.245, 0.255, 0.348, 0.274, 0.277, 0.331, 0.291, 0.168, 0.411]
-  Max pairwise normalized dot product: 0.692
+  [94, 78, 79, 35, 2, 43, 12, 31, 34, 41, 24]
+  [43, 28, 38, 89, 87, 82, 38, 33, 14, 43, 15]
+  [6, 35, 43, 10, 11, 13, 83, 88, 100, 36, 27]
+  ICI: 0.2967
+  ASI: 0.0027
+  TVA: 0.4991
+  Max Agent Specialization: 0.4292
+  H-score: 7.2473
+  Item-wise Gini: [0.417, 0.247, 0.183, 0.375, 0.557, 0.314, 0.372, 0.267, 0.403, 0.019, 0.145]
+  Max pairwise normalized dot product: 0.673
+  Dot Product Analysis:
+    Max pairwise dot product: 0.673
+    Mean pairwise dot product: 0.581
+    Dot product distance score: 0.327
+    All pairwise dots: [0.673, 0.573, 0.496]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 33:
-  [85, 94, 87, 45, 2, 16, 28, 35, 24, 21, 20]
-  [26, 46, 9, 86, 74, 83, 16, 4, 37, 48, 21]
-  [44, 35, 32, 23, 46, 34, 87, 71, 89, 20, 26]
-  ICI: 0.2920
-  ASI: 0.0029
-  TVA: 0.5086
-  H-score: 0.8586
-  Item-wise Gini: [0.259, 0.242, 0.415, 0.290, 0.411, 0.348, 0.338, 0.388, 0.264, 0.233, 0.035]
-  Max pairwise normalized dot product: 0.661
+  [82, 70, 87, 28, 47, 45, 42, 43, 28, 17, 19]
+  [47, 27, 42, 89, 100, 70, 37, 29, 25, 13, 1]
+  [4, 34, 25, 21, 43, 37, 86, 92, 80, 23, 23]
+  ICI: 0.2498
+  ASI: 0.0019
+  TVA: 0.4691
+  Max Agent Specialization: 0.3739
+  H-score: 6.3363
+  Item-wise Gini: [0.380, 0.204, 0.252, 0.328, 0.198, 0.142, 0.207, 0.266, 0.285, 0.134, 0.354]
+  Max pairwise normalized dot product: 0.786
+  Dot Product Analysis:
+    Max pairwise dot product: 0.786
+    Mean pairwise dot product: 0.704
+    Dot product distance score: 0.214
+    All pairwise dots: [0.786, 0.682, 0.644]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 34:
-  [97, 77, 100, 25, 22, 48, 9, 50, 24, 19, 47]
-  [15, 50, 50, 99, 80, 76, 41, 47, 14, 50, 36]
-  [40, 34, 5, 23, 19, 7, 75, 89, 78, 36, 25]
-  ICI: 0.2892
-  ASI: 0.0025
-  TVA: 0.4888
-  H-score: 0.8271
-  Item-wise Gini: [0.348, 0.147, 0.411, 0.309, 0.293, 0.326, 0.394, 0.210, 0.412, 0.168, 0.102]
-  Max pairwise normalized dot product: 0.687
+  [74, 90, 81, 20, 7, 16, 38, 46, 44, 35, 12]
+  [25, 32, 8, 91, 99, 70, 10, 40, 19, 45, 27]
+  [19, 29, 6, 4, 35, 42, 97, 92, 95, 18, 28]
+  ICI: 0.3259
+  ASI: 0.0007
+  TVA: 0.5398
+  Max Agent Specialization: 0.4285
+  H-score: 7.2975
+  Item-wise Gini: [0.312, 0.270, 0.527, 0.504, 0.434, 0.280, 0.400, 0.195, 0.321, 0.183, 0.159]
+  Max pairwise normalized dot product: 0.621
+  Dot Product Analysis:
+    Max pairwise dot product: 0.621
+    Mean pairwise dot product: 0.545
+    Dot product distance score: 0.379
+    All pairwise dots: [0.488, 0.621, 0.526]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 35:
-  [96, 80, 85, 15, 46, 31, 43, 44, 28, 21, 50]
-  [39, 10, 12, 83, 75, 75, 3, 40, 1, 26, 40]
-  [20, 28, 47, 42, 25, 40, 88, 94, 83, 37, 41]
-  ICI: 0.2822
-  ASI: 0.0053
-  TVA: 0.4747
-  H-score: 0.8632
-  Item-wise Gini: [0.303, 0.367, 0.312, 0.382, 0.294, 0.270, 0.413, 0.172, 0.483, 0.113, 0.059]
-  Max pairwise normalized dot product: 0.718
+  [96, 91, 70, 29, 31, 46, 6, 28, 10, 3, 34]
+  [47, 41, 43, 81, 84, 79, 31, 6, 27, 22, 48]
+  [6, 36, 32, 8, 37, 20, 89, 72, 83, 34, 44]
+  ICI: 0.3087
+  ASI: 0.0027
+  TVA: 0.4944
+  Max Agent Specialization: 0.4201
+  H-score: 7.1187
+  Item-wise Gini: [0.421, 0.233, 0.189, 0.391, 0.201, 0.247, 0.448, 0.417, 0.411, 0.361, 0.047]
+  Max pairwise normalized dot product: 0.758
+  Dot Product Analysis:
+    Max pairwise dot product: 0.758
+    Mean pairwise dot product: 0.608
+    Dot product distance score: 0.242
+    All pairwise dots: [0.758, 0.480, 0.585]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 36:
-  [98, 92, 93, 30, 38, 23, 37, 37, 19, 41, 43]
-  [26, 12, 27, 90, 74, 76, 43, 15, 38, 39, 47]
-  [46, 24, 35, 12, 2, 50, 91, 97, 80, 45, 9]
-  ICI: 0.2907
-  ASI: 0.0022
-  TVA: 0.4758
-  H-score: 0.8101
-  Item-wise Gini: [0.255, 0.395, 0.256, 0.405, 0.438, 0.254, 0.231, 0.376, 0.311, 0.047, 0.270]
-  Max pairwise normalized dot product: 0.646
+  [78, 71, 79, 49, 22, 22, 36, 21, 17, 50, 34]
+  [2, 19, 32, 81, 85, 82, 9, 36, 43, 47, 8]
+  [4, 23, 7, 42, 22, 48, 80, 85, 87, 42, 44]
+  ICI: 0.3064
+  ASI: 0.0024
+  TVA: 0.5173
+  Max Agent Specialization: 0.4070
+  H-score: 6.9415
+  Item-wise Gini: [0.601, 0.295, 0.399, 0.172, 0.344, 0.280, 0.371, 0.292, 0.308, 0.043, 0.270]
+  Max pairwise normalized dot product: 0.688
+  Dot Product Analysis:
+    Max pairwise dot product: 0.688
+    Mean pairwise dot product: 0.616
+    Dot product distance score: 0.312
+    All pairwise dots: [0.599, 0.562, 0.688]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 37:
-  [96, 93, 91, 17, 31, 6, 27, 20, 22, 26, 36]
-  [11, 6, 18, 72, 73, 79, 37, 32, 37, 4, 32]
-  [5, 45, 18, 47, 2, 40, 74, 87, 81, 20, 19]
-  ICI: 0.3351
-  ASI: 0.0000
-  TVA: 0.5125
-  H-score: 0.8484
-  Item-wise Gini: [0.530, 0.388, 0.366, 0.295, 0.467, 0.407, 0.232, 0.323, 0.283, 0.275, 0.121]
-  Max pairwise normalized dot product: 0.684
+  [91, 90, 98, 29, 49, 8, 49, 49, 6, 30, 40]
+  [11, 50, 49, 72, 78, 73, 42, 13, 21, 16, 42]
+  [20, 28, 15, 18, 48, 49, 82, 96, 85, 48, 23]
+  ICI: 0.2816
+  ASI: 0.0002
+  TVA: 0.4627
+  Max Agent Specialization: 0.3447
+  H-score: 5.9162
+  Item-wise Gini: [0.418, 0.228, 0.322, 0.326, 0.144, 0.353, 0.137, 0.348, 0.465, 0.216, 0.144]
+  Max pairwise normalized dot product: 0.706
+  Dot Product Analysis:
+    Max pairwise dot product: 0.706
+    Mean pairwise dot product: 0.655
+    Dot product distance score: 0.294
+    All pairwise dots: [0.706, 0.600, 0.660]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 38:
-  [74, 93, 96, 43, 22, 30, 36, 15, 37, 49, 3]
-  [29, 48, 13, 79, 97, 88, 21, 29, 22, 20, 10]
-  [41, 29, 3, 16, 27, 42, 87, 73, 72, 17, 7]
-  ICI: 0.2976
-  ASI: 0.0004
-  TVA: 0.5510
-  H-score: 0.8557
-  Item-wise Gini: [0.182, 0.215, 0.541, 0.301, 0.349, 0.250, 0.333, 0.361, 0.283, 0.208, 0.236]
-  Max pairwise normalized dot product: 0.627
+  [75, 74, 86, 25, 15, 6, 24, 46, 42, 44, 20]
+  [36, 4, 25, 99, 96, 78, 6, 44, 31, 47, 6]
+  [13, 13, 31, 18, 20, 29, 94, 98, 75, 11, 28]
+  ICI: 0.3381
+  ASI: 0.0013
+  TVA: 0.5651
+  Max Agent Specialization: 0.4268
+  H-score: 7.3120
+  Item-wise Gini: [0.330, 0.510, 0.288, 0.365, 0.402, 0.413, 0.484, 0.213, 0.218, 0.223, 0.287]
+  Max pairwise normalized dot product: 0.611
+  Dot Product Analysis:
+    Max pairwise dot product: 0.611
+    Mean pairwise dot product: 0.546
+    Dot product distance score: 0.389
+    All pairwise dots: [0.523, 0.611, 0.506]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 39:
-  [86, 95, 76, 31, 18, 50, 37, 31, 19, 33, 44]
-  [35, 30, 16, 88, 85, 71, 25, 28, 47, 48, 43]
-  [5, 15, 38, 33, 1, 36, 90, 95, 81, 46, 43]
-  ICI: 0.2722
-  ASI: 0.0027
-  TVA: 0.4757
-  H-score: 0.8016
-  Item-wise Gini: [0.424, 0.372, 0.300, 0.248, 0.538, 0.136, 0.300, 0.306, 0.296, 0.084, 0.015]
-  Max pairwise normalized dot product: 0.681
+  [78, 91, 90, 32, 46, 35, 40, 11, 9, 10, 10]
+  [22, 44, 27, 86, 77, 76, 29, 21, 28, 8, 35]
+  [34, 21, 15, 3, 45, 8, 82, 81, 84, 1, 1]
+  ICI: 0.3446
+  ASI: 0.0060
+  TVA: 0.5622
+  Max Agent Specialization: 0.5168
+  H-score: 8.6895
+  Item-wise Gini: [0.265, 0.273, 0.355, 0.451, 0.116, 0.366, 0.278, 0.446, 0.445, 0.306, 0.487]
+  Max pairwise normalized dot product: 0.706
+  Dot Product Analysis:
+    Max pairwise dot product: 0.706
+    Mean pairwise dot product: 0.575
+    Dot product distance score: 0.294
+    All pairwise dots: [0.706, 0.503, 0.517]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 40:
-  [72, 87, 80, 37, 20, 29, 15, 38, 47, 8, 38]
-  [12, 47, 3, 93, 79, 94, 19, 7, 39, 43, 31]
-  [6, 40, 16, 26, 15, 40, 84, 80, 86, 13, 3]
-  ICI: 0.3422
-  ASI: 0.0025
-  TVA: 0.6046
-  H-score: 0.9971
-  Item-wise Gini: [0.477, 0.151, 0.506, 0.265, 0.356, 0.258, 0.416, 0.413, 0.215, 0.355, 0.317]
-  Max pairwise normalized dot product: 0.616
+  [76, 72, 71, 18, 36, 2, 29, 18, 3, 40, 49]
+  [18, 45, 30, 70, 92, 77, 3, 29, 36, 27, 1]
+  [2, 6, 38, 7, 12, 35, 100, 96, 93, 27, 40]
+  ICI: 0.3714
+  ASI: 0.0013
+  TVA: 0.5481
+  Max Agent Specialization: 0.4685
+  H-score: 7.9534
+  Item-wise Gini: [0.519, 0.367, 0.208, 0.444, 0.383, 0.446, 0.478, 0.346, 0.444, 0.114, 0.371]
+  Max pairwise normalized dot product: 0.553
+  Dot Product Analysis:
+    Max pairwise dot product: 0.553
+    Mean pairwise dot product: 0.477
+    Dot product distance score: 0.447
+    All pairwise dots: [0.553, 0.432, 0.446]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 41:
-  [88, 73, 82, 37, 28, 45, 7, 1, 29, 41, 31]
-  [22, 36, 5, 90, 76, 76, 24, 39, 9, 10, 35]
-  [12, 37, 34, 17, 49, 39, 81, 92, 76, 48, 40]
-  ICI: 0.3013
-  ASI: 0.0025
-  TVA: 0.4863
-  H-score: 0.8379
-  Item-wise Gini: [0.421, 0.186, 0.435, 0.370, 0.238, 0.201, 0.410, 0.428, 0.360, 0.221, 0.047]
-  Max pairwise normalized dot product: 0.644
+  [76, 86, 93, 36, 43, 42, 31, 43, 43, 36, 43]
+  [46, 8, 32, 75, 71, 83, 44, 11, 40, 2, 30]
+  [19, 37, 30, 7, 11, 30, 89, 89, 88, 24, 29]
+  ICI: 0.2830
+  ASI: 0.0069
+  TVA: 0.4726
+  Max Agent Specialization: 0.3837
+  H-score: 6.5455
+  Item-wise Gini: [0.217, 0.352, 0.213, 0.414, 0.349, 0.247, 0.271, 0.386, 0.221, 0.323, 0.036]
+  Max pairwise normalized dot product: 0.721
+  Dot Product Analysis:
+    Max pairwise dot product: 0.721
+    Mean pairwise dot product: 0.661
+    Dot product distance score: 0.279
+    All pairwise dots: [0.721, 0.695, 0.566]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 42:
-  [73, 83, 86, 50, 42, 19, 37, 46, 5, 32, 26]
-  [15, 3, 11, 90, 83, 94, 25, 9, 25, 12, 7]
-  [36, 43, 45, 14, 48, 1, 71, 73, 91, 33, 50]
-  ICI: 0.3339
-  ASI: 0.0095
-  TVA: 0.4740
-  H-score: 0.9971
-  Item-wise Gini: [0.275, 0.407, 0.328, 0.385, 0.229, 0.570, 0.175, 0.308, 0.441, 0.137, 0.315]
-  Max pairwise normalized dot product: 0.728
+  [70, 87, 91, 4, 40, 16, 27, 42, 14, 41, 38]
+  [17, 6, 38, 88, 73, 94, 26, 35, 47, 22, 44]
+  [9, 1, 27, 34, 36, 41, 75, 77, 82, 20, 35]
+  ICI: 0.2941
+  ASI: 0.0001
+  TVA: 0.5474
+  Max Agent Specialization: 0.3628
+  H-score: 6.2839
+  Item-wise Gini: [0.419, 0.610, 0.264, 0.429, 0.140, 0.329, 0.280, 0.207, 0.336, 0.159, 0.026]
+  Max pairwise normalized dot product: 0.772
+  Dot Product Analysis:
+    Max pairwise dot product: 0.772
+    Mean pairwise dot product: 0.607
+    Dot product distance score: 0.228
+    All pairwise dots: [0.524, 0.525, 0.772]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 43:
-  [72, 79, 92, 27, 20, 6, 41, 7, 10, 3, 16]
-  [27, 10, 21, 91, 90, 78, 8, 20, 21, 2, 26]
-  [7, 39, 3, 48, 32, 27, 98, 96, 71, 38, 34]
-  ICI: 0.3912
-  ASI: 0.0026
-  TVA: 0.6280
-  H-score: 1.0721
-  Item-wise Gini: [0.432, 0.393, 0.524, 0.264, 0.336, 0.451, 0.362, 0.444, 0.349, 0.532, 0.098]
-  Max pairwise normalized dot product: 0.531
+  [90, 93, 98, 3, 39, 50, 22, 28, 22, 47, 33]
+  [47, 23, 39, 87, 96, 99, 2, 25, 15, 49, 10]
+  [44, 31, 28, 16, 31, 37, 83, 81, 97, 14, 18]
+  ICI: 0.3124
+  ASI: 0.0009
+  TVA: 0.5736
+  Max Agent Specialization: 0.4135
+  H-score: 7.0935
+  Item-wise Gini: [0.148, 0.301, 0.264, 0.528, 0.261, 0.222, 0.514, 0.288, 0.417, 0.215, 0.235]
+  Max pairwise normalized dot product: 0.656
+  Dot Product Analysis:
+    Max pairwise dot product: 0.656
+    Mean pairwise dot product: 0.598
+    Dot product distance score: 0.344
+    All pairwise dots: [0.656, 0.622, 0.516]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 44:
-  [83, 100, 83, 40, 44, 15, 26, 34, 34, 18, 26]
-  [2, 15, 4, 82, 70, 87, 14, 14, 43, 29, 9]
-  [22, 21, 24, 21, 31, 26, 84, 78, 89, 11, 30]
-  ICI: 0.3266
-  ASI: 0.0053
-  TVA: 0.5550
-  H-score: 0.9873
-  Item-wise Gini: [0.482, 0.367, 0.445, 0.332, 0.227, 0.422, 0.365, 0.330, 0.234, 0.255, 0.204]
-  Max pairwise normalized dot product: 0.610
+  [91, 79, 93, 38, 32, 38, 41, 31, 46, 3, 27]
+  [1, 24, 3, 75, 82, 82, 10, 32, 28, 11, 48]
+  [26, 21, 9, 6, 32, 47, 98, 78, 82, 39, 25]
+  ICI: 0.3305
+  ASI: 0.0037
+  TVA: 0.6009
+  Max Agent Specialization: 0.4582
+  H-score: 7.8233
+  Item-wise Gini: [0.492, 0.276, 0.555, 0.427, 0.287, 0.234, 0.393, 0.235, 0.211, 0.444, 0.203]
+  Max pairwise normalized dot product: 0.615
+  Dot Product Analysis:
+    Max pairwise dot product: 0.615
+    Mean pairwise dot product: 0.570
+    Dot product distance score: 0.385
+    All pairwise dots: [0.532, 0.615, 0.564]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 45:
-  [72, 85, 90, 26, 6, 5, 35, 20, 3, 48, 40]
-  [5, 17, 39, 70, 89, 81, 10, 38, 5, 24, 47]
-  [7, 21, 36, 34, 42, 43, 71, 96, 83, 27, 24]
-  ICI: 0.3369
-  ASI: 0.0021
-  TVA: 0.5792
-  H-score: 0.9589
-  Item-wise Gini: [0.536, 0.374, 0.240, 0.235, 0.420, 0.410, 0.326, 0.303, 0.577, 0.166, 0.161]
-  Max pairwise normalized dot product: 0.659
+  [94, 98, 83, 30, 19, 34, 17, 9, 27, 19, 20]
+  [42, 23, 47, 93, 74, 94, 45, 29, 41, 33, 34]
+  [32, 13, 16, 20, 24, 19, 96, 93, 78, 21, 14]
+  ICI: 0.2988
+  ASI: 0.0051
+  TVA: 0.5648
+  Max Agent Specialization: 0.4042
+  H-score: 6.9516
+  Item-wise Gini: [0.248, 0.431, 0.319, 0.286, 0.262, 0.287, 0.363, 0.455, 0.259, 0.076, 0.137]
+  Max pairwise normalized dot product: 0.657
+  Dot Product Analysis:
+    Max pairwise dot product: 0.657
+    Mean pairwise dot product: 0.575
+    Dot product distance score: 0.343
+    All pairwise dots: [0.657, 0.441, 0.627]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 46:
-  [83, 75, 88, 50, 8, 49, 27, 48, 9, 12, 15]
-  [2, 42, 25, 89, 78, 83, 20, 6, 29, 33, 20]
-  [31, 31, 14, 2, 18, 18, 93, 81, 100, 33, 37]
-  ICI: 0.3402
-  ASI: 0.0002
-  TVA: 0.5169
-  H-score: 0.8608
-  Item-wise Gini: [0.462, 0.191, 0.380, 0.424, 0.461, 0.305, 0.338, 0.369, 0.434, 0.196, 0.202]
-  Max pairwise normalized dot product: 0.601
+  [70, 94, 70, 33, 8, 20, 39, 23, 15, 43, 44]
+  [37, 16, 9, 91, 73, 81, 43, 6, 4, 45, 9]
+  [32, 9, 22, 29, 40, 30, 76, 90, 89, 17, 47]
+  ICI: 0.3257
+  ASI: 0.0028
+  TVA: 0.5295
+  Max Agent Specialization: 0.4506
+  H-score: 7.6279
+  Item-wise Gini: [0.186, 0.473, 0.396, 0.302, 0.383, 0.336, 0.140, 0.457, 0.514, 0.206, 0.235]
+  Max pairwise normalized dot product: 0.566
+  Dot Product Analysis:
+    Max pairwise dot product: 0.566
+    Mean pairwise dot product: 0.550
+    Dot product distance score: 0.434
+    All pairwise dots: [0.542, 0.566, 0.541]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 47:
-  [90, 86, 92, 3, 16, 34, 13, 2, 27, 35, 8]
-  [26, 46, 12, 79, 88, 83, 11, 16, 43, 39, 36]
-  [4, 33, 37, 16, 11, 21, 85, 78, 93, 13, 35]
-  ICI: 0.3654
-  ASI: 0.0036
-  TVA: 0.5718
-  H-score: 1.0088
-  Item-wise Gini: [0.496, 0.232, 0.397, 0.500, 0.423, 0.270, 0.462, 0.536, 0.270, 0.187, 0.235]
-  Max pairwise normalized dot product: 0.527
+  [90, 77, 97, 30, 18, 48, 32, 28, 5, 5, 4]
+  [22, 14, 16, 97, 85, 90, 20, 41, 38, 7, 44]
+  [8, 22, 1, 35, 29, 15, 73, 88, 88, 18, 1]
+  ICI: 0.3785
+  ASI: 0.0017
+  TVA: 0.6594
+  Max Agent Specialization: 0.4949
+  H-score: 8.4707
+  Item-wise Gini: [0.451, 0.372, 0.567, 0.247, 0.309, 0.294, 0.326, 0.292, 0.455, 0.326, 0.574]
+  Max pairwise normalized dot product: 0.596
+  Dot Product Analysis:
+    Max pairwise dot product: 0.596
+    Mean pairwise dot product: 0.500
+    Dot product distance score: 0.404
+    All pairwise dots: [0.519, 0.385, 0.596]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 48:
-  [90, 96, 71, 49, 34, 20, 8, 40, 48, 35, 31]
-  [1, 10, 13, 97, 91, 75, 4, 40, 18, 5, 32]
-  [15, 25, 14, 33, 31, 19, 78, 83, 91, 18, 49]
-  ICI: 0.3364
-  ASI: 0.0087
-  TVA: 0.6319
-  H-score: 1.1415
-  Item-wise Gini: [0.545, 0.398, 0.350, 0.286, 0.308, 0.379, 0.545, 0.194, 0.302, 0.302, 0.128]
-  Max pairwise normalized dot product: 0.612
+  [86, 92, 96, 19, 37, 24, 47, 1, 41, 27, 42]
+  [34, 46, 25, 83, 99, 83, 47, 24, 7, 27, 14]
+  [23, 31, 18, 31, 32, 22, 87, 77, 76, 24, 41]
+  ICI: 0.2767
+  ASI: 0.0008
+  TVA: 0.4946
+  Max Agent Specialization: 0.3629
+  H-score: 6.2187
+  Item-wise Gini: [0.274, 0.220, 0.357, 0.323, 0.258, 0.310, 0.171, 0.504, 0.387, 0.014, 0.201]
+  Max pairwise normalized dot product: 0.635
+  Dot Product Analysis:
+    Max pairwise dot product: 0.635
+    Mean pairwise dot product: 0.631
+    Dot product distance score: 0.365
+    All pairwise dots: [0.635, 0.627, 0.631]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 49:
-  [77, 72, 79, 18, 31, 25, 48, 46, 24, 3, 5]
-  [20, 2, 37, 88, 83, 86, 30, 40, 25, 23, 40]
-  [6, 9, 32, 10, 50, 13, 71, 94, 82, 46, 2]
-  ICI: 0.3547
-  ASI: 0.0024
-  TVA: 0.6322
-  H-score: 1.0341
-  Item-wise Gini: [0.466, 0.563, 0.211, 0.428, 0.186, 0.369, 0.207, 0.226, 0.315, 0.416, 0.526]
-  Max pairwise normalized dot product: 0.611
+  [81, 87, 86, 28, 27, 18, 31, 39, 31, 11, 6]
+  [25, 40, 47, 86, 97, 97, 15, 24, 13, 6, 8]
+  [7, 49, 6, 32, 38, 38, 80, 84, 91, 29, 20]
+  ICI: 0.3186
+  ASI: 0.0011
+  TVA: 0.5868
+  Max Agent Specialization: 0.4407
+  H-score: 7.5204
+  Item-wise Gini: [0.444, 0.187, 0.390, 0.262, 0.286, 0.344, 0.334, 0.262, 0.376, 0.324, 0.262]
+  Max pairwise normalized dot product: 0.624
+  Dot Product Analysis:
+    Max pairwise dot product: 0.624
+    Mean pairwise dot product: 0.597
+    Dot product distance score: 0.376
+    All pairwise dots: [0.624, 0.603, 0.566]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 50:
-  [91, 85, 85, 47, 2, 43, 30, 24, 33, 18, 41]
-  [7, 43, 26, 81, 78, 72, 50, 35, 17, 25, 10]
-  [14, 28, 23, 32, 35, 9, 71, 71, 86, 15, 43]
-  ICI: 0.2859
+  [84, 80, 82, 31, 46, 38, 11, 19, 12, 13, 39]
+  [24, 26, 21, 97, 91, 98, 26, 26, 5, 47, 38]
+  [10, 21, 9, 39, 37, 34, 87, 80, 92, 30, 23]
+  ICI: 0.3189
   ASI: 0.0000
-  TVA: 0.4685
-  H-score: 0.7552
-  Item-wise Gini: [0.481, 0.210, 0.275, 0.204, 0.437, 0.349, 0.209, 0.269, 0.356, 0.111, 0.254]
-  Max pairwise normalized dot product: 0.667
+  TVA: 0.5883
+  Max Agent Specialization: 0.3731
+  H-score: 6.5039
+  Item-wise Gini: [0.427, 0.318, 0.443, 0.243, 0.188, 0.232, 0.414, 0.328, 0.535, 0.233, 0.113]
+  Max pairwise normalized dot product: 0.649
+  Dot Product Analysis:
+    Max pairwise dot product: 0.649
+    Mean pairwise dot product: 0.563
+    Dot product distance score: 0.351
+    All pairwise dots: [0.649, 0.444, 0.595]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 51:
-  [92, 91, 80, 17, 49, 50, 39, 31, 49, 7, 5]
-  [30, 17, 29, 98, 93, 72, 11, 48, 10, 47, 36]
-  [47, 47, 22, 17, 47, 25, 74, 95, 96, 26, 13]
-  ICI: 0.3011
-  ASI: 0.0001
-  TVA: 0.5235
-  H-score: 0.8273
-  Item-wise Gini: [0.238, 0.314, 0.292, 0.416, 0.171, 0.221, 0.336, 0.243, 0.368, 0.341, 0.390]
-  Max pairwise normalized dot product: 0.759
+  [97, 87, 92, 7, 8, 12, 44, 21, 31, 7, 43]
+  [21, 48, 36, 86, 84, 79, 2, 17, 21, 20, 28]
+  [38, 24, 26, 14, 42, 48, 96, 84, 83, 18, 2]
+  ICI: 0.3406
+  ASI: 0.0010
+  TVA: 0.5238
+  Max Agent Specialization: 0.4507
+  H-score: 7.6297
+  Item-wise Gini: [0.327, 0.271, 0.294, 0.498, 0.388, 0.331, 0.432, 0.352, 0.291, 0.200, 0.374]
+  Max pairwise normalized dot product: 0.585
+  Dot Product Analysis:
+    Max pairwise dot product: 0.585
+    Mean pairwise dot product: 0.537
+    Dot product distance score: 0.415
+    All pairwise dots: [0.494, 0.585, 0.533]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 52:
-  [81, 81, 77, 23, 44, 33, 24, 1, 9, 37, 6]
-  [22, 48, 31, 75, 71, 95, 24, 17, 14, 47, 24]
-  [2, 17, 16, 20, 46, 42, 86, 90, 73, 45, 18]
-  ICI: 0.3083
-  ASI: 0.0013
-  TVA: 0.5427
-  H-score: 0.8768
-  Item-wise Gini: [0.516, 0.313, 0.349, 0.299, 0.094, 0.220, 0.308, 0.551, 0.437, 0.027, 0.233]
-  Max pairwise normalized dot product: 0.719
+  [87, 92, 82, 18, 15, 16, 5, 30, 31, 20, 49]
+  [27, 36, 13, 73, 84, 88, 50, 7, 46, 25, 20]
+  [3, 44, 34, 49, 31, 16, 98, 93, 89, 3, 20]
+  ICI: 0.3336
+  ASI: 0.0009
+  TVA: 0.5470
+  Max Agent Specialization: 0.4261
+  H-score: 7.2771
+  Item-wise Gini: [0.487, 0.231, 0.369, 0.258, 0.349, 0.400, 0.399, 0.432, 0.219, 0.300, 0.235]
+  Max pairwise normalized dot product: 0.649
+  Dot Product Analysis:
+    Max pairwise dot product: 0.649
+    Mean pairwise dot product: 0.555
+    Dot product distance score: 0.351
+    All pairwise dots: [0.500, 0.514, 0.649]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 53:
-  [91, 79, 94, 8, 8, 4, 35, 42, 36, 11, 28]
-  [33, 8, 43, 76, 71, 86, 23, 17, 18, 20, 46]
-  [16, 20, 36, 39, 13, 26, 91, 72, 86, 31, 7]
-  ICI: 0.3421
-  ASI: 0.0014
-  TVA: 0.5716
-  H-score: 0.9419
-  Item-wise Gini: [0.358, 0.443, 0.225, 0.367, 0.455, 0.470, 0.305, 0.281, 0.325, 0.215, 0.319]
-  Max pairwise normalized dot product: 0.612
+  [84, 94, 73, 33, 49, 1, 40, 42, 5, 9, 37]
+  [24, 27, 36, 85, 71, 83, 20, 16, 6, 41, 48]
+  [16, 25, 41, 2, 34, 24, 98, 95, 87, 7, 16]
+  ICI: 0.3466
+  ASI: 0.0018
+  TVA: 0.5989
+  Max Agent Specialization: 0.4515
+  H-score: 7.7265
+  Item-wise Gini: [0.358, 0.306, 0.158, 0.463, 0.156, 0.503, 0.336, 0.352, 0.562, 0.395, 0.209]
+  Max pairwise normalized dot product: 0.615
+  Dot Product Analysis:
+    Max pairwise dot product: 0.615
+    Mean pairwise dot product: 0.540
+    Dot product distance score: 0.385
+    All pairwise dots: [0.615, 0.578, 0.426]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 54:
-  [92, 100, 87, 25, 25, 4, 46, 44, 1, 50, 47]
-  [30, 1, 20, 95, 74, 90, 1, 38, 50, 42, 8]
-  [6, 36, 32, 34, 27, 1, 75, 85, 70, 10, 49]
-  ICI: 0.3577
+  [95, 100, 93, 37, 50, 24, 33, 34, 11, 34, 11]
+  [24, 36, 28, 74, 96, 80, 50, 22, 49, 25, 24]
+  [36, 37, 31, 47, 2, 42, 93, 97, 76, 31, 17]
+  ICI: 0.2526
   ASI: 0.0008
-  TVA: 0.5031
-  H-score: 0.8760
-  Item-wise Gini: [0.421, 0.454, 0.285, 0.321, 0.282, 0.627, 0.435, 0.209, 0.390, 0.227, 0.291]
-  Max pairwise normalized dot product: 0.623
+  TVA: 0.4622
+  Max Agent Specialization: 0.3570
+  H-score: 6.0738
+  Item-wise Gini: [0.299, 0.240, 0.279, 0.161, 0.427, 0.260, 0.231, 0.328, 0.320, 0.061, 0.172]
+  Max pairwise normalized dot product: 0.692
+  Dot Product Analysis:
+    Max pairwise dot product: 0.692
+    Mean pairwise dot product: 0.661
+    Dot product distance score: 0.308
+    All pairwise dots: [0.668, 0.623, 0.692]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 55:
-  [89, 94, 74, 31, 37, 43, 19, 28, 42, 3, 7]
-  [40, 22, 15, 80, 84, 94, 15, 20, 15, 44, 16]
-  [23, 23, 31, 45, 39, 27, 73, 87, 100, 16, 45]
-  ICI: 0.3182
-  ASI: 0.0012
-  TVA: 0.6074
-  H-score: 0.9486
-  Item-wise Gini: [0.298, 0.352, 0.329, 0.226, 0.217, 0.296, 0.336, 0.304, 0.339, 0.451, 0.351]
-  Max pairwise normalized dot product: 0.635
+  [91, 72, 77, 24, 42, 39, 2, 24, 45, 10, 43]
+  [25, 43, 36, 74, 87, 87, 14, 15, 20, 43, 28]
+  [39, 14, 28, 6, 43, 24, 76, 72, 89, 10, 17]
+  ICI: 0.3117
+  ASI: 0.0008
+  TVA: 0.5757
+  Max Agent Specialization: 0.4002
+  H-score: 6.8941
+  Item-wise Gini: [0.276, 0.288, 0.211, 0.427, 0.168, 0.260, 0.549, 0.367, 0.324, 0.341, 0.177]
+  Max pairwise normalized dot product: 0.715
+  Dot Product Analysis:
+    Max pairwise dot product: 0.715
+    Mean pairwise dot product: 0.623
+    Dot product distance score: 0.285
+    All pairwise dots: [0.715, 0.628, 0.527]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 56:
-  [78, 79, 87, 25, 24, 45, 20, 9, 7, 43, 23]
-  [5, 19, 43, 96, 86, 74, 19, 26, 40, 32, 13]
-  [29, 12, 38, 11, 12, 5, 87, 79, 70, 24, 35]
-  ICI: 0.3366
-  ASI: 0.0002
-  TVA: 0.5649
-  H-score: 0.9062
-  Item-wise Gini: [0.426, 0.397, 0.178, 0.416, 0.389, 0.362, 0.383, 0.428, 0.379, 0.111, 0.232]
-  Max pairwise normalized dot product: 0.591
+  [93, 83, 84, 19, 5, 17, 37, 33, 7, 37, 29]
+  [23, 38, 28, 71, 93, 86, 8, 16, 6, 35, 26]
+  [9, 24, 23, 46, 27, 31, 92, 83, 76, 36, 12]
+  ICI: 0.3219
+  ASI: 0.0004
+  TVA: 0.5365
+  Max Agent Specialization: 0.4054
+  H-score: 6.9415
+  Item-wise Gini: [0.448, 0.274, 0.305, 0.265, 0.477, 0.353, 0.401, 0.327, 0.518, 0.013, 0.172]
+  Max pairwise normalized dot product: 0.533
+  Dot Product Analysis:
+    Max pairwise dot product: 0.533
+    Mean pairwise dot product: 0.524
+    Dot product distance score: 0.467
+    All pairwise dots: [0.512, 0.528, 0.533]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 57:
-  [95, 82, 98, 44, 36, 2, 28, 7, 29, 30, 13]
-  [30, 8, 49, 100, 93, 98, 43, 45, 21, 47, 19]
-  [43, 12, 33, 18, 17, 3, 90, 78, 81, 14, 15]
-  ICI: 0.3219
-  ASI: 0.0019
-  TVA: 0.5639
-  H-score: 0.9232
-  Item-wise Gini: [0.275, 0.490, 0.226, 0.284, 0.292, 0.610, 0.300, 0.410, 0.360, 0.182, 0.061]
-  Max pairwise normalized dot product: 0.577
+  [93, 73, 85, 1, 47, 20, 25, 2, 38, 33, 8]
+  [38, 37, 32, 87, 80, 82, 39, 19, 41, 29, 42]
+  [47, 24, 27, 41, 26, 20, 88, 95, 93, 1, 43]
+  ICI: 0.3046
+  ASI: 0.0071
+  TVA: 0.4881
+  Max Agent Specialization: 0.4509
+  H-score: 7.5919
+  Item-wise Gini: [0.254, 0.286, 0.311, 0.437, 0.213, 0.320, 0.250, 0.534, 0.201, 0.374, 0.241]
+  Max pairwise normalized dot product: 0.677
+  Dot Product Analysis:
+    Max pairwise dot product: 0.677
+    Mean pairwise dot product: 0.619
+    Dot product distance score: 0.323
+    All pairwise dots: [0.635, 0.544, 0.677]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 58:
-  [95, 99, 78, 38, 14, 48, 4, 21, 48, 17, 44]
-  [24, 23, 28, 84, 100, 82, 2, 39, 35, 44, 42]
-  [25, 28, 17, 4, 50, 42, 89, 89, 92, 46, 44]
-  ICI: 0.2953
-  ASI: 0.0003
-  TVA: 0.5087
-  H-score: 0.8104
-  Item-wise Gini: [0.330, 0.339, 0.335, 0.426, 0.355, 0.164, 0.608, 0.295, 0.207, 0.172, 0.009]
-  Max pairwise normalized dot product: 0.640
+  [70, 78, 79, 50, 42, 32, 35, 23, 46, 14, 24]
+  [41, 14, 37, 89, 71, 93, 18, 14, 41, 28, 9]
+  [5, 10, 45, 38, 16, 40, 80, 96, 99, 37, 16]
+  ICI: 0.2766
+  ASI: 0.0034
+  TVA: 0.5015
+  Max Agent Specialization: 0.4025
+  H-score: 6.8324
+  Item-wise Gini: [0.362, 0.437, 0.157, 0.207, 0.298, 0.264, 0.305, 0.406, 0.198, 0.193, 0.190]
+  Max pairwise normalized dot product: 0.753
+  Dot Product Analysis:
+    Max pairwise dot product: 0.753
+    Mean pairwise dot product: 0.666
+    Dot product distance score: 0.247
+    All pairwise dots: [0.753, 0.640, 0.607]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 59:
-  [85, 100, 73, 32, 24, 44, 5, 49, 48, 40, 41]
-  [44, 29, 31, 83, 87, 73, 37, 27, 25, 32, 23]
-  [11, 50, 22, 38, 14, 24, 92, 93, 83, 32, 43]
-  ICI: 0.2588
-  ASI: 0.0012
-  TVA: 0.4509
-  H-score: 0.7335
-  Item-wise Gini: [0.336, 0.244, 0.251, 0.241, 0.399, 0.242, 0.433, 0.263, 0.250, 0.033, 0.124]
-  Max pairwise normalized dot product: 0.708
+  [91, 94, 79, 46, 37, 33, 49, 25, 35, 43, 23]
+  [33, 36, 11, 78, 72, 93, 9, 39, 40, 14, 32]
+  [43, 33, 1, 49, 20, 21, 81, 94, 83, 21, 30]
+  ICI: 0.2662
+  ASI: 0.0023
+  TVA: 0.5073
+  Max Agent Specialization: 0.3690
+  H-score: 6.3197
+  Item-wise Gini: [0.187, 0.210, 0.555, 0.164, 0.289, 0.346, 0.361, 0.310, 0.228, 0.205, 0.109]
+  Max pairwise normalized dot product: 0.681
+  Dot Product Analysis:
+    Max pairwise dot product: 0.681
+    Mean pairwise dot product: 0.673
+    Dot product distance score: 0.319
+    All pairwise dots: [0.681, 0.673, 0.665]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 60:
-  [78, 90, 99, 21, 13, 39, 11, 24, 20, 36, 44]
-  [10, 27, 39, 78, 81, 97, 20, 44, 34, 36, 28]
-  [31, 43, 26, 29, 47, 15, 86, 85, 93, 23, 5]
-  ICI: 0.3067
-  ASI: 0.0006
-  TVA: 0.5113
-  H-score: 0.8297
-  Item-wise Gini: [0.386, 0.270, 0.302, 0.289, 0.315, 0.356, 0.427, 0.265, 0.330, 0.096, 0.344]
-  Max pairwise normalized dot product: 0.647
+  [81, 93, 86, 42, 28, 21, 44, 9, 8, 28, 5]
+  [28, 18, 40, 97, 94, 99, 27, 17, 28, 37, 22]
+  [13, 47, 34, 48, 5, 23, 95, 87, 89, 50, 21]
+  ICI: 0.3146
+  ASI: 0.0009
+  TVA: 0.5446
+  Max Agent Specialization: 0.4200
+  H-score: 7.1642
+  Item-wise Gini: [0.398, 0.344, 0.250, 0.171, 0.454, 0.349, 0.261, 0.446, 0.421, 0.099, 0.224]
+  Max pairwise normalized dot product: 0.603
+  Dot Product Analysis:
+    Max pairwise dot product: 0.603
+    Mean pairwise dot product: 0.580
+    Dot product distance score: 0.397
+    All pairwise dots: [0.603, 0.585, 0.551]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 61:
-  [94, 72, 80, 18, 5, 27, 43, 17, 29, 36, 49]
-  [39, 15, 28, 84, 99, 81, 43, 9, 7, 11, 11]
-  [22, 36, 27, 5, 44, 50, 91, 82, 93, 26, 15]
-  ICI: 0.3333
-  ASI: 0.0018
-  TVA: 0.5854
-  H-score: 0.9551
-  Item-wise Gini: [0.308, 0.301, 0.264, 0.507, 0.444, 0.253, 0.166, 0.434, 0.431, 0.218, 0.326]
-  Max pairwise normalized dot product: 0.609
+  [74, 82, 70, 49, 48, 2, 4, 23, 18, 24, 39]
+  [24, 6, 20, 81, 89, 95, 44, 22, 20, 41, 9]
+  [40, 31, 25, 31, 39, 7, 80, 72, 100, 22, 39]
+  ICI: 0.3093
+  ASI: 0.0013
+  TVA: 0.5320
+  Max Agent Specialization: 0.4092
+  H-score: 6.9856
+  Item-wise Gini: [0.256, 0.441, 0.304, 0.217, 0.201, 0.598, 0.382, 0.265, 0.375, 0.159, 0.246]
+  Max pairwise normalized dot product: 0.612
+  Dot Product Analysis:
+    Max pairwise dot product: 0.612
+    Mean pairwise dot product: 0.574
+    Dot product distance score: 0.388
+    All pairwise dots: [0.539, 0.612, 0.570]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 62:
-  [89, 100, 98, 50, 16, 49, 47, 50, 18, 48, 1]
-  [43, 20, 17, 85, 90, 86, 20, 32, 20, 38, 41]
-  [37, 1, 27, 40, 40, 40, 100, 88, 93, 13, 20]
-  ICI: 0.3093
-  ASI: 0.0006
-  TVA: 0.5369
-  H-score: 0.8585
-  Item-wise Gini: [0.174, 0.531, 0.353, 0.181, 0.354, 0.185, 0.329, 0.225, 0.398, 0.208, 0.434]
-  Max pairwise normalized dot product: 0.641
+  [96, 87, 81, 41, 23, 4, 21, 26, 23, 38, 25]
+  [5, 11, 39, 72, 78, 97, 20, 48, 20, 27, 33]
+  [11, 45, 19, 45, 23, 29, 83, 73, 70, 48, 50]
+  ICI: 0.2929
+  ASI: 0.0022
+  TVA: 0.5434
+  Max Agent Specialization: 0.3846
+  H-score: 6.6168
+  Item-wise Gini: [0.543, 0.359, 0.303, 0.141, 0.314, 0.488, 0.319, 0.196, 0.274, 0.103, 0.138]
+  Max pairwise normalized dot product: 0.677
+  Dot Product Analysis:
+    Max pairwise dot product: 0.677
+    Mean pairwise dot product: 0.590
+    Dot product distance score: 0.323
+    All pairwise dots: [0.485, 0.607, 0.677]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 63:
-  [84, 93, 74, 32, 33, 10, 31, 21, 20, 28, 36]
-  [23, 5, 44, 90, 75, 76, 32, 8, 18, 43, 40]
-  [44, 24, 26, 34, 12, 1, 78, 98, 92, 50, 22]
-  ICI: 0.3148
-  ASI: 0.0006
-  TVA: 0.5520
-  H-score: 0.8791
-  Item-wise Gini: [0.270, 0.484, 0.227, 0.254, 0.357, 0.577, 0.211, 0.465, 0.369, 0.111, 0.133]
-  Max pairwise normalized dot product: 0.608
+  [94, 91, 75, 33, 48, 42, 10, 20, 29, 47, 12]
+  [38, 7, 30, 82, 92, 89, 15, 35, 39, 14, 34]
+  [21, 44, 34, 17, 20, 34, 100, 90, 79, 49, 46]
+  ICI: 0.2969
+  ASI: 0.0005
+  TVA: 0.5029
+  Max Agent Specialization: 0.3629
+  H-score: 6.2453
+  Item-wise Gini: [0.322, 0.399, 0.209, 0.347, 0.319, 0.246, 0.467, 0.304, 0.209, 0.199, 0.228]
+  Max pairwise normalized dot product: 0.663
+  Dot Product Analysis:
+    Max pairwise dot product: 0.663
+    Mean pairwise dot product: 0.610
+    Dot product distance score: 0.337
+    All pairwise dots: [0.663, 0.591, 0.575]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 64:
-  [86, 97, 83, 36, 43, 29, 13, 48, 36, 43, 2]
-  [35, 14, 12, 73, 95, 95, 39, 35, 38, 34, 44]
-  [42, 45, 31, 18, 43, 27, 71, 94, 90, 19, 13]
-  ICI: 0.2833
-  ASI: 0.0001
-  TVA: 0.5323
-  H-score: 0.8183
-  Item-wise Gini: [0.205, 0.350, 0.371, 0.283, 0.190, 0.293, 0.323, 0.232, 0.230, 0.159, 0.470]
-  Max pairwise normalized dot product: 0.737
+  [74, 87, 74, 37, 34, 36, 21, 11, 27, 4, 42]
+  [13, 44, 37, 89, 80, 82, 33, 2, 1, 10, 47]
+  [23, 34, 20, 38, 45, 20, 70, 96, 82, 26, 3]
+  ICI: 0.3252
+  ASI: 0.0014
+  TVA: 0.5510
+  Max Agent Specialization: 0.4355
+  H-score: 7.4150
+  Item-wise Gini: [0.369, 0.217, 0.276, 0.217, 0.199, 0.307, 0.257, 0.573, 0.488, 0.360, 0.323]
+  Max pairwise normalized dot product: 0.723
+  Dot Product Analysis:
+    Max pairwise dot product: 0.723
+    Mean pairwise dot product: 0.597
+    Dot product distance score: 0.277
+    All pairwise dots: [0.723, 0.559, 0.511]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 65:
-  [100, 97, 72, 23, 47, 43, 48, 33, 38, 15, 23]
-  [7, 14, 10, 100, 81, 74, 30, 6, 41, 44, 50]
-  [38, 16, 10, 17, 32, 7, 93, 77, 90, 9, 35]
-  ICI: 0.3310
-  ASI: 0.0033
-  TVA: 0.5894
-  H-score: 0.9856
-  Item-wise Gini: [0.391, 0.401, 0.416, 0.395, 0.200, 0.375, 0.274, 0.439, 0.254, 0.344, 0.190]
-  Max pairwise normalized dot product: 0.639
+  [73, 89, 72, 20, 31, 39, 50, 15, 32, 5, 21]
+  [11, 49, 18, 92, 72, 75, 11, 28, 7, 40, 49]
+  [38, 43, 26, 19, 43, 44, 78, 80, 94, 45, 20]
+  ICI: 0.2864
+  ASI: 0.0023
+  TVA: 0.5016
+  Max Agent Specialization: 0.3809
+  H-score: 6.5133
+  Item-wise Gini: [0.357, 0.202, 0.323, 0.393, 0.194, 0.164, 0.289, 0.318, 0.408, 0.279, 0.244]
+  Max pairwise normalized dot product: 0.724
+  Dot Product Analysis:
+    Max pairwise dot product: 0.724
+    Mean pairwise dot product: 0.643
+    Dot product distance score: 0.276
+    All pairwise dots: [0.604, 0.724, 0.602]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 66:
-  [73, 78, 73, 25, 29, 5, 41, 24, 4, 45, 31]
-  [25, 40, 13, 100, 100, 86, 41, 29, 26, 14, 42]
-  [50, 17, 5, 19, 33, 48, 94, 90, 82, 5, 20]
-  ICI: 0.3289
-  ASI: 0.0009
-  TVA: 0.5783
-  H-score: 0.9257
-  Item-wise Gini: [0.249, 0.327, 0.516, 0.347, 0.252, 0.366, 0.218, 0.301, 0.472, 0.440, 0.129]
-  Max pairwise normalized dot product: 0.636
+  [73, 89, 91, 49, 14, 38, 32, 15, 14, 39, 9]
+  [34, 24, 33, 86, 73, 88, 3, 16, 45, 24, 9]
+  [20, 25, 13, 24, 31, 1, 91, 74, 86, 29, 28]
+  ICI: 0.3252
+  ASI: 0.0001
+  TVA: 0.5735
+  Max Agent Specialization: 0.3996
+  H-score: 6.8929
+  Item-wise Gini: [0.260, 0.298, 0.364, 0.261, 0.338, 0.465, 0.477, 0.390, 0.343, 0.093, 0.294]
+  Max pairwise normalized dot product: 0.664
+  Dot Product Analysis:
+    Max pairwise dot product: 0.664
+    Mean pairwise dot product: 0.543
+    Dot product distance score: 0.336
+    All pairwise dots: [0.664, 0.486, 0.479]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 67:
-  [90, 82, 94, 28, 23, 14, 46, 20, 22, 24, 36]
-  [3, 23, 34, 80, 86, 96, 27, 3, 20, 46, 34]
-  [1, 35, 50, 3, 17, 43, 79, 97, 87, 49, 27]
-  ICI: 0.3291
-  ASI: 0.0008
-  TVA: 0.5471
-  H-score: 0.8916
-  Item-wise Gini: [0.630, 0.273, 0.216, 0.471, 0.379, 0.370, 0.214, 0.518, 0.333, 0.137, 0.064]
-  Max pairwise normalized dot product: 0.591
+  [76, 85, 95, 12, 21, 15, 47, 46, 39, 45, 27]
+  [29, 35, 23, 81, 71, 93, 13, 22, 32, 27, 18]
+  [25, 29, 12, 48, 25, 36, 75, 75, 96, 35, 29]
+  ICI: 0.2664
+  ASI: 0.0002
+  TVA: 0.4798
+  Max Agent Specialization: 0.3391
+  H-score: 5.8331
+  Item-wise Gini: [0.245, 0.234, 0.410, 0.347, 0.313, 0.383, 0.302, 0.238, 0.242, 0.084, 0.084]
+  Max pairwise normalized dot product: 0.677
+  Dot Product Analysis:
+    Max pairwise dot product: 0.677
+    Mean pairwise dot product: 0.637
+    Dot product distance score: 0.323
+    All pairwise dots: [0.557, 0.677, 0.675]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 68:
-  [71, 81, 73, 44, 4, 33, 30, 40, 20, 12, 31]
-  [14, 50, 50, 81, 81, 80, 33, 2, 40, 39, 50]
-  [47, 44, 47, 16, 23, 4, 94, 92, 77, 20, 31]
-  ICI: 0.2827
-  ASI: 0.0009
-  TVA: 0.4871
-  H-score: 0.7872
-  Item-wise Gini: [0.317, 0.172, 0.133, 0.285, 0.463, 0.410, 0.262, 0.432, 0.264, 0.223, 0.097]
-  Max pairwise normalized dot product: 0.743
+  [94, 86, 75, 35, 22, 25, 40, 22, 20, 17, 40]
+  [30, 47, 13, 82, 79, 77, 36, 35, 47, 39, 29]
+  [28, 26, 13, 28, 28, 20, 75, 92, 99, 37, 22]
+  ICI: 0.2633
+  ASI: 0.0016
+  TVA: 0.5266
+  Max Agent Specialization: 0.3493
+  H-score: 6.0370
+  Item-wise Gini: [0.294, 0.255, 0.419, 0.227, 0.276, 0.291, 0.191, 0.322, 0.328, 0.152, 0.132]
+  Max pairwise normalized dot product: 0.714
+  Dot Product Analysis:
+    Max pairwise dot product: 0.714
+    Mean pairwise dot product: 0.651
+    Dot product distance score: 0.286
+    All pairwise dots: [0.669, 0.568, 0.714]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 69:
-  [94, 85, 78, 32, 43, 9, 32, 31, 34, 5, 20]
-  [5, 32, 31, 88, 91, 95, 48, 27, 48, 37, 19]
-  [12, 50, 49, 39, 49, 16, 82, 99, 85, 1, 4]
-  ICI: 0.3048
-  ASI: 0.0009
-  TVA: 0.5416
-  H-score: 0.8644
-  Item-wise Gini: [0.543, 0.234, 0.221, 0.209, 0.148, 0.463, 0.201, 0.314, 0.199, 0.548, 0.265]
-  Max pairwise normalized dot product: 0.697
+  [89, 76, 90, 45, 12, 34, 32, 27, 48, 31, 5]
+  [20, 47, 20, 83, 95, 79, 35, 38, 45, 3, 23]
+  [36, 24, 41, 30, 22, 36, 88, 75, 75, 19, 30]
+  ICI: 0.2676
+  ASI: 0.0010
+  TVA: 0.4880
+  Max Agent Specialization: 0.3528
+  H-score: 6.0531
+  Item-wise Gini: [0.315, 0.232, 0.307, 0.220, 0.427, 0.201, 0.247, 0.235, 0.125, 0.349, 0.292]
+  Max pairwise normalized dot product: 0.734
+  Dot Product Analysis:
+    Max pairwise dot product: 0.734
+    Mean pairwise dot product: 0.693
+    Dot product distance score: 0.266
+    All pairwise dots: [0.635, 0.734, 0.710]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 70:
-  [80, 93, 89, 26, 22, 39, 49, 46, 33, 34, 28]
-  [21, 12, 40, 91, 70, 90, 50, 9, 10, 9, 49]
-  [49, 43, 20, 50, 6, 25, 91, 99, 80, 35, 20]
-  ICI: 0.2955
-  ASI: 0.0032
-  TVA: 0.4736
-  H-score: 0.8329
-  Item-wise Gini: [0.234, 0.345, 0.288, 0.295, 0.461, 0.315, 0.150, 0.385, 0.371, 0.211, 0.234]
-  Max pairwise normalized dot product: 0.760
+  [75, 99, 84, 39, 22, 42, 32, 33, 18, 8, 1]
+  [45, 9, 18, 72, 100, 78, 23, 22, 20, 50, 49]
+  [37, 26, 30, 48, 34, 11, 85, 89, 73, 16, 24]
+  ICI: 0.3183
+  ASI: 0.0010
+  TVA: 0.5822
+  Max Agent Specialization: 0.4062
+  H-score: 6.9983
+  Item-wise Gini: [0.173, 0.457, 0.346, 0.123, 0.321, 0.331, 0.296, 0.311, 0.325, 0.368, 0.428]
+  Max pairwise normalized dot product: 0.639
+  Dot Product Analysis:
+    Max pairwise dot product: 0.639
+    Mean pairwise dot product: 0.600
+    Dot product distance score: 0.361
+    All pairwise dots: [0.556, 0.639, 0.606]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 71:
-  [79, 79, 79, 39, 49, 15, 49, 41, 5, 5, 32]
-  [26, 32, 23, 94, 86, 85, 31, 14, 47, 10, 29]
-  [36, 30, 28, 39, 15, 11, 74, 80, 89, 31, 32]
-  ICI: 0.2773
+  [72, 80, 98, 47, 2, 27, 31, 43, 17, 16, 35]
+  [31, 44, 37, 80, 94, 100, 20, 19, 26, 9, 35]
+  [44, 39, 20, 23, 2, 2, 93, 72, 75, 29, 34]
+  ICI: 0.2961
   ASI: 0.0003
-  TVA: 0.5089
-  H-score: 0.7922
-  Item-wise Gini: [0.251, 0.229, 0.288, 0.210, 0.312, 0.441, 0.191, 0.330, 0.401, 0.381, 0.027]
-  Max pairwise normalized dot product: 0.673
+  TVA: 0.5231
+  Max Agent Specialization: 0.4010
+  H-score: 6.8359
+  Item-wise Gini: [0.191, 0.156, 0.329, 0.230, 0.623, 0.498, 0.362, 0.288, 0.348, 0.273, 0.023]
+  Max pairwise normalized dot product: 0.672
+  Dot Product Analysis:
+    Max pairwise dot product: 0.672
+    Mean pairwise dot product: 0.581
+    Dot product distance score: 0.328
+    All pairwise dots: [0.633, 0.672, 0.439]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 72:
-  [85, 93, 78, 6, 35, 30, 20, 39, 17, 32, 38]
-  [7, 2, 24, 93, 85, 98, 49, 26, 9, 20, 13]
-  [47, 31, 43, 30, 48, 36, 86, 92, 95, 35, 17]
-  ICI: 0.3115
-  ASI: 0.0075
-  TVA: 0.5249
-  H-score: 0.9866
-  Item-wise Gini: [0.389, 0.498, 0.243, 0.482, 0.233, 0.310, 0.239, 0.224, 0.437, 0.078, 0.236]
-  Max pairwise normalized dot product: 0.680
+  [71, 86, 99, 44, 2, 46, 22, 44, 39, 17, 20]
+  [35, 27, 21, 96, 94, 91, 19, 37, 50, 47, 43]
+  [28, 16, 45, 6, 45, 32, 97, 90, 89, 28, 47]
+  ICI: 0.2838
+  ASI: 0.0007
+  TVA: 0.5007
+  Max Agent Specialization: 0.3588
+  H-score: 6.1703
+  Item-wise Gini: [0.233, 0.380, 0.337, 0.391, 0.423, 0.213, 0.382, 0.216, 0.178, 0.191, 0.158]
+  Max pairwise normalized dot product: 0.644
+  Dot Product Analysis:
+    Max pairwise dot product: 0.644
+    Mean pairwise dot product: 0.633
+    Dot product distance score: 0.356
+    All pairwise dots: [0.625, 0.631, 0.644]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 73:
-  [85, 72, 85, 42, 17, 50, 22, 45, 18, 28, 19]
-  [34, 45, 45, 91, 90, 71, 4, 33, 14, 35, 12]
-  [18, 41, 39, 20, 2, 18, 85, 83, 90, 18, 45]
-  ICI: 0.2980
-  ASI: 0.0009
-  TVA: 0.5334
-  H-score: 0.8492
-  Item-wise Gini: [0.318, 0.119, 0.170, 0.307, 0.539, 0.252, 0.493, 0.216, 0.422, 0.135, 0.298]
-  Max pairwise normalized dot product: 0.762
+  [70, 100, 89, 31, 48, 24, 25, 13, 39, 50, 24]
+  [42, 2, 19, 70, 90, 97, 42, 44, 15, 25, 1]
+  [25, 32, 42, 21, 26, 21, 78, 73, 74, 34, 25]
+  ICI: 0.2940
+  ASI: 0.0044
+  TVA: 0.4615
+  Max Agent Specialization: 0.4328
+  H-score: 7.2693
+  Item-wise Gini: [0.189, 0.470, 0.282, 0.278, 0.272, 0.366, 0.262, 0.319, 0.318, 0.121, 0.340]
+  Max pairwise normalized dot product: 0.697
+  Dot Product Analysis:
+    Max pairwise dot product: 0.697
+    Mean pairwise dot product: 0.626
+    Dot product distance score: 0.303
+    All pairwise dots: [0.561, 0.697, 0.619]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 74:
-  [84, 78, 98, 36, 31, 20, 35, 37, 33, 50, 43]
-  [45, 41, 16, 80, 74, 100, 36, 40, 7, 12, 48]
-  [14, 2, 22, 20, 38, 32, 76, 99, 72, 23, 10]
-  ICI: 0.3045
-  ASI: 0.0050
-  TVA: 0.5217
-  H-score: 0.9267
-  Item-wise Gini: [0.287, 0.400, 0.371, 0.269, 0.204, 0.346, 0.252, 0.298, 0.431, 0.262, 0.239]
-  Max pairwise normalized dot product: 0.661
+  [97, 92, 100, 21, 9, 30, 8, 25, 44, 46, 27]
+  [14, 32, 2, 74, 97, 93, 20, 41, 27, 29, 15]
+  [46, 3, 41, 32, 28, 30, 74, 93, 92, 31, 14]
+  ICI: 0.3192
+  ASI: 0.0007
+  TVA: 0.5732
+  Max Agent Specialization: 0.4156
+  H-score: 7.1303
+  Item-wise Gini: [0.338, 0.452, 0.451, 0.302, 0.454, 0.300, 0.426, 0.283, 0.254, 0.085, 0.144]
+  Max pairwise normalized dot product: 0.599
+  Dot Product Analysis:
+    Max pairwise dot product: 0.599
+    Mean pairwise dot product: 0.545
+    Dot product distance score: 0.401
+    All pairwise dots: [0.438, 0.599, 0.597]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 75:
-  [70, 72, 75, 9, 11, 20, 13, 25, 33, 14, 25]
-  [6, 4, 38, 83, 78, 78, 2, 47, 3, 21, 25]
-  [20, 22, 31, 24, 49, 30, 94, 94, 90, 20, 43]
-  ICI: 0.3342
-  ASI: 0.0041
-  TVA: 0.5510
-  H-score: 0.9679
-  Item-wise Gini: [0.477, 0.497, 0.265, 0.445, 0.352, 0.313, 0.529, 0.204, 0.408, 0.083, 0.056]
-  Max pairwise normalized dot product: 0.575
+  [87, 80, 85, 18, 38, 26, 47, 29, 36, 39, 40]
+  [11, 32, 43, 91, 76, 88, 47, 30, 38, 4, 5]
+  [39, 45, 5, 39, 47, 11, 80, 87, 83, 41, 18]
+  ICI: 0.2842
+  ASI: 0.0029
+  TVA: 0.4863
+  Max Agent Specialization: 0.3937
+  H-score: 6.6911
+  Item-wise Gini: [0.353, 0.178, 0.383, 0.349, 0.184, 0.427, 0.136, 0.272, 0.208, 0.299, 0.354]
+  Max pairwise normalized dot product: 0.710
+  Dot Product Analysis:
+    Max pairwise dot product: 0.710
+    Mean pairwise dot product: 0.667
+    Dot product distance score: 0.290
+    All pairwise dots: [0.621, 0.710, 0.669]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 76:
-  [75, 87, 94, 10, 43, 9, 11, 23, 16, 2, 35]
-  [35, 24, 20, 77, 94, 87, 12, 37, 32, 3, 37]
-  [36, 39, 23, 22, 44, 41, 90, 86, 76, 39, 9]
-  ICI: 0.3334
-  ASI: 0.0048
-  TVA: 0.5995
-  H-score: 1.0290
-  Item-wise Gini: [0.228, 0.314, 0.391, 0.405, 0.198, 0.381, 0.438, 0.246, 0.285, 0.543, 0.247]
-  Max pairwise normalized dot product: 0.654
+  [89, 75, 97, 48, 3, 9, 30, 21, 44, 18, 2]
+  [45, 18, 25, 93, 87, 88, 19, 49, 5, 40, 23]
+  [43, 29, 24, 22, 26, 29, 78, 81, 80, 4, 24]
+  ICI: 0.3325
+  ASI: 0.0026
+  TVA: 0.5234
+  Max Agent Specialization: 0.4587
+  H-score: 7.7497
+  Item-wise Gini: [0.191, 0.329, 0.349, 0.265, 0.467, 0.397, 0.325, 0.273, 0.391, 0.366, 0.315]
+  Max pairwise normalized dot product: 0.648
+  Dot Product Analysis:
+    Max pairwise dot product: 0.648
+    Mean pairwise dot product: 0.585
+    Dot product distance score: 0.352
+    All pairwise dots: [0.523, 0.648, 0.585]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 77:
-  [77, 81, 98, 36, 9, 11, 20, 40, 40, 20, 4]
-  [17, 14, 24, 92, 91, 89, 41, 22, 41, 16, 45]
-  [47, 24, 47, 4, 42, 20, 92, 96, 79, 40, 34]
-  ICI: 0.3220
-  ASI: 0.0016
-  TVA: 0.5363
-  H-score: 0.8904
-  Item-wise Gini: [0.315, 0.403, 0.323, 0.431, 0.384, 0.425, 0.283, 0.288, 0.137, 0.188, 0.332]
-  Max pairwise normalized dot product: 0.677
+  [70, 100, 70, 3, 21, 32, 21, 42, 14, 41, 22]
+  [37, 3, 45, 95, 78, 77, 32, 16, 37, 16, 4]
+  [18, 7, 42, 1, 33, 34, 88, 80, 89, 28, 15]
+  ICI: 0.3261
+  ASI: 0.0003
+  TVA: 0.5630
+  Max Agent Specialization: 0.4234
+  H-score: 7.2417
+  Item-wise Gini: [0.278, 0.588, 0.119, 0.633, 0.286, 0.207, 0.318, 0.311, 0.358, 0.197, 0.293]
+  Max pairwise normalized dot product: 0.575
+  Dot Product Analysis:
+    Max pairwise dot product: 0.575
+    Mean pairwise dot product: 0.538
+    Dot product distance score: 0.425
+    All pairwise dots: [0.490, 0.549, 0.575]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 78:
-  [92, 80, 100, 40, 19, 50, 33, 25, 47, 36, 50]
-  [46, 48, 21, 80, 99, 89, 43, 39, 16, 22, 14]
-  [28, 31, 4, 6, 19, 23, 93, 100, 89, 14, 28]
-  ICI: 0.3048
-  ASI: 0.0056
-  TVA: 0.5350
-  H-score: 0.9526
-  Item-wise Gini: [0.205, 0.150, 0.492, 0.394, 0.393, 0.255, 0.293, 0.356, 0.364, 0.149, 0.225]
-  Max pairwise normalized dot product: 0.693
+  [78, 89, 74, 46, 8, 8, 44, 31, 11, 15, 17]
+  [42, 28, 10, 84, 73, 74, 33, 18, 20, 34, 28]
+  [23, 39, 43, 21, 4, 37, 98, 87, 76, 15, 48]
+  ICI: 0.3139
+  ASI: 0.0015
+  TVA: 0.5629
+  Max Agent Specialization: 0.4159
+  H-score: 7.1226
+  Item-wise Gini: [0.282, 0.279, 0.357, 0.286, 0.544, 0.377, 0.221, 0.313, 0.380, 0.215, 0.190]
+  Max pairwise normalized dot product: 0.664
+  Dot Product Analysis:
+    Max pairwise dot product: 0.664
+    Mean pairwise dot product: 0.607
+    Dot product distance score: 0.336
+    All pairwise dots: [0.596, 0.664, 0.562]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 79:
-  [79, 90, 79, 10, 39, 31, 27, 5, 25, 22, 28]
-  [35, 10, 17, 91, 71, 86, 21, 19, 18, 41, 39]
-  [46, 38, 23, 49, 36, 36, 99, 90, 74, 29, 3]
-  ICI: 0.3025
-  ASI: 0.0006
-  TVA: 0.5410
-  H-score: 0.8562
-  Item-wise Gini: [0.198, 0.408, 0.363, 0.376, 0.189, 0.247, 0.318, 0.474, 0.282, 0.138, 0.345]
-  Max pairwise normalized dot product: 0.635
+  [86, 82, 79, 24, 2, 2, 44, 2, 45, 40, 33]
+  [12, 27, 18, 84, 95, 99, 17, 46, 36, 1, 22]
+  [20, 26, 33, 19, 33, 27, 91, 88, 90, 11, 18]
+  ICI: 0.3568
+  ASI: 0.0008
+  TVA: 0.6061
+  Max Agent Specialization: 0.4349
+  H-score: 7.4896
+  Item-wise Gini: [0.425, 0.286, 0.321, 0.338, 0.476, 0.504, 0.321, 0.421, 0.209, 0.505, 0.146]
+  Max pairwise normalized dot product: 0.605
+  Dot Product Analysis:
+    Max pairwise dot product: 0.605
+    Mean pairwise dot product: 0.511
+    Dot product distance score: 0.395
+    All pairwise dots: [0.351, 0.577, 0.605]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 80:
-  [85, 86, 72, 35, 14, 22, 37, 26, 12, 13, 20]
-  [40, 7, 40, 76, 91, 92, 38, 11, 18, 10, 50]
-  [24, 30, 27, 29, 24, 33, 85, 100, 71, 49, 20]
-  ICI: 0.3147
-  ASI: 0.0013
-  TVA: 0.6287
-  H-score: 0.9692
-  Item-wise Gini: [0.304, 0.451, 0.249, 0.224, 0.387, 0.303, 0.181, 0.416, 0.366, 0.345, 0.224]
-  Max pairwise normalized dot product: 0.603
+  [89, 79, 88, 33, 42, 42, 20, 14, 48, 41, 20]
+  [19, 39, 38, 71, 100, 87, 43, 27, 32, 45, 24]
+  [45, 19, 11, 9, 17, 24, 80, 82, 73, 30, 5]
+  ICI: 0.2847
+  ASI: 0.0039
+  TVA: 0.4484
+  Max Agent Specialization: 0.4244
+  H-score: 7.1186
+  Item-wise Gini: [0.282, 0.254, 0.351, 0.338, 0.312, 0.227, 0.338, 0.420, 0.244, 0.027, 0.227]
+  Max pairwise normalized dot product: 0.736
+  Dot Product Analysis:
+    Max pairwise dot product: 0.736
+    Mean pairwise dot product: 0.641
+    Dot product distance score: 0.264
+    All pairwise dots: [0.736, 0.599, 0.587]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 81:
-  [80, 97, 91, 44, 22, 28, 40, 32, 21, 8, 44]
-  [34, 41, 49, 99, 80, 84, 23, 43, 37, 23, 26]
-  [37, 40, 20, 26, 8, 31, 93, 77, 72, 35, 41]
-  ICI: 0.2579
-  ASI: 0.0006
-  TVA: 0.4906
-  H-score: 0.7608
-  Item-wise Gini: [0.212, 0.219, 0.294, 0.266, 0.421, 0.243, 0.319, 0.214, 0.278, 0.290, 0.117]
-  Max pairwise normalized dot product: 0.730
+  [77, 85, 93, 37, 10, 32, 20, 33, 49, 10, 19]
+  [34, 5, 8, 86, 84, 97, 36, 4, 20, 5, 17]
+  [49, 11, 2, 24, 23, 42, 82, 81, 80, 9, 50]
+  ICI: 0.3318
+  ASI: 0.0034
+  TVA: 0.5702
+  Max Agent Specialization: 0.5046
+  H-score: 8.4880
+  Item-wise Gini: [0.148, 0.516, 0.580, 0.313, 0.447, 0.289, 0.292, 0.433, 0.253, 0.110, 0.239]
+  Max pairwise normalized dot product: 0.591
+  Dot Product Analysis:
+    Max pairwise dot product: 0.591
+    Mean pairwise dot product: 0.543
+    Dot product distance score: 0.409
+    All pairwise dots: [0.471, 0.591, 0.569]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 82:
-  [95, 83, 76, 23, 49, 19, 33, 22, 50, 25, 23]
-  [21, 2, 42, 79, 77, 89, 3, 6, 43, 26, 49]
-  [13, 14, 21, 29, 49, 8, 95, 79, 70, 6, 8]
-  ICI: 0.3363
-  ASI: 0.0041
-  TVA: 0.5518
-  H-score: 0.9695
-  Item-wise Gini: [0.386, 0.522, 0.218, 0.298, 0.130, 0.466, 0.498, 0.483, 0.142, 0.236, 0.342]
-  Max pairwise normalized dot product: 0.587
+  [99, 98, 97, 42, 15, 7, 20, 44, 43, 50, 38]
+  [39, 50, 42, 72, 91, 74, 20, 21, 40, 9, 22]
+  [20, 14, 32, 21, 12, 38, 79, 91, 86, 25, 43]
+  ICI: 0.2980
+  ASI: 0.0003
+  TVA: 0.5255
+  Max Agent Specialization: 0.3617
+  H-score: 6.2502
+  Item-wise Gini: [0.298, 0.314, 0.213, 0.256, 0.449, 0.378, 0.362, 0.319, 0.209, 0.292, 0.152]
+  Max pairwise normalized dot product: 0.671
+  Dot Product Analysis:
+    Max pairwise dot product: 0.671
+    Mean pairwise dot product: 0.620
+    Dot product distance score: 0.329
+    All pairwise dots: [0.671, 0.603, 0.586]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 83:
-  [87, 94, 74, 5, 18, 19, 43, 19, 38, 15, 42]
-  [36, 10, 1, 78, 74, 99, 49, 23, 2, 46, 41]
-  [49, 47, 28, 4, 25, 2, 90, 81, 70, 24, 27]
-  ICI: 0.3382
-  ASI: 0.0002
-  TVA: 0.5541
-  H-score: 0.8955
-  Item-wise Gini: [0.199, 0.370, 0.471, 0.565, 0.316, 0.537, 0.176, 0.340, 0.415, 0.240, 0.088]
-  Max pairwise normalized dot product: 0.756
+  [96, 87, 89, 43, 50, 40, 38, 15, 31, 39, 37]
+  [18, 15, 29, 80, 92, 84, 15, 13, 29, 35, 12]
+  [20, 35, 30, 38, 25, 42, 78, 94, 84, 29, 5]
+  ICI: 0.2822
+  ASI: 0.0032
+  TVA: 0.5667
+  Max Agent Specialization: 0.4007
+  H-score: 6.8753
+  Item-wise Gini: [0.336, 0.301, 0.219, 0.219, 0.308, 0.239, 0.319, 0.446, 0.268, 0.071, 0.352]
+  Max pairwise normalized dot product: 0.669
+  Dot Product Analysis:
+    Max pairwise dot product: 0.669
+    Mean pairwise dot product: 0.633
+    Dot product distance score: 0.331
+    All pairwise dots: [0.669, 0.631, 0.601]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 84:
-  [96, 98, 91, 25, 31, 31, 17, 34, 22, 23, 23]
-  [49, 44, 6, 82, 82, 72, 28, 37, 8, 45, 17]
-  [23, 47, 14, 31, 33, 31, 98, 78, 78, 32, 13]
-  ICI: 0.2711
-  ASI: 0.0000
-  TVA: 0.5593
-  H-score: 0.8309
-  Item-wise Gini: [0.282, 0.180, 0.506, 0.284, 0.242, 0.214, 0.380, 0.201, 0.433, 0.156, 0.119]
-  Max pairwise normalized dot product: 0.662
+  [86, 75, 89, 43, 31, 49, 12, 29, 29, 25, 32]
+  [38, 45, 41, 70, 73, 83, 46, 8, 24, 8, 14]
+  [40, 30, 34, 32, 6, 18, 92, 94, 94, 32, 10]
+  ICI: 0.2825
+  ASI: 0.0013
+  TVA: 0.5008
+  Max Agent Specialization: 0.3848
+  H-score: 6.5610
+  Item-wise Gini: [0.175, 0.187, 0.211, 0.193, 0.422, 0.307, 0.351, 0.436, 0.308, 0.242, 0.249]
+  Max pairwise normalized dot product: 0.795
+  Dot Product Analysis:
+    Max pairwise dot product: 0.795
+    Mean pairwise dot product: 0.655
+    Dot product distance score: 0.205
+    All pairwise dots: [0.795, 0.609, 0.562]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 85:
-  [72, 87, 95, 20, 20, 31, 36, 2, 19, 47, 31]
-  [2, 32, 35, 73, 89, 81, 28, 36, 25, 38, 7]
-  [47, 34, 27, 50, 48, 30, 74, 70, 73, 50, 31]
-  ICI: 0.2668
-  ASI: 0.0073
-  TVA: 0.4271
-  H-score: 0.8399
-  Item-wise Gini: [0.407, 0.258, 0.310, 0.266, 0.313, 0.274, 0.181, 0.391, 0.272, 0.040, 0.244]
-  Max pairwise normalized dot product: 0.762
+  [72, 94, 85, 19, 16, 33, 6, 31, 16, 30, 22]
+  [26, 50, 10, 95, 96, 91, 33, 21, 13, 32, 48]
+  [32, 30, 20, 42, 50, 9, 73, 94, 88, 22, 39]
+  ICI: 0.3072
+  ASI: 0.0008
+  TVA: 0.5226
+  Max Agent Specialization: 0.3949
+  H-score: 6.7577
+  Item-wise Gini: [0.280, 0.284, 0.464, 0.297, 0.306, 0.388, 0.392, 0.326, 0.421, 0.100, 0.123]
+  Max pairwise normalized dot product: 0.620
+  Dot Product Analysis:
+    Max pairwise dot product: 0.620
+    Mean pairwise dot product: 0.574
+    Dot product distance score: 0.380
+    All pairwise dots: [0.564, 0.536, 0.620]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 86:
-  [91, 84, 83, 28, 5, 17, 24, 44, 21, 47, 28]
-  [48, 24, 48, 95, 94, 82, 20, 1, 24, 19, 39]
-  [5, 13, 33, 50, 43, 27, 84, 85, 85, 44, 32]
-  ICI: 0.3044
-  ASI: 0.0004
-  TVA: 0.4957
-  H-score: 0.8089
-  Item-wise Gini: [0.406, 0.401, 0.216, 0.252, 0.418, 0.339, 0.327, 0.422, 0.318, 0.180, 0.065]
-  Max pairwise normalized dot product: 0.600
+  [70, 74, 88, 7, 12, 20, 17, 19, 47, 24, 27]
+  [34, 1, 43, 70, 82, 82, 24, 20, 15, 36, 35]
+  [47, 19, 31, 29, 37, 50, 84, 75, 92, 34, 35]
+  ICI: 0.2813
+  ASI: 0.0031
+  TVA: 0.4637
+  Max Agent Specialization: 0.3928
+  H-score: 6.6529
+  Item-wise Gini: [0.189, 0.545, 0.285, 0.409, 0.365, 0.276, 0.304, 0.273, 0.287, 0.072, 0.043]
+  Max pairwise normalized dot product: 0.689
+  Dot Product Analysis:
+    Max pairwise dot product: 0.689
+    Mean pairwise dot product: 0.629
+    Dot product distance score: 0.311
+    All pairwise dots: [0.528, 0.668, 0.689]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 87:
-  [87, 81, 99, 49, 37, 17, 30, 46, 40, 8, 8]
-  [40, 6, 27, 84, 80, 93, 31, 4, 49, 4, 27]
-  [39, 25, 2, 15, 48, 47, 83, 87, 96, 21, 25]
-  ICI: 0.3052
-  ASI: 0.0007
-  TVA: 0.5046
-  H-score: 0.8237
-  Item-wise Gini: [0.181, 0.436, 0.491, 0.332, 0.201, 0.344, 0.246, 0.405, 0.202, 0.334, 0.233]
-  Max pairwise normalized dot product: 0.652
+  [80, 73, 75, 47, 38, 38, 32, 14, 19, 27, 28]
+  [50, 7, 11, 73, 82, 83, 4, 4, 30, 44, 36]
+  [19, 9, 26, 17, 26, 16, 70, 100, 99, 31, 48]
+  ICI: 0.3228
+  ASI: 0.0038
+  TVA: 0.5441
+  Max Agent Specialization: 0.4275
+  H-score: 7.2989
+  Item-wise Gini: [0.261, 0.483, 0.368, 0.292, 0.276, 0.345, 0.414, 0.540, 0.357, 0.136, 0.120]
+  Max pairwise normalized dot product: 0.701
+  Dot Product Analysis:
+    Max pairwise dot product: 0.701
+    Mean pairwise dot product: 0.556
+    Dot product distance score: 0.299
+    All pairwise dots: [0.701, 0.511, 0.456]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 88:
-  [72, 82, 70, 43, 45, 31, 31, 9, 11, 33, 25]
-  [33, 23, 1, 87, 78, 90, 27, 16, 11, 8, 5]
-  [48, 42, 29, 42, 46, 11, 78, 73, 86, 26, 24]
-  ICI: 0.2950
-  ASI: 0.0092
-  TVA: 0.4987
-  H-score: 0.9777
-  Item-wise Gini: [0.141, 0.247, 0.472, 0.239, 0.193, 0.439, 0.195, 0.402, 0.435, 0.238, 0.242]
-  Max pairwise normalized dot product: 0.699
+  [97, 74, 71, 18, 31, 14, 47, 21, 16, 30, 3]
+  [35, 34, 21, 83, 80, 97, 17, 5, 44, 23, 44]
+  [35, 33, 4, 5, 29, 15, 95, 77, 86, 47, 16]
+  ICI: 0.3442
+  ASI: 0.0008
+  TVA: 0.6222
+  Max Agent Specialization: 0.4249
+  H-score: 7.3441
+  Item-wise Gini: [0.275, 0.218, 0.481, 0.474, 0.219, 0.417, 0.331, 0.466, 0.323, 0.174, 0.417]
+  Max pairwise normalized dot product: 0.608
+  Dot Product Analysis:
+    Max pairwise dot product: 0.608
+    Mean pairwise dot product: 0.548
+    Dot product distance score: 0.392
+    All pairwise dots: [0.549, 0.608, 0.486]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 89:
-  [94, 84, 81, 45, 21, 49, 39, 44, 25, 38, 48]
-  [41, 7, 39, 94, 86, 96, 15, 28, 40, 34, 35]
-  [41, 41, 27, 1, 34, 34, 72, 86, 90, 6, 46]
-  ICI: 0.2711
-  ASI: 0.0025
-  TVA: 0.4417
-  H-score: 0.7620
-  Item-wise Gini: [0.173, 0.362, 0.209, 0.456, 0.315, 0.224, 0.326, 0.268, 0.310, 0.249, 0.076]
-  Max pairwise normalized dot product: 0.723
+  [86, 93, 74, 37, 3, 46, 24, 24, 23, 33, 11]
+  [21, 38, 41, 93, 74, 71, 35, 5, 5, 4, 41]
+  [33, 8, 32, 23, 37, 20, 81, 92, 76, 23, 23]
+  ICI: 0.3337
+  ASI: 0.0006
+  TVA: 0.5322
+  Max Agent Specialization: 0.4099
+  H-score: 7.0181
+  Item-wise Gini: [0.300, 0.400, 0.185, 0.316, 0.423, 0.259, 0.270, 0.478, 0.454, 0.317, 0.278]
+  Max pairwise normalized dot product: 0.633
+  Dot Product Analysis:
+    Max pairwise dot product: 0.633
+    Mean pairwise dot product: 0.563
+    Dot product distance score: 0.367
+    All pairwise dots: [0.633, 0.544, 0.512]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 90:
-  [91, 71, 72, 41, 46, 38, 38, 29, 40, 39, 45]
-  [5, 14, 33, 96, 100, 71, 41, 9, 28, 37, 49]
-  [21, 26, 46, 46, 27, 29, 99, 94, 85, 44, 25]
-  ICI: 0.2517
-  ASI: 0.0071
-  TVA: 0.4811
-  H-score: 0.8756
-  Item-wise Gini: [0.482, 0.324, 0.147, 0.231, 0.308, 0.231, 0.225, 0.422, 0.229, 0.030, 0.161]
-  Max pairwise normalized dot product: 0.724
+  [98, 91, 70, 21, 16, 32, 1, 12, 29, 40, 20]
+  [3, 47, 18, 92, 83, 96, 7, 50, 21, 3, 34]
+  [35, 45, 24, 37, 21, 40, 74, 78, 76, 19, 44]
+  ICI: 0.3313
+  ASI: 0.0079
+  TVA: 0.5770
+  Max Agent Specialization: 0.4561
+  H-score: 7.7901
+  Item-wise Gini: [0.483, 0.197, 0.327, 0.314, 0.370, 0.249, 0.587, 0.293, 0.269, 0.417, 0.135]
+  Max pairwise normalized dot product: 0.663
+  Dot Product Analysis:
+    Max pairwise dot product: 0.663
+    Mean pairwise dot product: 0.584
+    Dot product distance score: 0.337
+    All pairwise dots: [0.484, 0.605, 0.663]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 91:
-  [81, 97, 84, 33, 18, 15, 46, 1, 12, 39, 39]
-  [26, 34, 47, 94, 84, 87, 4, 35, 31, 16, 8]
-  [21, 47, 6, 9, 14, 7, 84, 98, 86, 27, 33]
-  ICI: 0.3586
-  ASI: 0.0007
-  TVA: 0.5540
-  H-score: 0.9261
-  Item-wise Gini: [0.301, 0.232, 0.376, 0.411, 0.392, 0.483, 0.410, 0.493, 0.396, 0.183, 0.251]
-  Max pairwise normalized dot product: 0.560
+  [95, 78, 93, 6, 17, 45, 41, 12, 1, 33, 49]
+  [32, 50, 15, 89, 73, 72, 9, 23, 16, 38, 13]
+  [37, 35, 40, 34, 24, 35, 90, 78, 87, 46, 16]
+  ICI: 0.3100
+  ASI: 0.0040
+  TVA: 0.5561
+  Max Agent Specialization: 0.4224
+  H-score: 7.2225
+  Item-wise Gini: [0.252, 0.189, 0.351, 0.454, 0.354, 0.203, 0.360, 0.362, 0.532, 0.049, 0.299]
+  Max pairwise normalized dot product: 0.611
+  Dot Product Analysis:
+    Max pairwise dot product: 0.611
+    Mean pairwise dot product: 0.596
+    Dot product distance score: 0.389
+    All pairwise dots: [0.571, 0.611, 0.604]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 92:
-  [96, 83, 76, 38, 3, 8, 38, 37, 21, 20, 42]
-  [29, 5, 35, 91, 98, 88, 17, 32, 39, 38, 38]
-  [31, 48, 47, 15, 35, 14, 90, 100, 75, 7, 24]
-  ICI: 0.3134
-  ASI: 0.0004
-  TVA: 0.5276
-  H-score: 0.8486
-  Item-wise Gini: [0.306, 0.393, 0.194, 0.337, 0.457, 0.473, 0.337, 0.274, 0.263, 0.303, 0.129]
-  Max pairwise normalized dot product: 0.703
+  [71, 87, 94, 42, 4, 35, 32, 35, 39, 27, 35]
+  [49, 45, 46, 82, 99, 71, 45, 39, 22, 19, 37]
+  [3, 31, 41, 38, 13, 47, 83, 70, 85, 31, 40]
+  ICI: 0.2248
+  ASI: 0.0008
+  TVA: 0.4222
+  Max Agent Specialization: 0.3176
+  H-score: 5.4152
+  Item-wise Gini: [0.382, 0.228, 0.196, 0.148, 0.533, 0.132, 0.228, 0.176, 0.310, 0.131, 0.049]
+  Max pairwise normalized dot product: 0.736
+  Dot Product Analysis:
+    Max pairwise dot product: 0.736
+    Mean pairwise dot product: 0.716
+    Dot product distance score: 0.264
+    All pairwise dots: [0.736, 0.712, 0.700]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 93:
-  [91, 89, 84, 28, 48, 29, 23, 4, 19, 30, 33]
-  [3, 46, 9, 78, 80, 97, 47, 39, 36, 15, 12]
-  [21, 22, 46, 42, 6, 13, 95, 94, 70, 4, 7]
-  ICI: 0.3490
-  ASI: 0.0021
-  TVA: 0.5436
-  H-score: 0.9337
-  Item-wise Gini: [0.497, 0.264, 0.342, 0.224, 0.368, 0.396, 0.316, 0.454, 0.298, 0.339, 0.313]
-  Max pairwise normalized dot product: 0.604
+  [72, 89, 76, 46, 34, 18, 12, 10, 26, 2, 18]
+  [29, 49, 7, 97, 98, 86, 1, 24, 41, 48, 47]
+  [28, 2, 7, 18, 43, 4, 84, 89, 85, 31, 28]
+  ICI: 0.3703
+  ASI: 0.0011
+  TVA: 0.6087
+  Max Agent Specialization: 0.4526
+  H-score: 7.7737
+  Item-wise Gini: [0.274, 0.452, 0.535, 0.276, 0.182, 0.471, 0.570, 0.442, 0.267, 0.338, 0.148]
+  Max pairwise normalized dot product: 0.632
+  Dot Product Analysis:
+    Max pairwise dot product: 0.632
+    Mean pairwise dot product: 0.507
+    Dot product distance score: 0.368
+    All pairwise dots: [0.632, 0.386, 0.503]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 94:
-  [78, 98, 78, 37, 14, 31, 5, 45, 43, 48, 42]
-  [42, 20, 36, 74, 95, 95, 5, 44, 33, 10, 11]
-  [41, 33, 5, 11, 37, 40, 89, 70, 80, 43, 4]
-  ICI: 0.3135
-  ASI: 0.0015
-  TVA: 0.5417
-  H-score: 0.8857
-  Item-wise Gini: [0.121, 0.319, 0.389, 0.353, 0.378, 0.274, 0.574, 0.135, 0.213, 0.234, 0.424]
-  Max pairwise normalized dot product: 0.622
+  [93, 84, 94, 33, 25, 32, 47, 26, 16, 17, 19]
+  [12, 2, 3, 82, 94, 73, 3, 27, 17, 16, 23]
+  [34, 35, 42, 46, 21, 35, 70, 73, 74, 21, 45]
+  ICI: 0.2969
+  ASI: 0.0155
+  TVA: 0.5339
+  Max Agent Specialization: 0.5284
+  H-score: 8.8345
+  Item-wise Gini: [0.357, 0.447, 0.430, 0.280, 0.415, 0.274, 0.359, 0.225, 0.336, 0.057, 0.176]
+  Max pairwise normalized dot product: 0.730
+  Dot Product Analysis:
+    Max pairwise dot product: 0.730
+    Mean pairwise dot product: 0.565
+    Dot product distance score: 0.270
+    All pairwise dots: [0.405, 0.730, 0.562]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 95:
-  [81, 85, 76, 49, 10, 25, 20, 38, 9, 32, 29]
-  [36, 40, 33, 94, 77, 93, 6, 31, 37, 20, 42]
-  [15, 15, 9, 35, 11, 38, 94, 86, 73, 22, 7]
-  ICI: 0.3185
-  ASI: 0.0029
-  TVA: 0.5490
-  H-score: 0.9253
-  Item-wise Gini: [0.329, 0.331, 0.380, 0.173, 0.430, 0.257, 0.510, 0.283, 0.392, 0.127, 0.266]
-  Max pairwise normalized dot product: 0.688
+  [99, 92, 71, 27, 5, 5, 34, 24, 3, 33, 13]
+  [20, 1, 24, 88, 94, 82, 20, 23, 43, 10, 15]
+  [29, 9, 18, 45, 40, 7, 100, 77, 76, 4, 47]
+  ICI: 0.3854
+  ASI: 0.0007
+  TVA: 0.6736
+  Max Agent Specialization: 0.4823
+  H-score: 8.2973
+  Item-wise Gini: [0.368, 0.601, 0.331, 0.254, 0.434, 0.547, 0.328, 0.271, 0.386, 0.424, 0.279]
+  Max pairwise normalized dot product: 0.608
+  Dot Product Analysis:
+    Max pairwise dot product: 0.608
+    Mean pairwise dot product: 0.463
+    Dot product distance score: 0.392
+    All pairwise dots: [0.327, 0.452, 0.608]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 96:
-  [87, 81, 94, 12, 39, 30, 48, 9, 3, 20, 25]
-  [47, 13, 4, 82, 82, 93, 21, 48, 47, 3, 23]
-  [32, 9, 27, 25, 2, 1, 91, 78, 80, 8, 36]
-  ICI: 0.3621
-  ASI: 0.0010
-  TVA: 0.5531
-  H-score: 0.9348
-  Item-wise Gini: [0.197, 0.453, 0.466, 0.374, 0.426, 0.489, 0.325, 0.371, 0.423, 0.355, 0.144]
-  Max pairwise normalized dot product: 0.527
+  [74, 73, 82, 45, 28, 44, 45, 30, 12, 29, 22]
+  [27, 39, 49, 71, 73, 92, 7, 31, 41, 40, 29]
+  [29, 49, 42, 38, 34, 21, 84, 84, 73, 21, 20]
+  ICI: 0.2160
+  ASI: 0.0000
+  TVA: 0.4374
+  Max Agent Specialization: 0.2850
+  H-score: 4.9290
+  Item-wise Gini: [0.248, 0.148, 0.160, 0.140, 0.216, 0.298, 0.375, 0.244, 0.321, 0.138, 0.082]
+  Max pairwise normalized dot product: 0.785
+  Dot Product Analysis:
+    Max pairwise dot product: 0.785
+    Mean pairwise dot product: 0.744
+    Dot product distance score: 0.215
+    All pairwise dots: [0.785, 0.763, 0.684]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 97:
-  [74, 94, 95, 25, 27, 37, 11, 23, 32, 12, 29]
-  [9, 49, 26, 93, 89, 80, 7, 14, 14, 18, 34]
-  [42, 47, 2, 24, 44, 28, 74, 75, 90, 43, 10]
-  ICI: 0.3237
-  ASI: 0.0016
-  TVA: 0.5754
-  H-score: 0.9314
-  Item-wise Gini: [0.347, 0.171, 0.499, 0.344, 0.275, 0.260, 0.474, 0.347, 0.358, 0.269, 0.236]
-  Max pairwise normalized dot product: 0.616
+  [78, 97, 84, 44, 10, 46, 17, 9, 45, 35, 32]
+  [43, 30, 48, 88, 94, 84, 14, 7, 47, 49, 32]
+  [17, 20, 39, 29, 29, 27, 71, 79, 98, 38, 49]
+  ICI: 0.2698
+  ASI: 0.0004
+  TVA: 0.5409
+  Max Agent Specialization: 0.3501
+  H-score: 6.0643
+  Item-wise Gini: [0.301, 0.354, 0.179, 0.226, 0.408, 0.225, 0.383, 0.512, 0.195, 0.059, 0.117]
+  Max pairwise normalized dot product: 0.733
+  Dot Product Analysis:
+    Max pairwise dot product: 0.733
+    Mean pairwise dot product: 0.661
+    Dot product distance score: 0.267
+    All pairwise dots: [0.733, 0.612, 0.638]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 98:
-  [95, 82, 80, 3, 40, 4, 47, 33, 29, 5, 25]
-  [44, 44, 20, 95, 82, 98, 48, 4, 37, 6, 50]
-  [29, 13, 23, 6, 34, 12, 90, 98, 85, 39, 35]
-  ICI: 0.3394
-  ASI: 0.0009
-  TVA: 0.6255
-  H-score: 0.9829
-  Item-wise Gini: [0.281, 0.353, 0.355, 0.578, 0.171, 0.534, 0.176, 0.463, 0.246, 0.455, 0.113]
-  Max pairwise normalized dot product: 0.612
+  [71, 98, 89, 50, 50, 31, 30, 23, 18, 19, 1]
+  [24, 36, 46, 95, 100, 79, 34, 45, 16, 1, 27]
+  [29, 36, 23, 25, 43, 20, 100, 81, 94, 43, 7]
+  ICI: 0.3126
+  ASI: 0.0001
+  TVA: 0.5910
+  Max Agent Specialization: 0.3784
+  H-score: 6.5800
+  Item-wise Gini: [0.264, 0.254, 0.288, 0.270, 0.194, 0.299, 0.277, 0.254, 0.404, 0.439, 0.493]
+  Max pairwise normalized dot product: 0.747
+  Dot Product Analysis:
+    Max pairwise dot product: 0.747
+    Mean pairwise dot product: 0.651
+    Dot product distance score: 0.253
+    All pairwise dots: [0.747, 0.600, 0.606]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 99:
-  [85, 78, 79, 46, 43, 50, 15, 46, 13, 19, 40]
-  [5, 44, 50, 90, 87, 81, 7, 38, 32, 23, 35]
-  [33, 43, 20, 19, 45, 43, 95, 84, 73, 18, 32]
-  ICI: 0.2351
-  ASI: 0.0009
-  TVA: 0.4477
-  H-score: 0.6997
-  Item-wise Gini: [0.430, 0.136, 0.258, 0.312, 0.178, 0.153, 0.501, 0.178, 0.338, 0.062, 0.045]
-  Max pairwise normalized dot product: 0.776
+  [97, 87, 79, 21, 1, 33, 29, 39, 12, 5, 48]
+  [2, 45, 11, 96, 84, 95, 42, 23, 4, 4, 31]
+  [3, 38, 33, 36, 25, 50, 84, 96, 80, 45, 8]
+  ICI: 0.3753
+  ASI: 0.0027
+  TVA: 0.6384
+  Max Agent Specialization: 0.4830
+  H-score: 8.2729
+  Item-wise Gini: [0.622, 0.209, 0.375, 0.341, 0.518, 0.246, 0.211, 0.282, 0.514, 0.489, 0.311]
+  Max pairwise normalized dot product: 0.604
+  Dot Product Analysis:
+    Max pairwise dot product: 0.604
+    Mean pairwise dot product: 0.533
+    Dot product distance score: 0.396
+    All pairwise dots: [0.460, 0.535, 0.604]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 Specialized Matrix 100:
-  [79, 88, 76, 39, 38, 13, 16, 29, 39, 18, 38]
-  [17, 11, 37, 98, 99, 79, 20, 19, 18, 18, 25]
-  [43, 24, 20, 32, 43, 45, 98, 91, 76, 7, 15]
-  ICI: 0.2922
-  ASI: 0.0014
-  TVA: 0.5091
-  H-score: 0.8299
-  Item-wise Gini: [0.293, 0.414, 0.281, 0.284, 0.245, 0.340, 0.395, 0.326, 0.272, 0.191, 0.199]
-  Max pairwise normalized dot product: 0.625
+  [98, 91, 97, 33, 33, 50, 12, 21, 31, 38, 34]
+  [39, 20, 5, 94, 99, 88, 5, 8, 28, 32, 40]
+  [38, 32, 44, 42, 27, 37, 78, 75, 92, 27, 16]
+  ICI: 0.2904
+  ASI: 0.0052
+  TVA: 0.5441
+  Max Agent Specialization: 0.4434
+  H-score: 7.5121
+  Item-wise Gini: [0.209, 0.303, 0.406, 0.275, 0.329, 0.222, 0.509, 0.425, 0.275, 0.060, 0.205]
+  Max pairwise normalized dot product: 0.674
+  Dot Product Analysis:
+    Max pairwise dot product: 0.674
+    Mean pairwise dot product: 0.615
+    Dot product distance score: 0.326
+    All pairwise dots: [0.607, 0.674, 0.565]
+    Counterexample likelihood: MEDIUM (moderate preference similarity)
 
 === SPECIALIZED MATRIX SUMMARY ===
 Total matrices: 100
-Mean H-score: 0.8896
-Standard deviation: 0.0846
+Mean H-score: 6.9932
+Standard deviation: 0.7423

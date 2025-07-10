@@ -9,10 +9,8 @@
 #include <random>
 #include <chrono>
 #include <iomanip>
-
 #include <nlohmann/json.hpp>
 using json = nlohmann::json;
-
 using namespace std;
 
 // total utility for an agent across all items

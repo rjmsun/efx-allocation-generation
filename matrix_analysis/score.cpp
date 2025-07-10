@@ -28,9 +28,10 @@ struct MatrixStats {
     double ici;
     double asi;
     double tva;
+    double max_spec;
     double h_score;
     
-    MatrixStats(double i, double a, double t, double h) : ici(i), asi(a), tva(t), h_score(h) {}
+    MatrixStats(double i, double a, double t, double m, double h) : ici(i), asi(a), tva(t), max_spec(m), h_score(h) {}
 };
 
 // Gini coefficient calculation for vector<int>
@@ -138,14 +139,38 @@ double tva(const Utilities& matrix) {
     return sum_tva / m;
 }
 
-// Calculate H-score
+// Calculate agent specialization scores (individual agent Gini coefficients)
+vector<double> get_agent_specialization_scores(const Utilities& matrix) {
+    if (matrix.empty()) return {};
+    vector<double> agent_ginis;
+    for (const auto& row : matrix) {
+        vector<double> normed = normalize_row_sum(row);
+        agent_ginis.push_back(gini(normed));
+    }
+    return agent_ginis;
+}
+
+// Calculate maximum agent specialization (reward for highly specialized agents)
+double max_agent_specialization(const Utilities& matrix) {
+    auto agent_scores = get_agent_specialization_scores(matrix);
+    if (agent_scores.empty()) return 0.0;
+    return *max_element(agent_scores.begin(), agent_scores.end());
+}
+
+// Calculate H-score with reduced ASI weight and bonus for highly specialized agents
 double h_score(const Utilities& matrix) {
-    return ici(matrix) + 20 * asi(matrix) + tva(matrix);
+    double ici_score = ici(matrix);
+    double asi_score = asi(matrix);
+    double tva_score = tva(matrix);
+    double max_spec_score = max_agent_specialization(matrix);
+    
+    // Reduced ASI weight (from 20 to 5), but add bonus for highly specialized agents
+    return ici_score + 5 * asi_score + tva_score + 15 * max_spec_score;
 }
 
 // Calculate complete statistics for a matrix
 MatrixStats calculate_stats(const Utilities& matrix) {
-    return MatrixStats(ici(matrix), asi(matrix), tva(matrix), h_score(matrix));
+    return MatrixStats(ici(matrix), asi(matrix), tva(matrix), max_agent_specialization(matrix), h_score(matrix));
 }
 
 // Print matrix to output stream
@@ -171,6 +196,7 @@ void print_stats(const MatrixStats& stats, ostream& out, const string& label = "
     out << "  ICI: " << fixed << setprecision(4) << stats.ici << "\n";
     out << "  ASI: " << fixed << setprecision(4) << stats.asi << "\n";
     out << "  TVA: " << fixed << setprecision(4) << stats.tva << "\n";
+    out << "  Max Agent Specialization: " << fixed << setprecision(4) << stats.max_spec << "\n";
     out << "  H-score: " << fixed << setprecision(4) << stats.h_score << "\n";
 }
 
@@ -415,6 +441,70 @@ double max_pairwise_dot(const Utilities& matrix) {
     return max_dot;
 }
 
+// Calculate mean pairwise dot product between all agent pairs
+double mean_pairwise_dot(const Utilities& matrix) {
+    auto normed = normalize_rows(matrix);
+    int n = normed.size();
+    if (n < 2) return 0.0;
+    
+    double total_dot = 0.0;
+    int pair_count = 0;
+    
+    for (int i = 0; i < n; ++i) {
+        for (int j = i + 1; j < n; ++j) {
+            double dot = 0.0, norm_i = 0.0, norm_j = 0.0;
+            for (size_t k = 0; k < normed[i].size(); ++k) {
+                dot += normed[i][k] * normed[j][k];
+                norm_i += normed[i][k] * normed[i][k];
+                norm_j += normed[j][k] * normed[j][k];
+            }
+            if (norm_i > 0 && norm_j > 0) {
+                dot /= (sqrt(norm_i) * sqrt(norm_j));
+            } else {
+                dot = 0.0;
+            }
+            total_dot += dot;
+            pair_count++;
+        }
+    }
+    
+    return pair_count > 0 ? total_dot / pair_count : 0.0;
+}
+
+// Calculate dot product distance (1 - normalized_dot_product) for counterexample likelihood
+double dot_product_distance_score(const Utilities& matrix) {
+    double max_dot = max_pairwise_dot(matrix);
+    // Return distance score: higher values indicate more likely to be counterexample
+    // (agents with similar utility functions are more likely to compete for same items)
+    return 1.0 - max_dot;
+}
+
+// Calculate all pairwise dot products and return as vector
+vector<double> all_pairwise_dots(const Utilities& matrix) {
+    auto normed = normalize_rows(matrix);
+    int n = normed.size();
+    vector<double> dots;
+    
+    for (int i = 0; i < n; ++i) {
+        for (int j = i + 1; j < n; ++j) {
+            double dot = 0.0, norm_i = 0.0, norm_j = 0.0;
+            for (size_t k = 0; k < normed[i].size(); ++k) {
+                dot += normed[i][k] * normed[j][k];
+                norm_i += normed[i][k] * normed[i][k];
+                norm_j += normed[j][k] * normed[j][k];
+            }
+            if (norm_i > 0 && norm_j > 0) {
+                dot /= (sqrt(norm_i) * sqrt(norm_j));
+            } else {
+                dot = 0.0;
+            }
+            dots.push_back(dot);
+        }
+    }
+    
+    return dots;
+}
+
 // Print item-wise Gini vector
 void print_itemwise_gini(const vector<double>& ginis, ostream& out) {
     out << "  Item-wise Gini: [";
@@ -428,6 +518,35 @@ void print_itemwise_gini(const vector<double>& ginis, ostream& out) {
 // Print max pairwise dot product
 void print_max_pairwise_dot(double max_dot, ostream& out) {
     out << "  Max pairwise normalized dot product: " << fixed << setprecision(3) << max_dot << "\n";
+}
+
+// Print comprehensive dot product analysis
+void print_dot_product_analysis(const Utilities& matrix, ostream& out) {
+    double max_dot = max_pairwise_dot(matrix);
+    double mean_dot = mean_pairwise_dot(matrix);
+    double distance_score = dot_product_distance_score(matrix);
+    vector<double> all_dots = all_pairwise_dots(matrix);
+    
+    out << "  Dot Product Analysis:\n";
+    out << "    Max pairwise dot product: " << fixed << setprecision(3) << max_dot << "\n";
+    out << "    Mean pairwise dot product: " << fixed << setprecision(3) << mean_dot << "\n";
+    out << "    Dot product distance score: " << fixed << setprecision(3) << distance_score << "\n";
+    out << "    All pairwise dots: [";
+    for (size_t i = 0; i < all_dots.size(); ++i) {
+        out << fixed << setprecision(3) << all_dots[i];
+        if (i < all_dots.size() - 1) out << ", ";
+    }
+    out << "]\n";
+    
+    // Counterexample likelihood interpretation
+    out << "    Counterexample likelihood: ";
+    if (distance_score < 0.2) {
+        out << "LOW (agents have very similar preferences)\n";
+    } else if (distance_score < 0.5) {
+        out << "MEDIUM (moderate preference similarity)\n";
+    } else {
+        out << "HIGH (agents have diverse preferences)\n";
+    }
 }
 
 int main() {
@@ -485,6 +604,7 @@ int main() {
         print_stats(stats, counterfile);
         print_itemwise_gini(itemwise_gini(counterexamples[i]), counterfile);
         print_max_pairwise_dot(max_pairwise_dot(counterexamples[i]), counterfile);
+        print_dot_product_analysis(counterexamples[i], counterfile);
         counterexample_stats.push_back(stats);
         counterfile << "\n";
     }
@@ -515,6 +635,7 @@ int main() {
         print_stats(stats, uniformfile);
         print_itemwise_gini(itemwise_gini(uniform_matrices[i]), uniformfile);
         print_max_pairwise_dot(max_pairwise_dot(uniform_matrices[i]), uniformfile);
+        print_dot_product_analysis(uniform_matrices[i], uniformfile);
         uniform_h_scores.push_back(stats.h_score);
         uniformfile << "\n";
     }
@@ -539,6 +660,7 @@ int main() {
         print_stats(stats, poisonfile);
         print_itemwise_gini(itemwise_gini(poison_matrices[i]), poisonfile);
         print_max_pairwise_dot(max_pairwise_dot(poison_matrices[i]), poisonfile);
+        print_dot_product_analysis(poison_matrices[i], poisonfile);
         poison_h_scores.push_back(stats.h_score);
         poisonfile << "\n";
     }
@@ -563,6 +685,7 @@ int main() {
         print_stats(stats, highvaluefile);
         print_itemwise_gini(itemwise_gini(high_value_matrices[i]), highvaluefile);
         print_max_pairwise_dot(max_pairwise_dot(high_value_matrices[i]), highvaluefile);
+        print_dot_product_analysis(high_value_matrices[i], highvaluefile);
         high_value_h_scores.push_back(stats.h_score);
         highvaluefile << "\n";
     }
@@ -587,6 +710,7 @@ int main() {
         print_stats(stats, competitivefile);
         print_itemwise_gini(itemwise_gini(competitive_matrices[i]), competitivefile);
         print_max_pairwise_dot(max_pairwise_dot(competitive_matrices[i]), competitivefile);
+        print_dot_product_analysis(competitive_matrices[i], competitivefile);
         competitive_h_scores.push_back(stats.h_score);
         competitivefile << "\n";
     }
@@ -611,6 +735,7 @@ int main() {
         print_stats(stats, specializedfile);
         print_itemwise_gini(itemwise_gini(specialized_matrices[i]), specializedfile);
         print_max_pairwise_dot(max_pairwise_dot(specialized_matrices[i]), specializedfile);
+        print_dot_product_analysis(specialized_matrices[i], specializedfile);
         specialized_h_scores.push_back(stats.h_score);
         specializedfile << "\n";
     }
@@ -645,6 +770,94 @@ int main() {
          << " ± " << competitive_mean_std.second << "\n";
     cout << "Specialized: " << fixed << setprecision(4) << specialized_mean_std.first 
          << " ± " << specialized_mean_std.second << "\n";
+    
+    // Comprehensive dot product analysis
+    cout << "\n=== DOT PRODUCT ANALYSIS SUMMARY ===\n";
+    
+    // Collect dot product statistics for each matrix type
+    vector<double> counter_dot_scores, uniform_dot_scores, poison_dot_scores, 
+                   high_value_dot_scores, competitive_dot_scores, specialized_dot_scores;
+    
+    for (const auto& matrix : counterexamples) {
+        counter_dot_scores.push_back(dot_product_distance_score(matrix));
+    }
+    for (const auto& matrix : uniform_matrices) {
+        uniform_dot_scores.push_back(dot_product_distance_score(matrix));
+    }
+    for (const auto& matrix : poison_matrices) {
+        poison_dot_scores.push_back(dot_product_distance_score(matrix));
+    }
+    for (const auto& matrix : high_value_matrices) {
+        high_value_dot_scores.push_back(dot_product_distance_score(matrix));
+    }
+    for (const auto& matrix : competitive_matrices) {
+        competitive_dot_scores.push_back(dot_product_distance_score(matrix));
+    }
+    for (const auto& matrix : specialized_matrices) {
+        specialized_dot_scores.push_back(dot_product_distance_score(matrix));
+    }
+    
+    // Calculate statistics
+    auto counter_dot_stats = calculate_mean_std(counter_dot_scores);
+    auto uniform_dot_stats = calculate_mean_std(uniform_dot_scores);
+    auto poison_dot_stats = calculate_mean_std(poison_dot_scores);
+    auto high_value_dot_stats = calculate_mean_std(high_value_dot_scores);
+    auto competitive_dot_stats = calculate_mean_std(competitive_dot_scores);
+    auto specialized_dot_stats = calculate_mean_std(specialized_dot_scores);
+    
+    cout << "Dot Product Distance Scores (higher = more likely counterexample):\n";
+    cout << "Counterexamples: " << fixed << setprecision(4) << counter_dot_stats.first 
+         << " ± " << counter_dot_stats.second << "\n";
+    cout << "Uniform: " << fixed << setprecision(4) << uniform_dot_stats.first 
+         << " ± " << uniform_dot_stats.second << "\n";
+    cout << "Poison: " << fixed << setprecision(4) << poison_dot_stats.first 
+         << " ± " << poison_dot_stats.second << "\n";
+    cout << "High Value: " << fixed << setprecision(4) << high_value_dot_stats.first 
+         << " ± " << high_value_dot_stats.second << "\n";
+    cout << "Competitive: " << fixed << setprecision(4) << competitive_dot_stats.first 
+         << " ± " << competitive_dot_stats.second << "\n";
+    cout << "Specialized: " << fixed << setprecision(4) << specialized_dot_stats.first 
+         << " ± " << specialized_dot_stats.second << "\n";
+    
+    // Counterexample likelihood analysis
+    cout << "\nCounterexample Likelihood Analysis:\n";
+    cout << "Based on dot product distance scores:\n";
+    
+    // Find which matrix type is most similar to counterexamples
+    vector<pair<string, double>> matrix_types = {
+        {"Uniform", uniform_dot_stats.first},
+        {"Poison", poison_dot_stats.first},
+        {"High Value", high_value_dot_stats.first},
+        {"Competitive", competitive_dot_stats.first},
+        {"Specialized", specialized_dot_stats.first}
+    };
+    
+    // Sort by similarity to counterexamples (closest dot product distance)
+    sort(matrix_types.begin(), matrix_types.end(), 
+         [counter_dot_stats](const pair<string, double>& a, const pair<string, double>& b) {
+             return abs(a.second - counter_dot_stats.first) < abs(b.second - counter_dot_stats.first);
+         });
+    
+    cout << "Matrix types ranked by similarity to counterexamples:\n";
+    for (size_t i = 0; i < matrix_types.size(); ++i) {
+        cout << "  " << (i+1) << ". " << matrix_types[i].first 
+             << " (distance: " << fixed << setprecision(4) << matrix_types[i].second 
+             << ", diff from counterexamples: " << fixed << setprecision(4) 
+             << abs(matrix_types[i].second - counter_dot_stats.first) << ")\n";
+    }
+    
+    // Generate recommendations
+    cout << "\nRecommendations for counterexample generation:\n";
+    if (counter_dot_stats.first < 0.3) {
+        cout << "- Focus on utility matrices where agents have similar preferences\n";
+        cout << "- High dot product values indicate agents compete for same items\n";
+    } else if (counter_dot_stats.first < 0.6) {
+        cout << "- Moderate preference similarity seems to produce counterexamples\n";
+        cout << "- Balance between agent specialization and overlap\n";
+    } else {
+        cout << "- Diverse agent preferences may still produce counterexamples\n";
+        cout << "- Focus on other factors like item contention or value asymmetry\n";
+    }
     
     return 0;
 }

@@ -292,9 +292,9 @@ int earth_movers_distance(const Allocation& allocation1, const Allocation& alloc
     return total_flow;
 }
 
-std::set<std::pair<int, int>> build_envy_graph(const Allocation& allocation, const Utilities& valuations) {
+set<pair<int, int>> build_envy_graph(const Allocation& allocation, const Utilities& valuations) {
     int n = allocation.size();
-    std::set<std::pair<int, int>> graph;
+    set<pair<int, int>> graph;
     
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
