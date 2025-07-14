@@ -1,142 +1,45 @@
    Starting evolutionary search for a counterexample...
-   Config: 3 agents, 11 items
+   Config: 3 agents, 5 items
    Population Size: 100, Generations: 200
 
 --- Generation 1/200 ---
 ================================================================================
 COUNTEREXAMPLE FOUND
 ================================================================================
-Configuration: 3 agents, 11 items
+Configuration: 3 agents, 5 items
 MM allocations count: 1
 MM EFX allocations count: 0
-Max-min proportion: 0.378698224852071
-Min-optimal EFX proportion: 0.3542
+Max-min proportion: 0.26119402985074625
+Min-optimal EFX proportion: 0.1716
 
 Utility Matrix:
-  [5, 3, 3, 15, 4, 11, 11, 10, 3, 82, 14]
-  [5, 13, 8, 5, 2, 2, 12, 1, 17, 15, 89]
-  [17, 18, 7, 1, 9, 17, 1, 11, 15, 83, 92]
+  [9, 10, 11, 3, 100]
+  [2, 12, 11, 12, 97]
+  [10, 7, 2, 13, 2]
 
 MM Allocations (non EFX):
-Agent 0 gets bundle {9 }. (Value: 82, 50.93% of total utility)
-Agent 1 gets bundle {0 1 2 3 4 5 6 8 }. (Value: 64, 37.87% of total utility)
-Agent 2 gets bundle {7 10 }. (Value: 103, 38.01% of total utility)
-
-
-Strong Envy Edges:
-1 -> 2
-
-Envy Edges in General (weak or Strong)
-1 -> 2
-
-Min-Optimal EFX allocations:
-Min-optimal EFX allocation #1:
-Agent 0 gets bundle {9 }. (Value: 82, 50.93% of total utility)
-Agent 1 gets bundle {10 }. (Value: 89, 52.66% of total utility)
-Agent 2 gets bundle {0 1 2 3 4 5 6 7 8 }. (Value: 96, 35.42% of total utility)
-
-================================================================================
-
-Distance analysis saved to distance.txt
-================================================================================
-COUNTEREXAMPLE FOUND
-================================================================================
-Configuration: 3 agents, 11 items
-MM allocations count: 2
-MM EFX allocations count: 0
-Max-min proportion: 0.43243243243243246
-Min-optimal EFX proportion: 0.4174
-
-Utility Matrix:
-  [16, 92, 8, 18, 9, 2, 6, 16, 17, 11, 7]
-  [5, 83, 86, 95, 11, 1, 9, 16, 6, 5, 16]
-  [4, 12, 82, 97, 15, 3, 19, 5, 17, 13, 19]
-
-MM Allocations (non EFX):
-Agent 0 gets bundle {1 }. (Value: 92, 45.54% of total utility)
-Agent 1 gets bundle {0 2 4 5 6 7 10 }. (Value: 144, 43.24% of total utility)
-Agent 2 gets bundle {3 8 9 }. (Value: 127, 44.41% of total utility)
-
-Agent 0 gets bundle {1 }. (Value: 92, 45.54% of total utility)
-Agent 1 gets bundle {0 3 4 5 7 10 }. (Value: 144, 43.24% of total utility)
-Agent 2 gets bundle {2 6 8 9 }. (Value: 131, 45.80% of total utility)
+Agent 0 gets bundle {4 }. (Value: 100, 75.19% of total utility)
+Agent 1 gets bundle {1 2 3 }. (Value: 35, 26.12% of total utility)
+Agent 2 gets bundle {0 }. (Value: 10, 29.41% of total utility)
 
 
 Strong Envy Edges:
 2 -> 1
 
-2 -> 1
-
 Envy Edges in General (weak or Strong)
-2 -> 1
-
+1 -> 0
 2 -> 1
 
 Min-Optimal EFX allocations:
 Min-optimal EFX allocation #1:
-Agent 0 gets bundle {1 }. (Value: 92, 45.54% of total utility)
-Agent 1 gets bundle {0 2 4 7 9 10 }. (Value: 139, 41.74% of total utility)
-Agent 2 gets bundle {3 5 6 8 }. (Value: 136, 47.55% of total utility)
-
-================================================================================
-
-Distance analysis saved to distance.txt
-================================================================================
-COUNTEREXAMPLE FOUND
-================================================================================
-Configuration: 3 agents, 11 items
-MM allocations count: 1
-MM EFX allocations count: 0
-Max-min proportion: 0.40869565217391307
-Min-optimal EFX proportion: 0.3783
-
-Utility Matrix:
-  [1, 1, 4, 4, 86, 8, 1, 7, 12, 19, 87]
-  [13, 15, 11, 14, 86, 6, 2, 1, 11, 11, 88]
-  [3, 9, 16, 15, 10, 16, 13, 4, 13, 10, 93]
-
-MM Allocations (non EFX):
-Agent 0 gets bundle {7 10 }. (Value: 94, 40.87% of total utility)
-Agent 1 gets bundle {0 1 4 }. (Value: 114, 44.19% of total utility)
-Agent 2 gets bundle {2 3 5 6 8 9 }. (Value: 83, 41.09% of total utility)
-
-
-Strong Envy Edges:
-2 -> 0
-
-Envy Edges in General (weak or Strong)
-2 -> 0
-
-Min-Optimal EFX allocations:
-Min-optimal EFX allocation #1:
-Agent 0 gets bundle {10 }. (Value: 87, 37.83% of total utility)
-Agent 1 gets bundle {0 1 4 }. (Value: 114, 44.19% of total utility)
-Agent 2 gets bundle {2 3 5 6 7 8 9 }. (Value: 87, 43.07% of total utility)
+Agent 0 gets bundle {4 }. (Value: 100, 75.19% of total utility)
+Agent 1 gets bundle {1 2 }. (Value: 23, 17.16% of total utility)
+Agent 2 gets bundle {0 3 }. (Value: 23, 67.65% of total utility)
 
 Min-optimal EFX allocation #2:
-Agent 0 gets bundle {10 }. (Value: 87, 37.83% of total utility)
-Agent 1 gets bundle {0 4 6 }. (Value: 101, 39.15% of total utility)
-Agent 2 gets bundle {1 2 3 5 7 8 9 }. (Value: 83, 41.09% of total utility)
-
-Min-optimal EFX allocation #3:
-Agent 0 gets bundle {10 }. (Value: 87, 37.83% of total utility)
-Agent 1 gets bundle {0 4 }. (Value: 99, 38.37% of total utility)
-Agent 2 gets bundle {1 2 3 5 6 7 8 9 }. (Value: 96, 47.52% of total utility)
-
-Min-optimal EFX allocation #4:
-Agent 0 gets bundle {10 }. (Value: 87, 37.83% of total utility)
-Agent 1 gets bundle {1 4 6 }. (Value: 103, 39.92% of total utility)
-Agent 2 gets bundle {0 2 3 5 7 8 9 }. (Value: 77, 38.12% of total utility)
-
-Min-optimal EFX allocation #5:
-Agent 0 gets bundle {10 }. (Value: 87, 37.83% of total utility)
-Agent 1 gets bundle {1 4 }. (Value: 101, 39.15% of total utility)
-Agent 2 gets bundle {0 2 3 5 6 7 8 9 }. (Value: 90, 44.55% of total utility)
-
-Min-optimal EFX allocation #6:
-Agent 0 gets bundle {10 }. (Value: 87, 37.83% of total utility)
-Agent 1 gets bundle {3 4 }. (Value: 100, 38.76% of total utility)
-Agent 2 gets bundle {0 1 2 5 6 7 8 9 }. (Value: 84, 41.58% of total utility)
+Agent 0 gets bundle {4 }. (Value: 100, 75.19% of total utility)
+Agent 1 gets bundle {2 3 }. (Value: 23, 17.16% of total utility)
+Agent 2 gets bundle {0 1 }. (Value: 17, 50.00% of total utility)
 
 ================================================================================
 
@@ -144,47 +47,76 @@ Distance analysis saved to distance.txt
 ================================================================================
 COUNTEREXAMPLE FOUND
 ================================================================================
-Configuration: 3 agents, 11 items
-MM allocations count: 2
+Configuration: 3 agents, 5 items
+MM allocations count: 1
 MM EFX allocations count: 0
-Max-min proportion: 0.44621513944223107
-Min-optimal EFX proportion: 0.4360
+Max-min proportion: 0.30935251798561153
+Min-optimal EFX proportion: 0.2230
 
 Utility Matrix:
-  [90, 5, 92, 1, 5, 9, 10, 15, 17, 99, 1]
-  [86, 7, 12, 19, 7, 3, 13, 19, 3, 80, 2]
-  [13, 12, 80, 12, 12, 5, 6, 18, 4, 16, 9]
+  [94, 18, 12, 13, 2]
+  [95, 11, 12, 14, 13]
+  [7, 9, 19, 3, 18]
 
 MM Allocations (non EFX):
-Agent 0 gets bundle {4 5 6 7 8 9 }. (Value: 155, 45.06% of total utility)
-Agent 1 gets bundle {0 1 3 }. (Value: 112, 44.62% of total utility)
-Agent 2 gets bundle {2 10 }. (Value: 89, 47.59% of total utility)
-
-Agent 0 gets bundle {1 5 6 7 8 9 }. (Value: 155, 45.06% of total utility)
-Agent 1 gets bundle {0 3 4 }. (Value: 112, 44.62% of total utility)
-Agent 2 gets bundle {2 10 }. (Value: 89, 47.59% of total utility)
+Agent 0 gets bundle {1 2 3 }. (Value: 43, 30.94% of total utility)
+Agent 1 gets bundle {0 }. (Value: 95, 65.52% of total utility)
+Agent 2 gets bundle {4 }. (Value: 18, 32.14% of total utility)
 
 
 Strong Envy Edges:
-1 -> 0
-
-1 -> 0
+2 -> 0
 
 Envy Edges in General (weak or Strong)
-1 -> 0
-
-1 -> 0
+0 -> 1
+2 -> 0
 
 Min-Optimal EFX allocations:
 Min-optimal EFX allocation #1:
-Agent 0 gets bundle {1 4 5 7 8 9 }. (Value: 150, 43.60% of total utility)
-Agent 1 gets bundle {0 3 6 }. (Value: 118, 47.01% of total utility)
-Agent 2 gets bundle {2 10 }. (Value: 89, 47.59% of total utility)
+Agent 0 gets bundle {1 3 }. (Value: 31, 22.30% of total utility)
+Agent 1 gets bundle {0 }. (Value: 95, 65.52% of total utility)
+Agent 2 gets bundle {2 4 }. (Value: 37, 66.07% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.2896551724137931
+Min-optimal EFX proportion: 0.2069
+
+Utility Matrix:
+  [12, 15, 14, 89, 15]
+  [14, 10, 7, 84, 1]
+  [11, 4, 18, 2, 14]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {0 1 4 }. (Value: 42, 28.97% of total utility)
+Agent 1 gets bundle {3 }. (Value: 84, 72.41% of total utility)
+Agent 2 gets bundle {2 }. (Value: 18, 36.73% of total utility)
+
+
+Strong Envy Edges:
+2 -> 0
+
+Envy Edges in General (weak or Strong)
+0 -> 1
+2 -> 0
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {3 }. (Value: 89, 61.38% of total utility)
+Agent 1 gets bundle {0 1 }. (Value: 24, 20.69% of total utility)
+Agent 2 gets bundle {2 4 }. (Value: 32, 65.31% of total utility)
 
 Min-optimal EFX allocation #2:
-Agent 0 gets bundle {5 6 7 8 9 }. (Value: 150, 43.60% of total utility)
-Agent 1 gets bundle {0 1 3 4 }. (Value: 119, 47.41% of total utility)
-Agent 2 gets bundle {2 10 }. (Value: 89, 47.59% of total utility)
+Agent 0 gets bundle {1 4 }. (Value: 30, 20.69% of total utility)
+Agent 1 gets bundle {3 }. (Value: 84, 72.41% of total utility)
+Agent 2 gets bundle {0 2 }. (Value: 29, 59.18% of total utility)
 
 ================================================================================
 
@@ -192,306 +124,53 @@ Distance analysis saved to distance.txt
 ================================================================================
 COUNTEREXAMPLE FOUND
 ================================================================================
-Configuration: 3 agents, 11 items
-MM allocations count: 2
-MM EFX allocations count: 0
-Max-min proportion: 0.39862542955326463
-Min-optimal EFX proportion: 0.3820
-
-Utility Matrix:
-  [5, 18, 92, 17, 6, 8, 10, 4, 3, 18, 9]
-  [18, 19, 81, 16, 81, 8, 18, 9, 6, 8, 3]
-  [14, 17, 86, 1, 97, 7, 5, 15, 19, 12, 18]
-
-MM Allocations (non EFX):
-Agent 0 gets bundle {1 3 6 7 9 10 }. (Value: 76, 40.00% of total utility)
-Agent 1 gets bundle {0 2 5 }. (Value: 107, 40.07% of total utility)
-Agent 2 gets bundle {4 8 }. (Value: 116, 39.86% of total utility)
-
-Agent 0 gets bundle {1 3 5 6 9 10 }. (Value: 80, 42.11% of total utility)
-Agent 1 gets bundle {0 2 7 }. (Value: 108, 40.45% of total utility)
-Agent 2 gets bundle {4 8 }. (Value: 116, 39.86% of total utility)
-
-
-Strong Envy Edges:
-0 -> 1
-
-0 -> 1
-
-Envy Edges in General (weak or Strong)
-0 -> 1
-
-0 -> 1
-
-Min-Optimal EFX allocations:
-Min-optimal EFX allocation #1:
-Agent 0 gets bundle {2 }. (Value: 92, 48.42% of total utility)
-Agent 1 gets bundle {0 1 3 5 6 7 8 9 }. (Value: 102, 38.20% of total utility)
-Agent 2 gets bundle {4 10 }. (Value: 115, 39.52% of total utility)
-
-================================================================================
-
-Distance analysis saved to distance.txt
-================================================================================
-COUNTEREXAMPLE FOUND
-================================================================================
-Configuration: 3 agents, 11 items
-MM allocations count: 1
-MM EFX allocations count: 0
-Max-min proportion: 0.43416370106761565
-Min-optimal EFX proportion: 0.4199
-
-Utility Matrix:
-  [14, 16, 11, 19, 18, 4, 17, 87, 18, 4, 17]
-  [12, 19, 10, 4, 9, 5, 92, 93, 14, 10, 13]
-  [5, 18, 14, 4, 8, 4, 95, 6, 7, 3, 8]
-
-MM Allocations (non EFX):
-Agent 0 gets bundle {0 2 3 4 5 8 10 }. (Value: 101, 44.89% of total utility)
-Agent 1 gets bundle {1 7 9 }. (Value: 122, 43.42% of total utility)
-Agent 2 gets bundle {6 }. (Value: 95, 55.23% of total utility)
-
-
-Strong Envy Edges:
-0 -> 1
-
-Envy Edges in General (weak or Strong)
-0 -> 1
-
-Min-Optimal EFX allocations:
-Min-optimal EFX allocation #1:
-Agent 0 gets bundle {0 1 3 4 8 10 }. (Value: 102, 45.33% of total utility)
-Agent 1 gets bundle {2 5 7 9 }. (Value: 118, 41.99% of total utility)
-Agent 2 gets bundle {6 }. (Value: 95, 55.23% of total utility)
-
-================================================================================
-
-Distance analysis saved to distance.txt
-================================================================================
-COUNTEREXAMPLE FOUND
-================================================================================
-Configuration: 3 agents, 11 items
-MM allocations count: 1
-MM EFX allocations count: 0
-Max-min proportion: 0.45427728613569324
-Min-optimal EFX proportion: 0.4484
-
-Utility Matrix:
-  [1, 6, 15, 13, 7, 10, 16, 98, 82, 86, 5]
-  [6, 3, 1, 18, 2, 12, 2, 7, 94, 13, 4]
-  [11, 15, 9, 10, 10, 15, 3, 90, 16, 82, 6]
-
-MM Allocations (non EFX):
-Agent 0 gets bundle {2 3 4 6 7 10 }. (Value: 154, 45.43% of total utility)
-Agent 1 gets bundle {8 }. (Value: 94, 58.02% of total utility)
-Agent 2 gets bundle {0 1 5 9 }. (Value: 123, 46.07% of total utility)
-
-
-Strong Envy Edges:
-2 -> 0
-
-Envy Edges in General (weak or Strong)
-2 -> 0
-
-Min-Optimal EFX allocations:
-Min-optimal EFX allocation #1:
-Agent 0 gets bundle {2 3 5 6 7 }. (Value: 152, 44.84% of total utility)
-Agent 1 gets bundle {8 }. (Value: 94, 58.02% of total utility)
-Agent 2 gets bundle {0 1 4 9 10 }. (Value: 124, 46.44% of total utility)
-
-================================================================================
-
-Distance analysis saved to distance.txt
-================================================================================
-COUNTEREXAMPLE FOUND
-================================================================================
-Configuration: 3 agents, 11 items
-MM allocations count: 1
-MM EFX allocations count: 0
-Max-min proportion: 0.44692737430167595
-Min-optimal EFX proportion: 0.4246
-
-Utility Matrix:
-  [91, 12, 14, 8, 97, 18, 10, 85, 5, 4, 14]
-  [11, 6, 5, 4, 88, 15, 2, 12, 17, 17, 10]
-  [96, 14, 8, 10, 2, 12, 7, 93, 6, 18, 6]
-
-MM Allocations (non EFX):
-Agent 0 gets bundle {0 2 3 5 6 8 10 }. (Value: 160, 44.69% of total utility)
-Agent 1 gets bundle {4 }. (Value: 88, 47.06% of total utility)
-Agent 2 gets bundle {1 7 9 }. (Value: 125, 45.96% of total utility)
-
-
-Strong Envy Edges:
-2 -> 0
-
-Envy Edges in General (weak or Strong)
-2 -> 0
-
-Min-Optimal EFX allocations:
-Min-optimal EFX allocation #1:
-Agent 0 gets bundle {0 2 5 6 8 10 }. (Value: 152, 42.46% of total utility)
-Agent 1 gets bundle {4 }. (Value: 88, 47.06% of total utility)
-Agent 2 gets bundle {1 3 7 9 }. (Value: 135, 49.63% of total utility)
-
-================================================================================
-
-Distance analysis saved to distance.txt
-================================================================================
-COUNTEREXAMPLE FOUND
-================================================================================
-Configuration: 3 agents, 11 items
-MM allocations count: 1
-MM EFX allocations count: 0
-Max-min proportion: 0.4330357142857143
-Min-optimal EFX proportion: 0.3943
-
-Utility Matrix:
-  [18, 14, 15, 14, 95, 12, 11, 7, 14, 1, 2]
-  [81, 12, 12, 12, 1, 11, 3, 1, 4, 80, 7]
-  [87, 5, 12, 14, 98, 14, 8, 4, 7, 91, 10]
-
-MM Allocations (non EFX):
-Agent 0 gets bundle {4 }. (Value: 95, 46.80% of total utility)
-Agent 1 gets bundle {0 1 8 }. (Value: 97, 43.30% of total utility)
-Agent 2 gets bundle {2 3 5 6 7 9 10 }. (Value: 153, 43.71% of total utility)
-
-
-Strong Envy Edges:
-1 -> 2
-
-Envy Edges in General (weak or Strong)
-1 -> 2
-
-Min-Optimal EFX allocations:
-Min-optimal EFX allocation #1:
-Agent 0 gets bundle {4 }. (Value: 95, 46.80% of total utility)
-Agent 1 gets bundle {0 1 2 10 }. (Value: 112, 50.00% of total utility)
-Agent 2 gets bundle {3 5 6 7 8 9 }. (Value: 138, 39.43% of total utility)
-
-================================================================================
-
-Distance analysis saved to distance.txt
-================================================================================
-COUNTEREXAMPLE FOUND
-================================================================================
-Configuration: 3 agents, 11 items
-MM allocations count: 1
-MM EFX allocations count: 0
-Max-min proportion: 0.43956043956043955
-Min-optimal EFX proportion: 0.3931
-
-Utility Matrix:
-  [14, 14, 9, 5, 15, 81, 95, 19, 9, 13, 16]
-  [7, 3, 2, 7, 1, 85, 2, 6, 2, 14, 5]
-  [11, 5, 18, 16, 4, 1, 92, 19, 1, 11, 4]
-
-MM Allocations (non EFX):
-Agent 0 gets bundle {4 6 8 10 }. (Value: 135, 46.55% of total utility)
-Agent 1 gets bundle {5 }. (Value: 85, 63.43% of total utility)
-Agent 2 gets bundle {0 1 2 3 7 9 }. (Value: 80, 43.96% of total utility)
-
-
-Strong Envy Edges:
-2 -> 0
-
-Envy Edges in General (weak or Strong)
-2 -> 0
-
-Min-Optimal EFX allocations:
-Min-optimal EFX allocation #1:
-Agent 0 gets bundle {0 1 2 3 4 7 8 9 10 }. (Value: 114, 39.31% of total utility)
-Agent 1 gets bundle {5 }. (Value: 85, 63.43% of total utility)
-Agent 2 gets bundle {6 }. (Value: 92, 50.55% of total utility)
-
-================================================================================
-
-Distance analysis saved to distance.txt
-================================================================================
-COUNTEREXAMPLE FOUND
-================================================================================
-Configuration: 3 agents, 11 items
-MM allocations count: 1
-MM EFX allocations count: 0
-Max-min proportion: 0.4378531073446328
-Min-optimal EFX proportion: 0.4209
-
-Utility Matrix:
-  [3, 4, 6, 8, 16, 87, 15, 16, 89, 9, 12]
-  [8, 5, 2, 16, 10, 16, 89, 14, 5, 17, 15]
-  [15, 9, 15, 6, 9, 93, 95, 7, 91, 8, 6]
-
-MM Allocations (non EFX):
-Agent 0 gets bundle {7 8 10 }. (Value: 117, 44.15% of total utility)
-Agent 1 gets bundle {6 }. (Value: 89, 45.18% of total utility)
-Agent 2 gets bundle {0 1 2 3 4 5 9 }. (Value: 155, 43.79% of total utility)
-
-
-Strong Envy Edges:
-0 -> 2
-
-Envy Edges in General (weak or Strong)
-0 -> 2
-
-Min-Optimal EFX allocations:
-Min-optimal EFX allocation #1:
-Agent 0 gets bundle {3 7 8 10 }. (Value: 125, 47.17% of total utility)
-Agent 1 gets bundle {6 }. (Value: 89, 45.18% of total utility)
-Agent 2 gets bundle {0 1 2 4 5 9 }. (Value: 149, 42.09% of total utility)
-
-================================================================================
-
-Distance analysis saved to distance.txt
-================================================================================
-COUNTEREXAMPLE FOUND
-================================================================================
-Configuration: 3 agents, 11 items
+Configuration: 3 agents, 5 items
 MM allocations count: 3
 MM EFX allocations count: 0
-Max-min proportion: 0.40129449838187703
-Min-optimal EFX proportion: 0.3916
+Max-min proportion: 0.2638888888888889
+Min-optimal EFX proportion: 0.2446
 
 Utility Matrix:
-  [18, 14, 5, 7, 11, 16, 92, 11, 15, 11, 10]
-  [82, 17, 14, 97, 8, 8, 11, 13, 10, 1, 17]
-  [98, 5, 2, 94, 1, 5, 88, 8, 2, 3, 3]
+  [6, 19, 17, 11, 19]
+  [14, 8, 90, 6, 17]
+  [17, 5, 91, 17, 9]
 
 MM Allocations (non EFX):
-Agent 0 gets bundle {6 }. (Value: 92, 43.81% of total utility)
-Agent 1 gets bundle {3 10 }. (Value: 114, 41.01% of total utility)
-Agent 2 gets bundle {0 1 2 4 5 7 8 9 }. (Value: 124, 40.13% of total utility)
+Agent 0 gets bundle {4 }. (Value: 19, 26.39% of total utility)
+Agent 1 gets bundle {2 }. (Value: 90, 66.67% of total utility)
+Agent 2 gets bundle {0 1 3 }. (Value: 39, 28.06% of total utility)
 
-Agent 0 gets bundle {6 }. (Value: 92, 43.81% of total utility)
-Agent 1 gets bundle {3 4 8 }. (Value: 115, 41.37% of total utility)
-Agent 2 gets bundle {0 1 2 5 7 9 10 }. (Value: 124, 40.13% of total utility)
+Agent 0 gets bundle {1 }. (Value: 19, 26.39% of total utility)
+Agent 1 gets bundle {0 3 4 }. (Value: 37, 27.41% of total utility)
+Agent 2 gets bundle {2 }. (Value: 91, 65.47% of total utility)
 
-Agent 0 gets bundle {6 }. (Value: 92, 43.81% of total utility)
-Agent 1 gets bundle {2 3 4 }. (Value: 119, 42.81% of total utility)
-Agent 2 gets bundle {0 1 5 7 8 9 10 }. (Value: 124, 40.13% of total utility)
+Agent 0 gets bundle {1 }. (Value: 19, 26.39% of total utility)
+Agent 1 gets bundle {2 }. (Value: 90, 66.67% of total utility)
+Agent 2 gets bundle {0 3 4 }. (Value: 43, 30.94% of total utility)
 
 
 Strong Envy Edges:
 0 -> 2
-1 -> 2
 
-1 -> 2
+0 -> 1
 
-1 -> 2
+0 -> 2
 
 Envy Edges in General (weak or Strong)
 0 -> 2
-1 -> 2
+2 -> 1
 
+0 -> 1
 1 -> 2
 
 0 -> 2
-1 -> 2
+2 -> 1
 
 Min-Optimal EFX allocations:
 Min-optimal EFX allocation #1:
-Agent 0 gets bundle {6 }. (Value: 92, 43.81% of total utility)
-Agent 1 gets bundle {2 3 4 10 }. (Value: 136, 48.92% of total utility)
-Agent 2 gets bundle {0 1 5 7 8 9 }. (Value: 121, 39.16% of total utility)
+Agent 0 gets bundle {1 4 }. (Value: 38, 52.78% of total utility)
+Agent 1 gets bundle {2 }. (Value: 90, 66.67% of total utility)
+Agent 2 gets bundle {0 3 }. (Value: 34, 24.46% of total utility)
 
 ================================================================================
 
@@ -499,42 +178,116 @@ Distance analysis saved to distance.txt
 ================================================================================
 COUNTEREXAMPLE FOUND
 ================================================================================
-Configuration: 3 agents, 11 items
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.2846153846153846
+Min-optimal EFX proportion: 0.2462
+
+Utility Matrix:
+  [5, 15, 82, 11, 17]
+  [1, 3, 1, 19, 18]
+  [12, 9, 99, 10, 13]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {0 1 4 }. (Value: 37, 28.46% of total utility)
+Agent 1 gets bundle {3 }. (Value: 19, 45.24% of total utility)
+Agent 2 gets bundle {2 }. (Value: 99, 69.23% of total utility)
+
+
+Strong Envy Edges:
+1 -> 0
+
+Envy Edges in General (weak or Strong)
+0 -> 2
+1 -> 0
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {1 4 }. (Value: 32, 24.62% of total utility)
+Agent 1 gets bundle {0 3 }. (Value: 20, 47.62% of total utility)
+Agent 2 gets bundle {2 }. (Value: 99, 69.23% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.3356643356643357
+Min-optimal EFX proportion: 0.2657
+
+Utility Matrix:
+  [88, 19, 7, 10, 19]
+  [100, 13, 10, 4, 6]
+  [6, 15, 17, 2, 7]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {1 3 4 }. (Value: 48, 33.57% of total utility)
+Agent 1 gets bundle {0 }. (Value: 100, 75.19% of total utility)
+Agent 2 gets bundle {2 }. (Value: 17, 36.17% of total utility)
+
+
+Strong Envy Edges:
+2 -> 0
+
+Envy Edges in General (weak or Strong)
+0 -> 1
+2 -> 0
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {1 4 }. (Value: 38, 26.57% of total utility)
+Agent 1 gets bundle {0 }. (Value: 100, 75.19% of total utility)
+Agent 2 gets bundle {2 3 }. (Value: 19, 40.43% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
 MM allocations count: 2
 MM EFX allocations count: 0
-Max-min proportion: 0.4263959390862944
-Min-optimal EFX proportion: 0.3986
+Max-min proportion: 0.26785714285714285
+Min-optimal EFX proportion: 0.2576
 
 Utility Matrix:
-  [12, 6, 4, 8, 1, 17, 4, 83, 3, 14, 2]
-  [15, 9, 12, 15, 100, 5, 4, 97, 16, 9, 9]
-  [10, 19, 11, 8, 87, 19, 5, 9, 13, 4, 12]
+  [7, 16, 7, 18, 84]
+  [15, 19, 13, 9, 92]
+  [14, 8, 15, 12, 7]
 
 MM Allocations (non EFX):
-Agent 0 gets bundle {7 }. (Value: 83, 53.90% of total utility)
-Agent 1 gets bundle {4 8 9 }. (Value: 125, 42.96% of total utility)
-Agent 2 gets bundle {0 1 2 3 5 6 10 }. (Value: 84, 42.64% of total utility)
+Agent 0 gets bundle {4 }. (Value: 84, 63.64% of total utility)
+Agent 1 gets bundle {0 1 3 }. (Value: 43, 29.05% of total utility)
+Agent 2 gets bundle {2 }. (Value: 15, 26.79% of total utility)
 
-Agent 0 gets bundle {7 }. (Value: 83, 53.90% of total utility)
-Agent 1 gets bundle {3 4 6 9 }. (Value: 128, 43.99% of total utility)
-Agent 2 gets bundle {0 1 2 5 8 10 }. (Value: 84, 42.64% of total utility)
+Agent 0 gets bundle {0 1 3 }. (Value: 41, 31.06% of total utility)
+Agent 1 gets bundle {4 }. (Value: 92, 62.16% of total utility)
+Agent 2 gets bundle {2 }. (Value: 15, 26.79% of total utility)
 
 
 Strong Envy Edges:
 2 -> 1
 
-2 -> 1
+2 -> 0
 
 Envy Edges in General (weak or Strong)
+1 -> 0
 2 -> 1
 
-2 -> 1
+0 -> 1
+2 -> 0
 
 Min-Optimal EFX allocations:
 Min-optimal EFX allocation #1:
-Agent 0 gets bundle {7 }. (Value: 83, 53.90% of total utility)
-Agent 1 gets bundle {4 8 }. (Value: 116, 39.86% of total utility)
-Agent 2 gets bundle {0 1 2 3 5 6 9 10 }. (Value: 88, 44.67% of total utility)
+Agent 0 gets bundle {1 3 }. (Value: 34, 25.76% of total utility)
+Agent 1 gets bundle {4 }. (Value: 92, 62.16% of total utility)
+Agent 2 gets bundle {0 2 }. (Value: 29, 51.79% of total utility)
 
 ================================================================================
 
@@ -542,21 +295,687 @@ Distance analysis saved to distance.txt
 ================================================================================
 COUNTEREXAMPLE FOUND
 ================================================================================
-Configuration: 3 agents, 11 items
+Configuration: 3 agents, 5 items
 MM allocations count: 1
 MM EFX allocations count: 0
-Max-min proportion: 0.41947565543071164
-Min-optimal EFX proportion: 0.3942
+Max-min proportion: 0.3116883116883117
+Min-optimal EFX proportion: 0.2468
 
 Utility Matrix:
-  [13, 1, 3, 93, 8, 3, 12, 10, 7, 100, 17]
-  [12, 12, 14, 12, 4, 13, 7, 15, 16, 3, 91]
-  [4, 3, 3, 81, 14, 1, 11, 14, 3, 82, 96]
+  [4, 17, 7, 11, 91]
+  [10, 19, 10, 19, 96]
+  [7, 4, 4, 2, 4]
 
 MM Allocations (non EFX):
-Agent 0 gets bundle {6 9 }. (Value: 112, 41.95% of total utility)
-Agent 1 gets bundle {0 1 2 4 5 7 8 }. (Value: 86, 43.22% of total utility)
-Agent 2 gets bundle {3 10 }. (Value: 177, 56.73% of total utility)
+Agent 0 gets bundle {4 }. (Value: 91, 70.00% of total utility)
+Agent 1 gets bundle {1 2 3 }. (Value: 48, 31.17% of total utility)
+Agent 2 gets bundle {0 }. (Value: 7, 33.33% of total utility)
+
+
+Strong Envy Edges:
+2 -> 1
+
+Envy Edges in General (weak or Strong)
+1 -> 0
+2 -> 1
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {4 }. (Value: 91, 70.00% of total utility)
+Agent 1 gets bundle {1 3 }. (Value: 38, 24.68% of total utility)
+Agent 2 gets bundle {0 2 }. (Value: 11, 52.38% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.21428571428571427
+Min-optimal EFX proportion: 0.1714
+
+Utility Matrix:
+  [16, 13, 3, 8, 100]
+  [14, 4, 1, 9, 14]
+  [19, 4, 5, 11, 95]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {0 1 2 }. (Value: 32, 22.86% of total utility)
+Agent 1 gets bundle {3 }. (Value: 9, 21.43% of total utility)
+Agent 2 gets bundle {4 }. (Value: 95, 70.90% of total utility)
+
+
+Strong Envy Edges:
+1 -> 0
+
+Envy Edges in General (weak or Strong)
+0 -> 2
+1 -> 0
+1 -> 2
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {1 2 3 }. (Value: 24, 17.14% of total utility)
+Agent 1 gets bundle {0 }. (Value: 14, 33.33% of total utility)
+Agent 2 gets bundle {4 }. (Value: 95, 70.90% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.2542372881355932
+Min-optimal EFX proportion: 0.1949
+
+Utility Matrix:
+  [5, 4, 1, 10, 91]
+  [10, 3, 13, 7, 85]
+  [4, 12, 13, 3, 4]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {4 }. (Value: 91, 81.98% of total utility)
+Agent 1 gets bundle {0 2 3 }. (Value: 30, 25.42% of total utility)
+Agent 2 gets bundle {1 }. (Value: 12, 33.33% of total utility)
+
+
+Strong Envy Edges:
+2 -> 1
+
+Envy Edges in General (weak or Strong)
+1 -> 0
+2 -> 1
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {4 }. (Value: 91, 81.98% of total utility)
+Agent 1 gets bundle {0 2 }. (Value: 23, 19.49% of total utility)
+Agent 2 gets bundle {1 3 }. (Value: 15, 41.67% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.2857142857142857
+Min-optimal EFX proportion: 0.2409
+
+Utility Matrix:
+  [18, 4, 7, 15, 19]
+  [13, 3, 10, 98, 17]
+  [4, 16, 17, 88, 12]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {0 }. (Value: 18, 28.57% of total utility)
+Agent 1 gets bundle {3 }. (Value: 98, 69.50% of total utility)
+Agent 2 gets bundle {1 2 4 }. (Value: 45, 32.85% of total utility)
+
+
+Strong Envy Edges:
+0 -> 2
+
+Envy Edges in General (weak or Strong)
+0 -> 2
+2 -> 1
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {0 4 }. (Value: 37, 58.73% of total utility)
+Agent 1 gets bundle {3 }. (Value: 98, 69.50% of total utility)
+Agent 2 gets bundle {1 2 }. (Value: 33, 24.09% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.23076923076923078
+Min-optimal EFX proportion: 0.2261
+
+Utility Matrix:
+  [13, 13, 15, 11, 13]
+  [16, 10, 4, 5, 80]
+  [11, 11, 18, 4, 89]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {2 }. (Value: 15, 23.08% of total utility)
+Agent 1 gets bundle {0 1 3 }. (Value: 31, 26.96% of total utility)
+Agent 2 gets bundle {4 }. (Value: 89, 66.92% of total utility)
+
+
+Strong Envy Edges:
+0 -> 1
+
+Envy Edges in General (weak or Strong)
+0 -> 1
+1 -> 2
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {2 3 }. (Value: 26, 40.00% of total utility)
+Agent 1 gets bundle {0 1 }. (Value: 26, 22.61% of total utility)
+Agent 2 gets bundle {4 }. (Value: 89, 66.92% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.2537313432835821
+Min-optimal EFX proportion: 0.2090
+
+Utility Matrix:
+  [4, 9, 8, 15, 1]
+  [2, 8, 5, 15, 100]
+  [10, 18, 1, 16, 89]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {0 2 }. (Value: 12, 32.43% of total utility)
+Agent 1 gets bundle {4 }. (Value: 100, 76.92% of total utility)
+Agent 2 gets bundle {1 3 }. (Value: 34, 25.37% of total utility)
+
+
+Strong Envy Edges:
+0 -> 2
+
+Envy Edges in General (weak or Strong)
+0 -> 2
+2 -> 1
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {2 3 }. (Value: 23, 62.16% of total utility)
+Agent 1 gets bundle {4 }. (Value: 100, 76.92% of total utility)
+Agent 2 gets bundle {0 1 }. (Value: 28, 20.90% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.2072072072072072
+Min-optimal EFX proportion: 0.1622
+
+Utility Matrix:
+  [97, 6, 10, 9, 1]
+  [87, 5, 1, 7, 11]
+  [13, 15, 11, 7, 7]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {0 }. (Value: 97, 78.86% of total utility)
+Agent 1 gets bundle {1 3 4 }. (Value: 23, 20.72% of total utility)
+Agent 2 gets bundle {2 }. (Value: 11, 20.75% of total utility)
+
+
+Strong Envy Edges:
+2 -> 1
+
+Envy Edges in General (weak or Strong)
+1 -> 0
+2 -> 0
+2 -> 1
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {0 }. (Value: 97, 78.86% of total utility)
+Agent 1 gets bundle {3 4 }. (Value: 18, 16.22% of total utility)
+Agent 2 gets bundle {1 2 }. (Value: 26, 49.06% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.25
+Min-optimal EFX proportion: 0.2098
+
+Utility Matrix:
+  [11, 88, 16, 14, 14]
+  [14, 88, 5, 4, 3]
+  [6, 19, 6, 2, 11]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {0 2 3 }. (Value: 41, 28.67% of total utility)
+Agent 1 gets bundle {1 }. (Value: 88, 77.19% of total utility)
+Agent 2 gets bundle {4 }. (Value: 11, 25.00% of total utility)
+
+
+Strong Envy Edges:
+2 -> 0
+
+Envy Edges in General (weak or Strong)
+0 -> 1
+2 -> 0
+2 -> 1
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {2 3 }. (Value: 30, 20.98% of total utility)
+Agent 1 gets bundle {1 }. (Value: 88, 77.19% of total utility)
+Agent 2 gets bundle {0 4 }. (Value: 17, 38.64% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.2945205479452055
+Min-optimal EFX proportion: 0.2123
+
+Utility Matrix:
+  [12, 6, 97, 19, 12]
+  [7, 10, 87, 13, 9]
+  [4, 12, 8, 13, 3]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {0 3 4 }. (Value: 43, 29.45% of total utility)
+Agent 1 gets bundle {2 }. (Value: 87, 69.05% of total utility)
+Agent 2 gets bundle {1 }. (Value: 12, 30.00% of total utility)
+
+
+Strong Envy Edges:
+2 -> 0
+
+Envy Edges in General (weak or Strong)
+0 -> 1
+2 -> 0
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {0 3 }. (Value: 31, 21.23% of total utility)
+Agent 1 gets bundle {2 }. (Value: 87, 69.05% of total utility)
+Agent 2 gets bundle {1 4 }. (Value: 15, 37.50% of total utility)
+
+Min-optimal EFX allocation #2:
+Agent 0 gets bundle {3 4 }. (Value: 31, 21.23% of total utility)
+Agent 1 gets bundle {2 }. (Value: 87, 69.05% of total utility)
+Agent 2 gets bundle {0 1 }. (Value: 16, 40.00% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.2698412698412698
+Min-optimal EFX proportion: 0.2500
+
+Utility Matrix:
+  [13, 5, 4, 14, 10]
+  [2, 90, 14, 16, 4]
+  [18, 90, 9, 18, 9]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {0 }. (Value: 13, 28.26% of total utility)
+Agent 1 gets bundle {2 3 4 }. (Value: 34, 26.98% of total utility)
+Agent 2 gets bundle {1 }. (Value: 90, 62.50% of total utility)
+
+
+Strong Envy Edges:
+0 -> 1
+
+Envy Edges in General (weak or Strong)
+0 -> 1
+1 -> 2
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {2 4 }. (Value: 14, 30.43% of total utility)
+Agent 1 gets bundle {1 }. (Value: 90, 71.43% of total utility)
+Agent 2 gets bundle {0 3 }. (Value: 36, 25.00% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.20930232558139536
+Min-optimal EFX proportion: 0.2090
+
+Utility Matrix:
+  [9, 12, 18, 2, 9]
+  [9, 95, 11, 3, 16]
+  [17, 93, 10, 4, 5]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {3 4 }. (Value: 11, 22.00% of total utility)
+Agent 1 gets bundle {1 }. (Value: 95, 70.90% of total utility)
+Agent 2 gets bundle {0 2 }. (Value: 27, 20.93% of total utility)
+
+
+Strong Envy Edges:
+0 -> 2
+
+Envy Edges in General (weak or Strong)
+0 -> 1
+0 -> 2
+2 -> 1
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {2 }. (Value: 18, 36.00% of total utility)
+Agent 1 gets bundle {0 3 4 }. (Value: 28, 20.90% of total utility)
+Agent 2 gets bundle {1 }. (Value: 93, 72.09% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.18446601941747573
+Min-optimal EFX proportion: 0.1748
+
+Utility Matrix:
+  [12, 1, 6, 83, 1]
+  [18, 7, 14, 19, 16]
+  [4, 1, 5, 85, 10]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {0 1 2 }. (Value: 19, 18.45% of total utility)
+Agent 1 gets bundle {4 }. (Value: 16, 21.62% of total utility)
+Agent 2 gets bundle {3 }. (Value: 85, 80.95% of total utility)
+
+
+Strong Envy Edges:
+1 -> 0
+
+Envy Edges in General (weak or Strong)
+0 -> 2
+1 -> 0
+1 -> 2
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {0 2 }. (Value: 18, 17.48% of total utility)
+Agent 1 gets bundle {1 4 }. (Value: 23, 31.08% of total utility)
+Agent 2 gets bundle {3 }. (Value: 85, 80.95% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.2518518518518518
+Min-optimal EFX proportion: 0.2000
+
+Utility Matrix:
+  [16, 90, 7, 11, 11]
+  [6, 93, 10, 13, 13]
+  [5, 7, 6, 7, 11]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {0 2 3 }. (Value: 34, 25.19% of total utility)
+Agent 1 gets bundle {1 }. (Value: 93, 68.89% of total utility)
+Agent 2 gets bundle {4 }. (Value: 11, 30.56% of total utility)
+
+
+Strong Envy Edges:
+2 -> 0
+
+Envy Edges in General (weak or Strong)
+0 -> 1
+2 -> 0
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {0 3 }. (Value: 27, 20.00% of total utility)
+Agent 1 gets bundle {1 }. (Value: 93, 68.89% of total utility)
+Agent 2 gets bundle {2 4 }. (Value: 17, 47.22% of total utility)
+
+Min-optimal EFX allocation #2:
+Agent 0 gets bundle {0 4 }. (Value: 27, 20.00% of total utility)
+Agent 1 gets bundle {1 }. (Value: 93, 68.89% of total utility)
+Agent 2 gets bundle {2 3 }. (Value: 13, 36.11% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.2535211267605634
+Min-optimal EFX proportion: 0.2160
+
+Utility Matrix:
+  [7, 17, 84, 7, 10]
+  [17, 4, 91, 11, 19]
+  [10, 3, 10, 11, 16]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {2 }. (Value: 84, 67.20% of total utility)
+Agent 1 gets bundle {0 4 }. (Value: 36, 25.35% of total utility)
+Agent 2 gets bundle {1 3 }. (Value: 14, 28.00% of total utility)
+
+
+Strong Envy Edges:
+2 -> 1
+
+Envy Edges in General (weak or Strong)
+1 -> 0
+2 -> 1
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {1 4 }. (Value: 27, 21.60% of total utility)
+Agent 1 gets bundle {2 }. (Value: 91, 64.08% of total utility)
+Agent 2 gets bundle {0 3 }. (Value: 21, 42.00% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.2698412698412698
+Min-optimal EFX proportion: 0.2199
+
+Utility Matrix:
+  [4, 14, 13, 9, 5]
+  [14, 95, 17, 6, 9]
+  [11, 81, 11, 16, 7]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {2 }. (Value: 13, 28.89% of total utility)
+Agent 1 gets bundle {1 }. (Value: 95, 67.38% of total utility)
+Agent 2 gets bundle {0 3 4 }. (Value: 34, 26.98% of total utility)
+
+
+Strong Envy Edges:
+0 -> 2
+
+Envy Edges in General (weak or Strong)
+0 -> 1
+0 -> 2
+2 -> 1
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {3 4 }. (Value: 14, 31.11% of total utility)
+Agent 1 gets bundle {0 2 }. (Value: 31, 21.99% of total utility)
+Agent 2 gets bundle {1 }. (Value: 81, 64.29% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.1791044776119403
+Min-optimal EFX proportion: 0.1567
+
+Utility Matrix:
+  [9, 3, 17, 4, 15]
+  [4, 3, 83, 7, 7]
+  [11, 5, 99, 5, 14]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {0 }. (Value: 9, 18.75% of total utility)
+Agent 1 gets bundle {2 }. (Value: 83, 79.81% of total utility)
+Agent 2 gets bundle {1 3 4 }. (Value: 24, 17.91% of total utility)
+
+
+Strong Envy Edges:
+0 -> 2
+
+Envy Edges in General (weak or Strong)
+0 -> 1
+0 -> 2
+2 -> 1
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {4 }. (Value: 15, 31.25% of total utility)
+Agent 1 gets bundle {2 }. (Value: 83, 79.81% of total utility)
+Agent 2 gets bundle {0 1 3 }. (Value: 21, 15.67% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.24390243902439024
+Min-optimal EFX proportion: 0.2214
+
+Utility Matrix:
+  [83, 19, 5, 19, 5]
+  [11, 6, 8, 14, 2]
+  [98, 17, 1, 9, 11]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {1 3 }. (Value: 38, 29.01% of total utility)
+Agent 1 gets bundle {2 4 }. (Value: 10, 24.39% of total utility)
+Agent 2 gets bundle {0 }. (Value: 98, 72.06% of total utility)
+
+
+Strong Envy Edges:
+1 -> 0
+
+Envy Edges in General (weak or Strong)
+0 -> 2
+1 -> 0
+1 -> 2
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {1 2 4 }. (Value: 29, 22.14% of total utility)
+Agent 1 gets bundle {3 }. (Value: 14, 34.15% of total utility)
+Agent 2 gets bundle {0 }. (Value: 98, 72.06% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.3283582089552239
+Min-optimal EFX proportion: 0.2612
+
+Utility Matrix:
+  [17, 13, 12, 4, 5]
+  [14, 5, 12, 82, 3]
+  [5, 19, 16, 85, 9]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {0 }. (Value: 17, 33.33% of total utility)
+Agent 1 gets bundle {3 }. (Value: 82, 70.69% of total utility)
+Agent 2 gets bundle {1 2 4 }. (Value: 44, 32.84% of total utility)
+
+
+Strong Envy Edges:
+0 -> 2
+
+Envy Edges in General (weak or Strong)
+0 -> 2
+2 -> 1
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {0 4 }. (Value: 22, 43.14% of total utility)
+Agent 1 gets bundle {3 }. (Value: 82, 70.69% of total utility)
+Agent 2 gets bundle {1 2 }. (Value: 35, 26.12% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.27419354838709675
+Min-optimal EFX proportion: 0.2650
+
+Utility Matrix:
+  [11, 1, 5, 18, 97]
+  [10, 19, 17, 15, 1]
+  [18, 2, 1, 13, 83]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {4 }. (Value: 97, 73.48% of total utility)
+Agent 1 gets bundle {2 }. (Value: 17, 27.42% of total utility)
+Agent 2 gets bundle {0 1 3 }. (Value: 33, 28.21% of total utility)
 
 
 Strong Envy Edges:
@@ -564,32 +983,13 @@ Strong Envy Edges:
 
 Envy Edges in General (weak or Strong)
 1 -> 2
+2 -> 0
 
 Min-Optimal EFX allocations:
 Min-optimal EFX allocation #1:
-Agent 0 gets bundle {0 1 5 8 9 }. (Value: 124, 46.44% of total utility)
-Agent 1 gets bundle {10 }. (Value: 91, 45.73% of total utility)
-Agent 2 gets bundle {2 3 4 6 7 }. (Value: 123, 39.42% of total utility)
-
-Min-optimal EFX allocation #2:
-Agent 0 gets bundle {0 5 8 9 }. (Value: 123, 46.07% of total utility)
-Agent 1 gets bundle {1 10 }. (Value: 103, 51.76% of total utility)
-Agent 2 gets bundle {2 3 4 6 7 }. (Value: 123, 39.42% of total utility)
-
-Min-optimal EFX allocation #3:
-Agent 0 gets bundle {0 2 5 8 9 }. (Value: 126, 47.19% of total utility)
-Agent 1 gets bundle {10 }. (Value: 91, 45.73% of total utility)
-Agent 2 gets bundle {1 3 4 6 7 }. (Value: 123, 39.42% of total utility)
-
-Min-optimal EFX allocation #4:
-Agent 0 gets bundle {0 2 8 9 }. (Value: 123, 46.07% of total utility)
-Agent 1 gets bundle {5 10 }. (Value: 104, 52.26% of total utility)
-Agent 2 gets bundle {1 3 4 6 7 }. (Value: 123, 39.42% of total utility)
-
-Min-optimal EFX allocation #5:
-Agent 0 gets bundle {0 5 8 9 }. (Value: 123, 46.07% of total utility)
-Agent 1 gets bundle {2 10 }. (Value: 105, 52.76% of total utility)
-Agent 2 gets bundle {1 3 4 6 7 }. (Value: 123, 39.42% of total utility)
+Agent 0 gets bundle {4 }. (Value: 97, 73.48% of total utility)
+Agent 1 gets bundle {1 2 }. (Value: 36, 58.06% of total utility)
+Agent 2 gets bundle {0 3 }. (Value: 31, 26.50% of total utility)
 
 ================================================================================
 
@@ -597,79 +997,35 @@ Distance analysis saved to distance.txt
 ================================================================================
 COUNTEREXAMPLE FOUND
 ================================================================================
-Configuration: 3 agents, 11 items
+Configuration: 3 agents, 5 items
 MM allocations count: 1
 MM EFX allocations count: 0
-Max-min proportion: 0.4088888888888889
-Min-optimal EFX proportion: 0.3347
+Max-min proportion: 0.2932330827067669
+Min-optimal EFX proportion: 0.2256
 
 Utility Matrix:
-  [6, 12, 100, 2, 11, 5, 14, 11, 18, 16, 6]
-  [2, 17, 81, 2, 4, 2, 2, 14, 1, 92, 8]
-  [7, 3, 83, 19, 11, 3, 14, 7, 13, 82, 6]
+  [6, 9, 14, 88, 16]
+  [19, 19, 14, 1, 4]
+  [3, 13, 12, 86, 3]
 
 MM Allocations (non EFX):
-Agent 0 gets bundle {0 1 4 5 6 7 8 10 }. (Value: 83, 41.29% of total utility)
-Agent 1 gets bundle {9 }. (Value: 92, 40.89% of total utility)
-Agent 2 gets bundle {2 3 }. (Value: 102, 41.13% of total utility)
+Agent 0 gets bundle {1 2 4 }. (Value: 39, 29.32% of total utility)
+Agent 1 gets bundle {0 }. (Value: 19, 33.33% of total utility)
+Agent 2 gets bundle {3 }. (Value: 86, 73.50% of total utility)
 
 
 Strong Envy Edges:
-0 -> 2
+1 -> 0
 
 Envy Edges in General (weak or Strong)
 0 -> 2
+1 -> 0
 
 Min-Optimal EFX allocations:
 Min-optimal EFX allocation #1:
-Agent 0 gets bundle {0 1 3 4 5 6 7 8 10 }. (Value: 85, 42.29% of total utility)
-Agent 1 gets bundle {9 }. (Value: 92, 40.89% of total utility)
-Agent 2 gets bundle {2 }. (Value: 83, 33.47% of total utility)
-
-Min-optimal EFX allocation #2:
-Agent 0 gets bundle {0 1 3 4 5 6 7 8 }. (Value: 79, 39.30% of total utility)
-Agent 1 gets bundle {9 10 }. (Value: 100, 44.44% of total utility)
-Agent 2 gets bundle {2 }. (Value: 83, 33.47% of total utility)
-
-Min-optimal EFX allocation #3:
-Agent 0 gets bundle {0 1 3 4 5 6 8 10 }. (Value: 74, 36.82% of total utility)
-Agent 1 gets bundle {7 9 }. (Value: 106, 47.11% of total utility)
-Agent 2 gets bundle {2 }. (Value: 83, 33.47% of total utility)
-
-Min-optimal EFX allocation #4:
-Agent 0 gets bundle {0 1 3 4 5 7 8 10 }. (Value: 71, 35.32% of total utility)
-Agent 1 gets bundle {6 9 }. (Value: 94, 41.78% of total utility)
-Agent 2 gets bundle {2 }. (Value: 83, 33.47% of total utility)
-
-Min-optimal EFX allocation #5:
-Agent 0 gets bundle {0 1 3 4 6 7 8 10 }. (Value: 80, 39.80% of total utility)
-Agent 1 gets bundle {5 9 }. (Value: 94, 41.78% of total utility)
-Agent 2 gets bundle {2 }. (Value: 83, 33.47% of total utility)
-
-Min-optimal EFX allocation #6:
-Agent 0 gets bundle {0 1 3 5 6 7 8 10 }. (Value: 74, 36.82% of total utility)
-Agent 1 gets bundle {4 9 }. (Value: 96, 42.67% of total utility)
-Agent 2 gets bundle {2 }. (Value: 83, 33.47% of total utility)
-
-Min-optimal EFX allocation #7:
-Agent 0 gets bundle {0 1 4 5 6 7 8 10 }. (Value: 83, 41.29% of total utility)
-Agent 1 gets bundle {3 9 }. (Value: 94, 41.78% of total utility)
-Agent 2 gets bundle {2 }. (Value: 83, 33.47% of total utility)
-
-Min-optimal EFX allocation #8:
-Agent 0 gets bundle {0 3 4 5 6 7 8 10 }. (Value: 73, 36.32% of total utility)
-Agent 1 gets bundle {1 9 }. (Value: 109, 48.44% of total utility)
-Agent 2 gets bundle {2 }. (Value: 83, 33.47% of total utility)
-
-Min-optimal EFX allocation #9:
-Agent 0 gets bundle {1 3 4 5 6 7 8 10 }. (Value: 79, 39.30% of total utility)
-Agent 1 gets bundle {0 9 }. (Value: 94, 41.78% of total utility)
-Agent 2 gets bundle {2 }. (Value: 83, 33.47% of total utility)
-
-Min-optimal EFX allocation #10:
-Agent 0 gets bundle {2 }. (Value: 100, 49.75% of total utility)
-Agent 1 gets bundle {9 }. (Value: 92, 40.89% of total utility)
-Agent 2 gets bundle {0 1 3 4 5 6 7 8 10 }. (Value: 83, 33.47% of total utility)
+Agent 0 gets bundle {2 4 }. (Value: 30, 22.56% of total utility)
+Agent 1 gets bundle {0 1 }. (Value: 38, 66.67% of total utility)
+Agent 2 gets bundle {3 }. (Value: 86, 73.50% of total utility)
 
 ================================================================================
 
@@ -677,77 +1033,35 @@ Distance analysis saved to distance.txt
 ================================================================================
 COUNTEREXAMPLE FOUND
 ================================================================================
-Configuration: 3 agents, 11 items
-MM allocations count: 2
-MM EFX allocations count: 0
-Max-min proportion: 0.4368421052631579
-Min-optimal EFX proportion: 0.4333
-
-Utility Matrix:
-  [3, 3, 17, 6, 17, 85, 100, 12, 13, 1, 13]
-  [1, 8, 1, 7, 6, 92, 81, 10, 4, 13, 12]
-  [17, 7, 17, 7, 14, 7, 82, 2, 19, 9, 9]
-
-MM Allocations (non EFX):
-Agent 0 gets bundle {3 6 7 }. (Value: 118, 43.70% of total utility)
-Agent 1 gets bundle {5 10 }. (Value: 104, 44.26% of total utility)
-Agent 2 gets bundle {0 1 2 4 8 9 }. (Value: 83, 43.68% of total utility)
-
-Agent 0 gets bundle {3 6 7 }. (Value: 118, 43.70% of total utility)
-Agent 1 gets bundle {5 9 }. (Value: 105, 44.68% of total utility)
-Agent 2 gets bundle {0 1 2 4 8 10 }. (Value: 83, 43.68% of total utility)
-
-
-Strong Envy Edges:
-2 -> 0
-
-2 -> 0
-
-Envy Edges in General (weak or Strong)
-2 -> 0
-
-2 -> 0
-
-Min-Optimal EFX allocations:
-Min-optimal EFX allocation #1:
-Agent 0 gets bundle {4 6 }. (Value: 117, 43.33% of total utility)
-Agent 1 gets bundle {5 7 }. (Value: 102, 43.40% of total utility)
-Agent 2 gets bundle {0 1 2 3 8 9 10 }. (Value: 85, 44.74% of total utility)
-
-================================================================================
-
-Distance analysis saved to distance.txt
-================================================================================
-COUNTEREXAMPLE FOUND
-================================================================================
-Configuration: 3 agents, 11 items
+Configuration: 3 agents, 5 items
 MM allocations count: 1
 MM EFX allocations count: 0
-Max-min proportion: 0.42063492063492064
-Min-optimal EFX proportion: 0.3929
+Max-min proportion: 0.20454545454545456
+Min-optimal EFX proportion: 0.1760
 
 Utility Matrix:
-  [14, 10, 81, 17, 10, 3, 87, 4, 11, 8, 7]
-  [6, 11, 11, 17, 18, 10, 98, 10, 1, 12, 19]
-  [11, 7, 81, 13, 17, 3, 15, 12, 18, 4, 15]
+  [2, 17, 99, 6, 8]
+  [15, 1, 100, 7, 2]
+  [3, 6, 1, 7, 11]
 
 MM Allocations (non EFX):
-Agent 0 gets bundle {2 3 9 }. (Value: 106, 42.06% of total utility)
-Agent 1 gets bundle {6 }. (Value: 98, 46.01% of total utility)
-Agent 2 gets bundle {0 1 4 5 7 8 10 }. (Value: 83, 42.35% of total utility)
+Agent 0 gets bundle {0 1 4 }. (Value: 27, 20.45% of total utility)
+Agent 1 gets bundle {2 }. (Value: 100, 80.00% of total utility)
+Agent 2 gets bundle {3 }. (Value: 7, 25.00% of total utility)
 
 
 Strong Envy Edges:
 2 -> 0
 
 Envy Edges in General (weak or Strong)
+0 -> 1
 2 -> 0
 
 Min-Optimal EFX allocations:
 Min-optimal EFX allocation #1:
-Agent 0 gets bundle {1 2 9 }. (Value: 99, 39.29% of total utility)
-Agent 1 gets bundle {6 }. (Value: 98, 46.01% of total utility)
-Agent 2 gets bundle {0 3 4 5 7 8 10 }. (Value: 89, 45.41% of total utility)
+Agent 0 gets bundle {2 }. (Value: 99, 75.00% of total utility)
+Agent 1 gets bundle {0 3 }. (Value: 22, 17.60% of total utility)
+Agent 2 gets bundle {1 4 }. (Value: 17, 60.71% of total utility)
 
 ================================================================================
 
@@ -755,64 +1069,165 @@ Distance analysis saved to distance.txt
 ================================================================================
 COUNTEREXAMPLE FOUND
 ================================================================================
-Configuration: 3 agents, 11 items
-MM allocations count: 2
-MM EFX allocations count: 0
-Max-min proportion: 0.4358974358974359
-Min-optimal EFX proportion: 0.4096
-
-Utility Matrix:
-  [1, 15, 10, 15, 5, 99, 6, 5, 97, 15, 5]
-  [12, 2, 2, 99, 5, 13, 7, 19, 3, 18, 6]
-  [3, 16, 13, 99, 6, 90, 11, 17, 93, 17, 11]
-
-MM Allocations (non EFX):
-Agent 0 gets bundle {4 5 9 }. (Value: 119, 43.59% of total utility)
-Agent 1 gets bundle {3 }. (Value: 99, 53.23% of total utility)
-Agent 2 gets bundle {0 1 2 6 7 8 10 }. (Value: 164, 43.62% of total utility)
-
-Agent 0 gets bundle {1 4 5 }. (Value: 119, 43.59% of total utility)
-Agent 1 gets bundle {3 }. (Value: 99, 53.23% of total utility)
-Agent 2 gets bundle {0 2 6 7 8 9 10 }. (Value: 165, 43.88% of total utility)
-
-
-Strong Envy Edges:
-0 -> 2
-
-0 -> 2
-
-Envy Edges in General (weak or Strong)
-0 -> 2
-
-0 -> 2
-
-Min-Optimal EFX allocations:
-Min-optimal EFX allocation #1:
-Agent 0 gets bundle {1 5 9 }. (Value: 129, 47.25% of total utility)
-Agent 1 gets bundle {3 }. (Value: 99, 53.23% of total utility)
-Agent 2 gets bundle {0 2 4 6 7 8 10 }. (Value: 154, 40.96% of total utility)
-
-================================================================================
-
-Distance analysis saved to distance.txt
-================================================================================
-COUNTEREXAMPLE FOUND
-================================================================================
-Configuration: 3 agents, 11 items
+Configuration: 3 agents, 5 items
 MM allocations count: 1
 MM EFX allocations count: 0
-Max-min proportion: 0.4471830985915493
-Min-optimal EFX proportion: 0.4365
+Max-min proportion: 0.2733333333333333
+Min-optimal EFX proportion: 0.2133
 
 Utility Matrix:
-  [19, 13, 15, 4, 8, 11, 90, 10, 2, 10, 14]
-  [11, 14, 6, 95, 80, 9, 11, 17, 18, 15, 8]
-  [13, 14, 19, 98, 83, 6, 96, 6, 17, 8, 18]
+  [11, 4, 3, 9, 13]
+  [15, 80, 7, 10, 17]
+  [19, 100, 13, 9, 9]
 
 MM Allocations (non EFX):
-Agent 0 gets bundle {6 }. (Value: 90, 45.92% of total utility)
-Agent 1 gets bundle {3 7 9 }. (Value: 127, 44.72% of total utility)
-Agent 2 gets bundle {0 1 2 4 5 8 10 }. (Value: 170, 44.97% of total utility)
+Agent 0 gets bundle {4 }. (Value: 13, 32.50% of total utility)
+Agent 1 gets bundle {1 }. (Value: 80, 62.02% of total utility)
+Agent 2 gets bundle {0 2 3 }. (Value: 41, 27.33% of total utility)
+
+
+Strong Envy Edges:
+0 -> 2
+
+Envy Edges in General (weak or Strong)
+0 -> 2
+2 -> 1
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {3 4 }. (Value: 22, 55.00% of total utility)
+Agent 1 gets bundle {1 }. (Value: 80, 62.02% of total utility)
+Agent 2 gets bundle {0 2 }. (Value: 32, 21.33% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.24675324675324675
+Min-optimal EFX proportion: 0.2137
+
+Utility Matrix:
+  [1, 15, 6, 13, 96]
+  [17, 6, 13, 11, 96]
+  [7, 19, 16, 17, 18]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {4 }. (Value: 96, 73.28% of total utility)
+Agent 1 gets bundle {0 2 3 }. (Value: 41, 28.67% of total utility)
+Agent 2 gets bundle {1 }. (Value: 19, 24.68% of total utility)
+
+
+Strong Envy Edges:
+2 -> 1
+
+Envy Edges in General (weak or Strong)
+1 -> 0
+2 -> 1
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {1 3 }. (Value: 28, 21.37% of total utility)
+Agent 1 gets bundle {4 }. (Value: 96, 67.13% of total utility)
+Agent 2 gets bundle {0 2 }. (Value: 23, 29.87% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.23255813953488372
+Min-optimal EFX proportion: 0.1912
+
+Utility Matrix:
+  [1, 18, 10, 10, 4]
+  [12, 8, 7, 1, 99]
+  [11, 13, 15, 3, 94]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {3 }. (Value: 10, 23.26% of total utility)
+Agent 1 gets bundle {4 }. (Value: 99, 77.95% of total utility)
+Agent 2 gets bundle {0 1 2 }. (Value: 39, 28.68% of total utility)
+
+
+Strong Envy Edges:
+0 -> 2
+
+Envy Edges in General (weak or Strong)
+0 -> 2
+2 -> 1
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {1 3 }. (Value: 28, 65.12% of total utility)
+Agent 1 gets bundle {4 }. (Value: 99, 77.95% of total utility)
+Agent 2 gets bundle {0 2 }. (Value: 26, 19.12% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.2361111111111111
+Min-optimal EFX proportion: 0.2222
+
+Utility Matrix:
+  [16, 94, 16, 12, 6]
+  [17, 16, 11, 14, 8]
+  [18, 94, 8, 8, 2]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {2 3 4 }. (Value: 34, 23.61% of total utility)
+Agent 1 gets bundle {0 }. (Value: 17, 25.76% of total utility)
+Agent 2 gets bundle {1 }. (Value: 94, 72.31% of total utility)
+
+
+Strong Envy Edges:
+1 -> 0
+
+Envy Edges in General (weak or Strong)
+0 -> 2
+1 -> 0
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {0 2 }. (Value: 32, 22.22% of total utility)
+Agent 1 gets bundle {3 4 }. (Value: 22, 33.33% of total utility)
+Agent 2 gets bundle {1 }. (Value: 94, 72.31% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.2558139534883721
+Min-optimal EFX proportion: 0.2016
+
+Utility Matrix:
+  [2, 5, 8, 83, 5]
+  [14, 14, 15, 12, 2]
+  [11, 13, 13, 83, 9]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {3 }. (Value: 83, 80.58% of total utility)
+Agent 1 gets bundle {2 }. (Value: 15, 26.32% of total utility)
+Agent 2 gets bundle {0 1 4 }. (Value: 33, 25.58% of total utility)
 
 
 Strong Envy Edges:
@@ -820,12 +1235,13 @@ Strong Envy Edges:
 
 Envy Edges in General (weak or Strong)
 1 -> 2
+2 -> 0
 
 Min-Optimal EFX allocations:
 Min-optimal EFX allocation #1:
-Agent 0 gets bundle {6 }. (Value: 90, 45.92% of total utility)
-Agent 1 gets bundle {1 4 5 7 9 }. (Value: 135, 47.54% of total utility)
-Agent 2 gets bundle {0 2 3 8 10 }. (Value: 165, 43.65% of total utility)
+Agent 0 gets bundle {3 }. (Value: 83, 80.58% of total utility)
+Agent 1 gets bundle {0 4 }. (Value: 16, 28.07% of total utility)
+Agent 2 gets bundle {1 2 }. (Value: 26, 20.16% of total utility)
 
 ================================================================================
 
@@ -833,179 +1249,254 @@ Distance analysis saved to distance.txt
 ================================================================================
 COUNTEREXAMPLE FOUND
 ================================================================================
-Configuration: 3 agents, 11 items
+Configuration: 3 agents, 5 items
 MM allocations count: 1
 MM EFX allocations count: 0
-Max-min proportion: 0.47244094488188976
-Min-optimal EFX proportion: 0.4647
+Max-min proportion: 0.2517985611510791
+Min-optimal EFX proportion: 0.2000
 
 Utility Matrix:
-  [18, 17, 89, 19, 9, 93, 92, 3, 10, 1, 17]
-  [15, 11, 86, 4, 12, 1, 100, 15, 1, 5, 4]
-  [2, 9, 8, 15, 18, 92, 6, 17, 7, 3, 8]
+  [3, 83, 2, 18, 4]
+  [8, 96, 11, 8, 16]
+  [9, 5, 10, 17, 9]
 
 MM Allocations (non EFX):
-Agent 0 gets bundle {0 1 2 3 4 8 10 }. (Value: 179, 48.64% of total utility)
-Agent 1 gets bundle {6 7 9 }. (Value: 120, 47.24% of total utility)
-Agent 2 gets bundle {5 }. (Value: 92, 49.73% of total utility)
-
-
-Strong Envy Edges:
-1 -> 0
-
-Envy Edges in General (weak or Strong)
-1 -> 0
-
-Min-Optimal EFX allocations:
-Min-optimal EFX allocation #1:
-Agent 0 gets bundle {0 1 2 3 8 9 10 }. (Value: 171, 46.47% of total utility)
-Agent 1 gets bundle {4 6 7 }. (Value: 127, 50.00% of total utility)
-Agent 2 gets bundle {5 }. (Value: 92, 49.73% of total utility)
-
-================================================================================
-
-Distance analysis saved to distance.txt
-================================================================================
-COUNTEREXAMPLE FOUND
-================================================================================
-Configuration: 3 agents, 11 items
-MM allocations count: 1
-MM EFX allocations count: 0
-Max-min proportion: 0.45222929936305734
-Min-optimal EFX proportion: 0.4363
-
-Utility Matrix:
-  [1, 84, 11, 16, 85, 2, 17, 2, 82, 5, 9]
-  [7, 86, 16, 6, 95, 12, 6, 11, 4, 9, 4]
-  [8, 18, 15, 6, 6, 11, 12, 16, 82, 19, 2]
-
-MM Allocations (non EFX):
-Agent 0 gets bundle {1 2 3 6 9 10 }. (Value: 142, 45.22% of total utility)
-Agent 1 gets bundle {4 5 7 }. (Value: 118, 46.09% of total utility)
-Agent 2 gets bundle {0 8 }. (Value: 90, 46.15% of total utility)
-
-
-Strong Envy Edges:
-1 -> 0
-
-Envy Edges in General (weak or Strong)
-1 -> 0
-
-Min-Optimal EFX allocations:
-Min-optimal EFX allocation #1:
-Agent 0 gets bundle {1 2 3 6 10 }. (Value: 137, 43.63% of total utility)
-Agent 1 gets bundle {0 4 5 7 }. (Value: 125, 48.83% of total utility)
-Agent 2 gets bundle {8 9 }. (Value: 101, 51.79% of total utility)
-
-Min-optimal EFX allocation #2:
-Agent 0 gets bundle {1 2 3 6 10 }. (Value: 137, 43.63% of total utility)
-Agent 1 gets bundle {0 4 5 9 }. (Value: 123, 48.05% of total utility)
-Agent 2 gets bundle {7 8 }. (Value: 98, 50.26% of total utility)
-
-Min-optimal EFX allocation #3:
-Agent 0 gets bundle {1 2 3 6 10 }. (Value: 137, 43.63% of total utility)
-Agent 1 gets bundle {0 4 5 }. (Value: 114, 44.53% of total utility)
-Agent 2 gets bundle {7 8 9 }. (Value: 117, 60.00% of total utility)
-
-Min-optimal EFX allocation #4:
-Agent 0 gets bundle {1 2 3 6 10 }. (Value: 137, 43.63% of total utility)
-Agent 1 gets bundle {0 4 7 9 }. (Value: 122, 47.66% of total utility)
-Agent 2 gets bundle {5 8 }. (Value: 93, 47.69% of total utility)
-
-Min-optimal EFX allocation #5:
-Agent 0 gets bundle {1 2 3 6 10 }. (Value: 137, 43.63% of total utility)
-Agent 1 gets bundle {4 5 7 9 }. (Value: 127, 49.61% of total utility)
-Agent 2 gets bundle {0 8 }. (Value: 90, 46.15% of total utility)
-
-Min-optimal EFX allocation #6:
-Agent 0 gets bundle {1 2 3 6 10 }. (Value: 137, 43.63% of total utility)
-Agent 1 gets bundle {4 5 7 }. (Value: 118, 46.09% of total utility)
-Agent 2 gets bundle {0 8 9 }. (Value: 109, 55.90% of total utility)
-
-Min-optimal EFX allocation #7:
-Agent 0 gets bundle {1 2 3 6 10 }. (Value: 137, 43.63% of total utility)
-Agent 1 gets bundle {4 5 9 }. (Value: 116, 45.31% of total utility)
-Agent 2 gets bundle {0 7 8 }. (Value: 106, 54.36% of total utility)
-
-Min-optimal EFX allocation #8:
-Agent 0 gets bundle {1 2 3 6 10 }. (Value: 137, 43.63% of total utility)
-Agent 1 gets bundle {4 7 9 }. (Value: 115, 44.92% of total utility)
-Agent 2 gets bundle {0 5 8 }. (Value: 101, 51.79% of total utility)
-
-================================================================================
-
-Distance analysis saved to distance.txt
-================================================================================
-COUNTEREXAMPLE FOUND
-================================================================================
-Configuration: 3 agents, 11 items
-MM allocations count: 1
-MM EFX allocations count: 0
-Max-min proportion: 0.44
-Min-optimal EFX proportion: 0.4314
-
-Utility Matrix:
-  [10, 17, 5, 87, 16, 6, 86, 3, 2, 10, 14]
-  [82, 11, 11, 14, 8, 15, 19, 8, 1, 11, 17]
-  [93, 1, 17, 90, 10, 8, 98, 3, 3, 18, 9]
-
-MM Allocations (non EFX):
-Agent 0 gets bundle {1 3 10 }. (Value: 118, 46.09% of total utility)
-Agent 1 gets bundle {0 7 }. (Value: 90, 45.69% of total utility)
-Agent 2 gets bundle {2 4 5 6 8 9 }. (Value: 154, 44.00% of total utility)
-
-
-Strong Envy Edges:
-0 -> 2
-
-Envy Edges in General (weak or Strong)
-0 -> 2
-
-Min-Optimal EFX allocations:
-Min-optimal EFX allocation #1:
-Agent 0 gets bundle {1 3 8 10 }. (Value: 120, 46.88% of total utility)
-Agent 1 gets bundle {0 7 }. (Value: 90, 45.69% of total utility)
-Agent 2 gets bundle {2 4 5 6 9 }. (Value: 151, 43.14% of total utility)
-
-Min-optimal EFX allocation #2:
-Agent 0 gets bundle {1 3 10 }. (Value: 118, 46.09% of total utility)
-Agent 1 gets bundle {0 7 8 }. (Value: 91, 46.19% of total utility)
-Agent 2 gets bundle {2 4 5 6 9 }. (Value: 151, 43.14% of total utility)
-
-================================================================================
-
-Distance analysis saved to distance.txt
-================================================================================
-COUNTEREXAMPLE FOUND
-================================================================================
-Configuration: 3 agents, 11 items
-MM allocations count: 1
-MM EFX allocations count: 0
-Max-min proportion: 0.4551083591331269
-Min-optimal EFX proportion: 0.4334
-
-Utility Matrix:
-  [96, 13, 6, 16, 3, 12, 17, 16, 10, 11, 1]
-  [88, 3, 81, 8, 16, 4, 2, 15, 3, 96, 7]
-  [1, 17, 86, 10, 11, 10, 4, 7, 1, 85, 13]
-
-MM Allocations (non EFX):
-Agent 0 gets bundle {0 }. (Value: 96, 47.76% of total utility)
-Agent 1 gets bundle {3 4 6 7 8 9 10 }. (Value: 147, 45.51% of total utility)
-Agent 2 gets bundle {1 2 5 }. (Value: 113, 46.12% of total utility)
+Agent 0 gets bundle {1 }. (Value: 83, 75.45% of total utility)
+Agent 1 gets bundle {0 2 4 }. (Value: 35, 25.18% of total utility)
+Agent 2 gets bundle {3 }. (Value: 17, 34.00% of total utility)
 
 
 Strong Envy Edges:
 2 -> 1
 
 Envy Edges in General (weak or Strong)
+1 -> 0
 2 -> 1
 
 Min-Optimal EFX allocations:
 Min-optimal EFX allocation #1:
-Agent 0 gets bundle {0 }. (Value: 96, 47.76% of total utility)
-Agent 1 gets bundle {3 4 6 7 8 9 }. (Value: 140, 43.34% of total utility)
-Agent 2 gets bundle {1 2 5 10 }. (Value: 126, 51.43% of total utility)
+Agent 0 gets bundle {3 4 }. (Value: 22, 20.00% of total utility)
+Agent 1 gets bundle {1 }. (Value: 96, 69.06% of total utility)
+Agent 2 gets bundle {0 2 }. (Value: 19, 38.00% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.23684210526315788
+Min-optimal EFX proportion: 0.2097
+
+Utility Matrix:
+  [1, 12, 80, 3, 10]
+  [2, 7, 89, 9, 17]
+  [9, 5, 12, 3, 9]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {2 }. (Value: 80, 75.47% of total utility)
+Agent 1 gets bundle {1 3 4 }. (Value: 33, 26.61% of total utility)
+Agent 2 gets bundle {0 }. (Value: 9, 23.68% of total utility)
+
+
+Strong Envy Edges:
+2 -> 1
+
+Envy Edges in General (weak or Strong)
+1 -> 0
+2 -> 0
+2 -> 1
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {2 }. (Value: 80, 75.47% of total utility)
+Agent 1 gets bundle {3 4 }. (Value: 26, 20.97% of total utility)
+Agent 2 gets bundle {0 1 }. (Value: 14, 36.84% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.31851851851851853
+Min-optimal EFX proportion: 0.2519
+
+Utility Matrix:
+  [95, 5, 18, 3, 12]
+  [8, 6, 14, 15, 1]
+  [83, 16, 18, 9, 9]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {0 }. (Value: 95, 71.43% of total utility)
+Agent 1 gets bundle {3 }. (Value: 15, 34.09% of total utility)
+Agent 2 gets bundle {1 2 4 }. (Value: 43, 31.85% of total utility)
+
+
+Strong Envy Edges:
+1 -> 2
+
+Envy Edges in General (weak or Strong)
+1 -> 2
+2 -> 0
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {0 }. (Value: 95, 71.43% of total utility)
+Agent 1 gets bundle {3 4 }. (Value: 16, 36.36% of total utility)
+Agent 2 gets bundle {1 2 }. (Value: 34, 25.19% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.2032520325203252
+Min-optimal EFX proportion: 0.2019
+
+Utility Matrix:
+  [12, 94, 2, 13, 2]
+  [1, 14, 7, 13, 3]
+  [10, 82, 9, 1, 2]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {0 3 }. (Value: 25, 20.33% of total utility)
+Agent 1 gets bundle {2 4 }. (Value: 10, 26.32% of total utility)
+Agent 2 gets bundle {1 }. (Value: 82, 78.85% of total utility)
+
+
+Strong Envy Edges:
+1 -> 0
+
+Envy Edges in General (weak or Strong)
+0 -> 2
+1 -> 0
+1 -> 2
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {1 }. (Value: 94, 76.42% of total utility)
+Agent 1 gets bundle {3 }. (Value: 13, 34.21% of total utility)
+Agent 2 gets bundle {0 2 4 }. (Value: 21, 20.19% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.2288135593220339
+Min-optimal EFX proportion: 0.1949
+
+Utility Matrix:
+  [3, 88, 7, 3, 11]
+  [4, 89, 13, 10, 2]
+  [8, 10, 3, 7, 9]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {1 }. (Value: 88, 78.57% of total utility)
+Agent 1 gets bundle {0 2 3 }. (Value: 27, 22.88% of total utility)
+Agent 2 gets bundle {4 }. (Value: 9, 24.32% of total utility)
+
+
+Strong Envy Edges:
+2 -> 1
+
+Envy Edges in General (weak or Strong)
+1 -> 0
+2 -> 0
+2 -> 1
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {1 }. (Value: 88, 78.57% of total utility)
+Agent 1 gets bundle {2 3 }. (Value: 23, 19.49% of total utility)
+Agent 2 gets bundle {0 4 }. (Value: 17, 45.95% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.2833333333333333
+Min-optimal EFX proportion: 0.1750
+
+Utility Matrix:
+  [15, 1, 84, 19, 1]
+  [16, 8, 13, 1, 5]
+  [7, 8, 89, 9, 1]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {0 3 }. (Value: 34, 28.33% of total utility)
+Agent 1 gets bundle {1 4 }. (Value: 13, 30.23% of total utility)
+Agent 2 gets bundle {2 }. (Value: 89, 78.07% of total utility)
+
+
+Strong Envy Edges:
+1 -> 0
+
+Envy Edges in General (weak or Strong)
+0 -> 2
+1 -> 0
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {1 3 4 }. (Value: 21, 17.50% of total utility)
+Agent 1 gets bundle {0 }. (Value: 16, 37.21% of total utility)
+Agent 2 gets bundle {2 }. (Value: 89, 78.07% of total utility)
+
+================================================================================
+
+Distance analysis saved to distance.txt
+================================================================================
+COUNTEREXAMPLE FOUND
+================================================================================
+Configuration: 3 agents, 5 items
+MM allocations count: 1
+MM EFX allocations count: 0
+Max-min proportion: 0.28169014084507044
+Min-optimal EFX proportion: 0.1972
+
+Utility Matrix:
+  [83, 4, 1, 5, 9]
+  [10, 15, 9, 5, 12]
+  [96, 6, 14, 14, 12]
+
+MM Allocations (non EFX):
+Agent 0 gets bundle {0 }. (Value: 83, 81.37% of total utility)
+Agent 1 gets bundle {1 }. (Value: 15, 29.41% of total utility)
+Agent 2 gets bundle {2 3 4 }. (Value: 40, 28.17% of total utility)
+
+
+Strong Envy Edges:
+1 -> 2
+
+Envy Edges in General (weak or Strong)
+1 -> 2
+2 -> 0
+
+Min-Optimal EFX allocations:
+Min-optimal EFX allocation #1:
+Agent 0 gets bundle {0 }. (Value: 83, 81.37% of total utility)
+Agent 1 gets bundle {1 4 }. (Value: 27, 52.94% of total utility)
+Agent 2 gets bundle {2 3 }. (Value: 28, 19.72% of total utility)
 
 ================================================================================
 

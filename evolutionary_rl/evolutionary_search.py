@@ -32,7 +32,7 @@ class TeeLogger:
 
 # Configuration parameters
 NUM_AGENTS = 3
-NUM_ITEMS = 11
+NUM_ITEMS = 5
 ### make sure that mm_checker is in the same directory as this file 
 ### it should be if compiled using Makefile in cpp_core/
 CPP_EXECUTABLE = "./mm_checker" 
