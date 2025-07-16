@@ -168,10 +168,11 @@ void print_utilities(const Utilities& utils, ostream& out) {
 }
 
 Utilities generate_builtin_utilities() {
-    Utilities utils(3, vector<int>(11));
-    utils[0] = {4, 5, 2, 9, 24, 22, 51, 42, 44, 33, 53};
-    utils[1] = {13, 83, 25, 71, 44, 60, 24, 58, 50, 49, 21};
-    utils[2] = {96, 79, 89, 4, 52, 39, 35, 51, 41, 43, 31};
+    Utilities utils(4, vector<int>(10));
+    utils[0] = {1, 1, 1, 1, 100, 1, 100, 1, 1, 1};
+    utils[1] = {1, 1, 1, 1, 100, 1, 100, 1, 1, 1};
+    utils[2] = {75, 7, 6, 73, 95, 97, 66, 28, 85, 27};
+    utils[3] = {60, 13, 87, 81, 35, 28, 62, 23, 33, 94};
     return utils;
 }
 
@@ -183,8 +184,8 @@ int main() {
         return 1;
     }
 
-    int num_agents = 3;
-    int num_items = 11; 
+    int num_agents = 4;
+    int num_items = 10; 
 
     cout << "--- MM and EFX Allocation Finder ---\n";
     outfile << "--- MM and EFX Allocation Finder ---\n";

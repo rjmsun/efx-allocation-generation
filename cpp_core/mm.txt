@@ -1,26 +1,119 @@
 --- MM and EFX Allocation Finder ---
 Utility matrix:
-Agent 0 (Total utility: 289): 4 5 2 9 24 22 51 42 44 33 53 
-Agent 1 (Total utility: 498): 13 83 25 71 44 60 24 58 50 49 21 
-Agent 2 (Total utility: 560): 96 79 89 4 52 39 35 51 41 43 31 
+Agent 0 (Total utility: 208): 1 1 1 1 100 1 100 1 1 1 
+Agent 1 (Total utility: 208): 1 1 1 1 100 1 100 1 1 1 
+Agent 2 (Total utility: 559): 75 7 6 73 95 97 66 28 85 27 
+Agent 3 (Total utility: 516): 60 13 87 81 35 28 62 23 33 94 
 
 Starting Pass 1: Finding the maximinal proportion of utility...
-Pass 1 Complete. The highest possible minimum proportion of utility is: 51.21%
+Pass 1 Complete. The highest possible minimum proportion of utility is: 48.08%
 
 Starting Pass 2: Finding all MM allocations and checking for EFX...
 
 --- ANALYSIS COMPLETE ---
-Time taken: 0.60 seconds
-Total allocations checked: 177147
+Time taken: 3.51 seconds
+Total allocations checked: 1048576
 
-Found 1 Maximinal (MM) Allocations:
+Found 10 Maximinal (MM) Allocations:
 Allocation:
-Agent 0 gets bundle {6 8 10 }. (Value: 148, 51.21% of total utility)
-Agent 1 gets bundle {1 3 5 9 }. (Value: 263, 52.81% of total utility)
-Agent 2 gets bundle {0 2 4 7 }. (Value: 288, 51.43% of total utility)
+Agent 0 gets bundle {6 }. (Value: 100, 48.08% of total utility)
+Agent 1 gets bundle {4 }. (Value: 100, 48.08% of total utility)
+Agent 2 gets bundle {3 5 7 8 }. (Value: 283, 50.63% of total utility)
+Agent 3 gets bundle {0 1 2 9 }. (Value: 254, 49.22% of total utility)
+Allocation:
+Agent 0 gets bundle {1 6 }. (Value: 101, 48.56% of total utility)
+Agent 1 gets bundle {4 }. (Value: 100, 48.08% of total utility)
+Agent 2 gets bundle {0 5 7 8 }. (Value: 285, 50.98% of total utility)
+Agent 3 gets bundle {2 3 9 }. (Value: 262, 50.78% of total utility)
+Allocation:
+Agent 0 gets bundle {6 }. (Value: 100, 48.08% of total utility)
+Agent 1 gets bundle {1 4 }. (Value: 101, 48.56% of total utility)
+Agent 2 gets bundle {0 5 7 8 }. (Value: 285, 50.98% of total utility)
+Agent 3 gets bundle {2 3 9 }. (Value: 262, 50.78% of total utility)
+Allocation:
+Agent 0 gets bundle {6 }. (Value: 100, 48.08% of total utility)
+Agent 1 gets bundle {4 }. (Value: 100, 48.08% of total utility)
+Agent 2 gets bundle {0 1 5 7 8 }. (Value: 292, 52.24% of total utility)
+Agent 3 gets bundle {2 3 9 }. (Value: 262, 50.78% of total utility)
+Allocation:
+Agent 0 gets bundle {6 }. (Value: 100, 48.08% of total utility)
+Agent 1 gets bundle {4 }. (Value: 100, 48.08% of total utility)
+Agent 2 gets bundle {0 5 7 8 }. (Value: 285, 50.98% of total utility)
+Agent 3 gets bundle {1 2 3 9 }. (Value: 275, 53.29% of total utility)
+Allocation:
+Agent 0 gets bundle {4 }. (Value: 100, 48.08% of total utility)
+Agent 1 gets bundle {6 }. (Value: 100, 48.08% of total utility)
+Agent 2 gets bundle {3 5 7 8 }. (Value: 283, 50.63% of total utility)
+Agent 3 gets bundle {0 1 2 9 }. (Value: 254, 49.22% of total utility)
+Allocation:
+Agent 0 gets bundle {1 4 }. (Value: 101, 48.56% of total utility)
+Agent 1 gets bundle {6 }. (Value: 100, 48.08% of total utility)
+Agent 2 gets bundle {0 5 7 8 }. (Value: 285, 50.98% of total utility)
+Agent 3 gets bundle {2 3 9 }. (Value: 262, 50.78% of total utility)
+Allocation:
+Agent 0 gets bundle {4 }. (Value: 100, 48.08% of total utility)
+Agent 1 gets bundle {1 6 }. (Value: 101, 48.56% of total utility)
+Agent 2 gets bundle {0 5 7 8 }. (Value: 285, 50.98% of total utility)
+Agent 3 gets bundle {2 3 9 }. (Value: 262, 50.78% of total utility)
+Allocation:
+Agent 0 gets bundle {4 }. (Value: 100, 48.08% of total utility)
+Agent 1 gets bundle {6 }. (Value: 100, 48.08% of total utility)
+Agent 2 gets bundle {0 1 5 7 8 }. (Value: 292, 52.24% of total utility)
+Agent 3 gets bundle {2 3 9 }. (Value: 262, 50.78% of total utility)
+Allocation:
+Agent 0 gets bundle {4 }. (Value: 100, 48.08% of total utility)
+Agent 1 gets bundle {6 }. (Value: 100, 48.08% of total utility)
+Agent 2 gets bundle {0 5 7 8 }. (Value: 285, 50.98% of total utility)
+Agent 3 gets bundle {1 2 3 9 }. (Value: 275, 53.29% of total utility)
 
-Found 1 Allocations that are both MM and EFX:
+Found 10 Allocations that are both MM and EFX:
 Allocation:
-Agent 0 gets bundle {6 8 10 }. (Value: 148, 51.21% of total utility)
-Agent 1 gets bundle {1 3 5 9 }. (Value: 263, 52.81% of total utility)
-Agent 2 gets bundle {0 2 4 7 }. (Value: 288, 51.43% of total utility)
+Agent 0 gets bundle {6 }. (Value: 100, 48.08% of total utility)
+Agent 1 gets bundle {4 }. (Value: 100, 48.08% of total utility)
+Agent 2 gets bundle {3 5 7 8 }. (Value: 283, 50.63% of total utility)
+Agent 3 gets bundle {0 1 2 9 }. (Value: 254, 49.22% of total utility)
+Allocation:
+Agent 0 gets bundle {1 6 }. (Value: 101, 48.56% of total utility)
+Agent 1 gets bundle {4 }. (Value: 100, 48.08% of total utility)
+Agent 2 gets bundle {0 5 7 8 }. (Value: 285, 50.98% of total utility)
+Agent 3 gets bundle {2 3 9 }. (Value: 262, 50.78% of total utility)
+Allocation:
+Agent 0 gets bundle {6 }. (Value: 100, 48.08% of total utility)
+Agent 1 gets bundle {1 4 }. (Value: 101, 48.56% of total utility)
+Agent 2 gets bundle {0 5 7 8 }. (Value: 285, 50.98% of total utility)
+Agent 3 gets bundle {2 3 9 }. (Value: 262, 50.78% of total utility)
+Allocation:
+Agent 0 gets bundle {6 }. (Value: 100, 48.08% of total utility)
+Agent 1 gets bundle {4 }. (Value: 100, 48.08% of total utility)
+Agent 2 gets bundle {0 1 5 7 8 }. (Value: 292, 52.24% of total utility)
+Agent 3 gets bundle {2 3 9 }. (Value: 262, 50.78% of total utility)
+Allocation:
+Agent 0 gets bundle {6 }. (Value: 100, 48.08% of total utility)
+Agent 1 gets bundle {4 }. (Value: 100, 48.08% of total utility)
+Agent 2 gets bundle {0 5 7 8 }. (Value: 285, 50.98% of total utility)
+Agent 3 gets bundle {1 2 3 9 }. (Value: 275, 53.29% of total utility)
+Allocation:
+Agent 0 gets bundle {4 }. (Value: 100, 48.08% of total utility)
+Agent 1 gets bundle {6 }. (Value: 100, 48.08% of total utility)
+Agent 2 gets bundle {3 5 7 8 }. (Value: 283, 50.63% of total utility)
+Agent 3 gets bundle {0 1 2 9 }. (Value: 254, 49.22% of total utility)
+Allocation:
+Agent 0 gets bundle {1 4 }. (Value: 101, 48.56% of total utility)
+Agent 1 gets bundle {6 }. (Value: 100, 48.08% of total utility)
+Agent 2 gets bundle {0 5 7 8 }. (Value: 285, 50.98% of total utility)
+Agent 3 gets bundle {2 3 9 }. (Value: 262, 50.78% of total utility)
+Allocation:
+Agent 0 gets bundle {4 }. (Value: 100, 48.08% of total utility)
+Agent 1 gets bundle {1 6 }. (Value: 101, 48.56% of total utility)
+Agent 2 gets bundle {0 5 7 8 }. (Value: 285, 50.98% of total utility)
+Agent 3 gets bundle {2 3 9 }. (Value: 262, 50.78% of total utility)
+Allocation:
+Agent 0 gets bundle {4 }. (Value: 100, 48.08% of total utility)
+Agent 1 gets bundle {6 }. (Value: 100, 48.08% of total utility)
+Agent 2 gets bundle {0 1 5 7 8 }. (Value: 292, 52.24% of total utility)
+Agent 3 gets bundle {2 3 9 }. (Value: 262, 50.78% of total utility)
+Allocation:
+Agent 0 gets bundle {4 }. (Value: 100, 48.08% of total utility)
+Agent 1 gets bundle {6 }. (Value: 100, 48.08% of total utility)
+Agent 2 gets bundle {0 5 7 8 }. (Value: 285, 50.98% of total utility)
+Agent 3 gets bundle {1 2 3 9 }. (Value: 275, 53.29% of total utility)
