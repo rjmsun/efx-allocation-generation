@@ -143,59 +143,23 @@ bool isMinOptimalEFX(const Allocation& alloc, const Utilities& utils, const vect
 // Distance functions implementation
 
 int swap_distance(const Allocation& allocation1, const Allocation& allocation2) {
-    int n = allocation1.size();
-    
-    // Check if allocations are identical
-    if (allocation1 == allocation2) {
-        return 0;
+    unordered_map<int, int> item_to_agent1, item_to_agent2;
+    for (int agent = 0; agent < allocation1.size(); ++agent) {
+        for (int item : allocation1[agent]) item_to_agent1[item] = agent;
     }
-    
-    // Create a mapping from items to their target agent
-    unordered_map<int, int> item_to_target;
-    for (int agent = 0; agent < n; ++agent) {
-        for (int item : allocation2[agent]) {
-            item_to_target[item] = agent;
-        }
+    for (int agent = 0; agent < allocation2.size(); ++agent) {
+        for (int item : allocation2[agent]) item_to_agent2[item] = agent;
     }
-    
-    // Build the swap graph: edge (i,j) means agent i has an item that should go to agent j
-    vector<vector<int>> swap_graph(n);
-    for (int agent = 0; agent < n; ++agent) {
-        for (int item : allocation1[agent]) {
-            int target_agent = item_to_target[item];
-            if (target_agent != agent) {
-                swap_graph[agent].push_back(target_agent);
-            }
-        }
+    set<int> all_items;
+    for (const auto& p : item_to_agent1) all_items.insert(p.first);
+    for (const auto& p : item_to_agent2) all_items.insert(p.first);
+    int moves = 0;
+    for (int item : all_items) {
+        int a1 = item_to_agent1.count(item) ? item_to_agent1[item] : -1;
+        int a2 = item_to_agent2.count(item) ? item_to_agent2[item] : -1;
+        if (a1 != a2) ++moves;
     }
-    
-    // Count cycles using DFS
-    vector<bool> visited(n, false);
-    int cycles = 0;
-    
-    function<bool(int, int)> dfs = [&](int node, int start) -> bool {
-        if (visited[node]) {
-            return node == start;
-        }
-        visited[node] = true;
-        for (int neighbor : swap_graph[node]) {
-            if (dfs(neighbor, start)) {
-                return true;
-            }
-        }
-        return false;
-    };
-    
-    for (int i = 0; i < n; ++i) {
-        if (!visited[i] && !swap_graph[i].empty()) {
-            if (dfs(i, i)) {
-                cycles++;
-            }
-        }
-    }
-    
-    // Minimum swaps = n - cycles
-    return n - cycles;
+    return moves;
 }
 
 double normalized_euclidean_distance(const Allocation& allocation1, const Allocation& allocation2, const Utilities& valuations) {

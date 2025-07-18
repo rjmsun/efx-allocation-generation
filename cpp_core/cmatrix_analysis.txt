@@ -1,0 +1,1599 @@
+==================== COUNTEREXAMPLE MATRIX #1 ====================
+Raw Utility Matrix:
+  Agent 0: [155, 1849, 1880, 3115, 3705, 5553, 5602, 6819, 8662, 8728]
+  Agent 1: [301, 1744, 2736, 3852, 4267, 4978, 6391, 6614, 7096, 7302]
+  Agent 2: [276, 1122, 1284, 1430, 3217, 6312, 6514, 7365, 8608, 9010]
+Normalized Utility Matrix (rows sum to 1):
+  [0.00336, 0.04014, 0.04081, 0.06762, 0.08042, 0.12054, 0.12160, 0.14802, 0.18803, 0.18946]
+  [0.00665, 0.03852, 0.06042, 0.08507, 0.09423, 0.10994, 0.14114, 0.14607, 0.15671, 0.16126]
+  [0.00611, 0.02486, 0.02845, 0.03168, 0.07127, 0.13984, 0.14431, 0.16317, 0.19070, 0.19961]
+
+--- MM Allocations (1) ---
+  Agent 0: [0, 2, 5, 9]
+  Agent 1: [1, 3, 4, 6]
+  Agent 2: [7, 8]
+  Envy Edges: (2->0) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [0, 2, 5, 9] (Value: 16316, 35.42% of total utility)
+  Agent 1: [1, 3, 4, 6] (Value: 16254, 35.90% of total utility)
+  Agent 2: [7, 8] (Value: 15973, 35.39% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #125 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [2, 5, 9] (Value: 16161, 35.08% of total utility)
+  Agent 1: [0, 1, 3, 4, 6] (Value: 16555, 36.56% of total utility)
+  Agent 2: [7, 8] (Value: 15973, 35.39% of total utility)
+
+Close EFX allocation #126 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [2, 5, 9] (Value: 16161, 35.08% of total utility)
+  Agent 1: [1, 3, 4, 6] (Value: 16254, 35.90% of total utility)
+  Agent 2: [0, 7, 8] (Value: 16249, 36.00% of total utility)
+
+Close EFX allocation #130 (Pareto Optimal EFX #29, Not Min-optimal)
+  Agent 0: [0, 5, 9] (Value: 14436, 31.34% of total utility)
+  Agent 1: [1, 2, 3, 4, 6] (Value: 18990, 41.94% of total utility)
+  Agent 2: [7, 8] (Value: 15973, 35.39% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #2 ====================
+Raw Utility Matrix:
+  Agent 0: [2128, 2771, 2779, 4232, 5947, 5949, 8068, 9174, 9372, 9733]
+  Agent 1: [516, 1888, 3053, 5165, 5848, 6382, 6896, 7269, 7318, 9856]
+  Agent 2: [392, 736, 981, 2003, 3131, 3878, 6681, 8373, 8478, 9789]
+Normalized Utility Matrix (rows sum to 1):
+  [0.03538, 0.04607, 0.04620, 0.07035, 0.09886, 0.09890, 0.13412, 0.15251, 0.15580, 0.16180]
+  [0.00952, 0.03484, 0.05634, 0.09531, 0.10791, 0.11777, 0.12725, 0.13414, 0.13504, 0.18188]
+  [0.00882, 0.01656, 0.02207, 0.04507, 0.07045, 0.08726, 0.15033, 0.18840, 0.19077, 0.22026]
+
+--- MM Allocations (1) ---
+  Agent 0: [0, 1, 6, 9]
+  Agent 1: [2, 3, 4, 5]
+  Agent 2: [7, 8]
+  Envy Edges: (2->0) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [0, 1, 6, 9] (Value: 22700, 37.74% of total utility)
+  Agent 1: [2, 3, 4, 5] (Value: 20448, 37.73% of total utility)
+  Agent 2: [7, 8] (Value: 16851, 37.92% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #91 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [1, 6, 9] (Value: 20572, 34.20% of total utility)
+  Agent 1: [0, 2, 3, 4, 5] (Value: 20964, 38.69% of total utility)
+  Agent 2: [7, 8] (Value: 16851, 37.92% of total utility)
+
+Close EFX allocation #92 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [1, 6, 9] (Value: 20572, 34.20% of total utility)
+  Agent 1: [2, 3, 4, 5] (Value: 20448, 37.73% of total utility)
+  Agent 2: [0, 7, 8] (Value: 17243, 38.80% of total utility)
+
+Close EFX allocation #93 (Pareto Optimal EFX #2, Not Min-optimal)
+  Agent 0: [0, 6, 9] (Value: 19929, 33.13% of total utility)
+  Agent 1: [1, 2, 3, 4, 5] (Value: 22336, 41.22% of total utility)
+  Agent 2: [7, 8] (Value: 16851, 37.92% of total utility)
+
+Close EFX allocation #94 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [0, 6, 9] (Value: 19929, 33.13% of total utility)
+  Agent 1: [2, 3, 4, 5] (Value: 20448, 37.73% of total utility)
+  Agent 2: [1, 7, 8] (Value: 17587, 39.57% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #3 ====================
+Raw Utility Matrix:
+  Agent 0: [1576, 2170, 3226, 6295, 7142, 8954, 9461, 9534, 9790, 9894]
+  Agent 1: [400, 704, 2029, 2932, 3633, 5035, 7383, 8026, 8740, 9574]
+  Agent 2: [612, 996, 1696, 2500, 6103, 6139, 7948, 8138, 9122, 9485]
+Normalized Utility Matrix (rows sum to 1):
+  [0.02316, 0.03189, 0.04741, 0.09252, 0.10496, 0.13160, 0.13905, 0.14012, 0.14388, 0.14541]
+  [0.00825, 0.01453, 0.04187, 0.06051, 0.07498, 0.10391, 0.15237, 0.16563, 0.18037, 0.19758]
+  [0.01160, 0.01889, 0.03216, 0.04740, 0.11572, 0.11640, 0.15070, 0.15431, 0.17296, 0.17985]
+
+--- MM Allocations (1) ---
+  Agent 0: [1, 3, 4, 5]
+  Agent 1: [7, 9]
+  Agent 2: [0, 2, 6, 8]
+  Envy Edges: (1->2) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [1, 3, 4, 5] (Value: 24561, 36.10% of total utility)
+  Agent 1: [7, 9] (Value: 17600, 36.32% of total utility)
+  Agent 2: [0, 2, 6, 8] (Value: 19378, 36.74% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #192 (Pareto Optimal EFX #27, Not Min-optimal)
+  Agent 0: [1, 2, 3, 4, 5] (Value: 27787, 40.84% of total utility)
+  Agent 1: [7, 9] (Value: 17600, 36.32% of total utility)
+  Agent 2: [0, 6, 8] (Value: 17682, 33.53% of total utility)
+
+Close EFX allocation #197 (Pareto Optimal EFX #30, Not Min-optimal)
+  Agent 0: [1, 3, 4, 5] (Value: 24561, 36.10% of total utility)
+  Agent 1: [2, 7, 9] (Value: 19629, 40.51% of total utility)
+  Agent 2: [0, 6, 8] (Value: 17682, 33.53% of total utility)
+
+Close EFX allocation #200 (Pareto Optimal EFX #33, Not Min-optimal)
+  Agent 0: [0, 1, 3, 4, 5] (Value: 26137, 38.41% of total utility)
+  Agent 1: [7, 9] (Value: 17600, 36.32% of total utility)
+  Agent 2: [2, 6, 8] (Value: 18766, 35.58% of total utility)
+
+Close EFX allocation #201 (Pareto Optimal EFX #34, Not Min-optimal)
+  Agent 0: [1, 3, 4, 5] (Value: 24561, 36.10% of total utility)
+  Agent 1: [0, 7, 9] (Value: 18000, 37.15% of total utility)
+  Agent 2: [2, 6, 8] (Value: 18766, 35.58% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #4 ====================
+Raw Utility Matrix:
+  Agent 0: [247, 2636, 3417, 3841, 4379, 4896, 5000, 6599, 8621, 8731, 9677]
+  Agent 1: [544, 4126, 4372, 4668, 4829, 5225, 5273, 6235, 8589, 8810, 9240]
+  Agent 2: [621, 1089, 1141, 1636, 1665, 2796, 2940, 4655, 7997, 8905, 9350]
+Normalized Utility Matrix (rows sum to 1):
+  [0.00426, 0.04541, 0.05887, 0.06617, 0.07544, 0.08435, 0.08614, 0.11369, 0.14853, 0.15042, 0.16672]
+  [0.00879, 0.06664, 0.07062, 0.07540, 0.07800, 0.08440, 0.08517, 0.10071, 0.13873, 0.14230, 0.14925]
+  [0.01451, 0.02545, 0.02666, 0.03823, 0.03891, 0.06533, 0.06870, 0.10877, 0.18687, 0.20809, 0.21848]
+
+--- MM Allocations (1) ---
+  Agent 0: [0, 6, 7, 10]
+  Agent 1: [1, 2, 3, 4, 5]
+  Agent 2: [8, 9]
+  Envy Edges: (2->0) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [0, 6, 7, 10] (Value: 21523, 37.08% of total utility)
+  Agent 1: [1, 2, 3, 4, 5] (Value: 23220, 37.51% of total utility)
+  Agent 2: [8, 9] (Value: 16902, 39.50% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #238 (Pareto Optimal EFX #5, Not Min-optimal)
+  Agent 0: [6, 7, 10] (Value: 21276, 36.65% of total utility)
+  Agent 1: [0, 1, 2, 3, 4, 5] (Value: 23764, 38.38% of total utility)
+  Agent 2: [8, 9] (Value: 16902, 39.50% of total utility)
+
+Close EFX allocation #239 (Pareto Optimal EFX #6, Not Min-optimal)
+  Agent 0: [6, 7, 10] (Value: 21276, 36.65% of total utility)
+  Agent 1: [1, 2, 3, 4, 5] (Value: 23220, 37.51% of total utility)
+  Agent 2: [0, 8, 9] (Value: 17523, 40.95% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #5 ====================
+Raw Utility Matrix:
+  Agent 0: [344, 514, 720, 957, 1174, 1245, 1844, 2916, 4228, 5397, 6283]
+  Agent 1: [1151, 2167, 4627, 4792, 5431, 6541, 7014, 7147, 8108, 9390, 9873]
+  Agent 2: [2334, 2377, 3179, 3932, 4925, 5528, 5823, 6345, 9035, 9147, 9408]
+Normalized Utility Matrix (rows sum to 1):
+  [0.01343, 0.02006, 0.02810, 0.03735, 0.04582, 0.04859, 0.07197, 0.11381, 0.16501, 0.21064, 0.24522]
+  [0.01738, 0.03271, 0.06985, 0.07234, 0.08199, 0.09875, 0.10589, 0.10789, 0.12240, 0.14176, 0.14905]
+  [0.03763, 0.03832, 0.05125, 0.06339, 0.07939, 0.08911, 0.09387, 0.10228, 0.14565, 0.14745, 0.15166]
+
+--- MM Allocations (1) ---
+  Agent 0: [0, 7, 10]
+  Agent 1: [1, 2, 3, 5, 6]
+  Agent 2: [4, 8, 9]
+  Envy Edges: (0->2) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [0, 7, 10] (Value: 9543, 37.25% of total utility)
+  Agent 1: [1, 2, 3, 5, 6] (Value: 25141, 37.95% of total utility)
+  Agent 2: [4, 8, 9] (Value: 23107, 37.25% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #1108 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [0, 1, 7, 10] (Value: 10057, 39.25% of total utility)
+  Agent 1: [2, 3, 5, 6] (Value: 22974, 34.68% of total utility)
+  Agent 2: [4, 8, 9] (Value: 23107, 37.25% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #6 ====================
+Raw Utility Matrix:
+  Agent 0: [527, 571, 3876, 4300, 4716, 6106, 6840, 7105, 8510]
+  Agent 1: [1741, 3687, 3762, 6120, 6490, 8054, 8251, 8901, 9953]
+  Agent 2: [48, 156, 355, 853, 1084, 4606, 5834, 8997, 9574]
+  Agent 3: [638, 900, 1360, 2798, 3053, 3449, 5694, 6962, 8376]
+Normalized Utility Matrix (rows sum to 1):
+  [0.01239, 0.01342, 0.09109, 0.10106, 0.11083, 0.14350, 0.16075, 0.16698, 0.20000]
+  [0.03057, 0.06473, 0.06605, 0.10745, 0.11394, 0.14140, 0.14486, 0.15627, 0.17474]
+  [0.00152, 0.00495, 0.01127, 0.02707, 0.03441, 0.14619, 0.18517, 0.28556, 0.30387]
+  [0.01920, 0.02708, 0.04093, 0.08420, 0.09187, 0.10379, 0.17135, 0.20951, 0.25206]
+
+--- MM Allocations (1) ---
+  Agent 0: [5, 6]
+  Agent 1: [1, 3, 4]
+  Agent 2: [0, 7]
+  Agent 3: [2, 8]
+  Envy Edges: (1->0) (2->0) (2->3) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [5, 6] (Value: 12946, 30.42% of total utility)
+  Agent 1: [1, 3, 4] (Value: 16297, 28.61% of total utility)
+  Agent 2: [0, 7] (Value: 9045, 28.71% of total utility)
+  Agent 3: [2, 8] (Value: 9736, 29.30% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #359 (Pareto Optimal EFX #150, Not Min-optimal)
+  Agent 0: [5, 6] (Value: 12946, 30.42% of total utility)
+  Agent 1: [1, 2, 3, 4] (Value: 20059, 35.22% of total utility)
+  Agent 2: [0, 7] (Value: 9045, 28.71% of total utility)
+  Agent 3: [8] (Value: 8376, 25.21% of total utility)
+
+Close EFX allocation #363 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [5, 6] (Value: 12946, 30.42% of total utility)
+  Agent 1: [1, 3, 4] (Value: 16297, 28.61% of total utility)
+  Agent 2: [0, 2, 7] (Value: 9400, 29.83% of total utility)
+  Agent 3: [8] (Value: 8376, 25.21% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #7 ====================
+Raw Utility Matrix:
+  Agent 0: [34, 711, 988, 1990, 2482, 4333, 4484, 8868, 9830]
+  Agent 1: [2153, 3673, 3940, 4700, 4817, 6719, 7889, 9578, 9806]
+  Agent 2: [3591, 5370, 5535, 6673, 7070, 7903, 8020, 8780, 9962]
+  Agent 3: [740, 1285, 4778, 5366, 6812, 8253, 9424, 9493, 9967]
+Normalized Utility Matrix (rows sum to 1):
+  [0.00101, 0.02109, 0.02930, 0.05902, 0.07361, 0.12850, 0.13298, 0.26299, 0.29152]
+  [0.04041, 0.06894, 0.07396, 0.08822, 0.09042, 0.12612, 0.14808, 0.17978, 0.18406]
+  [0.05709, 0.08537, 0.08799, 0.10608, 0.11239, 0.12564, 0.12750, 0.13958, 0.15837]
+  [0.01319, 0.02290, 0.08514, 0.09562, 0.12139, 0.14707, 0.16793, 0.16916, 0.17761]
+
+--- MM Allocations (1) ---
+  Agent 0: [8]
+  Agent 1: [0, 2, 7]
+  Agent 2: [1, 3, 4]
+  Agent 3: [5, 6]
+  Envy Edges: (0->1) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [8] (Value: 9830, 29.15% of total utility)
+  Agent 1: [0, 2, 7] (Value: 15671, 29.42% of total utility)
+  Agent 2: [1, 3, 4] (Value: 19113, 30.38% of total utility)
+  Agent 3: [5, 6] (Value: 17677, 31.50% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #359 (Pareto Optimal EFX #180, Not Min-optimal)
+  Agent 0: [2, 8] (Value: 10818, 32.08% of total utility)
+  Agent 1: [0, 7] (Value: 11731, 22.02% of total utility)
+  Agent 2: [1, 3, 4] (Value: 19113, 30.38% of total utility)
+  Agent 3: [5, 6] (Value: 17677, 31.50% of total utility)
+
+Close EFX allocation #361 (Pareto Optimal EFX #182, Not Min-optimal)
+  Agent 0: [0, 8] (Value: 9864, 29.25% of total utility)
+  Agent 1: [2, 7] (Value: 13518, 25.37% of total utility)
+  Agent 2: [1, 3, 4] (Value: 19113, 30.38% of total utility)
+  Agent 3: [5, 6] (Value: 17677, 31.50% of total utility)
+
+Close EFX allocation #362 (Pareto Optimal EFX #183, Not Min-optimal)
+  Agent 0: [8] (Value: 9830, 29.15% of total utility)
+  Agent 1: [2, 7] (Value: 13518, 25.37% of total utility)
+  Agent 2: [0, 1, 3, 4] (Value: 22704, 36.09% of total utility)
+  Agent 3: [5, 6] (Value: 17677, 31.50% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #8 ====================
+Raw Utility Matrix:
+  Agent 0: [121, 721, 4126, 4445, 5329, 7411, 9605, 9624, 9729]
+  Agent 1: [722, 1355, 2445, 3148, 3330, 3625, 3637, 4043, 8945]
+  Agent 2: [382, 596, 4009, 4655, 5482, 7752, 7831, 8504, 8725]
+  Agent 3: [8, 234, 1658, 1836, 3658, 3797, 6344, 6932, 9668]
+Normalized Utility Matrix (rows sum to 1):
+  [0.00237, 0.01411, 0.08073, 0.08697, 0.10426, 0.14500, 0.18792, 0.18830, 0.19035]
+  [0.02310, 0.04336, 0.07824, 0.10074, 0.10656, 0.11600, 0.11638, 0.12938, 0.28624]
+  [0.00797, 0.01243, 0.08363, 0.09711, 0.11436, 0.16172, 0.16336, 0.17740, 0.18201]
+  [0.00023, 0.00686, 0.04857, 0.05379, 0.10716, 0.11123, 0.18585, 0.20308, 0.28323]
+
+--- MM Allocations (1) ---
+  Agent 0: [3, 6]
+  Agent 1: [0, 1, 2, 7]
+  Agent 2: [4, 5]
+  Agent 3: [8]
+  Envy Edges: (0->1) (1->3) (2->1) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [3, 6] (Value: 14050, 27.49% of total utility)
+  Agent 1: [0, 1, 2, 7] (Value: 8565, 27.41% of total utility)
+  Agent 2: [4, 5] (Value: 13234, 27.61% of total utility)
+  Agent 3: [8] (Value: 9668, 28.32% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #227 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [1, 3, 6] (Value: 14771, 28.90% of total utility)
+  Agent 1: [0, 2, 7] (Value: 7210, 23.07% of total utility)
+  Agent 2: [4, 5] (Value: 13234, 27.61% of total utility)
+  Agent 3: [8] (Value: 9668, 28.32% of total utility)
+
+Close EFX allocation #228 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [0, 3, 6] (Value: 14171, 27.73% of total utility)
+  Agent 1: [1, 2, 7] (Value: 7843, 25.10% of total utility)
+  Agent 2: [4, 5] (Value: 13234, 27.61% of total utility)
+  Agent 3: [8] (Value: 9668, 28.32% of total utility)
+
+Close EFX allocation #229 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [3, 6] (Value: 14050, 27.49% of total utility)
+  Agent 1: [1, 2, 7] (Value: 7843, 25.10% of total utility)
+  Agent 2: [0, 4, 5] (Value: 13616, 28.40% of total utility)
+  Agent 3: [8] (Value: 9668, 28.32% of total utility)
+
+Close EFX allocation #230 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [3, 6] (Value: 14050, 27.49% of total utility)
+  Agent 1: [0, 2, 7] (Value: 7210, 23.07% of total utility)
+  Agent 2: [1, 4, 5] (Value: 13830, 28.85% of total utility)
+  Agent 3: [8] (Value: 9668, 28.32% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #9 ====================
+Raw Utility Matrix:
+  Agent 0: [178, 963, 1294, 1902, 2875, 3416, 3490, 6368, 8551, 9789]
+  Agent 1: [1204, 2151, 2371, 2638, 3689, 4419, 6402, 7593, 9393, 9561]
+  Agent 2: [727, 3818, 4837, 6460, 6724, 6948, 7573, 8358, 8400, 8588]
+  Agent 3: [800, 1601, 2165, 3968, 5106, 5246, 5604, 6358, 6682, 9337]
+Normalized Utility Matrix (rows sum to 1):
+  [0.00458, 0.02480, 0.03333, 0.04899, 0.07405, 0.08798, 0.08989, 0.16401, 0.22024, 0.25212]
+  [0.02436, 0.04352, 0.04798, 0.05338, 0.07464, 0.08942, 0.12954, 0.15364, 0.19006, 0.19346]
+  [0.01164, 0.06115, 0.07748, 0.10347, 0.10770, 0.11129, 0.12130, 0.13387, 0.13454, 0.13756]
+  [0.01707, 0.03416, 0.04619, 0.08467, 0.10895, 0.11193, 0.11957, 0.13566, 0.14257, 0.19922]
+
+--- MM Allocations (2) ---
+  Agent 0: [2, 9]
+  Agent 1: [5, 8]
+  Agent 2: [1, 3, 4]
+  Agent 3: [0, 6, 7]
+  Envy Edges: (0->1) (1->3) 
+
+  Agent 0: [1, 9]
+  Agent 1: [5, 8]
+  Agent 2: [2, 3, 4]
+  Agent 3: [0, 6, 7]
+  Envy Edges: (0->1) (1->3) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [2, 9] (Value: 11083, 28.55% of total utility)
+  Agent 1: [5, 8] (Value: 13812, 27.95% of total utility)
+  Agent 2: [1, 3, 4] (Value: 17002, 27.23% of total utility)
+  Agent 3: [0, 6, 7] (Value: 12762, 27.23% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #675 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [0, 2, 9] (Value: 11261, 29.00% of total utility)
+  Agent 1: [5, 8] (Value: 13812, 27.95% of total utility)
+  Agent 2: [1, 3, 4] (Value: 17002, 27.23% of total utility)
+  Agent 3: [6, 7] (Value: 11962, 25.52% of total utility)
+
+Close EFX allocation #676 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [2, 9] (Value: 11083, 28.55% of total utility)
+  Agent 1: [5, 8] (Value: 13812, 27.95% of total utility)
+  Agent 2: [0, 1, 3, 4] (Value: 17729, 28.40% of total utility)
+  Agent 3: [6, 7] (Value: 11962, 25.52% of total utility)
+
+MM Allocation:
+  Agent 0: [1, 9] (Value: 10752, 27.69% of total utility)
+  Agent 1: [5, 8] (Value: 13812, 27.95% of total utility)
+  Agent 2: [2, 3, 4] (Value: 18021, 28.86% of total utility)
+  Agent 3: [0, 6, 7] (Value: 12762, 27.23% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #677 (Pareto Optimal EFX #320, Not Min-optimal)
+  Agent 0: [0, 1, 9] (Value: 10930, 28.15% of total utility)
+  Agent 1: [5, 8] (Value: 13812, 27.95% of total utility)
+  Agent 2: [2, 3, 4] (Value: 18021, 28.86% of total utility)
+  Agent 3: [6, 7] (Value: 11962, 25.52% of total utility)
+
+Close EFX allocation #678 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [1, 9] (Value: 10752, 27.69% of total utility)
+  Agent 1: [5, 8] (Value: 13812, 27.95% of total utility)
+  Agent 2: [0, 2, 3, 4] (Value: 18748, 30.03% of total utility)
+  Agent 3: [6, 7] (Value: 11962, 25.52% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #10 ====================
+Raw Utility Matrix:
+  Agent 0: [145, 320, 764, 1062, 3265, 3463, 3873, 5546, 8493, 9121]
+  Agent 1: [1959, 2800, 3817, 5159, 5390, 6572, 6838, 8402, 9714, 9802]
+  Agent 2: [1355, 2455, 3254, 4211, 4480, 5027, 5265, 7622, 7988, 9433]
+  Agent 3: [633, 1412, 1733, 2133, 4365, 5606, 6586, 7240, 7290, 9596]
+Normalized Utility Matrix (rows sum to 1):
+  [0.00402, 0.00888, 0.02119, 0.02946, 0.09056, 0.09606, 0.10743, 0.15383, 0.23558, 0.25300]
+  [0.03241, 0.04632, 0.06314, 0.08534, 0.08916, 0.10871, 0.11311, 0.13898, 0.16069, 0.16214]
+  [0.02652, 0.04805, 0.06369, 0.08242, 0.08769, 0.09839, 0.10305, 0.14919, 0.15635, 0.18463]
+  [0.01359, 0.03030, 0.03719, 0.04578, 0.09368, 0.12032, 0.14135, 0.15538, 0.15646, 0.20595]
+
+--- MM Allocations (1) ---
+  Agent 0: [1, 9]
+  Agent 1: [2, 4, 6]
+  Agent 2: [0, 3, 8]
+  Agent 3: [5, 7]
+  Envy Edges: (0->2) (1->2) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [1, 9] (Value: 9441, 26.19% of total utility)
+  Agent 1: [2, 4, 6] (Value: 16045, 26.54% of total utility)
+  Agent 2: [0, 3, 8] (Value: 13554, 26.53% of total utility)
+  Agent 3: [5, 7] (Value: 12846, 27.57% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #747 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [0, 1, 9] (Value: 9586, 26.59% of total utility)
+  Agent 1: [2, 4, 6] (Value: 16045, 26.54% of total utility)
+  Agent 2: [3, 8] (Value: 12199, 23.88% of total utility)
+  Agent 3: [5, 7] (Value: 12846, 27.57% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #11 ====================
+Raw Utility Matrix:
+  Agent 0: [156, 916, 2549, 3530, 3708, 6258, 6724, 7508, 8494, 9301]
+  Agent 1: [14, 182, 906, 1775, 3155, 3732, 4171, 6132, 7196, 7575]
+  Agent 2: [615, 1603, 2518, 2907, 3302, 6490, 8182, 8258, 9204, 9674]
+  Agent 3: [970, 3126, 3445, 4044, 4882, 5843, 6586, 7640, 9295, 9633]
+Normalized Utility Matrix (rows sum to 1):
+  [0.00317, 0.01864, 0.05187, 0.07183, 0.07545, 0.12734, 0.13682, 0.15278, 0.17284, 0.18926]
+  [0.00040, 0.00522, 0.02601, 0.05095, 0.09056, 0.10712, 0.11973, 0.17601, 0.20656, 0.21743]
+  [0.01166, 0.03039, 0.04773, 0.05511, 0.06259, 0.12303, 0.15510, 0.15654, 0.17447, 0.18338]
+  [0.01749, 0.05636, 0.06211, 0.07291, 0.08802, 0.10535, 0.11874, 0.13775, 0.16759, 0.17368]
+
+--- MM Allocations (1) ---
+  Agent 0: [0, 3, 9]
+  Agent 1: [4, 7]
+  Agent 2: [5, 6]
+  Agent 3: [1, 2, 8]
+  Envy Edges: (1->0) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [0, 3, 9] (Value: 12987, 26.43% of total utility)
+  Agent 1: [4, 7] (Value: 9287, 26.66% of total utility)
+  Agent 2: [5, 6] (Value: 14672, 27.81% of total utility)
+  Agent 3: [1, 2, 8] (Value: 15866, 28.61% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #430 (Pareto Optimal EFX #179, Min-optimal)
+  Agent 0: [3, 9] (Value: 12831, 26.11% of total utility)
+  Agent 1: [0, 4, 7] (Value: 9301, 26.70% of total utility)
+  Agent 2: [5, 6] (Value: 14672, 27.81% of total utility)
+  Agent 3: [1, 2, 8] (Value: 15866, 28.61% of total utility)
+
+Close EFX allocation #431 (Pareto Optimal EFX #180, Min-optimal)
+  Agent 0: [3, 9] (Value: 12831, 26.11% of total utility)
+  Agent 1: [4, 7] (Value: 9287, 26.66% of total utility)
+  Agent 2: [5, 6] (Value: 14672, 27.81% of total utility)
+  Agent 3: [0, 1, 2, 8] (Value: 16836, 30.35% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #12 ====================
+Raw Utility Matrix:
+  Agent 0: [125, 697, 4041, 4168, 4545, 7092, 7427, 8005, 8154, 9979]
+  Agent 1: [580, 670, 1645, 2077, 6525, 7561, 7613, 8544, 8710, 9912]
+  Agent 2: [624, 1630, 3102, 3602, 6153, 6452, 6816, 7890, 9696, 9899]
+  Agent 3: [467, 1733, 1889, 3276, 3776, 4724, 4928, 5779, 8401, 8473]
+Normalized Utility Matrix (rows sum to 1):
+  [0.00230, 0.01285, 0.07451, 0.07685, 0.08381, 0.13077, 0.13695, 0.14760, 0.15035, 0.18400]
+  [0.01077, 0.01244, 0.03056, 0.03858, 0.12120, 0.14044, 0.14141, 0.15870, 0.16178, 0.18411]
+  [0.01117, 0.02918, 0.05553, 0.06448, 0.11014, 0.11549, 0.12201, 0.14124, 0.17356, 0.17720]
+  [0.01075, 0.03989, 0.04348, 0.07540, 0.08691, 0.10873, 0.11343, 0.13302, 0.19337, 0.19502]
+
+--- MM Allocations (2) ---
+  Agent 0: [5, 6]
+  Agent 1: [4, 7]
+  Agent 2: [0, 1, 2, 9]
+  Agent 3: [3, 8]
+  Envy Edges: (0->2) (1->0) (3->2) 
+
+  Agent 0: [5, 6]
+  Agent 1: [4, 7]
+  Agent 2: [0, 1, 2, 8]
+  Agent 3: [3, 9]
+  Envy Edges: (1->0) (3->2) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [5, 6] (Value: 14519, 26.77% of total utility)
+  Agent 1: [4, 7] (Value: 15069, 27.99% of total utility)
+  Agent 2: [0, 1, 2, 9] (Value: 15255, 27.31% of total utility)
+  Agent 3: [3, 8] (Value: 11677, 26.88% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #1423 (Pareto Optimal EFX #404, Not Min-optimal)
+  Agent 0: [5, 6] (Value: 14519, 26.77% of total utility)
+  Agent 1: [0, 4, 7] (Value: 15649, 29.07% of total utility)
+  Agent 2: [1, 2, 9] (Value: 14631, 26.19% of total utility)
+  Agent 3: [3, 8] (Value: 11677, 26.88% of total utility)
+
+Close EFX allocation #1424 (Pareto Optimal EFX #405, Not Min-optimal)
+  Agent 0: [5, 6] (Value: 14519, 26.77% of total utility)
+  Agent 1: [4, 7] (Value: 15069, 27.99% of total utility)
+  Agent 2: [1, 2, 9] (Value: 14631, 26.19% of total utility)
+  Agent 3: [0, 3, 8] (Value: 12144, 27.95% of total utility)
+
+Close EFX allocation #1425 (Pareto Optimal EFX #406, Not Min-optimal)
+  Agent 0: [5, 6] (Value: 14519, 26.77% of total utility)
+  Agent 1: [4, 7] (Value: 15069, 27.99% of total utility)
+  Agent 2: [0, 2, 9] (Value: 13625, 24.39% of total utility)
+  Agent 3: [1, 3, 8] (Value: 13410, 30.87% of total utility)
+
+MM Allocation:
+  Agent 0: [5, 6] (Value: 14519, 26.77% of total utility)
+  Agent 1: [4, 7] (Value: 15069, 27.99% of total utility)
+  Agent 2: [0, 1, 2, 8] (Value: 15052, 26.94% of total utility)
+  Agent 3: [3, 9] (Value: 11749, 27.04% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #2025 (Pareto Optimal EFX #571, Not Min-optimal)
+  Agent 0: [5, 6] (Value: 14519, 26.77% of total utility)
+  Agent 1: [0, 4, 7] (Value: 15649, 29.07% of total utility)
+  Agent 2: [1, 2, 8] (Value: 14428, 25.83% of total utility)
+  Agent 3: [3, 9] (Value: 11749, 27.04% of total utility)
+
+Close EFX allocation #2026 (Pareto Optimal EFX #572, Not Min-optimal)
+  Agent 0: [5, 6] (Value: 14519, 26.77% of total utility)
+  Agent 1: [4, 7] (Value: 15069, 27.99% of total utility)
+  Agent 2: [1, 2, 8] (Value: 14428, 25.83% of total utility)
+  Agent 3: [0, 3, 9] (Value: 12216, 28.12% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #13 ====================
+Raw Utility Matrix:
+  Agent 0: [112, 426, 2202, 3028, 3136, 4413, 4730, 4746, 8839, 9491]
+  Agent 1: [560, 1615, 5118, 6156, 7371, 8021, 8692, 8931, 9735, 9853]
+  Agent 2: [456, 1133, 1617, 5534, 6053, 6536, 7463, 8050, 8395, 8971]
+  Agent 3: [322, 2659, 4341, 4450, 4864, 5056, 6255, 6321, 7275, 7679]
+Normalized Utility Matrix (rows sum to 1):
+  [0.00272, 0.01036, 0.05355, 0.07363, 0.07626, 0.10731, 0.11502, 0.11541, 0.21494, 0.23080]
+  [0.00848, 0.02445, 0.07748, 0.09320, 0.11159, 0.12143, 0.13159, 0.13521, 0.14738, 0.14917]
+  [0.00841, 0.02090, 0.02983, 0.10209, 0.11166, 0.12057, 0.13767, 0.14850, 0.15487, 0.16549]
+  [0.00654, 0.05402, 0.08819, 0.09041, 0.09882, 0.10272, 0.12708, 0.12842, 0.14780, 0.15601]
+
+--- MM Allocations (1) ---
+  Agent 0: [3, 8]
+  Agent 1: [0, 4, 9]
+  Agent 2: [5, 7]
+  Agent 3: [1, 2, 6]
+  Envy Edges: (0->1) (2->1) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [3, 8] (Value: 11867, 28.86% of total utility)
+  Agent 1: [0, 4, 9] (Value: 17784, 26.92% of total utility)
+  Agent 2: [5, 7] (Value: 14586, 26.91% of total utility)
+  Agent 3: [1, 2, 6] (Value: 13255, 26.93% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #1266 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [0, 3, 8] (Value: 11979, 29.13% of total utility)
+  Agent 1: [4, 9] (Value: 17224, 26.08% of total utility)
+  Agent 2: [5, 7] (Value: 14586, 26.91% of total utility)
+  Agent 3: [1, 2, 6] (Value: 13255, 26.93% of total utility)
+
+Close EFX allocation #1267 (Pareto Optimal EFX #561, Not Min-optimal)
+  Agent 0: [3, 8] (Value: 11867, 28.86% of total utility)
+  Agent 1: [4, 9] (Value: 17224, 26.08% of total utility)
+  Agent 2: [0, 5, 7] (Value: 15042, 27.75% of total utility)
+  Agent 3: [1, 2, 6] (Value: 13255, 26.93% of total utility)
+
+Close EFX allocation #1268 (Pareto Optimal EFX #562, Not Min-optimal)
+  Agent 0: [3, 8] (Value: 11867, 28.86% of total utility)
+  Agent 1: [4, 9] (Value: 17224, 26.08% of total utility)
+  Agent 2: [5, 7] (Value: 14586, 26.91% of total utility)
+  Agent 3: [0, 1, 2, 6] (Value: 13577, 27.58% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #14 ====================
+Raw Utility Matrix:
+  Agent 0: [696, 1388, 4854, 5328, 6573, 6824, 7134, 8936, 9902, 9946]
+  Agent 1: [749, 1539, 1569, 1682, 2234, 3163, 5258, 5704, 6890, 8327]
+  Agent 2: [697, 2579, 4179, 4322, 4449, 5045, 5701, 7024, 7483, 9602]
+  Agent 3: [243, 1855, 2532, 2549, 2770, 3815, 4712, 6847, 7418, 8482]
+Normalized Utility Matrix (rows sum to 1):
+  [0.01130, 0.02254, 0.07882, 0.08652, 0.10674, 0.11081, 0.11585, 0.14511, 0.16080, 0.16151]
+  [0.02018, 0.04147, 0.04227, 0.04532, 0.06019, 0.08522, 0.14167, 0.15368, 0.18564, 0.22436]
+  [0.01364, 0.05049, 0.08181, 0.08461, 0.08710, 0.09876, 0.11161, 0.13751, 0.14649, 0.18798]
+  [0.00589, 0.04500, 0.06142, 0.06183, 0.06720, 0.09255, 0.11431, 0.16610, 0.17995, 0.20576]
+
+--- MM Allocations (2) ---
+  Agent 0: [5, 8]
+  Agent 1: [1, 9]
+  Agent 2: [0, 2, 3, 4]
+  Agent 3: [6, 7]
+  Envy Edges: (0->2) (1->0) (1->3) 
+
+  Agent 0: [4, 8]
+  Agent 1: [1, 9]
+  Agent 2: [0, 2, 3, 5]
+  Agent 3: [6, 7]
+  Envy Edges: (0->2) (1->3) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [5, 8] (Value: 16726, 27.16% of total utility)
+  Agent 1: [1, 9] (Value: 9866, 26.58% of total utility)
+  Agent 2: [0, 2, 3, 4] (Value: 13647, 26.72% of total utility)
+  Agent 3: [6, 7] (Value: 11559, 28.04% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #606 (Pareto Optimal EFX #48, Not Min-optimal)
+  Agent 0: [5, 8] (Value: 16726, 27.16% of total utility)
+  Agent 1: [0, 1, 9] (Value: 10615, 28.60% of total utility)
+  Agent 2: [2, 3, 4] (Value: 12950, 25.35% of total utility)
+  Agent 3: [6, 7] (Value: 11559, 28.04% of total utility)
+
+MM Allocation:
+  Agent 0: [4, 8] (Value: 16475, 26.75% of total utility)
+  Agent 1: [1, 9] (Value: 9866, 26.58% of total utility)
+  Agent 2: [0, 2, 3, 5] (Value: 14243, 27.88% of total utility)
+  Agent 3: [6, 7] (Value: 11559, 28.04% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #614 (Pareto Optimal EFX #54, Min-optimal)
+  Agent 0: [0, 4, 8] (Value: 17171, 27.88% of total utility)
+  Agent 1: [1, 9] (Value: 9866, 26.58% of total utility)
+  Agent 2: [2, 3, 5] (Value: 13546, 26.52% of total utility)
+  Agent 3: [6, 7] (Value: 11559, 28.04% of total utility)
+
+Close EFX allocation #615 (Pareto Optimal EFX #55, Min-optimal)
+  Agent 0: [4, 8] (Value: 16475, 26.75% of total utility)
+  Agent 1: [0, 1, 9] (Value: 10615, 28.60% of total utility)
+  Agent 2: [2, 3, 5] (Value: 13546, 26.52% of total utility)
+  Agent 3: [6, 7] (Value: 11559, 28.04% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #15 ====================
+Raw Utility Matrix:
+  Agent 0: [349, 615, 643, 1501, 1605, 3080, 4933, 6242, 8733, 9601]
+  Agent 1: [208, 492, 3044, 4934, 5095, 6346, 6468, 6861, 9369, 9844]
+  Agent 2: [621, 1785, 2468, 2765, 4279, 5990, 6223, 8015, 9029, 9982]
+  Agent 3: [96, 848, 1477, 2348, 3428, 4682, 5852, 8037, 8598, 9311]
+  Agent 4: [2074, 2110, 3058, 4458, 5867, 6526, 7830, 7969, 8069, 8533]
+Normalized Utility Matrix (rows sum to 1):
+  [0.00936, 0.01649, 0.01724, 0.04024, 0.04303, 0.08257, 0.13224, 0.16734, 0.23412, 0.25739]
+  [0.00395, 0.00934, 0.05780, 0.09369, 0.09675, 0.12051, 0.12282, 0.13029, 0.17791, 0.18693]
+  [0.01214, 0.03489, 0.04824, 0.05405, 0.08364, 0.11709, 0.12165, 0.15667, 0.17650, 0.19512]
+  [0.00215, 0.01898, 0.03306, 0.05256, 0.07673, 0.10480, 0.13098, 0.17989, 0.19245, 0.20841]
+  [0.03671, 0.03735, 0.05413, 0.07891, 0.10385, 0.11552, 0.13860, 0.14106, 0.14283, 0.15104]
+
+--- MM Allocations (1) ---
+  Agent 0: [8]
+  Agent 1: [4, 5]
+  Agent 2: [1, 9]
+  Agent 3: [3, 7]
+  Agent 4: [0, 2, 6]
+  Envy Edges: (0->2) (1->3) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [8] (Value: 8733, 23.41% of total utility)
+  Agent 1: [4, 5] (Value: 11441, 21.73% of total utility)
+  Agent 2: [1, 9] (Value: 11767, 23.00% of total utility)
+  Agent 3: [3, 7] (Value: 10385, 23.24% of total utility)
+  Agent 4: [0, 2, 6] (Value: 12962, 22.94% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #1116 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [1, 8] (Value: 9348, 25.06% of total utility)
+  Agent 1: [4, 5] (Value: 11441, 21.73% of total utility)
+  Agent 2: [9] (Value: 9982, 19.51% of total utility)
+  Agent 3: [3, 7] (Value: 10385, 23.24% of total utility)
+  Agent 4: [0, 2, 6] (Value: 12962, 22.94% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #16 ====================
+Raw Utility Matrix:
+  Agent 0: [2562, 3218, 4010, 4191, 4864, 4896, 6546, 7185, 9465, 9597]
+  Agent 1: [275, 1444, 2268, 2998, 3020, 3049, 3674, 4648, 8428, 8651]
+  Agent 2: [609, 1201, 3484, 4233, 4618, 5541, 6262, 6677, 6728, 8527]
+  Agent 3: [354, 569, 1122, 3108, 4465, 5263, 8107, 8296, 8441, 9218]
+  Agent 4: [531, 843, 1235, 2680, 4635, 5864, 6069, 8251, 9321, 9973]
+Normalized Utility Matrix (rows sum to 1):
+  [0.04532, 0.05692, 0.07093, 0.07413, 0.08604, 0.08660, 0.11579, 0.12709, 0.16742, 0.16976]
+  [0.00715, 0.03755, 0.05898, 0.07796, 0.07853, 0.07929, 0.09554, 0.12087, 0.21917, 0.22496]
+  [0.01272, 0.02508, 0.07277, 0.08841, 0.09645, 0.11573, 0.13079, 0.13945, 0.14052, 0.17809]
+  [0.00723, 0.01163, 0.02292, 0.06350, 0.09123, 0.10753, 0.16564, 0.16950, 0.17247, 0.18834]
+  [0.01075, 0.01706, 0.02500, 0.05425, 0.09382, 0.11870, 0.12285, 0.16702, 0.18868, 0.20187]
+
+--- MM Allocations (3) ---
+  Agent 0: [0, 9]
+  Agent 1: [8]
+  Agent 2: [1, 2, 5]
+  Agent 3: [3, 7]
+  Agent 4: [4, 6]
+  Envy Edges: (1->0) (2->3) (2->4) (3->4) (4->3) 
+
+  Agent 0: [0, 9]
+  Agent 1: [8]
+  Agent 2: [1, 2, 5]
+  Agent 3: [4, 6]
+  Agent 4: [3, 7]
+  Envy Edges: (1->0) (2->3) (2->4) 
+
+  Agent 0: [0, 9]
+  Agent 1: [8]
+  Agent 2: [1, 2, 5]
+  Agent 3: [3, 6]
+  Agent 4: [4, 7]
+  Envy Edges: (1->0) (2->3) (2->4) (3->4) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [0, 9] (Value: 12159, 21.51% of total utility)
+  Agent 1: [8] (Value: 8428, 21.92% of total utility)
+  Agent 2: [1, 2, 5] (Value: 10226, 21.36% of total utility)
+  Agent 3: [3, 7] (Value: 11404, 23.30% of total utility)
+  Agent 4: [4, 6] (Value: 10704, 21.67% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #42 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [0, 9] (Value: 12159, 21.51% of total utility)
+  Agent 1: [1, 8] (Value: 9872, 25.67% of total utility)
+  Agent 2: [2, 5] (Value: 9025, 18.85% of total utility)
+  Agent 3: [3, 7] (Value: 11404, 23.30% of total utility)
+  Agent 4: [4, 6] (Value: 10704, 21.67% of total utility)
+
+Close EFX allocation #44 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [9] (Value: 9597, 16.98% of total utility)
+  Agent 1: [0, 8] (Value: 8703, 22.63% of total utility)
+  Agent 2: [1, 2, 5] (Value: 10226, 21.36% of total utility)
+  Agent 3: [3, 7] (Value: 11404, 23.30% of total utility)
+  Agent 4: [4, 6] (Value: 10704, 21.67% of total utility)
+
+MM Allocation:
+  Agent 0: [0, 9] (Value: 12159, 21.51% of total utility)
+  Agent 1: [8] (Value: 8428, 21.92% of total utility)
+  Agent 2: [1, 2, 5] (Value: 10226, 21.36% of total utility)
+  Agent 3: [4, 6] (Value: 12572, 25.69% of total utility)
+  Agent 4: [3, 7] (Value: 10931, 22.13% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #86 (Pareto Optimal EFX #18, Not Min-optimal)
+  Agent 0: [0, 9] (Value: 12159, 21.51% of total utility)
+  Agent 1: [1, 8] (Value: 9872, 25.67% of total utility)
+  Agent 2: [2, 5] (Value: 9025, 18.85% of total utility)
+  Agent 3: [4, 6] (Value: 12572, 25.69% of total utility)
+  Agent 4: [3, 7] (Value: 10931, 22.13% of total utility)
+
+Close EFX allocation #88 (Pareto Optimal EFX #19, Not Min-optimal)
+  Agent 0: [9] (Value: 9597, 16.98% of total utility)
+  Agent 1: [0, 8] (Value: 8703, 22.63% of total utility)
+  Agent 2: [1, 2, 5] (Value: 10226, 21.36% of total utility)
+  Agent 3: [4, 6] (Value: 12572, 25.69% of total utility)
+  Agent 4: [3, 7] (Value: 10931, 22.13% of total utility)
+
+MM Allocation:
+  Agent 0: [0, 9] (Value: 12159, 21.51% of total utility)
+  Agent 1: [8] (Value: 8428, 21.92% of total utility)
+  Agent 2: [1, 2, 5] (Value: 10226, 21.36% of total utility)
+  Agent 3: [3, 6] (Value: 11215, 22.91% of total utility)
+  Agent 4: [4, 7] (Value: 12886, 26.08% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #102 (Pareto Optimal EFX #26, Not Min-optimal)
+  Agent 0: [0, 9] (Value: 12159, 21.51% of total utility)
+  Agent 1: [1, 8] (Value: 9872, 25.67% of total utility)
+  Agent 2: [2, 5] (Value: 9025, 18.85% of total utility)
+  Agent 3: [3, 6] (Value: 11215, 22.91% of total utility)
+  Agent 4: [4, 7] (Value: 12886, 26.08% of total utility)
+
+Close EFX allocation #104 (Pareto Optimal EFX #28, Not Min-optimal)
+  Agent 0: [9] (Value: 9597, 16.98% of total utility)
+  Agent 1: [0, 8] (Value: 8703, 22.63% of total utility)
+  Agent 2: [1, 2, 5] (Value: 10226, 21.36% of total utility)
+  Agent 3: [3, 6] (Value: 11215, 22.91% of total utility)
+  Agent 4: [4, 7] (Value: 12886, 26.08% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #17 ====================
+Raw Utility Matrix:
+  Agent 0: [204, 1503, 2415, 3311, 5166, 5535, 7953, 8289, 9115, 9956]
+  Agent 1: [1414, 3735, 4458, 5286, 6229, 7825, 8181, 8409, 8529, 9347]
+  Agent 2: [271, 1816, 3886, 5035, 5210, 6764, 7820, 7834, 8160, 8390]
+  Agent 3: [137, 996, 2200, 2388, 2563, 3585, 5491, 6704, 7382, 8257]
+  Agent 4: [433, 734, 1428, 1982, 2269, 2817, 3365, 4896, 8529, 8849]
+Normalized Utility Matrix (rows sum to 1):
+  [0.00382, 0.02812, 0.04518, 0.06195, 0.09666, 0.10356, 0.14880, 0.15509, 0.17054, 0.18628]
+  [0.02230, 0.05890, 0.07030, 0.08336, 0.09823, 0.12340, 0.12901, 0.13261, 0.13450, 0.14740]
+  [0.00491, 0.03291, 0.07042, 0.09124, 0.09441, 0.12257, 0.14170, 0.14196, 0.14786, 0.15203]
+  [0.00345, 0.02509, 0.05541, 0.06015, 0.06455, 0.09030, 0.13830, 0.16885, 0.18593, 0.20797]
+  [0.01227, 0.02079, 0.04045, 0.05614, 0.06427, 0.07980, 0.09532, 0.13869, 0.24160, 0.25067]
+
+--- MM Allocations (1) ---
+  Agent 0: [0, 1, 9]
+  Agent 1: [4, 5]
+  Agent 2: [3, 6]
+  Agent 3: [2, 7]
+  Agent 4: [8]
+  Envy Edges: (1->0) (3->0) (4->0) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [0, 1, 9] (Value: 11663, 21.82% of total utility)
+  Agent 1: [4, 5] (Value: 14054, 22.16% of total utility)
+  Agent 2: [3, 6] (Value: 12855, 23.29% of total utility)
+  Agent 3: [2, 7] (Value: 8904, 22.43% of total utility)
+  Agent 4: [8] (Value: 8529, 24.16% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #351 (Pareto Optimal EFX #90, Min-optimal)
+  Agent 0: [1, 9] (Value: 11459, 21.44% of total utility)
+  Agent 1: [4, 5] (Value: 14054, 22.16% of total utility)
+  Agent 2: [3, 6] (Value: 12855, 23.29% of total utility)
+  Agent 3: [2, 7] (Value: 8904, 22.43% of total utility)
+  Agent 4: [0, 8] (Value: 8962, 25.39% of total utility)
+
+Close EFX allocation #352 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [0, 9] (Value: 10160, 19.01% of total utility)
+  Agent 1: [4, 5] (Value: 14054, 22.16% of total utility)
+  Agent 2: [3, 6] (Value: 12855, 23.29% of total utility)
+  Agent 3: [2, 7] (Value: 8904, 22.43% of total utility)
+  Agent 4: [1, 8] (Value: 9263, 26.24% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #18 ====================
+Raw Utility Matrix:
+  Agent 0: [415, 624, 647, 1049, 5222, 5690, 5939, 6208, 8664, 9169]
+  Agent 1: [201, 1676, 1784, 2355, 2391, 3750, 4090, 5023, 7815, 8498]
+  Agent 2: [129, 1222, 1354, 1429, 1560, 2047, 7599, 8001, 8420, 9382]
+  Agent 3: [1553, 3438, 6941, 6960, 7606, 8031, 9119, 9277, 9520, 9739]
+  Agent 4: [327, 416, 438, 713, 1728, 2719, 6040, 7060, 9336, 9558]
+Normalized Utility Matrix (rows sum to 1):
+  [0.00951, 0.01430, 0.01483, 0.02404, 0.11970, 0.13042, 0.13613, 0.14230, 0.19859, 0.21017]
+  [0.00535, 0.04459, 0.04747, 0.06266, 0.06362, 0.09978, 0.10883, 0.13365, 0.20794, 0.22611]
+  [0.00314, 0.02970, 0.03291, 0.03473, 0.03792, 0.04975, 0.18470, 0.19447, 0.20465, 0.22803]
+  [0.02151, 0.04763, 0.09616, 0.09642, 0.10537, 0.11126, 0.12633, 0.12852, 0.13189, 0.13492]
+  [0.00853, 0.01085, 0.01143, 0.01860, 0.04508, 0.07093, 0.15756, 0.18417, 0.24354, 0.24933]
+
+--- MM Allocations (4) ---
+  Agent 0: [4, 7]
+  Agent 1: [0, 9]
+  Agent 2: [5, 6]
+  Agent 3: [1, 2, 3]
+  Agent 4: [8]
+  Envy Edges: (0->2) (4->1) 
+
+  Agent 0: [5, 6]
+  Agent 1: [0, 9]
+  Agent 2: [4, 7]
+  Agent 3: [1, 2, 3]
+  Agent 4: [8]
+  Envy Edges: (2->0) (4->1) 
+
+  Agent 0: [4, 6]
+  Agent 1: [0, 9]
+  Agent 2: [5, 7]
+  Agent 3: [1, 2, 3]
+  Agent 4: [8]
+  Envy Edges: (0->2) (1->2) (4->1) (4->2) 
+
+  Agent 0: [4, 5]
+  Agent 1: [0, 9]
+  Agent 2: [6, 7]
+  Agent 3: [1, 2, 3]
+  Agent 4: [8]
+  Envy Edges: (0->2) (1->2) (3->2) (4->1) (4->2) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [4, 7] (Value: 11430, 26.20% of total utility)
+  Agent 1: [0, 9] (Value: 8699, 23.15% of total utility)
+  Agent 2: [5, 6] (Value: 9646, 23.45% of total utility)
+  Agent 3: [1, 2, 3] (Value: 17339, 24.02% of total utility)
+  Agent 4: [8] (Value: 9336, 24.35% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #329 (Pareto Optimal EFX #110, Not Min-optimal)
+  Agent 0: [0, 4, 7] (Value: 11845, 27.15% of total utility)
+  Agent 1: [9] (Value: 8498, 22.61% of total utility)
+  Agent 2: [5, 6] (Value: 9646, 23.45% of total utility)
+  Agent 3: [1, 2, 3] (Value: 17339, 24.02% of total utility)
+  Agent 4: [8] (Value: 9336, 24.35% of total utility)
+
+Close EFX allocation #330 (Pareto Optimal EFX #111, Not Min-optimal)
+  Agent 0: [4, 7] (Value: 11430, 26.20% of total utility)
+  Agent 1: [9] (Value: 8498, 22.61% of total utility)
+  Agent 2: [5, 6] (Value: 9646, 23.45% of total utility)
+  Agent 3: [0, 1, 2, 3] (Value: 18892, 26.17% of total utility)
+  Agent 4: [8] (Value: 9336, 24.35% of total utility)
+
+Close EFX allocation #331 (Pareto Optimal EFX #112, Not Min-optimal)
+  Agent 0: [4, 7] (Value: 11430, 26.20% of total utility)
+  Agent 1: [9] (Value: 8498, 22.61% of total utility)
+  Agent 2: [5, 6] (Value: 9646, 23.45% of total utility)
+  Agent 3: [1, 2, 3] (Value: 17339, 24.02% of total utility)
+  Agent 4: [0, 8] (Value: 9663, 25.21% of total utility)
+
+Close EFX allocation #332 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [4, 7] (Value: 11430, 26.20% of total utility)
+  Agent 1: [0, 9] (Value: 8699, 23.15% of total utility)
+  Agent 2: [5, 6] (Value: 9646, 23.45% of total utility)
+  Agent 3: [2, 3] (Value: 13901, 19.26% of total utility)
+  Agent 4: [1, 8] (Value: 9752, 25.44% of total utility)
+
+Close EFX allocation #334 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [4, 7] (Value: 11430, 26.20% of total utility)
+  Agent 1: [0, 9] (Value: 8699, 23.15% of total utility)
+  Agent 2: [5, 6] (Value: 9646, 23.45% of total utility)
+  Agent 3: [1, 3] (Value: 10398, 14.40% of total utility)
+  Agent 4: [2, 8] (Value: 9774, 25.50% of total utility)
+
+Close EFX allocation #336 (Pareto Optimal EFX #114, Not Min-optimal)
+  Agent 0: [4, 7] (Value: 11430, 26.20% of total utility)
+  Agent 1: [0, 9] (Value: 8699, 23.15% of total utility)
+  Agent 2: [5, 6] (Value: 9646, 23.45% of total utility)
+  Agent 3: [1, 2] (Value: 10379, 14.38% of total utility)
+  Agent 4: [3, 8] (Value: 10049, 26.21% of total utility)
+
+MM Allocation:
+  Agent 0: [5, 6] (Value: 11629, 26.66% of total utility)
+  Agent 1: [0, 9] (Value: 8699, 23.15% of total utility)
+  Agent 2: [4, 7] (Value: 9561, 23.24% of total utility)
+  Agent 3: [1, 2, 3] (Value: 17339, 24.02% of total utility)
+  Agent 4: [8] (Value: 9336, 24.35% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #370 (Pareto Optimal EFX #134, Not Min-optimal)
+  Agent 0: [5, 6] (Value: 11629, 26.66% of total utility)
+  Agent 1: [9] (Value: 8498, 22.61% of total utility)
+  Agent 2: [0, 4, 7] (Value: 9690, 23.55% of total utility)
+  Agent 3: [1, 2, 3] (Value: 17339, 24.02% of total utility)
+  Agent 4: [8] (Value: 9336, 24.35% of total utility)
+
+Close EFX allocation #371 (Pareto Optimal EFX #135, Not Min-optimal)
+  Agent 0: [5, 6] (Value: 11629, 26.66% of total utility)
+  Agent 1: [9] (Value: 8498, 22.61% of total utility)
+  Agent 2: [4, 7] (Value: 9561, 23.24% of total utility)
+  Agent 3: [0, 1, 2, 3] (Value: 18892, 26.17% of total utility)
+  Agent 4: [8] (Value: 9336, 24.35% of total utility)
+
+Close EFX allocation #372 (Pareto Optimal EFX #136, Not Min-optimal)
+  Agent 0: [5, 6] (Value: 11629, 26.66% of total utility)
+  Agent 1: [9] (Value: 8498, 22.61% of total utility)
+  Agent 2: [4, 7] (Value: 9561, 23.24% of total utility)
+  Agent 3: [1, 2, 3] (Value: 17339, 24.02% of total utility)
+  Agent 4: [0, 8] (Value: 9663, 25.21% of total utility)
+
+Close EFX allocation #373 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [5, 6] (Value: 11629, 26.66% of total utility)
+  Agent 1: [0, 9] (Value: 8699, 23.15% of total utility)
+  Agent 2: [4, 7] (Value: 9561, 23.24% of total utility)
+  Agent 3: [2, 3] (Value: 13901, 19.26% of total utility)
+  Agent 4: [1, 8] (Value: 9752, 25.44% of total utility)
+
+Close EFX allocation #375 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [5, 6] (Value: 11629, 26.66% of total utility)
+  Agent 1: [0, 9] (Value: 8699, 23.15% of total utility)
+  Agent 2: [4, 7] (Value: 9561, 23.24% of total utility)
+  Agent 3: [1, 3] (Value: 10398, 14.40% of total utility)
+  Agent 4: [2, 8] (Value: 9774, 25.50% of total utility)
+
+Close EFX allocation #377 (Pareto Optimal EFX #138, Not Min-optimal)
+  Agent 0: [5, 6] (Value: 11629, 26.66% of total utility)
+  Agent 1: [0, 9] (Value: 8699, 23.15% of total utility)
+  Agent 2: [4, 7] (Value: 9561, 23.24% of total utility)
+  Agent 3: [1, 2] (Value: 10379, 14.38% of total utility)
+  Agent 4: [3, 8] (Value: 10049, 26.21% of total utility)
+
+MM Allocation:
+  Agent 0: [4, 6] (Value: 11161, 25.58% of total utility)
+  Agent 1: [0, 9] (Value: 8699, 23.15% of total utility)
+  Agent 2: [5, 7] (Value: 10048, 24.42% of total utility)
+  Agent 3: [1, 2, 3] (Value: 17339, 24.02% of total utility)
+  Agent 4: [8] (Value: 9336, 24.35% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #411 (Pareto Optimal EFX #167, Not Min-optimal)
+  Agent 0: [0, 4, 6] (Value: 11576, 26.53% of total utility)
+  Agent 1: [9] (Value: 8498, 22.61% of total utility)
+  Agent 2: [5, 7] (Value: 10048, 24.42% of total utility)
+  Agent 3: [1, 2, 3] (Value: 17339, 24.02% of total utility)
+  Agent 4: [8] (Value: 9336, 24.35% of total utility)
+
+Close EFX allocation #412 (Pareto Optimal EFX #168, Not Min-optimal)
+  Agent 0: [4, 6] (Value: 11161, 25.58% of total utility)
+  Agent 1: [9] (Value: 8498, 22.61% of total utility)
+  Agent 2: [5, 7] (Value: 10048, 24.42% of total utility)
+  Agent 3: [0, 1, 2, 3] (Value: 18892, 26.17% of total utility)
+  Agent 4: [8] (Value: 9336, 24.35% of total utility)
+
+Close EFX allocation #413 (Pareto Optimal EFX #169, Not Min-optimal)
+  Agent 0: [4, 6] (Value: 11161, 25.58% of total utility)
+  Agent 1: [9] (Value: 8498, 22.61% of total utility)
+  Agent 2: [5, 7] (Value: 10048, 24.42% of total utility)
+  Agent 3: [1, 2, 3] (Value: 17339, 24.02% of total utility)
+  Agent 4: [0, 8] (Value: 9663, 25.21% of total utility)
+
+Close EFX allocation #414 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [4, 6] (Value: 11161, 25.58% of total utility)
+  Agent 1: [0, 9] (Value: 8699, 23.15% of total utility)
+  Agent 2: [5, 7] (Value: 10048, 24.42% of total utility)
+  Agent 3: [2, 3] (Value: 13901, 19.26% of total utility)
+  Agent 4: [1, 8] (Value: 9752, 25.44% of total utility)
+
+Close EFX allocation #416 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [4, 6] (Value: 11161, 25.58% of total utility)
+  Agent 1: [0, 9] (Value: 8699, 23.15% of total utility)
+  Agent 2: [5, 7] (Value: 10048, 24.42% of total utility)
+  Agent 3: [1, 3] (Value: 10398, 14.40% of total utility)
+  Agent 4: [2, 8] (Value: 9774, 25.50% of total utility)
+
+Close EFX allocation #418 (Pareto Optimal EFX #171, Not Min-optimal)
+  Agent 0: [4, 6] (Value: 11161, 25.58% of total utility)
+  Agent 1: [0, 9] (Value: 8699, 23.15% of total utility)
+  Agent 2: [5, 7] (Value: 10048, 24.42% of total utility)
+  Agent 3: [1, 2] (Value: 10379, 14.38% of total utility)
+  Agent 4: [3, 8] (Value: 10049, 26.21% of total utility)
+
+MM Allocation:
+  Agent 0: [4, 5] (Value: 10912, 25.01% of total utility)
+  Agent 1: [0, 9] (Value: 8699, 23.15% of total utility)
+  Agent 2: [6, 7] (Value: 15600, 37.92% of total utility)
+  Agent 3: [1, 2, 3] (Value: 17339, 24.02% of total utility)
+  Agent 4: [8] (Value: 9336, 24.35% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #468 (Pareto Optimal EFX #201, Not Min-optimal)
+  Agent 0: [0, 4, 5] (Value: 11327, 25.96% of total utility)
+  Agent 1: [9] (Value: 8498, 22.61% of total utility)
+  Agent 2: [6, 7] (Value: 15600, 37.92% of total utility)
+  Agent 3: [1, 2, 3] (Value: 17339, 24.02% of total utility)
+  Agent 4: [8] (Value: 9336, 24.35% of total utility)
+
+Close EFX allocation #469 (Pareto Optimal EFX #202, Not Min-optimal)
+  Agent 0: [4, 5] (Value: 10912, 25.01% of total utility)
+  Agent 1: [9] (Value: 8498, 22.61% of total utility)
+  Agent 2: [6, 7] (Value: 15600, 37.92% of total utility)
+  Agent 3: [0, 1, 2, 3] (Value: 18892, 26.17% of total utility)
+  Agent 4: [8] (Value: 9336, 24.35% of total utility)
+
+Close EFX allocation #470 (Pareto Optimal EFX #203, Not Min-optimal)
+  Agent 0: [4, 5] (Value: 10912, 25.01% of total utility)
+  Agent 1: [9] (Value: 8498, 22.61% of total utility)
+  Agent 2: [6, 7] (Value: 15600, 37.92% of total utility)
+  Agent 3: [1, 2, 3] (Value: 17339, 24.02% of total utility)
+  Agent 4: [0, 8] (Value: 9663, 25.21% of total utility)
+
+Close EFX allocation #471 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [4, 5] (Value: 10912, 25.01% of total utility)
+  Agent 1: [0, 9] (Value: 8699, 23.15% of total utility)
+  Agent 2: [6, 7] (Value: 15600, 37.92% of total utility)
+  Agent 3: [2, 3] (Value: 13901, 19.26% of total utility)
+  Agent 4: [1, 8] (Value: 9752, 25.44% of total utility)
+
+Close EFX allocation #473 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [4, 5] (Value: 10912, 25.01% of total utility)
+  Agent 1: [0, 9] (Value: 8699, 23.15% of total utility)
+  Agent 2: [6, 7] (Value: 15600, 37.92% of total utility)
+  Agent 3: [1, 3] (Value: 10398, 14.40% of total utility)
+  Agent 4: [2, 8] (Value: 9774, 25.50% of total utility)
+
+Close EFX allocation #475 (Pareto Optimal EFX #205, Not Min-optimal)
+  Agent 0: [4, 5] (Value: 10912, 25.01% of total utility)
+  Agent 1: [0, 9] (Value: 8699, 23.15% of total utility)
+  Agent 2: [6, 7] (Value: 15600, 37.92% of total utility)
+  Agent 3: [1, 2] (Value: 10379, 14.38% of total utility)
+  Agent 4: [3, 8] (Value: 10049, 26.21% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #19 ====================
+Raw Utility Matrix:
+  Agent 0: [87, 170, 1499, 2059, 3103, 3298, 5351, 8052, 9115, 9267]
+  Agent 1: [1457, 1746, 3303, 4252, 4643, 4940, 6295, 9306, 9711, 9819]
+  Agent 2: [16, 897, 1836, 2340, 3376, 3440, 5609, 5771, 7194, 8294]
+  Agent 3: [663, 1988, 2550, 4777, 6250, 7223, 7645, 8116, 9017, 9460]
+  Agent 4: [890, 1146, 1748, 2949, 4524, 5049, 5990, 8136, 8751, 9537]
+Normalized Utility Matrix (rows sum to 1):
+  [0.00207, 0.00405, 0.03569, 0.04902, 0.07388, 0.07852, 0.12740, 0.19171, 0.21702, 0.22064]
+  [0.02627, 0.03148, 0.05954, 0.07665, 0.08370, 0.08905, 0.11348, 0.16776, 0.17506, 0.17701]
+  [0.00041, 0.02313, 0.04735, 0.06035, 0.08707, 0.08872, 0.14466, 0.14884, 0.18554, 0.21391]
+  [0.01149, 0.03446, 0.04420, 0.08281, 0.10834, 0.12521, 0.13252, 0.14069, 0.15630, 0.16398]
+  [0.01827, 0.02352, 0.03588, 0.06053, 0.09286, 0.10363, 0.12295, 0.16700, 0.17962, 0.19575]
+
+--- MM Allocations (1) ---
+  Agent 0: [8]
+  Agent 1: [2, 7]
+  Agent 2: [4, 6]
+  Agent 3: [0, 3, 5]
+  Agent 4: [1, 9]
+  Envy Edges: (0->1) (0->4) (2->4) (3->2) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [8] (Value: 9115, 21.70% of total utility)
+  Agent 1: [2, 7] (Value: 12609, 22.73% of total utility)
+  Agent 2: [4, 6] (Value: 8985, 23.17% of total utility)
+  Agent 3: [0, 3, 5] (Value: 12663, 21.95% of total utility)
+  Agent 4: [1, 9] (Value: 10683, 21.93% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #1411 (Pareto Optimal EFX #534, Not Min-optimal)
+  Agent 0: [1, 8] (Value: 9285, 22.11% of total utility)
+  Agent 1: [2, 7] (Value: 12609, 22.73% of total utility)
+  Agent 2: [4, 6] (Value: 8985, 23.17% of total utility)
+  Agent 3: [0, 3, 5] (Value: 12663, 21.95% of total utility)
+  Agent 4: [9] (Value: 9537, 19.58% of total utility)
+
+Close EFX allocation #1414 (Pareto Optimal EFX #536, Not Min-optimal)
+  Agent 0: [8] (Value: 9115, 21.70% of total utility)
+  Agent 1: [2, 7] (Value: 12609, 22.73% of total utility)
+  Agent 2: [4, 6] (Value: 8985, 23.17% of total utility)
+  Agent 3: [0, 1, 3, 5] (Value: 14651, 25.40% of total utility)
+  Agent 4: [9] (Value: 9537, 19.58% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #20 ====================
+Raw Utility Matrix:
+  Agent 0: [600, 1087, 2457, 2934, 3314, 4015, 6161, 7698, 7944, 8598]
+  Agent 1: [35, 601, 1995, 4044, 4353, 4866, 5457, 6568, 6871, 8261]
+  Agent 2: [489, 844, 1701, 1811, 2998, 4392, 4469, 4710, 5041, 6122]
+  Agent 3: [158, 2418, 2768, 4553, 6472, 7336, 8571, 9875, 9929, 9979]
+  Agent 4: [648, 811, 892, 1392, 3418, 5602, 6881, 7558, 8938, 9904]
+Normalized Utility Matrix (rows sum to 1):
+  [0.01339, 0.02426, 0.05483, 0.06548, 0.07396, 0.08960, 0.13750, 0.17180, 0.17729, 0.19189]
+  [0.00081, 0.01396, 0.04634, 0.09394, 0.10111, 0.11303, 0.12676, 0.15256, 0.15960, 0.19189]
+  [0.01501, 0.02591, 0.05221, 0.05559, 0.09203, 0.13482, 0.13718, 0.14458, 0.15474, 0.18792]
+  [0.00255, 0.03896, 0.04460, 0.07337, 0.10429, 0.11821, 0.13811, 0.15912, 0.15999, 0.16080]
+  [0.01407, 0.01761, 0.01937, 0.03023, 0.07423, 0.12167, 0.14944, 0.16415, 0.19412, 0.21510]
+
+--- MM Allocations (2) ---
+  Agent 0: [2, 7]
+  Agent 1: [3, 6]
+  Agent 2: [1, 9]
+  Agent 3: [4, 5]
+  Agent 4: [0, 8]
+  Envy Edges: (2->3) (4->2) 
+
+  Agent 0: [2, 7]
+  Agent 1: [4, 5]
+  Agent 2: [1, 9]
+  Agent 3: [3, 6]
+  Agent 4: [0, 8]
+  Envy Edges: (1->3) (2->1) (3->1) (4->2) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [2, 7] (Value: 10155, 22.66% of total utility)
+  Agent 1: [3, 6] (Value: 9501, 22.07% of total utility)
+  Agent 2: [1, 9] (Value: 6966, 21.38% of total utility)
+  Agent 3: [4, 5] (Value: 13808, 22.25% of total utility)
+  Agent 4: [0, 8] (Value: 9586, 20.82% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #1024 (Pareto Optimal EFX #366, Not Min-optimal)
+  Agent 0: [2, 7] (Value: 10155, 22.66% of total utility)
+  Agent 1: [3, 6] (Value: 9501, 22.07% of total utility)
+  Agent 2: [9] (Value: 6122, 18.79% of total utility)
+  Agent 3: [4, 5] (Value: 13808, 22.25% of total utility)
+  Agent 4: [0, 1, 8] (Value: 10397, 22.58% of total utility)
+
+MM Allocation:
+  Agent 0: [2, 7] (Value: 10155, 22.66% of total utility)
+  Agent 1: [4, 5] (Value: 9219, 21.41% of total utility)
+  Agent 2: [1, 9] (Value: 6966, 21.38% of total utility)
+  Agent 3: [3, 6] (Value: 13124, 21.15% of total utility)
+  Agent 4: [0, 8] (Value: 9586, 20.82% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #1043 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [2, 7] (Value: 10155, 22.66% of total utility)
+  Agent 1: [4, 5] (Value: 9219, 21.41% of total utility)
+  Agent 2: [9] (Value: 6122, 18.79% of total utility)
+  Agent 3: [3, 6] (Value: 13124, 21.15% of total utility)
+  Agent 4: [0, 1, 8] (Value: 10397, 22.58% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #21 ====================
+Raw Utility Matrix:
+  Agent 0: [414, 663, 2762, 4257, 5609, 6129, 6380, 7080, 7950, 8697]
+  Agent 1: [911, 922, 1637, 3030, 4302, 4422, 4943, 5147, 6904, 9414]
+  Agent 2: [425, 913, 1271, 4418, 4467, 5134, 6257, 7090, 7146, 9826]
+  Agent 3: [58, 1003, 1605, 2016, 2739, 2839, 3399, 7878, 8364, 9973]
+  Agent 4: [431, 1366, 2723, 2830, 3183, 3216, 3672, 3918, 7178, 7207]
+Normalized Utility Matrix (rows sum to 1):
+  [0.00829, 0.01328, 0.05531, 0.08524, 0.11231, 0.12272, 0.12775, 0.14177, 0.15919, 0.17415]
+  [0.02188, 0.02215, 0.03932, 0.07278, 0.10333, 0.10622, 0.11873, 0.12363, 0.16583, 0.22612]
+  [0.00905, 0.01945, 0.02707, 0.09411, 0.09515, 0.10936, 0.13328, 0.15102, 0.15221, 0.20930]
+  [0.00145, 0.02515, 0.04025, 0.05056, 0.06869, 0.07120, 0.08524, 0.19757, 0.20976, 0.25011]
+  [0.01206, 0.03824, 0.07622, 0.07922, 0.08910, 0.09002, 0.10279, 0.10967, 0.20093, 0.20174]
+
+--- MM Allocations (1) ---
+  Agent 0: [4, 5]
+  Agent 1: [0, 9]
+  Agent 2: [3, 6]
+  Agent 3: [2, 7]
+  Agent 4: [1, 8]
+  Envy Edges: (3->1) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [4, 5] (Value: 11738, 23.50% of total utility)
+  Agent 1: [0, 9] (Value: 10325, 24.80% of total utility)
+  Agent 2: [3, 6] (Value: 10675, 22.74% of total utility)
+  Agent 3: [2, 7] (Value: 9483, 23.78% of total utility)
+  Agent 4: [1, 8] (Value: 8544, 23.92% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #221 (Pareto Optimal EFX #106, Min-optimal)
+  Agent 0: [0, 4, 5] (Value: 12152, 24.33% of total utility)
+  Agent 1: [9] (Value: 9414, 22.61% of total utility)
+  Agent 2: [3, 6] (Value: 10675, 22.74% of total utility)
+  Agent 3: [2, 7] (Value: 9483, 23.78% of total utility)
+  Agent 4: [1, 8] (Value: 8544, 23.92% of total utility)
+
+Close EFX allocation #222 (Pareto Optimal EFX #107, Min-optimal)
+  Agent 0: [4, 5] (Value: 11738, 23.50% of total utility)
+  Agent 1: [9] (Value: 9414, 22.61% of total utility)
+  Agent 2: [0, 3, 6] (Value: 11100, 23.64% of total utility)
+  Agent 3: [2, 7] (Value: 9483, 23.78% of total utility)
+  Agent 4: [1, 8] (Value: 8544, 23.92% of total utility)
+
+Close EFX allocation #223 (Pareto Optimal EFX #108, Min-optimal)
+  Agent 0: [4, 5] (Value: 11738, 23.50% of total utility)
+  Agent 1: [9] (Value: 9414, 22.61% of total utility)
+  Agent 2: [3, 6] (Value: 10675, 22.74% of total utility)
+  Agent 3: [0, 2, 7] (Value: 9541, 23.93% of total utility)
+  Agent 4: [1, 8] (Value: 8544, 23.92% of total utility)
+
+Close EFX allocation #224 (Pareto Optimal EFX #109, Min-optimal)
+  Agent 0: [4, 5] (Value: 11738, 23.50% of total utility)
+  Agent 1: [9] (Value: 9414, 22.61% of total utility)
+  Agent 2: [3, 6] (Value: 10675, 22.74% of total utility)
+  Agent 3: [2, 7] (Value: 9483, 23.78% of total utility)
+  Agent 4: [0, 1, 8] (Value: 8975, 25.12% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #22 ====================
+Raw Utility Matrix:
+  Agent 0: [131, 1284, 2686, 4497, 6049, 7827, 8201, 8641, 9397, 9546]
+  Agent 1: [1391, 1551, 3916, 4392, 4490, 5116, 5273, 6528, 7269, 8974]
+  Agent 2: [621, 1025, 1638, 2775, 4337, 6443, 7361, 7714, 8460, 9994]
+  Agent 3: [283, 1770, 2179, 4104, 5638, 5697, 6077, 7076, 8105, 9183]
+  Agent 4: [508, 2128, 2212, 3792, 4277, 4289, 4644, 4788, 6338, 8677]
+Normalized Utility Matrix (rows sum to 1):
+  [0.00225, 0.02204, 0.04610, 0.07719, 0.10383, 0.13435, 0.14077, 0.14832, 0.16130, 0.16385]
+  [0.02845, 0.03172, 0.08008, 0.08982, 0.09182, 0.10462, 0.10783, 0.13350, 0.14865, 0.18352]
+  [0.01233, 0.02035, 0.03252, 0.05509, 0.08611, 0.12792, 0.14614, 0.15315, 0.16796, 0.19842]
+  [0.00565, 0.03532, 0.04348, 0.08190, 0.11251, 0.11369, 0.12127, 0.14120, 0.16174, 0.18325]
+  [0.01220, 0.05109, 0.05311, 0.09104, 0.10268, 0.10297, 0.11149, 0.11495, 0.15216, 0.20832]
+
+--- MM Allocations (2) ---
+  Agent 0: [3, 6]
+  Agent 1: [2, 7]
+  Agent 2: [0, 9]
+  Agent 3: [4, 5]
+  Agent 4: [1, 8]
+  Envy Edges: (0->3) (2->3) (4->2) (4->3) 
+
+  Agent 0: [3, 5]
+  Agent 1: [2, 7]
+  Agent 2: [0, 9]
+  Agent 3: [4, 6]
+  Agent 4: [1, 8]
+  Envy Edges: (0->3) (2->3) (4->2) (4->3) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [3, 6] (Value: 12698, 21.80% of total utility)
+  Agent 1: [2, 7] (Value: 10444, 21.36% of total utility)
+  Agent 2: [0, 9] (Value: 10615, 21.07% of total utility)
+  Agent 3: [4, 5] (Value: 11335, 22.62% of total utility)
+  Agent 4: [1, 8] (Value: 8466, 20.33% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #2694 (Pareto Optimal EFX #642, Not Min-optimal)
+  Agent 0: [3, 6] (Value: 12698, 21.80% of total utility)
+  Agent 1: [0, 2, 7] (Value: 11835, 24.20% of total utility)
+  Agent 2: [9] (Value: 9994, 19.84% of total utility)
+  Agent 3: [4, 5] (Value: 11335, 22.62% of total utility)
+  Agent 4: [1, 8] (Value: 8466, 20.33% of total utility)
+
+Close EFX allocation #2695 (Pareto Optimal EFX #643, Not Min-optimal)
+  Agent 0: [3, 6] (Value: 12698, 21.80% of total utility)
+  Agent 1: [2, 7] (Value: 10444, 21.36% of total utility)
+  Agent 2: [9] (Value: 9994, 19.84% of total utility)
+  Agent 3: [4, 5] (Value: 11335, 22.62% of total utility)
+  Agent 4: [0, 1, 8] (Value: 8974, 21.54% of total utility)
+
+MM Allocation:
+  Agent 0: [3, 5] (Value: 12324, 21.15% of total utility)
+  Agent 1: [2, 7] (Value: 10444, 21.36% of total utility)
+  Agent 2: [0, 9] (Value: 10615, 21.07% of total utility)
+  Agent 3: [4, 6] (Value: 11715, 23.38% of total utility)
+  Agent 4: [1, 8] (Value: 8466, 20.33% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #2723 (Pareto Optimal EFX #654, Not Min-optimal)
+  Agent 0: [0, 3, 5] (Value: 12455, 21.38% of total utility)
+  Agent 1: [2, 7] (Value: 10444, 21.36% of total utility)
+  Agent 2: [9] (Value: 9994, 19.84% of total utility)
+  Agent 3: [4, 6] (Value: 11715, 23.38% of total utility)
+  Agent 4: [1, 8] (Value: 8466, 20.33% of total utility)
+
+Close EFX allocation #2724 (Pareto Optimal EFX #655, Not Min-optimal)
+  Agent 0: [3, 5] (Value: 12324, 21.15% of total utility)
+  Agent 1: [0, 2, 7] (Value: 11835, 24.20% of total utility)
+  Agent 2: [9] (Value: 9994, 19.84% of total utility)
+  Agent 3: [4, 6] (Value: 11715, 23.38% of total utility)
+  Agent 4: [1, 8] (Value: 8466, 20.33% of total utility)
+
+Close EFX allocation #2725 (Pareto Optimal EFX #656, Not Min-optimal)
+  Agent 0: [3, 5] (Value: 12324, 21.15% of total utility)
+  Agent 1: [2, 7] (Value: 10444, 21.36% of total utility)
+  Agent 2: [9] (Value: 9994, 19.84% of total utility)
+  Agent 3: [4, 6] (Value: 11715, 23.38% of total utility)
+  Agent 4: [0, 1, 8] (Value: 8974, 21.54% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #23 ====================
+Raw Utility Matrix:
+  Agent 0: [1408, 2199, 2659, 2724, 3112, 4316, 5850, 5916, 6231, 9225]
+  Agent 1: [1113, 1713, 3804, 4102, 6697, 7634, 7730, 8489, 8601, 9350]
+  Agent 2: [664, 1051, 2258, 3134, 3936, 4412, 4760, 4996, 5434, 6757]
+  Agent 3: [242, 471, 766, 780, 2512, 3397, 5276, 8350, 8862, 9644]
+  Agent 4: [663, 1000, 4721, 4825, 5874, 6220, 6567, 7250, 9537, 9709]
+Normalized Utility Matrix (rows sum to 1):
+  [0.03226, 0.05039, 0.06093, 0.06242, 0.07131, 0.09890, 0.13405, 0.13556, 0.14278, 0.21139]
+  [0.01879, 0.02892, 0.06422, 0.06925, 0.11306, 0.12888, 0.13050, 0.14332, 0.14521, 0.15785]
+  [0.01775, 0.02810, 0.06037, 0.08379, 0.10524, 0.11796, 0.12727, 0.13358, 0.14529, 0.18066]
+  [0.00600, 0.01169, 0.01901, 0.01935, 0.06233, 0.08429, 0.13092, 0.20720, 0.21990, 0.23931]
+  [0.01176, 0.01774, 0.08376, 0.08560, 0.10421, 0.11035, 0.11651, 0.12862, 0.16920, 0.17225]
+
+--- MM Allocations (2) ---
+  Agent 0: [0, 9]
+  Agent 1: [4, 5]
+  Agent 2: [3, 7]
+  Agent 3: [8]
+  Agent 4: [1, 2, 6]
+  Envy Edges: (0->4) (2->1) (3->0) (3->2) 
+
+  Agent 0: [0, 9]
+  Agent 1: [1, 2, 5]
+  Agent 2: [3, 7]
+  Agent 3: [8]
+  Agent 4: [4, 6]
+  Envy Edges: (1->4) (2->4) (3->0) (3->2) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [0, 9] (Value: 10633, 24.37% of total utility)
+  Agent 1: [4, 5] (Value: 14331, 24.19% of total utility)
+  Agent 2: [3, 7] (Value: 8130, 21.74% of total utility)
+  Agent 3: [8] (Value: 8862, 21.99% of total utility)
+  Agent 4: [1, 2, 6] (Value: 12288, 21.80% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #546 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [9] (Value: 9225, 21.14% of total utility)
+  Agent 1: [4, 5] (Value: 14331, 24.19% of total utility)
+  Agent 2: [3, 7] (Value: 8130, 21.74% of total utility)
+  Agent 3: [0, 8] (Value: 9104, 22.59% of total utility)
+  Agent 4: [1, 2, 6] (Value: 12288, 21.80% of total utility)
+
+MM Allocation:
+  Agent 0: [0, 9] (Value: 10633, 24.37% of total utility)
+  Agent 1: [1, 2, 5] (Value: 13151, 22.20% of total utility)
+  Agent 2: [3, 7] (Value: 8130, 21.74% of total utility)
+  Agent 3: [8] (Value: 8862, 21.99% of total utility)
+  Agent 4: [4, 6] (Value: 12441, 22.07% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #570 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [9] (Value: 9225, 21.14% of total utility)
+  Agent 1: [0, 1, 2, 5] (Value: 14264, 24.08% of total utility)
+  Agent 2: [3, 7] (Value: 8130, 21.74% of total utility)
+  Agent 3: [8] (Value: 8862, 21.99% of total utility)
+  Agent 4: [4, 6] (Value: 12441, 22.07% of total utility)
+
+Close EFX allocation #571 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [9] (Value: 9225, 21.14% of total utility)
+  Agent 1: [1, 2, 5] (Value: 13151, 22.20% of total utility)
+  Agent 2: [3, 7] (Value: 8130, 21.74% of total utility)
+  Agent 3: [0, 8] (Value: 9104, 22.59% of total utility)
+  Agent 4: [4, 6] (Value: 12441, 22.07% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #24 ====================
+Raw Utility Matrix:
+  Agent 0: [91, 233, 541, 719, 1205, 1272, 3330, 8078, 8165, 9269]
+  Agent 1: [358, 1046, 1771, 2130, 4814, 5192, 6891, 8447, 8726, 9565]
+  Agent 2: [2175, 2421, 2680, 2743, 3626, 4033, 4248, 4252, 4332, 5065]
+  Agent 3: [2233, 2814, 3597, 4029, 4399, 6321, 7139, 9078, 9102, 9326]
+  Agent 4: [1485, 2476, 2953, 3020, 3104, 4549, 4677, 5925, 6061, 7045]
+Normalized Utility Matrix (rows sum to 1):
+  [0.00277, 0.00708, 0.01644, 0.02185, 0.03662, 0.03866, 0.10121, 0.24551, 0.24815, 0.28171]
+  [0.00732, 0.02137, 0.03619, 0.04352, 0.09837, 0.10609, 0.14081, 0.17260, 0.17830, 0.19544]
+  [0.06114, 0.06805, 0.07533, 0.07710, 0.10193, 0.11337, 0.11941, 0.11952, 0.12177, 0.14238]
+  [0.03847, 0.04849, 0.06198, 0.06942, 0.07580, 0.10891, 0.12301, 0.15641, 0.15683, 0.16069]
+  [0.03596, 0.05996, 0.07151, 0.07313, 0.07517, 0.11016, 0.11326, 0.14348, 0.14677, 0.17060]
+
+--- MM Allocations (4) ---
+  Agent 0: [7]
+  Agent 1: [5, 6]
+  Agent 2: [0, 2, 4]
+  Agent 3: [3, 8]
+  Agent 4: [1, 9]
+  Envy Edges: (0->3) (0->4) (3->1) 
+
+  Agent 0: [7]
+  Agent 1: [5, 6]
+  Agent 2: [0, 1, 4]
+  Agent 3: [3, 8]
+  Agent 4: [2, 9]
+  Envy Edges: (0->3) (0->4) (2->1) (3->1) 
+
+  Agent 0: [7]
+  Agent 1: [4, 6]
+  Agent 2: [0, 2, 5]
+  Agent 3: [3, 8]
+  Agent 4: [1, 9]
+  Envy Edges: (0->3) (0->4) 
+
+  Agent 0: [7]
+  Agent 1: [4, 6]
+  Agent 2: [0, 1, 5]
+  Agent 3: [3, 8]
+  Agent 4: [2, 9]
+  Envy Edges: (0->3) (0->4) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [7] (Value: 8078, 24.55% of total utility)
+  Agent 1: [5, 6] (Value: 12083, 24.69% of total utility)
+  Agent 2: [0, 2, 4] (Value: 8481, 23.84% of total utility)
+  Agent 3: [3, 8] (Value: 13131, 22.62% of total utility)
+  Agent 4: [1, 9] (Value: 9521, 23.06% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #7368 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [1, 7] (Value: 8311, 25.26% of total utility)
+  Agent 1: [5, 6] (Value: 12083, 24.69% of total utility)
+  Agent 2: [0, 2, 4] (Value: 8481, 23.84% of total utility)
+  Agent 3: [3, 8] (Value: 13131, 22.62% of total utility)
+  Agent 4: [9] (Value: 7045, 17.06% of total utility)
+
+MM Allocation:
+  Agent 0: [7] (Value: 8078, 24.55% of total utility)
+  Agent 1: [5, 6] (Value: 12083, 24.69% of total utility)
+  Agent 2: [0, 1, 4] (Value: 8222, 23.11% of total utility)
+  Agent 3: [3, 8] (Value: 13131, 22.62% of total utility)
+  Agent 4: [2, 9] (Value: 9998, 24.21% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #7367 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [2, 7] (Value: 8619, 26.20% of total utility)
+  Agent 1: [5, 6] (Value: 12083, 24.69% of total utility)
+  Agent 2: [0, 1, 4] (Value: 8222, 23.11% of total utility)
+  Agent 3: [3, 8] (Value: 13131, 22.62% of total utility)
+  Agent 4: [9] (Value: 7045, 17.06% of total utility)
+
+MM Allocation:
+  Agent 0: [7] (Value: 8078, 24.55% of total utility)
+  Agent 1: [4, 6] (Value: 11705, 23.92% of total utility)
+  Agent 2: [0, 2, 5] (Value: 8888, 24.98% of total utility)
+  Agent 3: [3, 8] (Value: 13131, 22.62% of total utility)
+  Agent 4: [1, 9] (Value: 9521, 23.06% of total utility)
+  Closest EFX allocation(s) (swap distance = 2):
+
+Close EFX allocation #2803 (Pareto Optimal EFX #1260, Not Min-optimal)
+  Agent 0: [9] (Value: 9269, 28.17% of total utility)
+  Agent 1: [4, 6] (Value: 11705, 23.92% of total utility)
+  Agent 2: [0, 2, 5] (Value: 8888, 24.98% of total utility)
+  Agent 3: [3, 8] (Value: 13131, 22.62% of total utility)
+  Agent 4: [1, 7] (Value: 8401, 20.34% of total utility)
+
+Close EFX allocation #7341 (Pareto Optimal EFX #2642, Not Min-optimal)
+  Agent 0: [5, 7] (Value: 9350, 28.42% of total utility)
+  Agent 1: [4, 6] (Value: 11705, 23.92% of total utility)
+  Agent 2: [0, 1, 2] (Value: 7276, 20.45% of total utility)
+  Agent 3: [3, 8] (Value: 13131, 22.62% of total utility)
+  Agent 4: [9] (Value: 7045, 17.06% of total utility)
+
+Close EFX allocation #7376 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [2, 7] (Value: 8619, 26.20% of total utility)
+  Agent 1: [4, 6] (Value: 11705, 23.92% of total utility)
+  Agent 2: [0, 1, 5] (Value: 8629, 24.26% of total utility)
+  Agent 3: [3, 8] (Value: 13131, 22.62% of total utility)
+  Agent 4: [9] (Value: 7045, 17.06% of total utility)
+
+MM Allocation:
+  Agent 0: [7] (Value: 8078, 24.55% of total utility)
+  Agent 1: [4, 6] (Value: 11705, 23.92% of total utility)
+  Agent 2: [0, 1, 5] (Value: 8629, 24.26% of total utility)
+  Agent 3: [3, 8] (Value: 13131, 22.62% of total utility)
+  Agent 4: [2, 9] (Value: 9998, 24.21% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #7376 (Not Pareto Optimal EFX, Not Min-optimal)
+  Agent 0: [2, 7] (Value: 8619, 26.20% of total utility)
+  Agent 1: [4, 6] (Value: 11705, 23.92% of total utility)
+  Agent 2: [0, 1, 5] (Value: 8629, 24.26% of total utility)
+  Agent 3: [3, 8] (Value: 13131, 22.62% of total utility)
+  Agent 4: [9] (Value: 7045, 17.06% of total utility)
+
+================================================================================
+
+==================== COUNTEREXAMPLE MATRIX #25 ====================
+Raw Utility Matrix:
+  Agent 0: [1797, 1830, 3346, 4758, 5046, 6737, 7103, 7372, 8419, 9928]
+  Agent 1: [127, 306, 3781, 4924, 5108, 5980, 6854, 7032, 8694, 9580]
+  Agent 2: [342, 495, 872, 1083, 1900, 2728, 3325, 5503, 9251, 9561]
+  Agent 3: [1264, 1616, 1685, 2860, 7342, 8043, 8441, 8652, 8990, 9158]
+  Agent 4: [17, 1648, 2047, 4564, 5800, 6259, 6943, 7461, 7895, 8216]
+Normalized Utility Matrix (rows sum to 1):
+  [0.03190, 0.03248, 0.05939, 0.08446, 0.08957, 0.11959, 0.12608, 0.13086, 0.14944, 0.17623]
+  [0.00242, 0.00584, 0.07218, 0.09399, 0.09751, 0.11415, 0.13084, 0.13423, 0.16596, 0.18287]
+  [0.00975, 0.01412, 0.02487, 0.03089, 0.05419, 0.07781, 0.09484, 0.15696, 0.26386, 0.27270]
+  [0.02177, 0.02784, 0.02903, 0.04927, 0.12647, 0.13855, 0.14541, 0.14904, 0.15486, 0.15776]
+  [0.00033, 0.03241, 0.04026, 0.08975, 0.11406, 0.12309, 0.13654, 0.14673, 0.15526, 0.16157]
+
+--- MM Allocations (2) ---
+  Agent 0: [1, 9]
+  Agent 1: [0, 2, 7]
+  Agent 2: [8]
+  Agent 3: [4, 6]
+  Agent 4: [3, 5]
+  Envy Edges: (0->1) (0->3) (1->3) (2->0) (4->3) 
+
+  Agent 0: [1, 9]
+  Agent 1: [0, 2, 7]
+  Agent 2: [8]
+  Agent 3: [4, 5]
+  Agent 4: [3, 6]
+  Envy Edges: (0->1) (0->3) (0->4) (1->3) (1->4) (2->0) (4->3) 
+
+--- Closest EFX Allocations to MM (by swap distance) ---
+MM Allocation:
+  Agent 0: [1, 9] (Value: 11758, 20.87% of total utility)
+  Agent 1: [0, 2, 7] (Value: 10940, 20.88% of total utility)
+  Agent 2: [8] (Value: 9251, 26.39% of total utility)
+  Agent 3: [4, 6] (Value: 15783, 27.19% of total utility)
+  Agent 4: [3, 5] (Value: 10823, 21.28% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #98 (Pareto Optimal EFX #70, Min-optimal)
+  Agent 0: [1, 9] (Value: 11758, 20.87% of total utility)
+  Agent 1: [2, 7] (Value: 10813, 20.64% of total utility)
+  Agent 2: [0, 8] (Value: 9593, 27.36% of total utility)
+  Agent 3: [4, 6] (Value: 15783, 27.19% of total utility)
+  Agent 4: [3, 5] (Value: 10823, 21.28% of total utility)
+
+MM Allocation:
+  Agent 0: [1, 9] (Value: 11758, 20.87% of total utility)
+  Agent 1: [0, 2, 7] (Value: 10940, 20.88% of total utility)
+  Agent 2: [8] (Value: 9251, 26.39% of total utility)
+  Agent 3: [4, 5] (Value: 15385, 26.50% of total utility)
+  Agent 4: [3, 6] (Value: 11507, 22.63% of total utility)
+  Closest EFX allocation(s) (swap distance = 1):
+
+Close EFX allocation #178 (Pareto Optimal EFX #130, Min-optimal)
+  Agent 0: [1, 9] (Value: 11758, 20.87% of total utility)
+  Agent 1: [2, 7] (Value: 10813, 20.64% of total utility)
+  Agent 2: [0, 8] (Value: 9593, 27.36% of total utility)
+  Agent 3: [4, 5] (Value: 15385, 26.50% of total utility)
+  Agent 4: [3, 6] (Value: 11507, 22.63% of total utility)
+
+================================================================================
+
